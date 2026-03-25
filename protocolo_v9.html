@@ -1,0 +1,1345 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Damares Medina — Protocolo v9</title><style>:root{--bg:#0c0c14;--bg2:#12121e;--bg3:#1a1a2e;--text:#d0d0dc;--text2:#8888a0;--text3:#606078;--accent:#4a9e8e;--blue:#60a8e8;--teal:#50d0a0;--border:#1e1e32}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}.page{max-width:680px;margin:0 auto;padding:0 24px 80px}.hero{text-align:center;padding:48px 20px 40px;border-bottom:1px solid var(--border);margin-bottom:40px}.hero-author{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--accent);margin-bottom:20px}.hero-title{font-size:24px;font-weight:300;color:#fff;letter-spacing:1px;margin-bottom:8px}.hero-title strong{font-weight:600}.hero-sub{font-size:13px;color:var(--text2);margin-bottom:16px}.hero-meta{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text3)}h1{font-size:18px;font-weight:600;color:#fff;margin:48px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--border)}h2{font-size:14px;font-weight:600;color:var(--accent);margin:28px 0 12px}h3{font-size:12px;font-weight:600;color:var(--text2);margin:20px 0 8px}p{margin:8px 0;font-size:13px}strong{color:#e0e0f0}ul,ol{margin:8px 0 8px 24px;font-size:13px}li{margin:4px 0}blockquote{border-left:3px solid var(--accent);padding:8px 16px;margin:12px 0;background:rgba(74,158,142,.06);border-radius:0 6px 6px 0;font-size:13px;color:var(--teal)}pre{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;margin:12px 0;overflow-x:auto;font-size:12px;line-height:1.6}code{font-family:"SF Mono","Fira Code",monospace;font-size:12px;color:var(--blue)}pre code{color:var(--text)}table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12px}th{text-align:left;padding:8px 12px;background:var(--bg2);color:var(--accent);border:1px solid var(--border);font-weight:500}td{padding:8px 12px;border:1px solid var(--border)}tr:hover td{background:rgba(255,255,255,.02)}hr{border:none;height:1px;background:var(--border);margin:32px 0}.footer{text-align:center;padding:40px 0;border-top:1px solid var(--border);margin-top:48px}.footer p{font-size:11px;color:var(--text3);letter-spacing:1px;margin:4px 0}.footer .name{color:var(--accent)}.toc{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px 24px;margin:0 0 32px}.toc-title{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}.toc a{color:var(--text2);text-decoration:none;font-size:12px;display:block;padding:3px 0}.toc a:hover{color:var(--text)}@media(max-width:520px){.page{padding:0 14px 40px}.hero{padding:32px 12px 28px}.hero-title{font-size:20px}h1{font-size:16px}pre{padding:10px;font-size:11px}table{font-size:11px}th,td{padding:6px 8px}}</style></head><body><div class="page"><div class="hero"><div class="hero-author">Damares Medina</div><div class="hero-title"><strong>Protocolo Ontológico</strong> Universal</div><div class="hero-sub">Cartografia do Litigioso Brasileiro</div><div class="hero-meta">v9 · 25 de março de 2026 · Arquitetura Permanente</div></div><div class="toc"><div class="toc-title">Índice</div><a href="#s1">1. ÂNCORA E FINALIDADE</a>
+<a href="#s2">2. PRINCÍPIOS INEGOCIÁVEIS</a>
+<a href="#s3">3. ARQUITETURA EM CAMADAS</a>
+<a href="#s4">4. CAMADA 0 — DOMÍNIOS</a>
+<a href="#s5">5. CAMADA 1 — TAXONOMIAS VIVAS</a>
+<a href="#s6">6. CAMADA 2 — PRIMITIVOS UNIVERSAIS</a>
+<a href="#s7">7. ARGUMENTOS</a>
+<a href="#s8">8. SINAIS DECISÓRIOS (CAMADA PROSPECTIVA)</a>
+<a href="#s9">9. IMPACTO ORÇAMENTÁRIO</a>
+<a href="#s10">10. SISTEMA AUTOENSINÁVEL</a>
+<a href="#s11">11. VIDA PROCESSUAL, AMBIENTE DECISÓRIO E ECOLOGIA INSTITUCIONAL</a>
+<a href="#s12">12. VERSIONAMENTO</a>
+<a href="#s13">13. EQUIVALÊNCIA v1 → v9</a>
+<a href="#s14">14. ÁRVORE UNIVERSAL</a>
+<a href="#s15">15. SUBJECTS (TEMAS)</a>
+<a href="#s16">16. ANOTAÇÕES</a>
+<a href="#s17">17. PAPÉIS (ROLES)</a>
+<a href="#s18">18. CONVENÇÃO DE SLUG</a>
+<a href="#s19">19. CAMADA 3 — PROVENANCE</a>
+<a href="#s20">20. CAMADA 4 — DERIVADOS</a>
+<a href="#s21">21. CAMADA 5 — PADRÕES E VIEWS</a>
+<a href="#s22">22. IDENTIDADE MULTINÍVEL</a>
+<a href="#s23">23. REGRAS DE VÍNCULO</a>
+<a href="#s24">24. OPERAÇÕES SOBRE DADOS</a>
+<a href="#s25">25. ÍNDICES RECOMENDADOS</a>
+<a href="#s26">26. ESCALABILIDADE</a>
+<a href="#s27">27. BUSCA</a>
+<a href="#s28">28. PIPELINE</a>
+<a href="#s29">29. ERROS PROIBIDOS</a>
+<a href="#s30">30. FÓRMULA DE EXPANSÃO</a>
+<a href="#s31">31. FÓRMULA FINAL</a>
+<a href="#s32">32. PRINCÍPIO FINAL</a>
+</div><h1>PROTOCOLO ONTOLÓGICO UNIVERSAL v9</h1>
+
+<h2>Cartografia do Litigioso Brasileiro</h2>
+
+<hr>
+
+<h1 id="s1">1. ÂNCORA E FINALIDADE</h1>
+
+<p><strong>Autora:</strong> Damares Medina</p>
+<p><strong>Objeto:</strong> Cartografia do litigioso brasileiro</p>
+<p><strong>Princípio:</strong> O sistema modela <strong>relações entre estruturas normativas, documentos jurídicos, atores institucionais e argumentos</strong>, em múltiplos domínios e escalas.</p>
+
+<hr>
+
+<h1 id="s2">2. PRINCÍPIOS INEGOCIÁVEIS</h1>
+
+<ol><li>Todo corpus jurídico é uma <strong>árvore multinível</strong></li>
+<li>O artigo <strong>não é a raiz</strong> da estrutura normativa</li>
+<li>Todo objeto possui <strong>identidade estável (slug)</strong></li>
+<li>Estrutura ≠ texto ≠ derivação</li>
+<li>Embeddings são <strong>derivados, nunca estruturais</strong></li>
+<li>A base é <strong>corpus-agnóstica e hierarquia-aware</strong></li>
+<li>Nenhuma camada depende do frontend</li>
+<li><strong>Domínios são dados, não estrutura</strong> — crescem por INSERT</li>
+<li><strong>Cross-edges são consequência</strong> — edge entre domínios diferentes = cross-edge</li>
+<li><strong>Toda informação tem origem rastreável</strong> — provenance obrigatório</li>
+<li><strong>Existem apenas 4 primitivos</strong> — object, actor, event, edge. Sem exceções</li>
+<li><strong>Estado é derivado</strong> — último event com <code>to_state</code></li>
+<li><strong>Temas são objects</strong> — vinculados por edges, não campos</li>
+<li><strong>Slugs são globalmente únicos</strong> — nenhum slug em mais de uma tabela</li>
+<li><strong>Edge é fonte de verdade para relações</strong> — payload é cache derivado</li>
+<li><strong>Nunca DELETE</strong> — encerrar com <code>valid_to</code> + event <code>anulacao</code></li>
+<li><strong>source [verbo] target</strong> — direção universal dos edges</li>
+<li><strong>Versionamento event-sourced</strong> — nós in-place, versão é marco</li>
+<li><strong>Payload é convenção</strong> — estrutura por type, validação no pipeline</li>
+<li><strong>UUID é identidade interna irredutível</strong> — slug é identidade pública legível. Relações estruturais ancoram-se em UUID; slugs servem à leitura, publicação e interoperabilidade humana</li>
+<li><strong>Domain ≠ classe ontológica</strong> — domínio indica pertencimento institucional; classe indica a natureza do ente modelado</li>
+<li><strong>Cada tipo de relação tem classe epistêmica</strong> — distinguir fato estrutural de interpretação de classificação</li>
+<li><strong>O sistema registra sinais, não apenas fatos</strong> — toda decisão deve conter o sinal decisório mínimo necessário para reconstruir e projetar padrões de desfecho, direção, fundamentação, técnica decisória e efeito material</li>
+<li><strong>Predição é função da camada analítica</strong> — construída sobre types, payloads, edges, events e views, nunca sobre os primitivos</li>
+<li><strong>O sistema é autoensinável apenas na camada de perfis</strong> — o aprendizado incide sobre regularidades observadas em decisões por relator e órgão, sem autoalteração do núcleo ontológico</li>
+<li><strong>Toda aprendizagem é mediada por membrana</strong> — recorrência empírica vira hipótese, hipótese vira estrutura apenas após validação</li>
+<li><strong>Perfis decisórios são derivados</strong> — dinâmicos e revisáveis, nunca fonte primária de verdade</li>
+<li><strong>Ambiente de julgamento é variável estruturante</strong> — deve ser capturado no evento e correlacionado com órgão, relator, tema e técnica decisória</li>
+</ol>
+<hr>
+
+<h1 id="s3">3. ARQUITETURA EM CAMADAS</h1>
+
+<pre><code>CAMADA 0 — DOMÍNIOS
+  domains (hierárquicos, expansíveis)
+
+CAMADA 1 — TAXONOMIAS VIVAS
+  object_types (+ ontological_class)
+  actor_types (+ actor_class)
+  event_types (+ event_class)
+  edge_types (+ epistemic_class)
+  state_types
+  (domain_slug nullable para transversais)
+
+CAMADA 2 — PRIMITIVOS UNIVERSAIS (schema fixo)
+  objects (id uuid + slug)
+  actors (id uuid + slug)
+  events (referencia por uuid)
+  edges (source_id/target_id uuid)
+
+CAMADA 3 — PROVENANCE (rastreabilidade)
+  provenance (cruza tudo, referencia por uuid)
+
+CAMADA 4 — DERIVADOS (reconstruíveis)
+  chunks · embeddings · published_objects
+
+CAMADA 5 — PADRÕES (views materializadas)
+  domain denormalizado, slugs resolvidos, estado atual
+</code></pre>
+
+<hr>
+
+<h1 id="s4">4. CAMADA 0 — DOMÍNIOS</h1>
+
+<h2>4.1 Definição</h2>
+
+<p>Um domínio é um <strong>sistema institucional autônomo</strong>. Domínios são dados — entram por INSERT.</p>
+
+<h2>4.2 Estrutura</h2>
+
+<pre><code>domains
+  domain_slug           text PK
+  label                 text NOT NULL
+  parent_domain_slug    text FK → domains (nullable)
+  valid_from            timestamptz
+</code></pre>
+
+<h2>4.3 Hierarquia</h2>
+
+<pre><code>transversal
+normativo
+juridico
+  └── stf · stj · tst
+executivo
+  └── presidencia · agu · pgfn
+mp
+  └── pgr · mpf
+legislativo
+  └── senado · camara
+controle
+  └── tcu · cnj
+</code></pre>
+
+<h2>4.4 Ground zero</h2>
+
+<p>3 domínios: <code>transversal</code>, <code>normativo</code>, <code>juridico</code>.</p>
+
+<h2>4.5 Regra</h2>
+
+<blockquote>Nunca hardcodar quantidade de domínios. Funciona com 2 ou 200.</blockquote>
+
+<hr>
+
+<h1 id="s5">5. CAMADA 1 — TAXONOMIAS VIVAS</h1>
+
+<p>Dados, nunca enums. Crescem por INSERT. <code>domain_slug</code> nullable para transversais.</p>
+
+<h2>5.1 <code>object_types</code></h2>
+
+<pre><code>object_types
+  type_slug             text PK
+  domain_slug           text FK → domains (nullable)
+  ontological_class     text NOT NULL
+  label                 text
+  valid_from            timestamptz
+</code></pre>
+
+<blockquote><code>domain_slug</code> responde: <strong>a que sistema pertence</strong><br><code>ontological_class</code> responde: <strong>o que é</strong></blockquote>
+
+<p>Classes ontológicas:</p>
+
+<table><thead><tr><th>Classe</th><th>Significado</th></tr></thead><tbody><tr><td>estrutural</td><td>entidade estática com existência própria (norma, dispositivo, súmula)</td></tr><tr><td>processual</td><td>entidade dinâmica com ciclo de vida (ação, recurso, processo)</td></tr><tr><td>semantico</td><td>entidade abstrata classificatória (tema, assunto)</td></tr><tr><td>editorial</td><td>entidade derivada de intervenção humana (anotação, comentário)</td></tr><tr><td>argumentativo</td><td>entidade que expressa razão, tese ou fundamento</td></tr><tr><td>analitico</td><td>entidade de análise quantitativa ou qualitativa derivada (impacto, estimativa)</td></tr><tr><td>preditivo</td><td>entidade que captura sinal decisório para projeção de padrões</td></tr></tbody></table>
+<p>Exemplos:</p>
+
+<table><thead><tr><th>type_slug</th><th>domain</th><th>ontological_class</th><th>label</th></tr></thead><tbody><tr><td>constituicao</td><td>normativo</td><td>estrutural</td><td>Constituição</td></tr><tr><td>versao_normativa</td><td>normativo</td><td>estrutural</td><td>Versão/marco temporal</td></tr><tr><td>emenda_constitucional</td><td>normativo</td><td>estrutural</td><td>Emenda Constitucional</td></tr><tr><td>titulo</td><td>normativo</td><td>estrutural</td><td>Título</td></tr><tr><td>capitulo</td><td>normativo</td><td>estrutural</td><td>Capítulo</td></tr><tr><td>secao</td><td>normativo</td><td>estrutural</td><td>Seção</td></tr><tr><td>artigo</td><td>normativo</td><td>estrutural</td><td>Artigo</td></tr><tr><td>caput</td><td>normativo</td><td>estrutural</td><td>Caput</td></tr><tr><td>inciso</td><td>normativo</td><td>estrutural</td><td>Inciso</td></tr><tr><td>paragrafo</td><td>normativo</td><td>estrutural</td><td>Parágrafo</td></tr><tr><td>alinea</td><td>normativo</td><td>estrutural</td><td>Alínea</td></tr><tr><td>acao_direta</td><td>juridico</td><td>processual</td><td>Ação Direta</td></tr><tr><td>recurso_extraordinario</td><td>juridico</td><td>processual</td><td>Recurso Extraordinário</td></tr><tr><td>sumula_vinculante</td><td>juridico</td><td>estrutural</td><td>Súmula Vinculante</td></tr><tr><td>decreto</td><td>executivo</td><td>estrutural</td><td>Decreto</td></tr><tr><td>projeto_lei</td><td>legislativo</td><td>processual</td><td>Projeto de Lei</td></tr><tr><td>subject</td><td>transversal</td><td>semantico</td><td>Tema/assunto</td></tr><tr><td>anotacao</td><td>transversal</td><td>editorial</td><td>Anotação editorial</td></tr><tr><td>argumento</td><td>juridico</td><td>argumentativo</td><td>Razão de decidir / fundamento</td></tr><tr><td>impacto_orcamentario</td><td>transversal</td><td>analitico</td><td>Impacto orçamentário de decisão</td></tr><tr><td>estimativa_fiscal</td><td>transversal</td><td>analitico</td><td>Estimativa fiscal quantificada</td></tr><tr><td>nota_tecnica_fiscal</td><td>transversal</td><td>editorial</td><td>Nota técnica sobre impacto fiscal</td></tr><tr><td>ente_orcamentario</td><td>transversal</td><td>estrutural</td><td>Ente ou centro de impacto orçamentário</td></tr><tr><td>resultado_decisorio</td><td>juridico</td><td>preditivo</td><td>Sinal de resultado de julgamento</td></tr><tr><td>fundamento</td><td>juridico</td><td>argumentativo</td><td>Fundamento jurídico</td></tr><tr><td>tese</td><td>juridico</td><td>argumentativo</td><td>Tese fixada ou proposta</td></tr></tbody></table>
+<h2>5.2 <code>actor_types</code></h2>
+
+<pre><code>actor_types
+  type_slug             text PK
+  domain_slug           text FK → domains (nullable)
+  actor_class           text NOT NULL
+  label                 text
+  valid_from            timestamptz
+</code></pre>
+
+<p>Classes de actor:</p>
+
+<table><thead><tr><th>Classe</th><th>Significado</th></tr></thead><tbody><tr><td>institucional</td><td>ator investido de função pública</td></tr><tr><td>automatizado</td><td>ator de sistema (pipeline, IA)</td></tr></tbody></table>
+<p>Exemplos:</p>
+
+<table><thead><tr><th>type_slug</th><th>domain</th><th>actor_class</th><th>label</th></tr></thead><tbody><tr><td>ministro_stf</td><td>juridico</td><td>institucional</td><td>Ministro do STF</td></tr><tr><td>presidente</td><td>executivo</td><td>institucional</td><td>Presidente da República</td></tr><tr><td>procurador_geral</td><td>mp</td><td>institucional</td><td>Procurador-Geral</td></tr><tr><td>senador</td><td>legislativo</td><td>institucional</td><td>Senador</td></tr><tr><td>deputado</td><td>legislativo</td><td>institucional</td><td>Deputado Federal</td></tr><tr><td>sistema</td><td>transversal</td><td>automatizado</td><td>Ator automatizado</td></tr></tbody></table>
+<h2>5.3 <code>event_types</code></h2>
+
+<pre><code>event_types
+  type_slug             text PK
+  domain_slug           text FK → domains (nullable)
+  event_class           text NOT NULL
+  label                 text
+  valid_from            timestamptz
+</code></pre>
+
+<p>Classes de event:</p>
+
+<table><thead><tr><th>Classe</th><th>Significado</th></tr></thead><tbody><tr><td>juridico</td><td>ocorrência do sistema de justiça</td></tr><tr><td>normativo</td><td>ocorrência do sistema normativo</td></tr><tr><td>manutencao</td><td>ocorrência operacional do sistema</td></tr><tr><td>fiscal</td><td>ocorrência com consequência orçamentária/fiscal</td></tr></tbody></table>
+<p>Exemplos:</p>
+
+<table><thead><tr><th>type_slug</th><th>domain</th><th>event_class</th><th>label</th></tr></thead><tbody><tr><td>julgamento</td><td>juridico</td><td>juridico</td><td>Julgamento</td></tr><tr><td>distribuicao</td><td>juridico</td><td>juridico</td><td>Distribuição</td></tr><tr><td>publicacao_dje</td><td>juridico</td><td>juridico</td><td>Publicação no DJe</td></tr><tr><td>promulgacao</td><td>normativo</td><td>normativo</td><td>Promulgação</td></tr><tr><td>emenda_aplicada</td><td>normativo</td><td>normativo</td><td>Aplicação de emenda</td></tr><tr><td>nomeacao</td><td>executivo</td><td>juridico</td><td>Nomeação</td></tr><tr><td>mudanca_estado</td><td>transversal</td><td>manutencao</td><td>Transição de estado</td></tr><tr><td>correcao</td><td>transversal</td><td>manutencao</td><td>Correção de dado</td></tr><tr><td>anulacao</td><td>transversal</td><td>manutencao</td><td>Anulação de dado</td></tr><tr><td>criacao</td><td>transversal</td><td>manutencao</td><td>Registro de criação</td></tr><tr><td>alocacao_risco_fiscal</td><td>juridico</td><td>fiscal</td><td>Redistribuição de risco fiscal</td></tr><tr><td>modulacao_efeitos_fiscais</td><td>juridico</td><td>fiscal</td><td>Modulação de efeitos com impacto fiscal</td></tr><tr><td>formacao_resultado</td><td>juridico</td><td>juridico</td><td>Formação de resultado decisório</td></tr></tbody></table>
+<h2>5.4 <code>edge_types</code></h2>
+
+<pre><code>edge_types
+  type_slug             text PK
+  source_domain_slug    text FK → domains (nullable)
+  target_domain_slug    text FK → domains (nullable)
+  epistemic_class       text NOT NULL
+  label                 text
+  bidirectional         boolean DEFAULT false
+  allows_multiple       boolean DEFAULT true
+  weight_semantics      text
+  weight_required       boolean DEFAULT false
+  valid_from            timestamptz
+</code></pre>
+
+<p>Classes epistêmicas:</p>
+
+<table><thead><tr><th>Classe</th><th>Significado</th><th>Exemplo</th></tr></thead><tbody><tr><td>estrutural</td><td>relação constitutiva da árvore/hierarquia</td><td>parent_of, version_of</td></tr><tr><td>normativa</td><td>relação que altera o ordenamento</td><td>amends, emenda, veta</td></tr><tr><td>interpretativa</td><td>relação hermenêutica entre decisão e norma</td><td>interpreta, aplica, questiona</td></tr><tr><td>classificatoria</td><td>relação taxonômica/temática</td><td>sobre</td></tr><tr><td>editorial</td><td>relação de anotação/comentário</td><td>annota</td></tr><tr><td>institucional</td><td>relação entre atores e funções</td><td>exerce_papel, sucede, nomeia, denuncia</td></tr><tr><td>argumentativa</td><td>relação entre fundamentos e decisões</td><td>suporta, contradiz, fundamenta, apoia, confirma, supera</td></tr><tr><td>fiscal</td><td>relação de impacto orçamentário/fiscal</td><td>impacta_orcamento, aloca_risco_fiscal, modula</td></tr><tr><td>preditiva</td><td>relação que captura sinal de desfecho</td><td>decide_em_favor_de</td></tr></tbody></table>
+<p>Exemplos:</p>
+
+<table><thead><tr><th>type_slug</th><th>source</th><th>target</th><th>epistemic</th><th>mult</th><th>weight_semantics</th><th>weight_req</th><th>label</th></tr></thead><tbody><tr><td>parent_of</td><td>NULL</td><td>NULL</td><td>estrutural</td><td>false</td><td>NULL</td><td>false</td><td>relação hierárquica</td></tr><tr><td>version_of</td><td>normativo</td><td>normativo</td><td>estrutural</td><td>false</td><td>NULL</td><td>false</td><td>versão de obra</td></tr><tr><td>amends</td><td>normativo</td><td>normativo</td><td>normativa</td><td>true</td><td>NULL</td><td>false</td><td>emenda altera dispositivo</td></tr><tr><td>emenda</td><td>legislativo</td><td>normativo</td><td>normativa</td><td>true</td><td>NULL</td><td>false</td><td>emenda constituição</td></tr><tr><td>veta</td><td>executivo</td><td>legislativo</td><td>normativa</td><td>false</td><td>NULL</td><td>false</td><td>veta projeto</td></tr><tr><td>interpreta</td><td>juridico</td><td>normativo</td><td>interpretativa</td><td>true</td><td>confidence (0-1)</td><td>true</td><td>interpreta dispositivo</td></tr><tr><td>aplica</td><td>juridico</td><td>normativo</td><td>interpretativa</td><td>true</td><td>confidence (0-1)</td><td>true</td><td>aplica norma</td></tr><tr><td>questiona</td><td>juridico</td><td>normativo</td><td>interpretativa</td><td>true</td><td>confidence (0-1)</td><td>true</td><td>questiona constitucionalidade</td></tr><tr><td>sobre</td><td>NULL</td><td>NULL</td><td>classificatoria</td><td>true</td><td>relevancia (0-1)</td><td>false</td><td>vincula a tema</td></tr><tr><td>annota</td><td>NULL</td><td>NULL</td><td>editorial</td><td>true</td><td>NULL</td><td>false</td><td>anotação ao alvo</td></tr><tr><td>exerce_papel</td><td>NULL</td><td>NULL</td><td>institucional</td><td>true</td><td>NULL</td><td>false</td><td>papel no contexto</td></tr><tr><td>sucede</td><td>NULL</td><td>NULL</td><td>institucional</td><td>false</td><td>NULL</td><td>false</td><td>sucessão de actor</td></tr><tr><td>relator_de</td><td>juridico</td><td>juridico</td><td>institucional</td><td>false</td><td>NULL</td><td>false</td><td>relator do processo</td></tr><tr><td>nomeia_ministro</td><td>executivo</td><td>juridico</td><td>institucional</td><td>false</td><td>NULL</td><td>false</td><td>nomeia ministro</td></tr><tr><td>denuncia</td><td>mp</td><td>juridico</td><td>institucional</td><td>true</td><td>NULL</td><td>false</td><td>oferece denúncia</td></tr><tr><td>suporta</td><td>juridico</td><td>juridico</td><td>argumentativa</td><td>true</td><td>forca (0-1)</td><td>false</td><td>fundamento suporta decisão</td></tr><tr><td>contradiz</td><td>juridico</td><td>juridico</td><td>argumentativa</td><td>true</td><td>forca (0-1)</td><td>false</td><td>argumento contradiz argumento</td></tr><tr><td>fundamenta_em</td><td>juridico</td><td>normativo</td><td>argumentativa</td><td>true</td><td>confidence (0-1)</td><td>false</td><td>argumento se fundamenta em norma</td></tr><tr><td>impacta_orcamento</td><td>juridico</td><td>transversal</td><td>fiscal</td><td>true</td><td>magnitude (0-1)</td><td>true</td><td>decisão impacta orçamento de ente</td></tr><tr><td>aloca_risco_fiscal</td><td>juridico</td><td>transversal</td><td>fiscal</td><td>true</td><td>magnitude (0-1)</td><td>true</td><td>decisão redistribui risco fiscal</td></tr><tr><td>quantifica</td><td>transversal</td><td>transversal</td><td>fiscal</td><td>true</td><td>confidence (0-1)</td><td>false</td><td>vincula estimativa a impacto</td></tr><tr><td>mitiga_impacto</td><td>juridico</td><td>juridico</td><td>fiscal</td><td>true</td><td>eficacia (0-1)</td><td>false</td><td>modulação mitiga impacto fiscal</td></tr><tr><td>externaliza_risco</td><td>juridico</td><td>transversal</td><td>fiscal</td><td>true</td><td>magnitude (0-1)</td><td>false</td><td>decisão transfere risco a terceiro</td></tr><tr><td>decide_em_favor_de</td><td>juridico</td><td>transversal</td><td>preditiva</td><td>true</td><td>confidence (0-1)</td><td>false</td><td>decisão favorece parte/ente</td></tr><tr><td>gera_impacto_orcamentario</td><td>juridico</td><td>transversal</td><td>fiscal</td><td>true</td><td>magnitude (0-1)</td><td>false</td><td>decisão gera impacto orçamentário</td></tr><tr><td>fundamenta</td><td>juridico</td><td>juridico</td><td>argumentativa</td><td>true</td><td>forca (0-1)</td><td>false</td><td>fundamento embasa decisão</td></tr><tr><td>apoia</td><td>juridico</td><td>juridico</td><td>argumentativa</td><td>true</td><td>forca (0-1)</td><td>false</td><td>fundamento/tese apoia outro</td></tr><tr><td>confirma</td><td>juridico</td><td>juridico</td><td>argumentativa</td><td>true</td><td>confidence (0-1)</td><td>false</td><td>decisão confirma precedente</td></tr><tr><td>supera</td><td>juridico</td><td>juridico</td><td>argumentativa</td><td>true</td><td>confidence (0-1)</td><td>false</td><td>decisão supera precedente</td></tr><tr><td>modula</td><td>juridico</td><td>juridico</td><td>fiscal</td><td>true</td><td>eficacia (0-1)</td><td>false</td><td>decisão modula efeitos</td></tr></tbody></table>
+<blockquote><code>weight_semantics</code> declara o que o weight significa para cada tipo.<br><code>weight_required</code> indica se o weight é obrigatório na inserção.</blockquote>
+
+
+
+<blockquote>Edges fiscais semanticamente completos não devem apontar para target NULL. O alvo deve ser um object ou actor que represente o ente, fundo, regime ou centro de impacto afetado (ex: <code>ente-uniao</code>, <code>ente-estado-sp</code>, <code>fundo-fgts</code>, <code>regime-rpps</code>).</blockquote>
+
+
+
+<blockquote>Entes afetados por impacto fiscal são objects do type <code>ente_orcamentario</code> (domain: transversal, ontological_class: estrutural), com slugs próprios: <code>ente-uniao</code>, <code>ente-estado-sp</code>, <code>ente-municipio-rj</code>, <code>fundo-fgts</code>, <code>regime-rpps</code>.</blockquote>
+
+
+
+<blockquote><strong>source [verbo] target</strong> — sempre.<br>Mesmo domínio = interna. Diferente = cross-edge. NULL = transversal.<br><code>allows_multiple = false</code>: máx 1 edge ativo por type+source+target.<br><code>epistemic_class</code> permite filtrar por natureza da relação: separar fato de interpretação de classificação.</blockquote>
+
+<h2>5.5 <code>state_types</code></h2>
+
+<pre><code>state_types
+  type_slug             text
+  object_type_slug      text FK → object_types
+  domain_slug           text FK → domains
+  label                 text
+  terminal              boolean DEFAULT false
+  valid_from            timestamptz
+  PRIMARY KEY (type_slug, object_type_slug)
+</code></pre>
+
+<p>Exemplos:</p>
+
+<table><thead><tr><th>state</th><th>object_type</th><th>domain</th><th>terminal</th></tr></thead><tbody><tr><td>vigente</td><td>artigo</td><td>normativo</td><td>false</td></tr><tr><td>vigente</td><td>inciso</td><td>normativo</td><td>false</td></tr><tr><td>vigente</td><td>paragrafo</td><td>normativo</td><td>false</td></tr><tr><td>suspensa</td><td>artigo</td><td>normativo</td><td>false</td></tr><tr><td>revogada</td><td>artigo</td><td>normativo</td><td>true</td></tr><tr><td>distribuida</td><td>acao_direta</td><td>juridico</td><td>false</td></tr><tr><td>pautada</td><td>acao_direta</td><td>juridico</td><td>false</td></tr><tr><td>julgada</td><td>acao_direta</td><td>juridico</td><td>false</td></tr><tr><td>transitada</td><td>acao_direta</td><td>juridico</td><td>true</td></tr></tbody></table>
+<blockquote>Estado = último event com <code>to_state</code>, ordenado por <code>occurred_at</code>.<br><code>aggregate_id</code> aponta para objects.id ou actors.id. Slugs são resolvidos apenas em views legíveis.</blockquote>
+
+<pre><code>{
+  "from_state": "distribuida",
+  "to_state": "pautada",
+  "reason": "inclusão em pauta pelo relator"
+}
+</code></pre>
+
+<hr>
+
+<h1 id="s6">6. CAMADA 2 — PRIMITIVOS UNIVERSAIS</h1>
+
+<p>Schema fixo. Nunca muda. Tudo é instância de um destes quatro.</p>
+
+<blockquote><strong>UUID é identidade interna irredutível. Slug é identidade pública legível.</strong><br>Relações estruturais ancoram-se em UUID. Slugs servem à leitura, publicação e interoperabilidade humana.</blockquote>
+
+<h2>6.1 <code>objects</code></h2>
+
+<pre><code>objects
+  id            uuid PK DEFAULT gen_random_uuid()
+  slug          text UNIQUE NOT NULL
+  type_slug     text FK → object_types
+  payload       jsonb
+  hash_content  text
+  valid_from    timestamptz
+  valid_to      timestamptz (nullable)
+  recorded_at   timestamptz DEFAULT now()
+</code></pre>
+
+
+
+<blockquote>Mutáveis com rastreio. Toda mutação gera:<br>1. Event <code>correcao</code> com <code>hash_anterior</code> no payload<br>2. Atualização do <code>hash_content</code><br>3. Novo provenance</blockquote>
+
+
+
+<blockquote><code>valid_to = now()</code> + event <code>anulacao</code>. Nunca DELETE.</blockquote>
+
+
+
+<table><thead><tr><th>type_slug</th><th>campos obrigatórios</th></tr></thead><tbody><tr><td>constituicao</td><td><code>title</code>, <code>jurisdiction</code>, <code>promulgation_date</code></td></tr><tr><td>artigo</td><td><code>text_content</code>, <code>sibling_order</code></td></tr><tr><td>inciso</td><td><code>text_content</code>, <code>sibling_order</code></td></tr><tr><td>paragrafo</td><td><code>text_content</code>, <code>sibling_order</code></td></tr><tr><td>alinea</td><td><code>text_content</code>, <code>sibling_order</code></td></tr><tr><td>caput</td><td><code>text_content</code></td></tr><tr><td>titulo</td><td><code>text_content</code>, <code>sibling_order</code>, <code>numero_romano</code></td></tr><tr><td>acao_direta</td><td><code>process_number</code>, <code>court</code>, <code>class_code</code></td></tr><tr><td>sumula_vinculante</td><td><code>numero</code>, <code>enunciado</code></td></tr><tr><td>emenda_constitucional</td><td><code>numero</code>, <code>data</code>, <code>ementa</code></td></tr><tr><td>subject</td><td><code>label</code></td></tr><tr><td>anotacao</td><td><code>text</code>, <code>annotation_type</code></td></tr><tr><td>argumento</td><td><code>text_content</code>, <code>argument_type</code></td></tr><tr><td>resultado_decisorio</td><td><code>outcome</code>, <code>outcome_polarity</code>, <code>decision_unanimity</code>, <code>merits_reached</code></td></tr><tr><td>fundamento</td><td><code>text_content</code>, <code>fundamento_type</code></td></tr><tr><td>tese</td><td><code>text_content</code>, <code>binding</code>, <code>fixation_date</code>, <code>status</code></td></tr><tr><td>impacto_orcamentario</td><td><code>decisao_slug</code>, <code>ente_afetado</code>, <code>direcao</code>, <code>horizonte_temporal</code></td></tr><tr><td>estimativa_fiscal</td><td><code>valor_brl</code>, <code>metodologia</code>, <code>fonte</code>, <code>data_referencia</code>, <code>confianca</code></td></tr><tr><td>nota_tecnica_fiscal</td><td><code>text</code>, <code>autor</code>, <code>annotation_type</code></td></tr></tbody></table>
+<blockquote>Fonte de verdade no payload: <code>text_content</code>, <code>sibling_order</code>, <code>numero_romano</code><br>Cache derivável: <code>path_slug</code>, <code>depth_level</code>, <code>is_leaf</code>, <code>is_repealed</code>, <code>normalized_text</code></blockquote>
+
+<h2>6.2 <code>actors</code></h2>
+
+<pre><code>actors
+  id            uuid PK DEFAULT gen_random_uuid()
+  slug          text UNIQUE NOT NULL
+  type_slug     text FK → actor_types
+  payload       jsonb
+  dedup_hash    text
+  valid_from    timestamptz
+  valid_to      timestamptz (nullable)
+  recorded_at   timestamptz DEFAULT now()
+</code></pre>
+
+<blockquote>Sucessão via edge <code>sucede</code>. Ciclo de vida via events.<br>Actor <code>sistema-pipeline</code> é autor de events automatizados.</blockquote>
+
+<h2>6.3 <code>events</code></h2>
+
+<p>Append-only. Imutável. Nunca UPDATE, nunca DELETE.</p>
+
+<pre><code>events
+  event_id        uuid PK DEFAULT gen_random_uuid()
+  type_slug       text FK → event_types
+  aggregate_id    uuid NOT NULL
+  actor_id        uuid NOT NULL
+  payload         jsonb
+  causation_id    uuid FK → events (nullable)
+  occurred_at     timestamptz NOT NULL
+  recorded_at     timestamptz DEFAULT now()
+</code></pre>
+
+<blockquote><code>aggregate_id</code> aponta para objects.id ou actors.id.<br><code>actor_id</code> aponta para actors.id. NOT NULL — usar <code>sistema-pipeline</code>.<br><code>causation_id</code> encadeia events.</blockquote>
+
+<h2>6.4 <code>edges</code></h2>
+
+<p>Grafo tipado universal.</p>
+
+<pre><code>edges
+  edge_id              uuid PK DEFAULT gen_random_uuid()
+  type_slug            text FK → edge_types
+  source_id            uuid NOT NULL
+  target_id            uuid NOT NULL
+  weight               float (nullable)
+  payload              jsonb (nullable)
+  valid_from           timestamptz (nullable)
+  valid_to             timestamptz (nullable)
+  causation_event_id   uuid FK → events (nullable)
+  recorded_at          timestamptz DEFAULT now()
+</code></pre>
+
+<blockquote><code>source_id</code> e <code>target_id</code> são uuid — fonte de verdade relacional.<br>Slugs resolvidos via views (v_edges_readable).<br><code>allows_multiple = false</code>: máx 1 edge ativo por type+source+target.<br>Encerrar: <code>valid_to = now()</code>. Nunca DELETE.<br><code>weight</code> obrigatório quando <code>edge_type.weight_required = true</code>.</blockquote>
+
+<h2>6.5 Identidade dual</h2>
+
+<table><thead><tr><th>Camada</th><th>Campo</th><th>Função</th></tr></thead><tbody><tr><td>interna</td><td><code>id</code> (uuid)</td><td>identidade irredutível, FK, consistência</td></tr><tr><td>pública</td><td><code>slug</code> (text)</td><td>identidade legível, publicação, API</td></tr></tbody></table>
+<blockquote>UUID garante consistência. Slug garante inteligibilidade.<br>Relações (edges, events) ancoram em UUID.<br>Interfaces humanas (API, views, export) expõem slugs.</blockquote>
+
+<h2>6.6 Três tempos irredutíveis</h2>
+
+<table><thead><tr><th>Primitivo</th><th>occurred_at</th><th>valid_from/to</th><th>recorded_at</th></tr></thead><tbody><tr><td>objects</td><td>—</td><td>sim</td><td>sim</td></tr><tr><td>actors</td><td>—</td><td>sim</td><td>sim</td></tr><tr><td>events</td><td>sim</td><td>—</td><td>sim</td></tr><tr><td>edges</td><td>—</td><td>sim</td><td>sim</td></tr></tbody></table>
+<h2>6.7 Regra</h2>
+
+<blockquote>Toda entidade é instância de um destes quatro.<br><code>constituicao</code> = object. <code>ministro</code> = actor. <code>julgamento</code> = event. <code>interpreta</code> = edge. <code>argumento</code> = object.</blockquote>
+
+<hr>
+
+<h1 id="s7">7. ARGUMENTOS</h1>
+
+<h2>7.1 Definição</h2>
+
+<p>Argumentos são <strong>objects</strong> do type <code>argumento</code> (ontological_class: <code>argumentativo</code>). Representam razões de decidir, teses, fundamentos e dissensos dentro de decisões.</p>
+
+<h2>7.2 Estrutura</h2>
+
+<pre><code>object: arg-adi4650-financiamento-privado
+  type: argumento
+  payload: {
+    text_content: "O financiamento privado de campanhas compromete a igualdade...",
+    argument_type: "razao_decidir",
+    direction: "procedente"
+  }
+</code></pre>
+
+<h2>7.3 Tipos de argumento (via payload <code>argument_type</code>)</h2>
+
+<ul><li><code>razao_decidir</code> — fundamento principal da decisão</li>
+<li><code>obiter_dictum</code> — consideração acessória</li>
+<li><code>voto_divergente</code> — fundamento do dissenso</li>
+<li><code>tese_fixada</code> — tese de repercussão geral</li>
+</ul>
+<h2>7.4 Vinculação</h2>
+
+<pre><code>arg-adi4650-financiamento-privado --[suporta]--&gt; stf-adi-4650
+arg-adi4650-financiamento-privado --[fundamenta_em]--&gt; cf-1988-art-1
+arg-adi4650-financiamento-privado --[fundamenta_em]--&gt; cf-1988-art-5
+
+arg-adi4650-liberdade-expressao --[contradiz]--&gt; arg-adi4650-financiamento-privado
+arg-adi4650-liberdade-expressao --[suporta]--&gt; stf-adi-4650
+  payload: { role: "voto_divergente", ministro: "ministro-gilmar" }
+</code></pre>
+
+<h2>7.5 Regras</h2>
+
+<blockquote>Argumento é object, não event. Tem existência própria e pode ser referenciado por múltiplas decisões.<br><code>suporta</code> liga argumento à decisão. <code>fundamenta_em</code> liga argumento à norma.<br><code>contradiz</code> liga argumento a argumento — captura dissenso interno.<br>Isso transforma o sistema em máquina de análise argumentativa, não apenas banco de decisões.</blockquote>
+
+<hr>
+
+<h1 id="s8">8. SINAIS DECISÓRIOS (CAMADA PROSPECTIVA)</h1>
+
+<h2>8.1 Princípio</h2>
+
+<blockquote>O sistema não deve apenas registrar que houve decisão; deve registrar o sinal decisório mínimo necessário para reconstruir e projetar padrões de desfecho, direção, fundamentação, técnica decisória e efeito material.</blockquote>
+
+<blockquote>Predição não é função dos primitivos; é função da camada analítica construída sobre types, payloads, edges, events e views.</blockquote>
+
+<h2>8.2 Camada de resultado</h2>
+
+<p>Payload padronizado obrigatório no event_type <code>julgamento</code>:</p>
+
+<pre><code>{
+  "outcome": "procedente | improcedente | parcial | nao_conhecido | prejudicado",
+  "outcome_polarity": "favor_autor | favor_reu | favor_estado | favor_particular | misto",
+  "decision_unanimity": "unanime | maioria | monocratica",
+  "merits_reached": true
+}
+</code></pre>
+
+<p>Ou, para máxima granularidade, criar object_type <code>resultado_decisorio</code> vinculado à decisão.</p>
+
+<h2>8.3 Camada de direção material</h2>
+
+<p>Payload no event <code>julgamento</code> ou no object <code>resultado_decisorio</code>:</p>
+
+<pre><code>{
+  "decision_direction": "expansiva | restritiva | conservadora | inovadora | neutra",
+  "rights_effect": "amplia | restringe | preserva | indeterminado",
+  "state_constraint": "aumenta | reduz | mantem"
+}
+</code></pre>
+
+<h2>8.4 Camada de técnica decisória</h2>
+
+<pre><code>{
+  "uses_modulation": true,
+  "temporal_effect": "ex_tunc | ex_nunc | prospectivo | misto",
+  "injunctive_profile": "forte | medio | fraco | inexistente",
+  "deference_level": "alto | medio | baixo",
+  "reasoning_style": "formalista | consequencialista | principialista | pragmatica | mista"
+}
+</code></pre>
+
+<h2>8.5 Camada de fundamento</h2>
+
+<p>Objects tipo <code>fundamento</code> e <code>tese</code> com edges:</p>
+
+<pre><code>fundamento-x --[fundamenta]--&gt; stf-adi-4650
+fundamento-x --[fundamenta_em]--&gt; cf-1988-art-14
+fundamento-x --[apoia]--&gt; tese-y
+
+tese-rg-tema-123 --[confirma]--&gt; tese-rg-tema-100
+tese-rg-tema-200 --[supera]--&gt; tese-rg-tema-100
+</code></pre>
+
+<h2>8.6 Camada de efeito fiscal e institucional</h2>
+
+<p>Payload no event ou object analítico:</p>
+
+<pre><code>{
+  "fiscal_effect": "expansivo | contencao | neutro | indeterminado",
+  "fiscal_risk_shift": "estado | particular | compartilhado",
+  "estimated_budget_impact": 0,
+  "impact_horizon": "imediato | curto | medio | longo",
+  "retroactive_liability": "alta | media | baixa | inexistente"
+}
+</code></pre>
+
+<h2>8.7 Camada de ambiente de julgamento</h2>
+
+<p>Payload obrigatório em todo julgamento colegiado:</p>
+
+<pre><code>{
+  "decision_body": "plenario | primeira_turma | segunda_turma | secao | orgao_especial",
+  "collegiality_mode": "colegiado | monocratico",
+  "adjudication_environment": "virtual | presencial | hibrido",
+  "session_format": "sincrona | assincrona | mista",
+  "oral_argument_present": true,
+  "public_debate_intensity": "alta | media | baixa | inexistente"
+}
+</code></pre>
+
+<p>Campos derivados recomendados:</p>
+
+<pre><code>{
+  "panel_size": 11,
+  "votes_present": 10,
+  "agu_manifested": true,
+  "pgr_manifested": false,
+  "amicus_participation": true
+}
+</code></pre>
+
+<blockquote>Ambiente de julgamento não é detalhe procedimental — é variável decisória.<br>O filtro de ambiente só é computado como variável colegiada quando <code>collegiality_mode = colegiado</code>.<br>Todas as views analíticas e preditivas devem permitir filtragem por ambiente de julgamento.</blockquote>
+
+
+
+<blockquote>Toda análise de ambiente de julgamento deve derivar de um mapeamento canônico único baseado no event_type = julgamento. Campos canônicos: <code>decision_body</code>, <code>collegiality_mode</code>, <code>adjudication_environment</code>, <code>session_format</code>, <code>oral_argument_present</code>, <code>public_debate_intensity</code>. Nenhuma view analítica pode redefinir localmente o significado desses campos. Toda view deve herdá-los da camada canônica de julgamento.</blockquote>
+
+<h2>8.8 Regras</h2>
+
+<blockquote>Todo julgamento deve conter no mínimo: <code>outcome</code>, <code>decision_direction</code>, <code>uses_modulation</code>, <code>reasoning_style</code>, <code>fiscal_effect</code>, <code>decision_body</code>, <code>adjudication_environment</code>.<br>Fundamentos e teses são objects com existência própria — podem ser referenciados por múltiplas decisões.<br>A camada prospectiva não altera primitivos — apenas enriquece types, payloads, edges e views.</blockquote>
+
+<h2>8.9 Rastreabilidade dos sinais prospectivos</h2>
+
+<blockquote>Todo campo prospectivo ou interpretativo deve declarar no payload:<br>* <code>extraction_method</code>: manual | automatico | hibrido<br>* <code>confidence_score</code>: float (0-1)</blockquote>
+
+<p>Campos sujeitos a esta regra:</p>
+<ul><li><code>decision_direction</code>, <code>rights_effect</code>, <code>state_constraint</code></li>
+<li><code>uses_modulation</code>, <code>temporal_effect</code>, <code>injunctive_profile</code></li>
+<li><code>deference_level</code>, <code>reasoning_style</code></li>
+<li><code>fiscal_effect</code>, <code>fiscal_risk_shift</code>, <code>retroactive_liability</code></li>
+</ul>
+<blockquote>Quando o payload do event contiver campos prospectivos ou analíticos, deve incluir <code>extraction_method</code> e <code>confidence_score</code>. Provenance deve registrar <code>source_type</code>, <code>pipeline_version</code>, <code>hash_input</code>, <code>confidence</code> e método de extração.</blockquote>
+
+<hr>
+
+<h1 id="s9">9. IMPACTO ORÇAMENTÁRIO</h1>
+
+<h2>8.1 Definição</h2>
+
+<p>Impacto orçamentário é modelado em 3 níveis progressivos, sem alterar primitivos.</p>
+
+<h2>8.2 Nível 1 — Edge com payload (sempre)</h2>
+
+<p>Toda decisão relevante ganha um edge fiscal:</p>
+
+<pre><code>stf-adi-4650 --[aloca_risco_fiscal]--&gt; ente-uniao
+  payload: {
+    direcao: "aumento_despesa",
+    estimativa_brl: 5000000000,
+    horizonte_temporal: "10_anos",
+    confianca: 0.7,
+    retroatividade: false,
+    base_documental: "nota-tecnica-stn-2023"
+  }
+  weight: 0.8 (magnitude)
+</code></pre>
+
+<h2>8.3 Nível 2 — Object analítico (quando houver material suficiente)</h2>
+
+<pre><code>object: impacto-adi4650-financiamento
+  type: impacto_orcamentario
+  payload: {
+    decisao_slug: "stf-adi-4650",
+    ente_afetado: "uniao",
+    direcao: "aumento_despesa",
+    horizonte_temporal: "10_anos",
+    multiplas_estimativas: [
+      { fonte: "STN", valor_brl: 5000000000, data: "2023-06" },
+      { fonte: "IFI", valor_brl: 3200000000, data: "2023-09" }
+    ],
+    divergencia_metodologica: true
+  }
+
+impacto-adi4650-financiamento --[impacta_orcamento]--&gt; stf-adi-4650
+impacto-adi4650-financiamento --[sobre]--&gt; subject-financiamento-eleitoral
+</code></pre>
+
+<h2>8.4 Nível 3 — Fórmulas analíticas (views derivadas)</h2>
+
+
+
+<pre><code>EFR = risco_pos_decisao - risco_pre_decisao
+</code></pre>
+
+<p>Captura: quem paga após a decisão vs quem pagava antes.</p>
+
+
+
+<pre><code>ICF% = 1 - (impacto_efetivo / impacto_potencial)
+</code></pre>
+
+<p>Captura: quanto do impacto potencial foi contido pela modulação.</p>
+
+
+
+<pre><code>IDT = data_efetividade_financeira - data_reconhecimento_juridico
+</code></pre>
+
+<p>Captura: quanto tempo entre o reconhecimento jurídico e o custo real.</p>
+
+
+
+<pre><code>IIFD = Σ(estimativas_ponderadas) × fator_retroatividade × fator_horizonte
+</code></pre>
+
+
+
+<pre><code>IDC = (validade_juridica_reconhecida) - (consequencia_fiscal_implementada)
+</code></pre>
+
+<p>Captura: distância entre o que o STF decidiu e o que efetivamente custou.</p>
+
+<h2>8.5 Regras</h2>
+
+<blockquote>Impacto orçamentário é modelado sem nova tabela — apenas novos types e edge_types.<br>Nível 1 (edge com payload) é obrigatório para toda decisão com consequência fiscal.<br>Nível 2 (object analítico) quando houver múltiplas estimativas ou divergência.<br>Nível 3 (fórmulas) são views derivadas, recalculáveis.<br>Edges fiscais devem ter weight obrigatório (magnitude do impacto).</blockquote>
+
+<hr>
+
+<h1 id="s10">10. SISTEMA AUTOENSINÁVEL</h1>
+
+<h2>10.1 Princípio</h2>
+
+<blockquote>O sistema é autoensinável apenas na camada de perfis, padrões e features derivadas. O aprendizado incide sobre regularidades observadas em decisões por relator e órgão decisório, sem autoalteração do núcleo ontológico.</blockquote>
+
+<blockquote>Toda aprendizagem decisória é mediada por uma membrana de consistência, que converte recorrência empírica em hipótese analítica, e hipótese analítica em estrutura reconhecida apenas após validação.</blockquote>
+
+<blockquote>O banco aprende; a ontologia decide o que pode virar conhecimento estrutural.</blockquote>
+
+<h2>10.2 Objeto de aprendizado</h2>
+
+<p>O sistema aprende progressivamente:</p>
+
+<p><strong>Por relator:</strong></p>
+<ul><li>taxa de procedência / improcedência</li>
+<li>frequência de não conhecimento</li>
+<li>propensão à modulação</li>
+<li>intensidade de contenção fiscal</li>
+<li>direção decisória recorrente</li>
+<li>estilo argumentativo dominante</li>
+<li>frequência de deferência institucional</li>
+<li>perfil por classe processual, tema e dispositivo</li>
+<li>variação por ambiente de julgamento (virtual vs presencial)</li>
+</ul>
+<p><strong>Por órgão:</strong></p>
+<ul><li>distribuição de resultados</li>
+<li>temas sensíveis</li>
+<li>rigidez ou expansividade média</li>
+<li>técnica decisória típica</li>
+<li>grau de estabilidade</li>
+<li>variação por ambiente de julgamento</li>
+</ul>
+<p><strong>Por relator + órgão:</strong></p>
+<ul><li>o relator muda quando sai do monocrático para colegiado?</li>
+<li>o órgão contém ou amplifica o padrão individual?</li>
+<li>quais relatores convergem mais com certo órgão?</li>
+<li>quais órgãos produzem mais variação interna?</li>
+</ul>
+<h2>10.3 Arquitetura do autoensino</h2>
+
+<pre><code>DECISÕES NOVAS
+→ extração estruturada de sinais
+→ agregação por relator
+→ agregação por órgão
+→ detecção de regularidades
+→ geração de hipótese decisória
+→ MEMBRANA ONTOLÓGICA
+→ incorporação controlada
+→ refinamento dos perfis
+</code></pre>
+
+<h2>10.4 Core fixo vs camada autoensinável</h2>
+
+<table><thead><tr><th>Camada</th><th>O que contém</th><th>Pode mudar?</th></tr></thead><tbody><tr><td><strong>Core fixo</strong></td><td>4 primitivos, identidade dual, classes ontológicas, integridade relacional, temporalidade, provenance</td><td>NÃO</td></tr><tr><td><strong>Autoensinável</strong></td><td>perfis decisórios, clusters por relator, estilos, padrões de órgão, correlações, features preditivas</td><td>SIM (por INSERT)</td></tr></tbody></table>
+<h2>10.5 Perfis derivados</h2>
+
+<pre><code>learned_decision_profiles
+  profile_id            uuid PK DEFAULT gen_random_uuid()
+  profile_type          text NOT NULL
+  target_slug           text NOT NULL
+  period_start          date
+  period_end            date
+  sample_size           integer
+  profile_payload       jsonb
+  confidence_score      float
+  stability_score       float
+  predictive_gain       float
+  status                text DEFAULT 'proposed'
+  created_at            timestamptz DEFAULT now()
+</code></pre>
+
+<p>Valores de <code>profile_type</code>:</p>
+<ul><li><code>relator</code> — perfil de ministro/relator</li>
+<li><code>orgao</code> — perfil de órgão decisório</li>
+<li><code>relator_orgao</code> — perfil cruzado relator × órgão</li>
+<li><code>relator_environment</code> — perfil do relator por ambiente</li>
+<li><code>orgao_environment</code> — perfil do órgão por ambiente</li>
+</ul>
+<p>Valores de <code>status</code>:</p>
+<ul><li><code>proposed</code> — hipótese gerada pelo sistema</li>
+<li><code>validated</code> — aprovada pela membrana</li>
+<li><code>incorporated</code> — integrada às features preditivas</li>
+<li><code>rejected</code> — descartada</li>
+<li><code>superseded</code> — substituída por perfil mais recente</li>
+</ul>
+<h2>10.6 Propostas ontológicas</h2>
+
+<pre><code>ontology_proposals
+  proposal_id           uuid PK DEFAULT gen_random_uuid()
+  proposal_type         text NOT NULL
+  description           text
+  evidence_payload      jsonb
+  recurrence_count      integer
+  stability_score       float
+  predictive_gain       float
+  compatibility_score   float
+  status                text DEFAULT 'pending'
+  created_at            timestamptz DEFAULT now()
+  reviewed_at           timestamptz
+</code></pre>
+
+<p>Valores de <code>proposal_type</code>:</p>
+<ul><li><code>new_decision_pattern</code> — padrão decisório novo</li>
+<li><code>new_reasoning_pattern</code> — padrão argumentativo novo</li>
+<li><code>new_fiscal_pattern</code> — padrão fiscal novo</li>
+<li><code>new_predictive_feature</code> — feature preditiva candidata</li>
+<li><code>new_body_pattern</code> — padrão de órgão novo</li>
+<li><code>new_relator_pattern</code> — padrão de relator novo</li>
+<li><code>new_environment_pattern</code> — padrão sensível ao ambiente</li>
+</ul>
+<h2>10.7 A membrana</h2>
+
+<p>Opera em 3 níveis:</p>
+
+<p><strong>Nível 1 — Observação livre</strong></p>
+<p>O sistema observa tudo: frequências, desvios, clusters, correlações, anomalias.</p>
+
+<p><strong>Nível 2 — Proposta controlada</strong></p>
+<p>O sistema sugere: novo padrão, nova tipologia, nova feature, refinamento de perfil. Apenas como proposta.</p>
+
+<p><strong>Nível 3 — Incorporação condicionada</strong></p>
+<p>Só entra no modelo oficial se passar por:</p>
+<ul><li>recorrência mínima (recurrence_count)</li>
+<li>estabilidade temporal (stability_score)</li>
+<li>ganho discriminatório (predictive_gain)</li>
+<li>compatibilidade com a ontologia (compatibility_score)</li>
+<li>utilidade preditiva demonstrada</li>
+</ul>
+<h2>10.8 Fluxo de autoensino</h2>
+
+<ol><li><strong>Ingestão</strong> — entra nova decisão</li>
+<li><strong>Extração</strong> — pipeline extrai: relator, órgão, ambiente, outcome, direção, modulação, fundamento, efeito fiscal</li>
+<li><strong>Atualização</strong> — recalcula perfis derivados</li>
+<li><strong>Detecção</strong> — compara perfil anterior vs atual, identifica tendência de deslocamento</li>
+<li><strong>Hipótese</strong> — gera hipótese analítica (ex: "Relator X apresenta aumento de modulação em virtual nos últimos 18 meses")</li>
+<li><strong>Membrana</strong> — hipótese recebe scores de confiança, estabilidade e ganho preditivo</li>
+<li><strong>Incorporação</strong> — se aprovada: vira feature oficial, vira padrão reconhecido</li>
+</ol>
+<h2>10.9 Regras</h2>
+
+<blockquote>Perfis decisórios são derivados, dinâmicos e revisáveis; nunca fonte primária de verdade.<br>O sistema não altera automaticamente o núcleo ontológico.<br>Toda incorporação passa pela membrana de 3 níveis.<br>Perfis sensíveis ao ambiente devem carregar <code>environment_sensitive: true</code> e <code>environment_effect_strength</code>.</blockquote>
+
+<hr>
+
+<h1 id="s11">11. VIDA PROCESSUAL, AMBIENTE DECISÓRIO E ECOLOGIA INSTITUCIONAL</h1>
+
+<h2>11.1 Princípio Geral</h2>
+
+<blockquote>Cada unidade processual é modelada como uma entidade persistente no tempo, dotada de ciclo de vida próprio. Seus eventos não são atributos periféricos, mas os acontecimentos constitutivos de sua trajetória institucional.</blockquote>
+
+<h2>11.2 Princípio da Vida Processual</h2>
+
+<blockquote>O processo não é uma fotografia. É uma linha de vida institucional. O estado é apenas a expressão derivada de seu acontecimento mais recente.</blockquote>
+
+<h2>11.3 Princípio do Acontecimento Qualificado</h2>
+
+<blockquote>Todo acontecimento processual juridicamente relevante deve registrar não apenas que ocorreu, mas quando ocorreu, em que ambiente ocorreu, em que órgão ocorreu e sob que configuração institucional ocorreu.</blockquote>
+
+<h2>11.4 Princípio da Ecologia Decisória</h2>
+
+<blockquote>Nenhum julgamento colegiado deve ser modelado apenas por relator e órgão. Sua representação ontológica deve incluir, sempre que disponíveis, os demais atores relevantes, seus papéis contextuais e suas correlações com ambiente, tempo, tema e resultado.</blockquote>
+
+<h2>11.5 Contrato mínimo da ecologia decisória</h2>
+
+<p>Todo julgamento colegiado deve registrar <strong>obrigatoriamente</strong>:</p>
+<ul><li>1 relator</li>
+<li>1 órgão decisório</li>
+<li>1 ambiente de julgamento</li>
+<li>panel_size</li>
+<li>votes_present</li>
+</ul>
+<p>Sempre que disponível, devem ser registrados:</p>
+<ul><li>presidente da sessão</li>
+<li>divergência</li>
+<li>pedido de vista</li>
+<li>destaque</li>
+<li>manifestação da AGU</li>
+<li>manifestação da PGR/MP</li>
+<li>participação de amicus</li>
+<li>sustentação oral</li>
+</ul>
+<blockquote>Regra de completude mínima: nenhuma linha de <code>v_judgment_ecology</code> é válida sem relator, órgão, ambiente, panel_size e votes_present.</blockquote>
+
+<blockquote>Regra de completude da ecologia decisória: todo julgamento colegiado deve conter obrigatoriamente relator, órgão decisório, ambiente de julgamento, panel_size e votes_present. Eventos de julgamento que não atendam a esses requisitos são considerados incompletos e não devem ser utilizados em análises agregadas ou preditivas.</blockquote>
+
+<h2>11.6 Princípio do Ambiente</h2>
+
+<blockquote>O ambiente de julgamento integra a temporalidade do processo. Ele influencia a forma, a intensidade e o resultado dos acontecimentos decisórios ao longo de sua vida institucional.</blockquote>
+
+<h2>11.6 Regra Estrutural</h2>
+
+<blockquote>Tempo e ambiente são dimensões constitutivas do evento. Não são contexto externo nem detalhe de interface.</blockquote>
+
+<h2>11.7 Unidade Central</h2>
+
+<table><thead><tr><th>Conceito</th><th>Definição</th></tr></thead><tbody><tr><td>processo</td><td>entidade persistente</td></tr><tr><td>evento</td><td>acontecimento</td></tr><tr><td>estado</td><td>síntese derivada</td></tr><tr><td>trajetória</td><td>sequência ordenada de acontecimentos</td></tr><tr><td>ambiente</td><td>condição institucional do acontecimento</td></tr><tr><td>ecologia decisória</td><td>correlação entre atores, órgão, tema, tempo e ambiente</td></tr></tbody></table>
+<h2>11.8 Atores Relevantes</h2>
+
+<p>A ecologia decisória deve admitir, sempre que houver dado disponível:</p>
+
+<p><strong>Atores jurisdicionais:</strong></p>
+<ul><li>relator, presidente da sessão, revisor</li>
+<li>votantes, divergentes</li>
+<li>autor de pedido de vista, autor de destaque</li>
+<li>ausentes</li>
+</ul>
+<p><strong>Atores processuais e institucionais:</strong></p>
+<ul><li>requerente / recorrente / impetrante</li>
+<li>requerido / recorrido / impetrado</li>
+<li>AGU, PGR / MP, defensorias</li>
+<li>amici curiae, partidos, entidades de classe</li>
+<li>entes federativos, advocacias públicas</li>
+</ul>
+<h2>11.9 Regra dos Papéis</h2>
+
+<blockquote>Payload resume; edges explicam.</blockquote>
+
+<p>Papéis contextuais modelados por <code>exerce_papel</code>:</p>
+
+<pre><code>ministro-barroso --[exerce_papel]--&gt; julgamento-x
+  payload: { "role": "relator" }
+
+ministro-fachin --[exerce_papel]--&gt; julgamento-x
+  payload: { "role": "divergente" }
+
+agu --[exerce_papel]--&gt; julgamento-x
+  payload: { "role": "manifestante" }
+
+pgr --[exerce_papel]--&gt; julgamento-x
+  payload: { "role": "custos_legis_manifestante" }
+
+amicus-abcd --[exerce_papel]--&gt; julgamento-x
+  payload: { "role": "amicus_curiae" }
+</code></pre>
+
+<h2>11.10 Temporalidade da Vida Processual</h2>
+
+<table><thead><tr><th>Plano</th><th>Campo</th><th>Significado</th></tr></thead><tbody><tr><td>tempo do acontecimento</td><td><code>occurred_at</code></td><td>quando o evento ocorreu</td></tr><tr><td>tempo da validade</td><td><code>valid_from</code> / <code>valid_to</code></td><td>vigência</td></tr><tr><td>tempo do registro</td><td><code>recorded_at</code></td><td>quando o sistema soube</td></tr><tr><td>tempo da trajetória</td><td>sequência de events</td><td>vida processual</td></tr></tbody></table>
+<blockquote>O estado processual é sempre derivado da sequência temporal dos acontecimentos, e nunca substitui a história do processo.</blockquote>
+
+<h2>11.11 Filtros Estruturais Obrigatórios</h2>
+
+<p>As views e consultas devem permitir filtragem por:</p>
+
+<ul><li>relator, órgão decisório, colegialidade</li>
+<li>ambiente (virtual, presencial, híbrido)</li>
+<li>tema, classe processual</li>
+<li>demais atores relevantes</li>
+<li>período, resultado, direção</li>
+<li>técnica decisória, efeito fiscal/material</li>
+</ul>
+<h2>11.12 Correlações Obrigatórias</h2>
+
+<p>A camada analítica deve permitir, no mínimo:</p>
+
+<table><thead><tr><th>Eixo A</th><th>×</th><th>Eixo B</th></tr></thead><tbody><tr><td>tempo</td><td>×</td><td>ambiente</td></tr><tr><td>relator</td><td>×</td><td>ambiente</td></tr><tr><td>órgão</td><td>×</td><td>ambiente</td></tr><tr><td>relator</td><td>×</td><td>órgão</td></tr><tr><td>relator</td><td>×</td><td>outros ministros</td></tr><tr><td>tema</td><td>×</td><td>ambiente</td></tr><tr><td>tema</td><td>×</td><td>atores</td></tr><tr><td>classe processual</td><td>×</td><td>ambiente</td></tr><tr><td>classe processual</td><td>×</td><td>atores</td></tr><tr><td>resultado</td><td>×</td><td>ambiente</td></tr><tr><td>direção</td><td>×</td><td>ambiente</td></tr><tr><td>modulação/técnica</td><td>×</td><td>ambiente</td></tr><tr><td>efeito fiscal</td><td>×</td><td>atores</td></tr><tr><td>efeito fiscal</td><td>×</td><td>ambiente</td></tr></tbody></table>
+<h2>11.13 Views de Vida Processual</h2>
+
+<pre><code>v_process_lifecycle
+  processo_id, processo_slug, data_nascimento, evento_mais_recente,
+  estado_atual, duracao_total, numero_eventos, sequencia_marcos[]
+
+v_process_trajectory_patterns
+  pattern_type, sequencia[], frequencia, duracao_media
+
+v_judgment_ecology
+  caso_id, caso_slug, relator_slug, orgao, ambiente, tempo,
+  temas[], atores_participantes[], papeis[],
+  outcome, direction, tecnica, efeito_fiscal
+
+v_collegial_dynamics
+  julgamento_id, composicao[], vista_presente, destaque_presente,
+  divergencia_presente, migracao_ambiente
+</code></pre>
+
+<h2>11.14 Fórmulas de Vida Processual</h2>
+
+
+<pre><code>DVP = último_evento - distribuição
+</code></pre>
+
+
+<pre><code>TEM = evento_n - evento_(n-1)
+</code></pre>
+
+
+<pre><code>IIP = eventos_suspensivos / total_eventos
+</code></pre>
+
+
+<pre><code>ICT = eventos_distintos × duração × bifurcações
+</code></pre>
+
+
+<pre><code>TCVP = julgamentos_com_destaque / julgamentos_virtuais
+</code></pre>
+
+
+<pre><code>TM = julgamento_presencial - julgamento_virtual
+</code></pre>
+
+
+<pre><code>IVR = julgamentos_virtuais / total_julgamentos
+</code></pre>
+
+<h2>11.15 Regra de Não-Colonização</h2>
+
+<blockquote>O corpus pode ensinar a ontologia a enxergar melhor padrões decisórios. Ele não pode redefinir sozinho a estrutura do sistema.</blockquote>
+
+<h2>11.16 Objetivo Prospectivo</h2>
+
+<blockquote>A ontologia deve estar preparada não apenas para reconstruir a trajetória dos processos, mas para projetar padrões futuros de percurso, ambiente, comportamento decisório e interação institucional.</blockquote>
+
+<h2>11.17 Princípio Final da Camada</h2>
+
+<blockquote>O acontecimento decisório é uma ecologia institucional temporalmente situada, e não uma relação binária entre processo e resultado.</blockquote>
+
+<hr>
+
+<h1 id="s12">12. VERSIONAMENTO</h1>
+
+<h2>8.1 Princípio</h2>
+
+<blockquote>Event-sourced. Nós in-place. Histórico via events. Versão é marco, não cópia.</blockquote>
+
+<h2>8.2 Exemplo: EC 45/2004</h2>
+
+<pre><code>1. INSERT object: cf-ec-45 (type: emenda_constitucional)
+INSERT object: cf-1988-art-5-par-3 (type: paragrafo)
+INSERT edge: cf-1988-art-5 --[parent_of]--&gt; cf-1988-art-5-par-3
+INSERT edge: cf-ec-45 --[amends]--&gt; cf-1988-art-5
+INSERT event: emenda_aplicada (aggregate_id: id de cf-1988-art-5)
+INSERT object: cf-1988-v-ec45 (type: versao_normativa)
+INSERT edge: cf-1988-v-ec45 --[version_of]--&gt; cf-1988
+</code></pre>
+
+<h2>8.3 Reconstrução temporal</h2>
+
+<blockquote>CF na data X: objects com <code>valid_from ≤ X</code> e (<code>valid_to IS NULL</code> ou <code>valid_to > X</code>) + events com <code>occurred_at ≤ X</code> + edges ativos.</blockquote>
+
+<h2>8.4 Regras</h2>
+
+<blockquote>Nunca duplicar árvore. Versão é marco. Alterações são events. Edge <code>amends</code> liga emenda aos nós.</blockquote>
+
+<hr>
+
+<h1 id="s13">13. EQUIVALÊNCIA v1 → v9</h1>
+
+<table><thead><tr><th>v1</th><th>v9</th><th>Como</th></tr></thead><tbody><tr><td>works</td><td>object</td><td>type: <code>constituicao</code></td></tr><tr><td>work_versions</td><td>object</td><td>type: <code>versao_normativa</code> + edge <code>version_of</code></td></tr><tr><td>legal_nodes</td><td>object</td><td>type: <code>artigo</code>, <code>inciso</code>... + edge <code>parent_of</code></td></tr><tr><td>documents</td><td>object</td><td>type: <code>acao_direta</code>, <code>recurso_extraordinario</code></td></tr><tr><td>annotations</td><td>object</td><td>type: <code>anotacao</code> + edge <code>annota</code></td></tr><tr><td>citations</td><td>edge</td><td>type: <code>interpreta</code>, <code>aplica</code>, <code>cita</code></td></tr><tr><td>node_relationships</td><td>edge</td><td>type: <code>parent_of</code>, <code>amends</code>, <code>revokes</code></td></tr><tr><td>chunks</td><td>chunk</td><td>derivado</td></tr><tr><td>embeddings</td><td>embedding</td><td>derivado</td></tr></tbody></table>
+<hr>
+
+<h1 id="s14">14. ÁRVORE UNIVERSAL</h1>
+
+<p>Edges <code>parent_of</code> entre objects. Sem tabela de nós.</p>
+
+<table><thead><tr><th>Campo no payload</th><th>Natureza</th></tr></thead><tbody><tr><td><code>text_content</code></td><td>fonte de verdade</td></tr><tr><td><code>sibling_order</code></td><td>fonte de verdade</td></tr><tr><td><code>numero_romano</code></td><td>fonte de verdade</td></tr><tr><td><code>path_slug</code></td><td>cache</td></tr><tr><td><code>depth_level</code></td><td>cache</td></tr><tr><td><code>is_leaf</code></td><td>cache</td></tr><tr><td><code>is_repealed</code></td><td>cache (do último event)</td></tr><tr><td><code>normalized_text</code></td><td>cache</td></tr></tbody></table>
+<blockquote>Cache divergiu? Edge/event vence. Nenhum nó sem <code>parent_of</code> (exceto raiz). Filtrar por domain.<br>ADCT usa prefixo <code>adct</code>: <code>cf-1988-adct-art-1</code>.</blockquote>
+
+<hr>
+
+<h1 id="s15">15. SUBJECTS (TEMAS)</h1>
+
+<p>Objects type <code>subject</code> (transversal, ontological_class: semantico). Hierarquia via <code>parent_of</code>. Vinculação via edge <code>sobre</code>.</p>
+
+<pre><code>subject-saude --[parent_of]--&gt; subject-saude-publica
+stf-adi-4650 --[sobre]--&gt; subject-financiamento-eleitoral
+cf-1988-art-196 --[sobre]--&gt; subject-saude
+</code></pre>
+
+<hr>
+
+<h1 id="s16">16. ANOTAÇÕES</h1>
+
+<p>Objects type <code>anotacao</code> (transversal, ontological_class: editorial). Edge <code>annota</code> ao nó mais específico.</p>
+
+<hr>
+
+<h1 id="s17">17. PAPÉIS (ROLES)</h1>
+
+<p>Edge <code>exerce_papel</code> (epistemic_class: institucional) com <code>{role: "relator"}</code> no payload.</p>
+
+<h2>Papéis mínimos obrigatórios no julgamento colegiado</h2>
+
+<table><thead><tr><th>Role</th><th>Obrigatoriedade</th></tr></thead><tbody><tr><td><code>relator</code></td><td>obrigatório</td></tr><tr><td><code>orgao_decisorio</code></td><td>obrigatório</td></tr><tr><td><code>votante</code></td><td>recomendável</td></tr><tr><td><code>presidente_sessao</code></td><td>recomendável</td></tr><tr><td><code>divergente</code></td><td>quando houver</td></tr><tr><td><code>autor_vista</code></td><td>quando houver</td></tr><tr><td><code>autor_destaque</code></td><td>quando houver</td></tr><tr><td><code>manifestante_agu</code></td><td>quando houver</td></tr><tr><td><code>manifestante_pgr</code></td><td>quando houver</td></tr><tr><td><code>amicus_curiae</code></td><td>quando houver</td></tr></tbody></table>
+<hr>
+
+<h1 id="s18">18. CONVENÇÃO DE SLUG</h1>
+
+<table><thead><tr><th>Categoria</th><th>Padrão</th><th>Exemplo</th></tr></thead><tbody><tr><td>constituição</td><td>cf-(ano)</td><td><code>cf-1988</code></td></tr><tr><td>versão</td><td>(obra)-v-(ref)</td><td><code>cf-1988-v-ec45</code></td></tr><tr><td>emenda</td><td>cf-ec-(n)</td><td><code>cf-ec-45</code></td></tr><tr><td>título</td><td>(obra)-tit-(n)</td><td><code>cf-1988-tit-2</code></td></tr><tr><td>capítulo</td><td>...-cap-(n)</td><td><code>cf-1988-tit-2-cap-1</code></td></tr><tr><td>seção</td><td>...-sec-(n)</td><td><code>cf-1988-tit-2-cap-1-sec-1</code></td></tr><tr><td>artigo (corpo)</td><td>(obra)-art-(n)</td><td><code>cf-1988-art-5</code></td></tr><tr><td>artigo (ADCT)</td><td>(obra)-adct-art-(n)</td><td><code>cf-1988-adct-art-1</code></td></tr><tr><td>caput</td><td>...-caput</td><td><code>cf-1988-art-5-caput</code></td></tr><tr><td>inciso</td><td>...-inc-(rom)</td><td><code>cf-1988-art-5-inc-ix</code></td></tr><tr><td>alínea</td><td>...-ali-(letra)</td><td><code>cf-1988-art-5-inc-ix-ali-a</code></td></tr><tr><td>parágrafo</td><td>...-par-(n)</td><td><code>cf-1988-art-5-par-1</code></td></tr><tr><td>decisão</td><td>(tribunal)-(classe)-(n)</td><td><code>stf-adi-4650</code></td></tr><tr><td>súmula</td><td>(tribunal)-sv-(n)</td><td><code>stf-sv-11</code></td></tr><tr><td>subject</td><td>subject-(tema)</td><td><code>subject-saude</code></td></tr><tr><td>anotação</td><td>anotacao-(ctx)</td><td><code>anotacao-cf1988-art5-ec45</code></td></tr><tr><td>argumento</td><td>arg-(contexto)</td><td><code>arg-adi4650-financiamento-privado</code></td></tr><tr><td>actor</td><td>(papel)-(nome)</td><td><code>ministro-barroso</code></td></tr><tr><td>actor sistema</td><td>sistema-(nome)</td><td><code>sistema-pipeline</code></td></tr></tbody></table>
+<blockquote>Slug identifica. Path posiciona. Slug nunca muda. UUID é a FK real.</blockquote>
+
+<hr>
+
+<h1 id="s19">19. CAMADA 3 — PROVENANCE</h1>
+
+<pre><code>provenance
+  provenance_id    uuid PK DEFAULT gen_random_uuid()
+  target_id        uuid NOT NULL
+  target_table     text NOT NULL
+  source_type      text NOT NULL
+  source_url       text
+  pipeline_version text
+  confidence       float
+  hash_input       text
+  hash_output      text
+  produced_at      timestamptz DEFAULT now()
+</code></pre>
+
+<blockquote><code>target_id</code> referencia o uuid do primitivo.<br><code>target_table</code>: objects, actors, events, edges.<br>source_types: manual, scraping, parsing, pipeline, ia.<br>Nenhum dado sem provenance. Confidence ordena conflitos.</blockquote>
+
+<hr>
+
+<h1 id="s20">20. CAMADA 4 — DERIVADOS</h1>
+
+<pre><code>chunks
+  chunk_slug       text PK
+  object_id        uuid NOT NULL
+  chunk_text       text NOT NULL
+  chunk_index      integer NOT NULL
+  token_estimate   integer
+  hash_chunk       text
+
+embeddings
+  chunk_slug       text FK → chunks
+  embedding_model  text NOT NULL
+  vector_ref       vector(1536)
+  created_at       timestamptz DEFAULT now()
+  UNIQUE (chunk_slug, embedding_model)
+
+published_objects
+  slug             text PK
+  payload_json     jsonb NOT NULL
+  payload_hash     text NOT NULL
+  updated_at       timestamptz DEFAULT now()
+</code></pre>
+
+<blockquote>Embedding nunca substitui estrutura. JSON nunca é base primária.</blockquote>
+
+<hr>
+
+<h1 id="s21">21. CAMADA 5 — PADRÕES E VIEWS</h1>
+
+<pre><code>v_objects_readable
+  id, slug, type_slug, domain_slug, ontological_class, payload, valid_from, valid_to
+
+v_edges_readable
+  edge_id, type_slug, epistemic_class,
+  source_id, source_slug, target_id, target_slug,
+  weight, payload, valid_from, valid_to
+
+v_current_state
+  id, slug, type_slug, domain_slug, current_state, last_event_at
+
+v_tree_nodes
+  id, slug, type_slug, parent_id, parent_slug, path_slug,
+  depth_level, sibling_order, domain_slug
+
+v_decidability_index
+  node_id, node_slug, domain_slug, edge_count_by_type, total_edges
+</code></pre>
+
+<h2>19.2 View canônica de ambiente</h2>
+
+<pre><code>v_judgment_environment_canonical
+  event_id, aggregate_id, decision_body, collegiality_mode,
+  adjudication_environment, session_format,
+  oral_argument_present, public_debate_intensity,
+  panel_size, votes_present
+</code></pre>
+
+<blockquote>Regra: todas as views analíticas que utilizem ambiente de julgamento devem resolver esse eixo a partir de <code>v_judgment_environment_canonical</code>.</blockquote>
+
+<h2>19.3 Views preditivas</h2>
+
+<pre><code>v_decision_signals
+  case_id, case_slug, subject_slugs[], class_code, rapporteur_slug,
+  outcome, outcome_polarity, decision_direction, uses_modulation,
+  reasoning_style, fiscal_effect, decision_unanimity, period
+
+v_actor_decision_profile
+  actor_id, actor_slug, total_decisions,
+  procedencia_rate, modulacao_rate, contencao_fiscal_rate,
+  deference_pattern, dominant_reasoning_style
+
+v_norm_decision_profile
+  node_id, node_slug, activation_count, associated_classes[],
+  procedencia_rate, expansion_rate, restriction_rate,
+  avg_fiscal_effect
+
+v_predictive_features
+  case_id, case_slug, subject_vector, normative_targets[],
+  class_code, rapporteur_slug, court_composition_hash,
+  historical_similarity_score,
+  outcome_label, direction_label, modulation_label,
+  fiscal_effect_label
+</code></pre>
+
+<h2>19.4 Fórmulas preditivas</h2>
+
+
+<pre><code>P(outcome | subject + article + class + relator + periodo)
+</code></pre>
+
+
+<pre><code>P(decision_direction | subject + fundamento + historico_do_orgao)
+</code></pre>
+
+
+<pre><code>P(uses_modulation | impacto_fiscal + tipo_acao + historico)
+</code></pre>
+
+
+<pre><code>ICF = decisoes_com_contencao / decisoes_fiscalmente_relevantes
+</code></pre>
+
+
+<pre><code>IED = decisoes_expansivas / total_decisoes
+</code></pre>
+
+
+<pre><code>IEI = confirmacoes / (confirmacoes + superacoes + contradicoes)
+</code></pre>
+
+<blockquote>Views preditivas são recalculáveis e servem como features para modelos de ML.<br>Nenhuma predição é armazenada como fato — predição é derivado.</blockquote>
+
+<h2>20.4 Views de ambiente e perfil decisório</h2>
+
+<pre><code>v_judgment_environment_profile
+  case_id, case_slug, relator_slug, decision_body,
+  adjudication_environment, session_format, outcome,
+  decision_direction, uses_modulation, fiscal_effect, subjects[]
+
+v_relator_decision_profile
+  actor_id, actor_slug, total_decisions,
+  procedencia_rate, modulacao_rate, contencao_fiscal_rate,
+  deference_pattern, dominant_reasoning_style
+
+v_relator_environment_profile
+  actor_id, actor_slug, environment,
+  total_decisions, outcome_rate_by_env,
+  modulation_rate_by_env, fiscal_containment_by_env
+
+v_body_decision_profile
+  decision_body, total_decisions, outcome_distribution,
+  direction_distribution, modulation_rate, avg_fiscal_effect
+
+v_body_environment_profile
+  decision_body, environment, total_decisions,
+  outcome_distribution, subjects_by_env[]
+
+v_relator_orgao_decision_profile
+  actor_slug, decision_body, total_decisions,
+  procedencia_rate, convergence_with_body,
+  divergence_rate, modulation_rate
+
+v_subject_environment_profile
+  subject_slug, environment, total_decisions,
+  dominant_relator, dominant_body,
+  direction_profile_by_env
+
+v_actor_environment_interactions
+  actor_slug, actor_type, environment,
+  participation_rate, correlation_with_outcome,
+  correlation_with_modulation
+
+v_emerging_decision_patterns
+  pattern_id, pattern_type, description,
+  recurrence, stability, predictive_gain, status
+</code></pre>
+
+<blockquote>Views recalculáveis. Incluem slugs resolvidos e domain denormalizado.</blockquote>
+
+<hr>
+
+<h1 id="s22">22. IDENTIDADE MULTINÍVEL</h1>
+
+<table><thead><tr><th>Nível</th><th>Campo</th><th>Função</th></tr></thead><tbody><tr><td>identidade interna</td><td>id (uuid)</td><td>consistência, FK</td></tr><tr><td>identidade pública</td><td>slug</td><td>leitura, API</td></tr><tr><td>domínio</td><td>type → domain</td><td>pertencimento institucional</td></tr><tr><td>classe ontológica</td><td>type → ontological_class</td><td>natureza do ente</td></tr><tr><td>versão</td><td>hash_content</td><td>estado do dado</td></tr><tr><td>estado</td><td>último event to_state</td><td>ciclo de vida</td></tr><tr><td>tema</td><td>edges <code>sobre</code></td><td>assunto</td></tr><tr><td>papel</td><td>edges <code>exerce_papel</code></td><td>função</td></tr><tr><td>classe epistêmica</td><td>edge_type → epistemic_class</td><td>natureza da relação</td></tr><tr><td>granularidade</td><td>chunk_slug</td><td>busca semântica</td></tr><tr><td>posição</td><td>path_slug (cache)</td><td>árvore</td></tr><tr><td>origem</td><td>provenance_id</td><td>de onde veio</td></tr></tbody></table>
+<hr>
+
+<h1 id="s23">23. REGRAS DE VÍNCULO</h1>
+
+<ol><li>Vincular ao nó mais específico</li>
+<li>Nunca colapsar no caput</li>
+<li>Subir por agregação</li>
+<li>Registrar incerteza (confidence no provenance)</li>
+<li>Separar inferido de confirmado (source_type no provenance)</li>
+<li>Edges interpretativos devem ter weight (confidence)</li>
+<li>Distinguir relação epistêmica: não misturar fato com interpretação</li>
+</ol>
+<hr>
+
+<h1 id="s24">24. OPERAÇÕES SOBRE DADOS</h1>
+
+<table><thead><tr><th>Operação</th><th>Como</th><th>Obrigatório</th></tr></thead><tbody><tr><td><strong>Criar</strong></td><td>INSERT primitivo + provenance</td><td>provenance</td></tr><tr><td><strong>Corrigir</strong></td><td>UPDATE payload + event <code>correcao</code> + provenance</td><td>event + provenance</td></tr><tr><td><strong>Encerrar</strong></td><td><code>valid_to</code> + event <code>anulacao</code></td><td>event</td></tr><tr><td><strong>Relacionar</strong></td><td>INSERT edge + provenance</td><td>provenance</td></tr><tr><td><strong>Mudar estado</strong></td><td>event com <code>to_state</code></td><td>event</td></tr><tr><td><strong>Versionar</strong></td><td>INSERT versão + events nos nós</td><td>events</td></tr></tbody></table>
+<blockquote>Nunca DELETE. Nunca UPDATE sem event. Nunca INSERT sem provenance.</blockquote>
+
+<hr>
+
+<h1 id="s25">25. ÍNDICES RECOMENDADOS</h1>
+
+<pre><code>objects:     (type_slug), (slug), (valid_from), (valid_to)
+actors:      (type_slug), (slug), (valid_from)
+events:      (aggregate_id, occurred_at), (type_slug), (actor_id)
+edges:       (type_slug, source_id), (type_slug, target_id),
+             (source_id), (target_id)
+edges:       GIN (payload)
+events:      GIN (payload)
+provenance:  (target_id, target_table)
+</code></pre>
+
+<hr>
+
+<h1 id="s26">26. ESCALABILIDADE</h1>
+
+<ul><li>rebuild parcial por domínio</li>
+<li>reindexação por hash</li>
+<li>chunking incremental</li>
+<li>embeddings sob demanda</li>
+<li>expansão por INSERT em domains + types</li>
+<li>política de relevância via weight obrigatório em edges interpretativos</li>
+</ul>
+<hr>
+
+<h1 id="s27">27. BUSCA</h1>
+
+<ul><li><strong>Lexical:</strong> filtros por domínio, type, subject, classe ontológica, classe epistêmica, período</li>
+<li><strong>Semântica:</strong> similaridade via embeddings</li>
+<li><strong>Híbrida:</strong> filtro + ranking semântico</li>
+</ul>
+<hr>
+
+<h1 id="s28">28. PIPELINE</h1>
+
+<ol><li>ingestão (RAW)</li>
+<li>canonização (slug, type, domain, classes)</li>
+<li>parsing (extração estruturada)</li>
+<li>vinculação (edges entre objects)</li>
+<li>provenance (registro de origem)</li>
+<li>normalização (texto limpo)</li>
+<li>atribuição de subjects (edges <code>sobre</code>)</li>
+<li>atribuição de estado inicial (event com <code>to_state</code>)</li>
+<li>extração de argumentos (objects tipo <code>argumento</code>, <code>fundamento</code>, <code>tese</code> + edges <code>suporta</code>, <code>contradiz</code>, <code>fundamenta</code>, <code>apoia</code>, <code>confirma</code>, <code>supera</code>)</li>
+<li>extração de sinais decisórios (payload de <code>julgamento</code> com outcome, direction, modulation, reasoning_style, fiscal_effect)</li>
+<li>vinculação fiscal (edges <code>impacta_orcamento</code>, <code>aloca_risco_fiscal</code>, objects <code>impacto_orcamentario</code>)</li>
+<li>chunking (segmentação)</li>
+<li>embeddings (representação semântica)</li>
+<li>materialização de views estruturais + preditivas + ambiente</li>
+<li>atualização de perfis decisórios (learned_decision_profiles)</li>
+<li>detecção de padrões emergentes (ontology_proposals)</li>
+<li>publicação (published_objects)</li>
+</ol>
+<hr>
+
+<h1 id="s29">29. ERROS PROIBIDOS</h1>
+
+<ul><li>colapsar estrutura</li>
+<li>modelar por tela</li>
+<li>usar slug como única estrutura</li>
+<li>misturar camadas</li>
+<li>embeddar antes de estruturar</li>
+<li>perder vínculo com fonte</li>
+<li><strong>hardcodar domínios</strong></li>
+<li><strong>zona de integração como camada fixa</strong></li>
+<li><strong>dado sem provenance</strong></li>
+<li><strong>tabela para o que cabe nos 4 primitivos</strong></li>
+<li><strong>estado como campo — estado é derivado</strong></li>
+<li><strong>tema como campo — tema é edge</strong></li>
+<li><strong>slug duplicado entre tabelas</strong></li>
+<li><strong>payload como fonte de verdade para relações</strong></li>
+<li><strong>DELETE — encerrar com valid_to</strong></li>
+<li><strong>event sem actor</strong></li>
+<li><strong>relação como campo — relação é edge</strong></li>
+<li><strong>duplicar árvore para versionar</strong></li>
+<li><strong>usar slug como FK relacional — UUID é a FK</strong></li>
+<li><strong>misturar classes epistêmicas — fato ≠ interpretação ≠ classificação</strong></li>
+<li><strong>edge interpretativo sem weight — confidence obrigatório</strong></li>
+<li><strong>julgamento sem sinal decisório — outcome e direction são obrigatórios</strong></li>
+<li><strong>predição armazenada como fato — predição é sempre derivado</strong></li>
+<li><strong>fundamento sem vínculo a norma ou decisão — fundamento solto é ruído</strong></li>
+<li><strong>perfil decisório tratado como fato — perfis são derivados, revisáveis</strong></li>
+<li><strong>autoalteração do core ontológico — só a camada de perfis aprende</strong></li>
+<li><strong>incorporação sem membrana — toda hipótese passa por validação de 3 níveis</strong></li>
+<li><strong>julgamento colegiado sem ambiente — adjudication_environment obrigatório</strong></li>
+</ul>
+<hr>
+
+<h1 id="s30">30. FÓRMULA DE EXPANSÃO</h1>
+
+<pre><code>1. INSERT em domains
+INSERT em *_types com domain_slug + classe
+INSERT em state_types
+INSERT em objects · actors · events · edges (com uuid)
+INSERT em provenance (com target_id uuid)
+Materializar views
+Derivados se recalculam
+
+Nunca ALTER TABLE. Nunca redesenho. Nunca partir do zero.
+</code></pre>
+
+<hr>
+
+<h1 id="s31">31. FÓRMULA FINAL</h1>
+
+<pre><code>DOMAINS (N, hierárquicos, inclui transversal)
+→ TAXONOMIAS (
+    object_types + ontological_class
+    actor_types + actor_class
+    event_types + event_class
+    edge_types + epistemic_class
+    state_types
+  )
+→ PRIMITIVOS (
+    objects [id uuid + slug]
+    actors [id uuid + slug]
+    events [aggregate_id + actor_id uuid]
+    edges [source_id + target_id uuid]
+  )
+→ PROVENANCE (target_id uuid)
+→ VIEWS MATERIALIZADAS (estruturais + preditivas + ambiente + perfis)
+→ PERFIS APRENDIDOS (learned_decision_profiles)
+→ MEMBRANA (ontology_proposals)
+→ DERIVADOS (chunks · embeddings · JSON)
+→ API / VIEWS
+</code></pre>
+
+<hr>
+
+<h1 id="s32">32. PRINCÍPIO FINAL</h1>
+
+<blockquote>O sistema não organiza textos.<br>Ele organiza relações estruturadas entre textos, decisões, normas, instituições, argumentos e sinais decisórios, em múltiplos domínios, escalas e classes epistêmicas.<br>O átomo de hoje é a cartografia do contencioso constitucional.<br>O cosmos de amanhã é INSERT.<br>A cartografia não apenas mapeia o passado — ela projeta o futuro.<br>O banco aprende; a ontologia decide o que pode virar conhecimento estrutural.</blockquote>
+
+<hr>
+
+<p><strong>Este protocolo define a arquitetura permanente do sistema.</p>
+<p>Nenhuma implementação deve violar suas regras estruturais.</strong></p>
+
+<p><strong>v9 — 25 de março de 2026</strong></p>
+<p><strong>Damares Medina</strong></p>
+<div class="footer"><p><strong>Este protocolo define a arquitetura permanente do sistema.</strong></p><p><strong>Nenhuma implementação deve violar suas regras estruturais.</strong></p><p style="margin-top:16px" class="name">Damares Medina · v9 · 25 de março de 2026</p></div></div></body></html>

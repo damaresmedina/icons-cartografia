@@ -1,0 +1,489 @@
+
+<style>
+.layer { cursor:default; }
+.expandable { cursor:pointer; }
+.expandable:hover rect { opacity:0.85; }
+.detail { transition: opacity 0.2s; }
+#tooltip { position:absolute; background:var(--color-background-secondary); border:1px solid var(--color-border-secondary); border-radius:6px; padding:8px 12px; font-size:12px; color:var(--color-text-primary); pointer-events:none; opacity:0; transition:opacity 0.15s; max-width:220px; line-height:1.5; z-index:10; }
+.tab-bar { display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+.tab { padding:6px 14px; border-radius:20px; font-size:12px; cursor:pointer; border:1px solid var(--color-border-secondary); background:var(--color-background-secondary); color:var(--color-text-secondary); transition:all 0.15s; }
+.tab.active { background:var(--color-background-info); color:var(--color-text-info); border-color:var(--color-border-info); font-weight:500; }
+.view { display:none; }
+.view.active { display:block; }
+</style>
+
+<div id="tooltip"></div>
+<div class="tab-bar">
+  <div class="tab active" onclick="show('overview')">Visão geral</div>
+  <div class="tab" onclick="show('primitivos')">Primitivos</div>
+  <div class="tab" onclick="show('sistemas')">Dois sistemas</div>
+  <div class="tab" onclick="show('poliedro')">Poliedro</div>
+  <div class="tab" onclick="show('ciclo')">Ciclo</div>
+  <div class="tab" onclick="show('expansao')">Expansão</div>
+</div>
+
+<!-- ══ VISÃO GERAL ══ -->
+<div id="view-overview" class="view active">
+<svg width="100%" viewBox="0 0 680 820">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<!-- CAM 0: TAXONOMIAS -->
+<g class="c-amber"><rect x="30" y="20" width="620" height="36" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="38" text-anchor="middle" dominant-baseline="central">0 — taxonomias vivas (dados, nunca enums — crescem por INSERT)</text></g>
+<g class="expandable" onclick="tip(event,'object_types · actor_types · event_types · edge_types · role_types · subject_types — cada uma com valid_from/to')">
+<g class="c-amber"><rect x="40" y="64" width="92" height="32" rx="4" stroke-width="0.5"/>
+<text class="ts" x="86" y="80" text-anchor="middle" dominant-baseline="central">object_types</text></g>
+<g class="c-amber"><rect x="142" y="64" width="92" height="32" rx="4" stroke-width="0.5"/>
+<text class="ts" x="188" y="80" text-anchor="middle" dominant-baseline="central">actor_types</text></g>
+<g class="c-amber"><rect x="244" y="64" width="92" height="32" rx="4" stroke-width="0.5"/>
+<text class="ts" x="290" y="80" text-anchor="middle" dominant-baseline="central">event_types</text></g>
+<g class="c-amber"><rect x="346" y="64" width="92" height="32" rx="4" stroke-width="0.5"/>
+<text class="ts" x="392" y="80" text-anchor="middle" dominant-baseline="central">edge_types</text></g>
+<g class="c-amber"><rect x="448" y="64" width="92" height="32" rx="4" stroke-width="0.5"/>
+<text class="ts" x="494" y="80" text-anchor="middle" dominant-baseline="central">role_types</text></g>
+<g class="c-amber"><rect x="550" y="64" width="100" height="32" rx="4" stroke-width="0.5"/>
+<text class="ts" x="600" y="80" text-anchor="middle" dominant-baseline="central">subject_types</text></g>
+</g>
+<line x1="340" y1="96" x2="340" y2="116" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<!-- CAM 1: PRIMITIVOS -->
+<g class="c-blue"><rect x="30" y="116" width="620" height="28" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="130" text-anchor="middle" dominant-baseline="central">1 — schema fixo · primitivos universais · nunca muda</text></g>
+<g class="expandable" onclick="show('primitivos')">
+<g class="c-teal"><rect x="30" y="152" width="145" height="52" rx="6" stroke-width="0.5"/>
+<text class="th" x="102" y="170" text-anchor="middle" dominant-baseline="central">objects</text>
+<text class="ts" x="102" y="188" text-anchor="middle" dominant-baseline="central">slug · type · payload</text></g>
+<g class="c-purple"><rect x="189" y="152" width="145" height="52" rx="6" stroke-width="0.5"/>
+<text class="th" x="261" y="170" text-anchor="middle" dominant-baseline="central">actors</text>
+<text class="ts" x="261" y="188" text-anchor="middle" dominant-baseline="central">slug · type · payload</text></g>
+<g class="c-coral"><rect x="348" y="152" width="145" height="52" rx="6" stroke-width="0.5"/>
+<text class="th" x="420" y="170" text-anchor="middle" dominant-baseline="central">events</text>
+<text class="ts" x="420" y="188" text-anchor="middle" dominant-baseline="central">id · type · causation</text></g>
+<g class="c-blue"><rect x="507" y="152" width="143" height="52" rx="6" stroke-width="0.5"/>
+<text class="th" x="578" y="170" text-anchor="middle" dominant-baseline="central">edges</text>
+<text class="ts" x="578" y="188" text-anchor="middle" dominant-baseline="central">src · tgt · type · weight</text></g>
+</g>
+<line x1="340" y1="204" x2="340" y2="224" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<!-- CAM 2: TRÊS COLUNAS -->
+<g class="c-gray"><rect x="30" y="224" width="620" height="28" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="238" text-anchor="middle" dominant-baseline="central">2 — dois sistemas + poliedro institucional</text></g>
+
+<g class="expandable" onclick="show('sistemas')">
+<g class="c-teal"><rect x="30" y="260" width="192" height="172" rx="7" stroke-width="0.5"/>
+<text class="th" x="126" y="280" text-anchor="middle" dominant-baseline="central">sistema normativo</text>
+<text class="ts" x="126" y="302" text-anchor="middle" dominant-baseline="central">norm_object</text>
+<text class="ts" x="126" y="320" text-anchor="middle" dominant-baseline="central">work_version</text>
+<text class="ts" x="126" y="338" text-anchor="middle" dominant-baseline="central">legal_node</text>
+<text class="ts" x="126" y="356" text-anchor="middle" dominant-baseline="central">amendment</text>
+<text class="ts" x="126" y="374" text-anchor="middle" dominant-baseline="central">controversy</text>
+<text class="ts" x="126" y="392" text-anchor="middle" dominant-baseline="central">controversy_thread</text>
+<text class="ts" x="126" y="422" text-anchor="middle" dominant-baseline="central">→ ver sistemas</text></g>
+
+<g class="c-purple"><rect x="244" y="260" width="192" height="172" rx="7" stroke-width="0.5"/>
+<text class="th" x="340" y="280" text-anchor="middle" dominant-baseline="central">sistema jurídico</text>
+<text class="ts" x="340" y="302" text-anchor="middle" dominant-baseline="central">legal_object</text>
+<text class="ts" x="340" y="320" text-anchor="middle" dominant-baseline="central">process_event</text>
+<text class="ts" x="340" y="338" text-anchor="middle" dominant-baseline="central">vote · thesis</text>
+<text class="ts" x="340" y="356" text-anchor="middle" dominant-baseline="central">claim · modulation</text>
+<text class="ts" x="340" y="374" text-anchor="middle" dominant-baseline="central">compliance</text>
+<text class="ts" x="340" y="392" text-anchor="middle" dominant-baseline="central">bench_composition</text>
+<text class="ts" x="340" y="422" text-anchor="middle" dominant-baseline="central">→ ver sistemas</text></g>
+</g>
+
+<g class="expandable" onclick="show('poliedro')">
+<g class="c-red"><rect x="458" y="260" width="192" height="172" rx="7" stroke-width="0.5"/>
+<text class="th" x="554" y="280" text-anchor="middle" dominant-baseline="central">poliedro institucional</text>
+<text class="ts" x="554" y="302" text-anchor="middle" dominant-baseline="central">systemic_role · seat</text>
+<text class="ts" x="554" y="320" text-anchor="middle" dominant-baseline="central">constitutional_cap.</text>
+<text class="ts" x="554" y="338" text-anchor="middle" dominant-baseline="central">informal_capacity</text>
+<text class="ts" x="554" y="356" text-anchor="middle" dominant-baseline="central">capacity_gap</text>
+<text class="ts" x="554" y="374" text-anchor="middle" dominant-baseline="central">inst_constraint</text>
+<text class="ts" x="554" y="392" text-anchor="middle" dominant-baseline="central">career_crossing</text>
+<text class="ts" x="554" y="422" text-anchor="middle" dominant-baseline="central">→ ver poliedro</text></g>
+</g>
+
+<line x1="340" y1="432" x2="340" y2="452" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<!-- CAM 3: INTEGRAÇÃO -->
+<g class="c-amber"><rect x="30" y="452" width="620" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="340" y="468" text-anchor="middle" dominant-baseline="central">3 — zona de integração · cross_edges entre sistemas</text>
+<text class="ts" x="340" y="486" text-anchor="middle" dominant-baseline="central">norm_object ←[ aplica · interpreta · questiona · viola · consolida ]→ legal_object</text></g>
+<line x1="340" y1="496" x2="340" y2="516" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<!-- CAM 4: PROVENANCE -->
+<g class="c-red"><rect x="30" y="516" width="620" height="40" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="532" text-anchor="middle" dominant-baseline="central">4 — provenance + conflicts · horizontal · cruza tudo</text>
+<text class="ts" x="340" y="548" text-anchor="middle" dominant-baseline="central">source_type · hash · pipeline_version · confidence · resolver</text></g>
+<line x1="340" y1="556" x2="340" y2="576" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<!-- CAM 5: DERIVADOS -->
+<g class="c-purple"><rect x="30" y="576" width="620" height="40" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="592" text-anchor="middle" dominant-baseline="central">5 — derivados · reconstruíveis · versionados por hash</text>
+<text class="ts" x="340" y="608" text-anchor="middle" dominant-baseline="central">chunks · embeddings · published_objects (JSON / API)</text></g>
+<line x1="340" y1="616" x2="340" y2="636" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<!-- CAM 6: PADRÕES -->
+<g class="c-gray"><rect x="30" y="636" width="620" height="52" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="654" text-anchor="middle" dominant-baseline="central">6 — plano de padrões · views · metodologia declarada</text>
+<text class="ts" x="340" y="672" text-anchor="middle" dominant-baseline="central">activation_index · capacity_gap_rate · pole_distance</text>
+<text class="ts" x="340" y="686" text-anchor="middle" dominant-baseline="central">win_rate_by_pair · bench_genealogy_index</text></g>
+<line x1="340" y1="688" x2="340" y2="708" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<!-- TRÊS TEMPOS -->
+<g class="c-blue"><rect x="30" y="708" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="724" text-anchor="middle" dominant-baseline="central">três tempos irredutíveis — em todo objeto, ator e evento</text>
+<text class="ts" x="340" y="740" text-anchor="middle" dominant-baseline="central">occurred_at · valid_from/to · recorded_at</text></g>
+
+<!-- FASES -->
+<g class="expandable" onclick="show('expansao')">
+<g class="c-gray"><rect x="30" y="760" width="620" height="28" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="774" text-anchor="middle" dominant-baseline="central">expansão por fases — INSERT, nunca redesenho → ver expansão</text></g>
+</g>
+</svg>
+</div>
+
+<!-- ══ PRIMITIVOS ══ -->
+<div id="view-primitivos" class="view">
+<svg width="100%" viewBox="0 0 680 540">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g class="c-blue"><rect x="30" y="20" width="620" height="28" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central">schema fixo — quatro primitivos universais</text></g>
+
+<g class="c-teal"><rect x="30" y="64" width="295" height="140" rx="8" stroke-width="0.5"/>
+<text class="th" x="177" y="86" text-anchor="middle" dominant-baseline="central">objects</text>
+<text class="ts" x="50" y="110" dominant-baseline="central">slug            text PK</text>
+<text class="ts" x="50" y="128" dominant-baseline="central">type_slug       FK → object_types</text>
+<text class="ts" x="50" y="146" dominant-baseline="central">payload         jsonb</text>
+<text class="ts" x="50" y="164" dominant-baseline="central">hash_content    text</text>
+<text class="ts" x="50" y="182" dominant-baseline="central">valid_from      timestamptz</text>
+<text class="ts" x="50" y="198" dominant-baseline="central">recorded_at     timestamptz</text></g>
+
+<g class="c-purple"><rect x="355" y="64" width="295" height="140" rx="8" stroke-width="0.5"/>
+<text class="th" x="502" y="86" text-anchor="middle" dominant-baseline="central">actors</text>
+<text class="ts" x="375" y="110" dominant-baseline="central">slug            text PK</text>
+<text class="ts" x="375" y="128" dominant-baseline="central">type_slug       FK → actor_types</text>
+<text class="ts" x="375" y="146" dominant-baseline="central">payload         jsonb</text>
+<text class="ts" x="375" y="164" dominant-baseline="central">dedup_hash      text</text>
+<text class="ts" x="375" y="182" dominant-baseline="central">succession_slug FK → actors</text>
+<text class="ts" x="375" y="198" dominant-baseline="central">recorded_at     timestamptz</text></g>
+
+<g class="c-coral"><rect x="30" y="224" width="295" height="156" rx="8" stroke-width="0.5"/>
+<text class="th" x="177" y="246" text-anchor="middle" dominant-baseline="central">events  —  append-only, imutável</text>
+<text class="ts" x="50" y="270" dominant-baseline="central">event_id        uuid PK</text>
+<text class="ts" x="50" y="288" dominant-baseline="central">type_slug       FK → event_types</text>
+<text class="ts" x="50" y="306" dominant-baseline="central">aggregate_slug  text</text>
+<text class="ts" x="50" y="324" dominant-baseline="central">actor_slug      FK → actors</text>
+<text class="ts" x="50" y="342" dominant-baseline="central">payload         jsonb</text>
+<text class="ts" x="50" y="360" dominant-baseline="central">causation_id    uuid FK → events</text>
+<text class="ts" x="50" y="374" dominant-baseline="central">occurred_at     timestamptz</text></g>
+
+<g class="c-blue"><rect x="355" y="224" width="295" height="156" rx="8" stroke-width="0.5"/>
+<text class="th" x="502" y="246" text-anchor="middle" dominant-baseline="central">edges  —  grafo tipado universal</text>
+<text class="ts" x="375" y="270" dominant-baseline="central">edge_id         uuid PK</text>
+<text class="ts" x="375" y="288" dominant-baseline="central">type_slug       FK → edge_types</text>
+<text class="ts" x="375" y="306" dominant-baseline="central">source_slug     text</text>
+<text class="ts" x="375" y="324" dominant-baseline="central">target_slug     text</text>
+<text class="ts" x="375" y="342" dominant-baseline="central">weight          float</text>
+<text class="ts" x="375" y="360" dominant-baseline="central">valid_from/to   timestamptz</text>
+<text class="ts" x="375" y="374" dominant-baseline="central">causation_event_id  uuid</text></g>
+
+<g class="c-gray"><rect x="30" y="400" width="620" height="44" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="418" text-anchor="middle" dominant-baseline="central">toda entidade especializada é instância de um destes quatro</text>
+<text class="ts" x="340" y="436" text-anchor="middle" dominant-baseline="central">norm_object = object · ministro = actor · julgamento = event · cita = edge</text></g>
+
+<g class="c-blue"><rect x="30" y="460" width="620" height="56" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="478" text-anchor="middle" dominant-baseline="central">três tempos em tudo</text>
+<text class="ts" x="340" y="498" text-anchor="middle" dominant-baseline="central">occurred_at — quando aconteceu no mundo real</text>
+<text class="ts" x="340" y="514" text-anchor="middle" dominant-baseline="central">valid_from/to — quando estava vigente  ·  recorded_at — quando o sistema soube</text></g>
+</svg>
+</div>
+
+<!-- ══ DOIS SISTEMAS ══ -->
+<div id="view-sistemas" class="view">
+<svg width="100%" viewBox="0 0 680 680">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="c-teal"><rect x="30" y="20" width="295" height="36" rx="8" stroke-width="0.5"/>
+<text class="th" x="177" y="38" text-anchor="middle" dominant-baseline="central">sistema normativo</text></g>
+<g class="c-teal"><rect x="30" y="64" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="177" y="78" text-anchor="middle" dominant-baseline="central">norm_object</text>
+<text class="ts" x="177" y="92" text-anchor="middle" dominant-baseline="central">work · node_schema · jurisdiction</text></g>
+<g class="c-teal"><rect x="30" y="108" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="177" y="122" text-anchor="middle" dominant-baseline="central">work_version</text>
+<text class="ts" x="177" y="136" text-anchor="middle" dominant-baseline="central">valid_from/to · trigger_amendment</text></g>
+<g class="c-teal"><rect x="30" y="152" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="177" y="166" text-anchor="middle" dominant-baseline="central">legal_node</text>
+<text class="ts" x="177" y="180" text-anchor="middle" dominant-baseline="central">árvore · path · depth · is_repealed</text></g>
+<g class="c-teal"><rect x="30" y="196" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="177" y="210" text-anchor="middle" dominant-baseline="central">amendment</text>
+<text class="ts" x="177" y="224" text-anchor="middle" dominant-baseline="central">before/after · affected_node</text></g>
+<g class="c-amber"><rect x="30" y="240" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="177" y="254" text-anchor="middle" dominant-baseline="central">controversy</text>
+<text class="ts" x="177" y="268" text-anchor="middle" dominant-baseline="central">never_closed · origin_norm · origin_event</text></g>
+<g class="c-amber"><rect x="30" y="284" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="177" y="298" text-anchor="middle" dominant-baseline="central">controversy_thread</text>
+<text class="ts" x="177" y="312" text-anchor="middle" dominant-baseline="central">entry_type · relation_to_lead · alignment</text></g>
+
+<g class="c-purple"><rect x="355" y="20" width="295" height="36" rx="8" stroke-width="0.5"/>
+<text class="th" x="502" y="38" text-anchor="middle" dominant-baseline="central">sistema jurídico</text></g>
+<g class="c-purple"><rect x="355" y="64" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="502" y="78" text-anchor="middle" dominant-baseline="central">legal_object</text>
+<text class="ts" x="502" y="92" text-anchor="middle" dominant-baseline="central">process_number_cnj · class_code</text></g>
+<g class="c-purple"><rect x="355" y="108" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="502" y="122" text-anchor="middle" dominant-baseline="central">process_event</text>
+<text class="ts" x="502" y="136" text-anchor="middle" dominant-baseline="central">session_type · virtual · presencial</text></g>
+<g class="c-purple"><rect x="355" y="152" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="502" y="166" text-anchor="middle" dominant-baseline="central">vote</text>
+<text class="ts" x="502" y="180" text-anchor="middle" dominant-baseline="central">direction · is_leading · divergence</text></g>
+<g class="c-purple"><rect x="355" y="196" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="502" y="210" text-anchor="middle" dominant-baseline="central">thesis</text>
+<text class="ts" x="502" y="224" text-anchor="middle" dominant-baseline="central">binding · fixation_date · status</text></g>
+<g class="c-purple"><rect x="355" y="240" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="502" y="254" text-anchor="middle" dominant-baseline="central">claim</text>
+<text class="ts" x="502" y="268" text-anchor="middle" dominant-baseline="central">pedido · phase · fiscal_impact_brl</text></g>
+<g class="c-coral"><rect x="355" y="284" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="502" y="298" text-anchor="middle" dominant-baseline="central">modulation</text>
+<text class="ts" x="502" y="312" text-anchor="middle" dominant-baseline="central">ex_nunc · pro_futuro · fiscal_impact</text></g>
+<g class="c-coral"><rect x="355" y="328" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="502" y="342" text-anchor="middle" dominant-baseline="central">compliance</text>
+<text class="ts" x="502" y="356" text-anchor="middle" dominant-baseline="central">cumprimento · descumprimento · Rcl</text></g>
+<g class="c-purple"><rect x="355" y="372" width="295" height="36" rx="5" stroke-width="0.5"/>
+<text class="th" x="502" y="386" text-anchor="middle" dominant-baseline="central">bench_composition</text>
+<text class="ts" x="502" y="400" text-anchor="middle" dominant-baseline="central">snapshot · seat · actor · origin</text></g>
+
+<!-- ZONA DE INTEGRAÇÃO -->
+<g class="c-amber"><rect x="30" y="440" width="620" height="52" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="458" text-anchor="middle" dominant-baseline="central">zona de integração — única ponte entre os sistemas</text>
+<text class="ts" x="340" y="478" text-anchor="middle" dominant-baseline="central">cross_edge: norm_object ←[ aplica · interpreta · questiona · viola · consolida ]→ legal_object</text></g>
+
+<g class="c-gray"><rect x="30" y="512" width="620" height="60" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="530" text-anchor="middle" dominant-baseline="central">natureza distinta dos dois sistemas</text>
+<text class="ts" x="50" y="552" dominant-baseline="central">normativo:  objeto VIGE  —  temporalidade = vigência  —  produto = texto estável</text>
+<text class="ts" x="50" y="570" dominant-baseline="central">jurídico:   processo OCORRE  —  temporalidade = duração  —  produto = decisão singular</text></g>
+
+<g class="c-amber"><rect x="30" y="592" width="620" height="68" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="612" text-anchor="middle" dominant-baseline="central">controversy — objeto que atravessa os dois sistemas</text>
+<text class="ts" x="50" y="632" dominant-baseline="central">preexiste ao processo (nasce no sistema normativo com a norma instável)</text>
+<text class="ts" x="50" y="650" dominant-baseline="central">sobrevive ao trânsito (pode gerar novos processos no sistema jurídico indefinidamente)</text></g>
+</svg>
+</div>
+
+<!-- ══ POLIEDRO ══ -->
+<div id="view-poliedro" class="view">
+<svg width="100%" viewBox="0 0 680 700">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<!-- vértices -->
+<g class="c-coral"><rect x="60" y="50" width="170" height="64" rx="9" stroke-width="0.5"/>
+<text class="th" x="145" y="72" text-anchor="middle" dominant-baseline="central">Executivo</text>
+<text class="ts" x="145" y="90" text-anchor="middle" dominant-baseline="central">presidente · AGU · PGFN</text>
+<text class="ts" x="145" y="106" text-anchor="middle" dominant-baseline="central">nomeia · veta · decreta</text></g>
+
+<g class="c-blue"><rect x="450" y="50" width="170" height="64" rx="9" stroke-width="0.5"/>
+<text class="th" x="535" y="72" text-anchor="middle" dominant-baseline="central">STF</text>
+<text class="ts" x="535" y="90" text-anchor="middle" dominant-baseline="central">11 ministros · plenário</text>
+<text class="ts" x="535" y="106" text-anchor="middle" dominant-baseline="central">julga · interpreta · modula</text></g>
+
+<g class="c-teal"><rect x="60" y="560" width="170" height="64" rx="9" stroke-width="0.5"/>
+<text class="th" x="145" y="582" text-anchor="middle" dominant-baseline="central">Congresso</text>
+<text class="ts" x="145" y="600" text-anchor="middle" dominant-baseline="central">Câmara · Senado</text>
+<text class="ts" x="145" y="616" text-anchor="middle" dominant-baseline="central">legisla · sabatina · impeachment</text></g>
+
+<g class="c-purple"><rect x="450" y="560" width="170" height="64" rx="9" stroke-width="0.5"/>
+<text class="th" x="535" y="582" text-anchor="middle" dominant-baseline="central">PGR / MP</text>
+<text class="ts" x="535" y="600" text-anchor="middle" dominant-baseline="central">Ministério Público</text>
+<text class="ts" x="535" y="616" text-anchor="middle" dominant-baseline="central">denuncia · ADI · custos legis</text></g>
+
+<!-- arestas bidirecionais -->
+<line x1="230" y1="76" x2="448" y2="76" stroke="#D85A30" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+<line x1="448" y1="92" x2="230" y2="92" stroke="#185FA5" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+<text class="ts" x="339" y="68" text-anchor="middle">nomeia ministros</text>
+<text class="ts" x="339" y="104" text-anchor="middle">julga presidente / ministros</text>
+
+<line x1="230" y1="584" x2="448" y2="584" stroke="#1D9E75" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+<line x1="448" y1="600" x2="230" y2="600" stroke="#7F77DD" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+<text class="ts" x="339" y="576" text-anchor="middle">sabatina PGR</text>
+<text class="ts" x="339" y="612" text-anchor="middle">PGR denuncia parlamentares</text>
+
+<line x1="116" y1="114" x2="116" y2="558" stroke="#D85A30" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+<line x1="136" y1="558" x2="136" y2="114" stroke="#1D9E75" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+<text class="ts" x="72" y="338" text-anchor="middle" transform="rotate(-90,72,338)">veto presidencial</text>
+<text class="ts" x="96" y="338" text-anchor="middle" transform="rotate(-90,96,338)">impeachment · legisla</text>
+
+<line x1="564" y1="114" x2="564" y2="558" stroke="#185FA5" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+<line x1="544" y1="558" x2="544" y2="114" stroke="#7F77DD" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+<text class="ts" x="610" y="338" text-anchor="middle" transform="rotate(90,610,338)">STF julga o PGR</text>
+<text class="ts" x="586" y="338" text-anchor="middle" transform="rotate(90,586,338)">PGR propõe APs no STF</text>
+
+<line x1="178" y1="114" x2="492" y2="558" stroke="#D85A30" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+<line x1="470" y1="558" x2="156" y2="114" stroke="#7F77DD" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+<text class="ts" x="265" y="388" text-anchor="middle" transform="rotate(50,265,388)">nomeia PGR</text>
+<text class="ts" x="385" y="310" text-anchor="middle" transform="rotate(50,385,310)">PGR acusa presidente</text>
+
+<line x1="232" y1="590" x2="512" y2="114" stroke="#1D9E75" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+<line x1="532" y1="114" x2="250" y2="590" stroke="#185FA5" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+<text class="ts" x="420" y="400" text-anchor="middle" transform="rotate(-50,420,400)">foro parlamentar</text>
+<text class="ts" x="310" y="320" text-anchor="middle" transform="rotate(-50,310,320)">impeachment STF</text>
+
+<!-- centro: informais -->
+<g class="c-amber"><rect x="250" y="278" width="180" height="120" rx="8" stroke-width="0.8"/>
+<text class="th" x="340" y="298" text-anchor="middle" dominant-baseline="central">atores informais</text>
+<rect x="262" y="316" width="156" height="24" rx="4" fill="#FAC775" stroke="#BA7517" stroke-width="0.5"/>
+<text class="ts" x="340" y="328" text-anchor="middle" dominant-baseline="central" fill="#633806">ANPR — lista tríplice</text>
+<rect x="262" y="348" width="156" height="24" rx="4" fill="#FAC775" stroke="#BA7517" stroke-width="0.5"/>
+<text class="ts" x="340" y="360" text-anchor="middle" dominant-baseline="central" fill="#633806">OAB · AMB · assoc. prof.</text>
+<text class="ts" x="340" y="390" text-anchor="middle" dominant-baseline="central">informal_capacity</text></g>
+
+<line x1="250" y1="330" x2="160" y2="114" stroke="#BA7517" stroke-width="0.7" stroke-dasharray="4 3" fill="none"/>
+<line x1="430" y1="330" x2="520" y2="114" stroke="#BA7517" stroke-width="0.7" stroke-dasharray="4 3" fill="none"/>
+<line x1="280" y1="398" x2="160" y2="558" stroke="#BA7517" stroke-width="0.7" stroke-dasharray="4 3" fill="none"/>
+<line x1="400" y1="398" x2="520" y2="558" stroke="#BA7517" stroke-width="0.7" stroke-dasharray="4 3" fill="none"/>
+
+<g class="c-gray"><rect x="30" y="646" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="ts" x="340" y="658" text-anchor="middle" dominant-baseline="central">cada aresta = institutional_constraint(bidirectional:true, currently_operative: varia no tempo)</text>
+<text class="ts" x="340" y="674" text-anchor="middle" dominant-baseline="central">paradoxo Janot-Aras: excesso e déficit no polo PGR produzem instabilidade por razões opostas</text></g>
+</svg>
+</div>
+
+<!-- ══ CICLO ══ -->
+<div id="view-ciclo" class="view">
+<svg width="100%" viewBox="0 0 680 580">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="c-amber"><rect x="200" y="20" width="280" height="52" rx="10" stroke-width="0.8"/>
+<text class="th" x="340" y="40" text-anchor="middle" dominant-baseline="central">controversy</text>
+<text class="ts" x="340" y="58" text-anchor="middle" dominant-baseline="central">fato · ato · norma instável  —  never_closed: bool</text></g>
+
+<line x1="260" y1="72" x2="160" y2="120" stroke="#BA7517" stroke-width="1" fill="none" marker-end="url(#a)"/>
+<line x1="420" y1="72" x2="520" y2="120" stroke="#7F77DD" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<g class="c-teal"><rect x="30" y="120" width="240" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="150" y="138" text-anchor="middle" dominant-baseline="central">norma instável</text>
+<text class="ts" x="150" y="154" text-anchor="middle" dominant-baseline="central">legal_node · work_version</text></g>
+
+<g class="c-purple"><rect x="410" y="120" width="240" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="530" y="138" text-anchor="middle" dominant-baseline="central">processo</text>
+<text class="ts" x="530" y="154" text-anchor="middle" dominant-baseline="central">legal_object · controversy_thread</text></g>
+
+<line x1="150" y1="164" x2="150" y2="200" stroke="#1D9E75" stroke-width="1" fill="none" marker-end="url(#a)"/>
+<line x1="530" y1="164" x2="530" y2="200" stroke="#7F77DD" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<g class="c-teal"><rect x="30" y="200" width="240" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="150" y="218" text-anchor="middle" dominant-baseline="central">emenda / lei nova</text>
+<text class="ts" x="150" y="234" text-anchor="middle" dominant-baseline="central">amendment · norm_event</text></g>
+
+<g class="c-purple"><rect x="410" y="200" width="240" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="530" y="218" text-anchor="middle" dominant-baseline="central">decisão / tese</text>
+<text class="ts" x="530" y="234" text-anchor="middle" dominant-baseline="central">vote · thesis · modulation</text></g>
+
+<line x1="150" y1="244" x2="150" y2="280" stroke="#1D9E75" stroke-width="1" fill="none" marker-end="url(#a)"/>
+<line x1="530" y1="244" x2="530" y2="280" stroke="#7F77DD" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<g class="c-amber"><rect x="30" y="280" width="240" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="150" y="298" text-anchor="middle" dominant-baseline="central">nova controvérsia</text>
+<text class="ts" x="150" y="314" text-anchor="middle" dominant-baseline="central">gera novo ciclo</text></g>
+
+<g class="c-coral"><rect x="410" y="280" width="240" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="530" y="298" text-anchor="middle" dominant-baseline="central">compliance</text>
+<text class="ts" x="530" y="314" text-anchor="middle" dominant-baseline="central">cumprimento · descumprimento · Rcl</text></g>
+
+<path d="M150 324 L150 390 L340 390 L340 72" fill="none" stroke="#BA7517" stroke-width="0.8" stroke-dasharray="5 3" marker-end="url(#a)"/>
+<path d="M530 324 L530 420 L340 420 L340 72" fill="none" stroke="#D85A30" stroke-width="0.8" stroke-dasharray="5 3" marker-end="url(#a)"/>
+<text class="ts" x="180" y="410" dominant-baseline="central">loop normativo</text>
+<text class="ts" x="400" y="438" dominant-baseline="central">loop jurídico</text>
+
+<g class="c-red"><rect x="170" y="460" width="340" height="52" rx="7" stroke-width="0.5"/>
+<text class="th" x="340" y="480" text-anchor="middle" dominant-baseline="central">capacity_gap</text>
+<text class="ts" x="340" y="498" text-anchor="middle" dominant-baseline="central">quando a capacidade existia e o evento não ocorreu</text>
+<text class="ts" x="340" y="514" text-anchor="middle" dominant-baseline="central">paradoxo: ausência é dado tão importante quanto presença</text></g>
+
+<g class="c-gray"><rect x="30" y="534" width="620" height="28" rx="5" stroke-width="0.5"/>
+<text class="ts" x="340" y="548" text-anchor="middle" dominant-baseline="central">o ciclo não tem fim endógeno — só tem fim com compliance real  ·  never_closed: true é o estado normal</text></g>
+</svg>
+</div>
+
+<!-- ══ EXPANSÃO ══ -->
+<div id="view-expansao" class="view">
+<svg width="100%" viewBox="0 0 680 620">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="c-gray"><rect x="30" y="20" width="620" height="28" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central">como inserir novos sistemas — sempre dois passos, nunca redesenho</text></g>
+
+<g class="c-amber"><rect x="30" y="64" width="295" height="52" rx="7" stroke-width="0.5"/>
+<text class="th" x="177" y="82" text-anchor="middle" dominant-baseline="central">passo 1 — popular taxonomias</text>
+<text class="ts" x="177" y="100" text-anchor="middle" dominant-baseline="central">INSERT em *_types antes dos fatos</text></g>
+<g class="c-blue"><rect x="355" y="64" width="295" height="52" rx="7" stroke-width="0.5"/>
+<text class="th" x="502" y="82" text-anchor="middle" dominant-baseline="central">passo 2 — popular fatos</text>
+<text class="ts" x="502" y="100" text-anchor="middle" dominant-baseline="central">INSERT em objects · actors · events · edges</text></g>
+
+<line x1="340" y1="116" x2="340" y2="140" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<g class="c-teal"><rect x="30" y="140" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="154" text-anchor="middle" dominant-baseline="central">fase 1 — hoje  ·  CF-1988 + STF + poliedro mínimo</text>
+<text class="ts" x="340" y="168" text-anchor="middle" dominant-baseline="central">norm_objects · legal_objects · actors(ministros) · controversies · edges(cross)</text></g>
+<line x1="340" y1="176" x2="340" y2="196" stroke="#1D9E75" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+<g class="c-purple"><rect x="30" y="196" width="620" height="52" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="214" text-anchor="middle" dominant-baseline="central">fase 2  —  Executivo + AGU + PGR + MP</text>
+<text class="ts" x="340" y="232" text-anchor="middle" dominant-baseline="central">INSERT actor_types: presidente · pgr · procurador  ·  INSERT role_types: pgr_acusador · agu_12o_ministro</text>
+<text class="ts" x="340" y="246" text-anchor="middle" dominant-baseline="central">INSERT fatos: nomeações · listas tríplices · capacity_gaps(Aras) · career_crossings(AGU→gabinetes)</text></g>
+<line x1="340" y1="248" x2="340" y2="268" stroke="#7F77DD" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+<g class="c-amber"><rect x="30" y="268" width="620" height="44" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="286" text-anchor="middle" dominant-baseline="central">fase 3  —  CNJ + STJ + TST + TCU</text>
+<text class="ts" x="340" y="304" text-anchor="middle" dominant-baseline="central">INSERT actor_types: conselheiro_cnj · ministro_stj  ·  INSERT fatos: oversight_events · temas_stj</text></g>
+<line x1="340" y1="312" x2="340" y2="332" stroke="#BA7517" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+<g class="c-coral"><rect x="30" y="332" width="620" height="44" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="350" text-anchor="middle" dominant-baseline="central">fase 4  —  Justiça Federal + Estadual</text>
+<text class="ts" x="340" y="368" text-anchor="middle" dominant-baseline="central">INSERT actor_types: desembargador · juiz  ·  INSERT objects: processos TRF/TJ  ·  mesmo schema</text></g>
+<line x1="340" y1="376" x2="340" y2="396" stroke="#D85A30" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+<g class="c-blue"><rect x="30" y="396" width="620" height="44" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="414" text-anchor="middle" dominant-baseline="central">fase 5  —  Legislativo completo</text>
+<text class="ts" x="340" y="432" text-anchor="middle" dominant-baseline="central">INSERT actor_types: deputado · senador  ·  INSERT object_types: pl · pec · mp  ·  INSERT fatos: votações</text></g>
+<line x1="340" y1="440" x2="340" y2="460" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+<g class="c-gray"><rect x="30" y="460" width="620" height="44" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="478" text-anchor="middle" dominant-baseline="central">fase N  —  cosmos</text>
+<text class="ts" x="340" y="496" text-anchor="middle" dominant-baseline="central">IA como ator · direito supranacional · soft law · INSERT actor_types: sistema_ia  ·  mesmo schema</text></g>
+
+<g class="c-teal"><rect x="30" y="524" width="620" height="68" rx="7" stroke-width="0.5"/>
+<text class="th" x="340" y="544" text-anchor="middle" dominant-baseline="central">invariante de expansão</text>
+<text class="ts" x="50" y="564" dominant-baseline="central">1.  INSERT nas taxonomias vivas  (vocabulário do novo sistema)</text>
+<text class="ts" x="50" y="582" dominant-baseline="central">2.  INSERT nos fatos  (actors · objects · events · edges · capacities · constraints)</text>
+<text class="ts" x="50" y="596" dominant-baseline="central">    nunca ALTER TABLE  ·  nunca redesenho  ·  nunca partir do zero</text></g>
+</svg>
+</div>
+
+<script>
+function show(v) {
+  document.querySelectorAll('.view').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+  document.getElementById('view-' + v).classList.add('active');
+  document.querySelectorAll('.tab').forEach(el => {
+    if (el.textContent.toLowerCase().replace(/\s+/g,'').includes(v.replace(/\s+/g,'').substring(0,4))) el.classList.add('active');
+  });
+}
+const labels = {
+  'overview':'Visão geral','primitivos':'Primitivos','sistemas':'Dois sistemas',
+  'poliedro':'Poliedro','ciclo':'Ciclo','expansao':'Expansão'
+};
+document.querySelectorAll('.tab').forEach((el,i) => {
+  const keys = Object.keys(labels);
+  el.onclick = () => show(keys[i]);
+});
+function tip(e, text) {
+  const t = document.getElementById('tooltip');
+  t.textContent = text;
+  t.style.opacity = '1';
+  t.style.left = (e.clientX + 12) + 'px';
+  t.style.top = (e.clientY - 10) + 'px';
+  setTimeout(() => t.style.opacity = '0', 3000);
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.expandable')) document.getElementById('tooltip').style.opacity = '0';
+});
+</script>
