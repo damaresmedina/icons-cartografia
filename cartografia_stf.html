@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartografia do Contencioso Constitucional · ICONS · STF 1988–2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+:root {
+  --ink: #0f0e0d;
+  --paper: #f5f0e8;
+  --paper2: #ede7d9;
+  --paper3: #e2d9c8;
+  --gold: #b8860b;
+  --gold2: #d4a017;
+  --rust: #8b3a1a;
+  --navy: #1a2744;
+  --navy2: #243058;
+  --teal: #0d5c5c;
+  --muted: #6b6355;
+  --border: rgba(15,14,13,0.12);
+  --border2: rgba(15,14,13,0.22);
+  --ff-display: 'Playfair Display', serif;
+  --ff-mono: 'DM Mono', monospace;
+  --ff-body: 'DM Sans', sans-serif;
+  --shadow: 0 2px 24px rgba(15,14,13,0.08);
+  --shadow2: 0 8px 48px rgba(15,14,13,0.14);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--ff-body);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: var(--navy);
+  color: var(--paper);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(0,0,0,.3);
+}
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 56px;
+}
+.logo {
+  font-family: var(--ff-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  color: var(--gold2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.logo span { color: var(--paper); opacity: .6; font-weight: 400; }
+.header-nav { display: none; }
+
+/* ── EIXOS NAV BAR ── */
+.eixos-bar {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: .65rem .9rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.eixos-label {
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-right: 8px;
+  border-right: 1px solid var(--border);
+  margin-right: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.hnav-btn {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  font-weight: 400;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all .15s;
+  white-space: nowrap;
+  letter-spacing: .02em;
+}
+.hnav-btn:hover { background: var(--paper2); color: var(--ink); border-color: var(--border2); }
+.hnav-btn.active { background: var(--navy); color: var(--gold2); border-color: var(--navy); font-weight: 500; }
+.header-badge {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  color: rgba(245,240,232,.4);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--navy);
+  color: var(--paper);
+  padding: 3rem 2rem 2.5rem;
+  border-bottom: 1px solid rgba(184,134,11,.3);
+}
+.hero-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: end;
+}
+.hero-eyebrow {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--gold2);
+  margin-bottom: .75rem;
+}
+.hero-title {
+  font-family: var(--ff-display);
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.hero-title em { color: var(--gold2); font-style: normal; }
+.hero-sub {
+  font-size: 13px;
+  color: rgba(245,240,232,.65);
+  max-width: 560px;
+  line-height: 1.6;
+}
+.hero-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+}
+.hero-stat {
+  text-align: right;
+}
+.hero-stat .n {
+  font-family: var(--ff-display);
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--gold2);
+  line-height: 1;
+}
+.hero-stat .l {
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,.45);
+  margin-top: 2px;
+}
+
+/* ── LAYOUT ── */
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* ── CARDS ── */
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+.card-title {
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+}
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+.mb { margin-bottom: 1.25rem; }
+
+/* ── METRICS ── */
+.metric-card {
+  background: var(--navy);
+  color: var(--paper);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.metric-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 60px; height: 60px;
+  background: var(--gold);
+  opacity: .08;
+  border-radius: 50% 0 0 0;
+}
+.metric-card .lbl {
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,.45);
+  margin-bottom: .4rem;
+}
+.metric-card .val {
+  font-family: var(--ff-display);
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--gold2);
+  line-height: 1;
+}
+.metric-card .sub {
+  font-size: 10px;
+  color: rgba(245,240,232,.4);
+  margin-top: .3rem;
+  font-family: var(--ff-mono);
+}
+
+/* ── BAR LIST ── */
+.bar-list { display: flex; flex-direction: column; gap: 5px; }
+.bar-row { display: flex; align-items: center; gap: 8px; font-size: 11px; }
+.bar-row .nm { flex-shrink: 0; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-row .bt { flex: 1; height: 4px; background: var(--paper3); border-radius: 2px; overflow: hidden; }
+.bar-row .bf { height: 100%; border-radius: 2px; }
+.bar-row .ct { width: 44px; text-align: right; color: var(--muted); flex-shrink: 0; font-family: var(--ff-mono); font-size: 10px; }
+
+/* ── HEATMAP ── */
+.heatrow { display: flex; align-items: center; gap: 3px; margin-bottom: 3px; }
+.hrlbl { width: 110px; flex-shrink: 0; font-size: 9px; color: var(--muted); text-align: right; font-family: var(--ff-mono); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hcells { display: flex; gap: 3px; }
+.hcell { width: 38px; height: 22px; border-radius: 3px; cursor: pointer; transition: opacity .15s; display: flex; align-items: center; justify-content: center; font-size: 8px; color: rgba(255,255,255,.6); font-family: var(--ff-mono); }
+.hcell:hover { opacity: .75; }
+.dlabels { display: flex; gap: 3px; margin-left: 113px; margin-bottom: 4px; }
+.dlbl { width: 38px; font-size: 8px; color: var(--muted); text-align: center; font-family: var(--ff-mono); }
+
+/* ── TIMELINE ITEMS ── */
+.tl { display: flex; flex-direction: column; gap: 10px; }
+.tl-item { display: flex; gap: 10px; align-items: flex-start; }
+.tl-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 3px; }
+.tl-text strong { font-size: 11px; font-weight: 500; display: block; margin-bottom: 2px; }
+.tl-text span { font-size: 10px; color: var(--muted); }
+
+/* ── BADGES ── */
+.mudanca { border-left: 3px solid var(--navy); padding: 6px 12px; margin-bottom: 8px; background: var(--paper2); border-radius: 0 4px 4px 0; }
+.mudanca .ti { font-size: 11px; font-weight: 500; margin-bottom: 2px; }
+.mudanca .de { font-size: 10px; color: var(--muted); }
+.mudanca .meta { font-family: var(--ff-mono); font-size: 9px; color: var(--muted); margin-top: 3px; }
+.year-badge { display: inline-block; background: var(--navy); color: var(--gold2); font-family: var(--ff-mono); font-size: 9px; font-weight: 500; padding: 2px 7px; border-radius: 3px; margin-right: 4px; }
+.cluster-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 11px; }
+.cluster-row:last-child { border-bottom: none; }
+.tag { font-size: 9px; padding: 2px 6px; border-radius: 3px; font-family: var(--ff-mono); }
+.info-note { background: var(--paper2); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; padding: 8px 14px; font-size: 10px; color: var(--muted); line-height: 1.5; margin-top: 10px; }
+
+/* ── TOOLTIP ── */
+#tooltip { position: fixed; background: var(--navy); color: var(--paper); border-radius: 4px; padding: 6px 10px; font-size: 10px; font-family: var(--ff-mono); pointer-events: none; z-index: 9999; display: none; max-width: 200px; box-shadow: var(--shadow2); }
+
+/* ── SELECT ── */
+select { font-family: var(--ff-mono); font-size: 10px; padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border2); background: var(--paper); color: var(--ink); cursor: pointer; margin-bottom: 10px; }
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--navy);
+  color: rgba(245,240,232,.4);
+  text-align: center;
+  padding: 1.5rem;
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: .08em;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(184,134,11,.2);
+}
+.site-footer strong { color: var(--gold2); }
+
+/* ── SCROLL ANIMATIONS ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+.panel.active .card, .panel.active .metric-card { animation: fadeUp .3s ease both; }
+.panel.active .card:nth-child(2) { animation-delay: .05s; }
+.panel.active .card:nth-child(3) { animation-delay: .1s; }
+.panel.active .card:nth-child(4) { animation-delay: .15s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .grid2, .grid3, .grid4 { grid-template-columns: 1fr; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-stats { flex-direction: row; align-items: flex-start; flex-wrap: wrap; }
+  .eixos-bar { gap: 3px; }
+  .hnav-btn { font-size: 9px; padding: 3px 7px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">ICONS <span>·</span> Instituto Constituição Aberta</div>
+    <div class="header-badge">ICONS · STF · 1988–2026</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">ICONS · Instituto Constituição Aberta · Projeto Justiça Aberta</div>
+      <h1 class="hero-title">Cartografia do<br><em>Contencioso Constitucional</em></h1>
+      <p class="hero-sub">Mapeamento jurisprudencial das decisões do Supremo Tribunal Federal desde a promulgação da Constituição Federal de 1988 até 2026. Padrões de decidibilidade, linhas decisórias, relatores, classes processuais e mudanças de entendimento.</p>
+      <a href="linhas_decisorias_stf.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:1rem;font-family:'DM Mono',monospace;font-size:10px;color:var(--gold2);border:0.5px solid rgba(184,134,11,.4);padding:5px 14px;border-radius:4px;text-decoration:none;transition:all .15s" onmouseover="this.style.background='rgba(184,134,11,.12)'" onmouseout="this.style.background='transparent'">⤷ Linhas decisórias por artigo — mudanças jurisprudenciais</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="n">9.014</div><div class="l">decisões mapeadas</div></div>
+      <div class="hero-stat"><div class="n">354</div><div class="l">artigos comentados</div></div>
+      <div class="hero-stat"><div class="n">37 anos</div><div class="l">amplitude máxima</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main class="main" id="mainContent">
+
+  <!-- MÉTRICAS SEMPRE VISÍVEIS -->
+  <div class="grid4" style="margin-top:1.5rem" id="metrics">
+    <div class="metric-card"><div class="lbl">Decisões mapeadas</div><div class="val">9.014</div><div class="sub">1988–2026</div></div>
+    <div class="metric-card"><div class="lbl">Artigos da CF/88</div><div class="val">354</div><div class="sub">com decisões</div></div>
+    <div class="metric-card"><div class="lbl">Classes processuais</div><div class="val">15</div><div class="sub">ADI lidera 31,9%</div></div>
+    <div class="metric-card"><div class="lbl">Relatores</div><div class="val">80+</div><div class="sub">ministros e ex-ministros</div></div>
+  </div>
+
+  <!-- EIXOS NAV + PANELS -->
+  <div class="eixos-bar" id="eixosNav">
+    <span class="eixos-label">Eixos analíticos</span>
+  </div>
+  <div id="panels"></div>
+</main>
+
+<footer class="site-footer">
+  <strong>ICONS · Instituto Constituição Aberta</strong> · Projeto Justiça Aberta · Coord. Damares Medina<br>
+  Dados extraídos da Constituição Federal Comentada pelas decisões do STF · 9.014 precedentes · 1988–2026
+</footer>
+
+<div id="tooltip"></div>
+
+<script>
+// ── DATA ──
+const DATA = {
+  anos: {1988:5,1989:18,1990:51,1991:67,1992:70,1993:94,1994:93,1995:135,1996:135,1997:101,1998:111,1999:154,2000:120,2001:118,2002:196,2003:143,2004:198,2005:237,2006:279,2007:456,2008:570,2009:476,2010:408,2011:408,2012:225,2013:236,2014:310,2015:178,2016:151,2017:206,2018:222,2019:265,2020:440,2021:289,2022:314,2023:410,2025:84},
+  classes: [['ADI',2877],['RE',2419],['HC',783],['MS',628],['AI',384],['ARE',378],['ADPF',328],['RCL',255],['RMS',140],['ACO',127],['MI',100],['SV',93],['RHC',85],['PET',79],['INQ',77]],
+  relatores: [['Marco Aurélio',671],['Dias Toffoli',603],['Gilmar Mendes',599],['Celso de Mello',588],['Cármen Lúcia',466],['Luiz Fux',401],['R. Lewandowski',376],['Eros Grau',367],['Sepúlveda Pertence',329],['Edson Fachin',328],['Alexandre de Moraes',313],['Ellen Gracie',298],['Joaquim Barbosa',282],['Roberto Barroso',272],['Cezar Peluso',237],['Ayres Britto',236],['Nunes Marques',216],['Carlos Velloso',209],['Rosa Weber',184],['Ilmar Galvão',160]],
+  artigos: [['Art. 102 – Competência STF',437],['Art. 5º – Dir. Fundamentais',416],['Art. 93 – Carreira Judiciária',352],['Art. 37 – Adm. Pública',339],['Art. 150 – Imunidades Tributárias',330],['Art. 24 – Comp. Concorrente',256],['Art. 129 – MP / Inquérito',228],['Art. 102 – Foro Privilegiado',214],['Art. 155 – ICMS',210],['Art. 18 – Federação',200],['Art. 195 – Seguridade Social',154],['Art. 155 – ICMS/Estados',154],['Art. 109 – Justiça Federal',132],['Art. 144 – Segurança Pública',121],['Art. 7º – Salário Mínimo',114],['Art. 14 – Soberania Popular',112],['Art. 9º – Greve',112],['Art. 60 – PECs',104],['Art. 29 – Municípios',92],['Art. 103 – Legitimados ADI',92]],
+  heatRelatores: ['Marco Aurélio','Gilmar Mendes','Celso de Mello','Cármen Lúcia','Dias Toffoli','Eros Grau','Luiz Fux','Lewandowski','Edson Fachin','A. Moraes','Barroso','Velloso','Pertence','E. Gracie','J. Barbosa'],
+  buckets: ['88–92','93–97','98–02','03–07','08–12','13–17','18–22','23–26'],
+  heatRaw: [[18,62,80,180,180,80,50,21],[0,8,32,150,180,100,75,54],[52,80,110,150,110,50,20,16],[0,0,0,40,160,130,90,46],[0,0,0,80,130,105,160,128],[0,0,5,85,150,80,20,7],[0,0,0,40,120,80,110,51],[0,0,10,60,110,85,70,41],[0,0,0,0,40,80,120,88],[0,0,0,0,50,70,110,83],[0,0,0,0,30,70,95,77],[30,55,75,42,5,0,0,0],[20,85,90,90,30,4,0,0],[0,0,50,85,90,50,15,8],[0,0,5,80,100,60,35,2]],
+  temas: [['Dir. Fundamentais',1820],['Poder Judiciário',1240],['Tributação',980],['Federalismo',860],['Poder Legislativo',620],['Ordem Econômica',540],['Adm. Pública',480],['Seguridade Social',420],['MP / Advocacia',380],['Poder Executivo',320],['Outros',354]],
+  decidib: [['ADI',88],['RCL',80],['ADPF',74],['RE',75],['HC',62],['MS',55],['ARE',52],['MI',45]],
+  tempo: [['Art. 5º',1.1],['Art. 102',1.3],['Art. 37',1.5],['Art. 129',1.8],['Art. 150',2.0],['Art. 155',2.2],['Art. 109',2.5],['Art. 195',2.7],['Art. 60',3.1],['Art. 24',3.3],['Art. 93',3.8],['Art. 14',4.2],['Art. 9º',4.8],['Art. 40',5.2],['Art. 225',6.1]],
+  radarData: {
+    'Marco Aurélio': [85,72,45,60,55,40],
+    'Gilmar Mendes': [70,55,80,65,75,50],
+    'Celso de Mello': [90,65,40,55,60,35],
+    'Edson Fachin': [80,88,35,45,40,30],
+    'Roberto Barroso': [88,60,50,70,65,40],
+    'Dias Toffoli': [60,45,85,70,80,65],
+    'Cármen Lúcia': [75,50,55,80,70,45],
+    'Alexandre de Moraes': [70,80,40,65,55,35],
+    'Luiz Fux': [65,45,75,80,60,70],
+  },
+  clusters: [
+    {tema:'Controle concentrado', arts:['Art. 102','Art. 103','Art. 97'], cor:'#1a2744'},
+    {tema:'Federalismo tributário', arts:['Art. 150','Art. 155','Art. 145'], cor:'#b8860b'},
+    {tema:'Direitos processuais', arts:['Art. 5º','Art. 93','Art. 109'], cor:'#0d5c5c'},
+    {tema:'MP e persecução penal', arts:['Art. 127','Art. 129','Art. 144'], cor:'#8b3a1a'},
+    {tema:'Federalismo normativo', arts:['Art. 22','Art. 24','Art. 25'], cor:'#4a3080'},
+    {tema:'Previdência e trabalho', arts:['Art. 40','Art. 195','Art. 7º'], cor:'#2d6a2d'},
+  ],
+  mudancas: [
+    {art:'Art. 5º – Direitos Fundamentais', span:'1988–2025', anos:37, dec:416, nota:'Maior amplitude do sistema. Habeas corpus, dignidade, privacidade digital, igualdade de gênero. Múltiplos ciclos de revisão ao longo de 37 anos.'},
+    {art:'Art. 102 – Competência do STF', span:'1989–2025', anos:36, dec:437, nota:'Revisão do foro privilegiado em 2018 (AP 937 QO). Ampliação progressiva do controle concentrado. Maior volume de decisões.'},
+    {art:'Art. 37 – Administração Pública', span:'1990–2025', anos:35, dec:339, nota:'Improbidade administrativa, teto remuneratório, concurso público. Múltiplos ciclos de consolidação e revisão.'},
+    {art:'Art. 150 – Imunidades Tributárias', span:'1990–2025', anos:35, dec:330, nota:'RE 562.045 como marco central de revisão. Imunidades recíprocas e religiosas redefinidas progressivamente.'},
+    {art:'Art. 129 – Ministério Público', span:'1990–2025', anos:35, dec:228, nota:'Expansão das funções investigatórias. Oscilação entre autonomia institucional e limites constitucionais.'},
+    {art:'Art. 60 – PECs e Cláusulas Pétreas', span:'1993–2025', anos:32, dec:104, nota:'Definição dos limites materiais ao poder de reforma constitucional. Núcleo essencial da constitucionalidade.'},
+    {art:'Art. 195 – Seguridade Social', span:'1993–2025', anos:32, dec:154, nota:'Contribuições sociais revisadas após EC 20/1998 e EC 41/2003. Custeio e base de cálculo redefinidos.'},
+  ],
+  marcos: [
+    {ano:'1994', desc:'ADI 939 — imunidade tributária e cláusulas pétreas. Primeira grande revisão de entendimento do STF pós-88.'},
+    {ano:'2003', desc:'ADI 3.105 — contribuição de inativos. Revisão do alcance da irredutibilidade e cláusulas pétreas previdenciárias.'},
+    {ano:'2007', desc:'Repercussão geral (EC 45/2004) entra em vigor. Filtro quantitativo do RE reconfigurado.'},
+    {ano:'2008', desc:'ADPF 153 — Lei de Anistia. ADI 3.510 — células-tronco. Expansão da pauta de direitos fundamentais.'},
+    {ano:'2011', desc:'ADPF 132 / ADI 4.277 — união homoafetiva. Interpretação conforme como técnica decisória central.'},
+    {ano:'2018', desc:'AP 937 QO — revisão do foro privilegiado. Virada processual penal de alto impacto político-institucional.'},
+    {ano:'2023', desc:'ADPF 779 — legítima defesa da honra. Expansão da pauta ambiental e democrática.'},
+  ],
+};
+
+// ── COLORS ──
+const COLORS = ['#1a2744','#243058','#b8860b','#d4a017','#0d5c5c','#8b3a1a','#4a3080','#2d6a2d','#5c3a1a','#1a5c5c','#6b4226','#2d4a6b'];
+const NAVY_RAMP = ['#e8ecf4','#b5c4d9','#7a96bc','#3d679c','#1a2744'];
+const GOLD_RAMP = ['#fdf3d7','#f5d98a','#d4a017','#b8860b','#7a5a07'];
+const TEAL_RAMP = ['#d7f0f0','#8dd5d5','#3daaaa','#0d7c7c','#0d5c5c'];
+const gc = 'rgba(15,14,13,.06)';
+const tc = '#9b9186';
+
+function ramp(r, v, max) { return r[Math.min(Math.floor((v/max)*r.length), r.length-1)]; }
+function heatCol(v, max) {
+  if (!v) return '#f5f0e8';
+  const stops = ['#e8ecf4','#b5c4d9','#7a96bc','#3d679c','#1a3a6e','#0f2244'];
+  return stops[Math.min(Math.floor((v/max)*stops.length), stops.length-1)];
+}
+
+function barHTML(data, max, rampArr, nameW) {
+  return data.map(([n,v]) => {
+    const pct = Math.round((v/max)*100);
+    const col = ramp(rampArr, v, max);
+    const disp = typeof v === 'number' && v < 50 ? v.toFixed(1) : v.toLocaleString('pt-BR');
+    return `<div class="bar-row">
+      <span class="nm" style="width:${nameW||130}px">${n}</span>
+      <div class="bt"><div class="bf" style="width:${pct}%;background:${col}"></div></div>
+      <span class="ct">${disp}</span>
+    </div>`;
+  }).join('');
+}
+
+// ── ACTIVE CHART REGISTRY ──
+const charts = {};
+function killChart(id) { if (charts[id]) { charts[id].destroy(); delete charts[id]; } }
+function mkChart(id, cfg) { killChart(id); charts[id] = new Chart(document.getElementById(id), cfg); }
+
+// ── PANEL DEFINITIONS ──
+const PANELS = [
+  { id:'temporal',  label:'① Temporal' },
+  { id:'classes',   label:'② Classes' },
+  { id:'relatores', label:'③ Relatores' },
+  { id:'artigos',   label:'④ Artigos' },
+  { id:'calor',     label:'⑤ Calor' },
+  { id:'mudancas',  label:'⑥ Mudanças' },
+  { id:'orgao',     label:'⑦ Órgão' },
+  { id:'temas',     label:'⑧ Temas' },
+  { id:'decidib',   label:'⑨ Decidibilidade' },
+  { id:'tempo',     label:'⑩ Tempo' },
+  { id:'rede',      label:'⑪ Rede' },
+  { id:'perfil',    label:'⑫ Perfil' },
+];
+
+const RENDERS = {
+  temporal(el) {
+    el.innerHTML = `
+    <div class="grid2">
+      <div class="card mb">
+        <div class="card-title">Decisões por ano (1988–2025)</div>
+        <div style="position:relative;height:220px"><canvas id="ch_tl"></canvas></div>
+        <div style="display:flex;justify-content:space-between;font-size:9px;color:${tc};margin-top:4px;font-family:'DM Mono',monospace">
+          <span>1988</span><span>1995</span><span>2000</span><span>2005</span><span>2010</span><span>2015</span><span>2020</span><span>2025</span>
+        </div>
+      </div>
+      <div class="card mb">
+        <div class="card-title">Por década</div>
+        <div style="position:relative;height:220px"><canvas id="ch_dec"></canvas></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Fases do contencioso constitucional</div>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-dot" style="background:#b5c4d9"></div><div class="tl-text"><strong>1988–1994 · Fase fundacional</strong><span>Baixo volume, jurisprudência formativa. 571 decisões em 7 anos. Estabelecimento dos parâmetros constitucionais básicos.</span></div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:#7a96bc"></div><div class="tl-text"><strong>1995–2001 · Fase expansiva</strong><span>Crescimento acelerado pós-plano real e redemocratização plena. Consolidação da jurisdição constitucional.</span></div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:#3d679c"></div><div class="tl-text"><strong>2002–2011 · Fase de sobrecarga</strong><span>Pico em 2007–2008 (1.026 decisões). Repercussão geral introduzida em 2007 pela EC 45/2004.</span></div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:#1a2744"></div><div class="tl-text"><strong>2012–2019 · Fase de seletividade</strong><span>Filtros processuais ativos. Pauta política e criminal cresce expressivamente.</span></div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:#b8860b"></div><div class="tl-text"><strong>2020–2026 · Fase democrática</strong><span>Pandemia, eleições, democracia e meio ambiente dominam a pauta. Retomada de volume.</span></div></div>
+      </div>
+    </div>`;
+    const ay = Object.keys(DATA.anos).filter(a=>+a>=1988&&+a<=2025);
+    const av = ay.map(a=>DATA.anos[a]||0);
+    mkChart('ch_tl', {type:'bar', data:{labels:ay, datasets:[{data:av, backgroundColor:av.map(v=>v>400?'#1a2744':v>200?'#3d679c':'#b5c4d9'), borderRadius:2, borderSkipped:false}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{display:false}, y:{grid:{color:gc}, ticks:{font:{size:9}, color:tc}}}}});
+    mkChart('ch_dec', {type:'bar', data:{labels:['1988–99','2000–09','2010–19','2020–26'], datasets:[{data:[1208,3600,2232,1564], backgroundColor:['#b5c4d9','#3d679c','#1a2744','#b8860b'], borderRadius:4}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{ticks:{font:{size:10}, color:tc}}, y:{grid:{color:gc}, ticks:{font:{size:9}, color:tc}}}}});
+  },
+
+  classes(el) {
+    el.innerHTML = `
+    <div class="grid2">
+      <div class="card mb">
+        <div class="card-title">Proporção por classe processual</div>
+        <div style="position:relative;height:230px"><canvas id="ch_cls"></canvas></div>
+      </div>
+      <div class="card mb">
+        <div class="card-title">Volume absoluto</div>
+        <div class="bar-list">${barHTML(DATA.classes,2877,NAVY_RAMP,55)}</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Evolução das principais classes por período</div>
+      <div style="position:relative;height:160px"><canvas id="ch_cevol"></canvas></div>
+      <div class="info-note">ADI + RE = 58,7% do contencioso constitucional. ADPF cresce após 2016 como instrumento de controle concentrado. AI foi extinto em 2010 após representar ~4% do volume. Súmulas Vinculantes (93) marcam consolidação doutrinária.</div>
+    </div>`;
+    mkChart('ch_cls', {type:'doughnut', data:{labels:DATA.classes.map(c=>c[0]), datasets:[{data:DATA.classes.map(c=>c[1]), backgroundColor:COLORS, borderWidth:2, borderColor:'#f5f0e8'}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:10}, color:'#6b6355', boxWidth:12}}, tooltip:{callbacks:{label:c=>c.label+': '+c.parsed.toLocaleString('pt-BR')+' ('+((c.parsed/9014)*100).toFixed(1)+'%)'}}}}});
+    mkChart('ch_cevol', {type:'bar', data:{labels:['88–94','95–01','02–08','09–15','16–26'], datasets:[{label:'ADI',data:[180,420,900,680,697],backgroundColor:'#1a2744'},{label:'RE',data:[100,380,750,600,589],backgroundColor:'#3d679c'},{label:'HC',data:[60,100,200,220,203],backgroundColor:'#0d5c5c'},{label:'ADPF',data:[0,5,40,80,203],backgroundColor:'#b8860b'}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:9}, color:tc, boxWidth:10}}}, scales:{x:{stacked:true, ticks:{font:{size:9}, color:tc}}, y:{stacked:true, grid:{color:gc}, ticks:{font:{size:9}, color:tc}}}}});
+  },
+
+  relatores(el) {
+    el.innerHTML = `
+    <div class="grid2">
+      <div class="card mb">
+        <div class="card-title">Top 20 relatores — volume total</div>
+        <div class="bar-list">${barHTML(DATA.relatores,671,TEAL_RAMP,130)}</div>
+      </div>
+      <div class="card mb">
+        <div class="card-title">Curva de concentração decisória</div>
+        <div style="position:relative;height:200px"><canvas id="ch_relconc"></canvas></div>
+        <div class="info-note">Os 5 primeiros relatores respondem por ~28% do acervo. Os 10 primeiros por ~45%. Alta concentração histórica.</div>
+        <div class="card-title" style="margin-top:1rem">Gerações da Corte</div>
+        <div class="tl" style="margin-top:.5rem">
+          <div class="tl-item"><div class="tl-dot" style="background:#b5c4d9"></div><div class="tl-text"><strong>1988–2003</strong><span>Pertence, Velloso, Galvão, Moreira Alves — fundadores da jurisprudência pós-88.</span></div></div>
+          <div class="tl-item"><div class="tl-dot" style="background:#3d679c"></div><div class="tl-text"><strong>1990–2021</strong><span>Marco Aurélio, Celso de Mello, Gilmar Mendes, Cármen Lúcia — geração central.</span></div></div>
+          <div class="tl-item"><div class="tl-dot" style="background:#1a2744"></div><div class="tl-text"><strong>2003–presente</strong><span>Toffoli, Lewandowski, Luiz Fux, J. Barbosa — geração de consolidação.</span></div></div>
+          <div class="tl-item"><div class="tl-dot" style="background:#b8860b"></div><div class="tl-text"><strong>2014–presente</strong><span>Fachin, A. Moraes, Barroso, Rosa Weber, Nunes Marques — geração atual.</span></div></div>
+        </div>
+      </div>
+    </div>`;
+    const cumul = DATA.relatores.map((_,i)=>DATA.relatores.slice(0,i+1).reduce((s,r)=>s+r[1],0));
+    mkChart('ch_relconc', {type:'line', data:{labels:DATA.relatores.map(r=>r[0].split(' ')[0]), datasets:[{data:cumul, borderColor:'#1a2744', borderWidth:2, pointBackgroundColor:'#b8860b', pointRadius:3, fill:true, backgroundColor:'rgba(26,39,68,.06)', tension:.3}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{ticks:{font:{size:8}, color:tc, maxRotation:45}}, y:{grid:{color:gc}, ticks:{font:{size:9}, color:tc}}}}});
+  },
+
+  artigos(el) {
+    el.innerHTML = `
+    <div class="grid2">
+      <div class="card mb">
+        <div class="card-title">Top 20 artigos — litigiosidade</div>
+        <div class="bar-list">${barHTML(DATA.artigos,437,GOLD_RAMP,160)}</div>
+      </div>
+      <div class="card mb">
+        <div class="card-title">Por bloco temático</div>
+        <div style="position:relative;height:300px"><canvas id="ch_tree"></canvas></div>
+      </div>
+    </div>`;
+    mkChart('ch_tree', {type:'bar', data:{labels:DATA.temas.map(t=>t[0]), datasets:[{data:DATA.temas.map(t=>t[1]), backgroundColor:COLORS, borderRadius:3}]}, options:{indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{grid:{color:gc}, ticks:{font:{size:9}, color:tc}}, y:{ticks:{font:{size:10}, color:tc}}}}});
+  },
+
+  calor(el) {
+    const maxH = Math.max(...DATA.heatRaw.flat());
+    let html = `<div class="card">
+      <div class="card-title">Intensidade decisória: relator × período de 5 anos</div>
+      <div class="dlabels">${DATA.buckets.map(b=>`<div class="dlbl">${b}</div>`).join('')}</div>`;
+    DATA.heatRelatores.forEach((rel,ri) => {
+      html += `<div class="heatrow"><span class="hrlbl">${rel}</span><div class="hcells">`;
+      DATA.heatRaw[ri].forEach((v,bi) => {
+        html += `<div class="hcell" style="background:${heatCol(v,maxH)}" data-tip="${rel} · ${DATA.buckets[bi]}: ${v} decisões">${v||''}</div>`;
+      });
+      html += `</div></div>`;
+    });
+    html += `<div class="info-note" style="margin-top:10px">Passe o mouse nas células para detalhes. Células escuras = maior concentração de decisões naquele período. Identifica protagonismo de cada ministro e fases de transição da Corte.</div></div>`;
+    el.innerHTML = html;
+    el.querySelectorAll('.hcell').forEach(c => {
+      const tip = document.getElementById('tooltip');
+      c.addEventListener('mouseenter', e => { tip.textContent = c.dataset.tip; tip.style.display='block'; });
+      c.addEventListener('mousemove', e => { tip.style.left=(e.clientX+14)+'px'; tip.style.top=(e.clientY-30)+'px'; });
+      c.addEventListener('mouseleave', () => { tip.style.display='none'; });
+    });
+  },
+
+  mudancas(el) {
+    el.innerHTML = `
+    <div class="grid2">
+      <div class="card mb">
+        <div class="card-title">Artigos com maior amplitude temporal</div>
+        ${DATA.mudancas.map(m=>`<div class="mudanca">
+          <div class="ti">${m.art}</div>
+          <div class="meta">${m.span} · ${m.anos} anos · ${m.dec} decisões</div>
+          <div class="de" style="margin-top:3px">${m.nota}</div>
+        </div>`).join('')}
+      </div>
+      <div class="card mb">
+        <div class="card-title">Marcos de virada decisória</div>
+        ${DATA.marcos.map(m=>`<div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start;font-size:11px">
+          <span class="year-badge">${m.ano}</span>
+          <span style="color:var(--muted);line-height:1.4">${m.desc}</span>
+        </div>`).join('')}
+        <div class="card-title" style="margin-top:1rem">Dispersão revisional por período</div>
+        <div style="position:relative;height:160px"><canvas id="ch_rev"></canvas></div>
+      </div>
+    </div>`;
+    mkChart('ch_rev', {type:'bar', data:{labels:['88–94','95–01','02–08','09–15','16–26'], datasets:[{label:'Revisões identificadas', data:[1,2,4,3,5], backgroundColor:'#1a2744', borderRadius:3},{label:'Volume normalizado', data:[1.2,2.3,5.8,3.2,5.1], backgroundColor:'#b8860b', borderRadius:3}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:9}, color:tc, boxWidth:10}}}, scales:{x:{ticks:{font:{size:9}, color:tc}}, y:{grid:{color:gc}, ticks:{font:{size:9}, color:tc}}}}});
+  },
+
+  orgao(el) {
+    el.innerHTML = `
+    <div class="grid2">
+      <div class="card mb">
+        <div class="card-title">Plenário vs. Turmas</div>
+        <div style="position:relative;height:220px"><canvas id="ch_org"></canvas></div>
+      </div>
+      <div class="card mb">
+        <div class="card-title">Distribuição por classe e órgão</div>
+        <div style="position:relative;height:220px"><canvas id="ch_orgcls"></canvas></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Competências por órgão</div>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-dot" style="background:#1a2744"></div><div class="tl-text"><strong>Plenário (53,5%) — 4.820 decisões</strong><span>ADI, ADC, ADPF, grandes RE com repercussão geral, questões federais e constitucionais sistêmicas. Quórum mínimo de 6 ministros.</span></div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:#0d5c5c"></div><div class="tl-text"><strong>1ª Turma (18,6%) — 1.680 decisões</strong><span>HC, RHC, MS, RE individuais, causas penais e processuais. 5 ministros.</span></div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:#b8860b"></div><div class="tl-text"><strong>2ª Turma (17,5%) — 1.580 decisões</strong><span>HC, RHC, MS, RE individuais, causas cíveis, tributárias e administrativas. 5 ministros.</span></div></div>
+      </div>
+    </div>`;
+    mkChart('ch_org', {type:'doughnut', data:{labels:['Plenário','1ª Turma','2ª Turma','Não ident.'], datasets:[{data:[4820,1680,1580,934], backgroundColor:['#1a2744','#0d5c5c','#b8860b','#9b9186'], borderWidth:2, borderColor:'#f5f0e8'}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:10}, color:tc, boxWidth:12}}, tooltip:{callbacks:{label:c=>c.label+': '+c.parsed.toLocaleString('pt-BR')+' ('+((c.parsed/9014)*100).toFixed(1)+'%)'}}}}});
+    mkChart('ch_orgcls', {type:'bar', data:{labels:['ADI','RE','HC','MS','ADPF','RCL'], datasets:[{label:'Plenário',data:[2700,800,100,200,300,200],backgroundColor:'#1a2744'},{label:'1ª Turma',data:[80,700,340,220,14,30],backgroundColor:'#0d5c5c'},{label:'2ª Turma',data:[70,750,300,180,10,20],backgroundColor:'#b8860b'}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:9}, color:tc, boxWidth:10}}}, scales:{x:{stacked:true, ticks:{font:{size:9}, color:tc}}, y:{stacked:true, grid:{color:gc}, ticks:{font:{size:9}, color:tc}}}}});
+  },
+
+  temas(el) {
+    el.innerHTML = `
+    <div class="grid2">
+      <div class="card mb">
+        <div class="card-title">Decisões por bloco temático</div>
+        <div style="position:relative;height:280px"><canvas id="ch_temas"></canvas></div>
+      </div>
+      <div class="card mb">
+        <div class="card-title">Clusters jurisprudenciais — artigos co-citados</div>
+        <div id="clusterList"></div>
+        <div class="card-title" style="margin-top:1rem">Evolução temática por período</div>
+        <div style="position:relative;height:150px"><canvas id="ch_tevol"></canvas></div>
+      </div>
+    </div>`;
+    mkChart('ch_temas', {type:'bar', data:{labels:DATA.temas.map(t=>t[0]), datasets:[{data:DATA.temas.map(t=>t[1]), backgroundColor:COLORS, borderRadius:3}]}, options:{indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{grid:{color:gc}, ticks:{font:{size:9}, color:tc}}, y:{ticks:{font:{size:10}, color:tc}}}}});
+    mkChart('ch_tevol', {type:'line', data:{labels:['88–94','95–01','02–08','09–15','16–26'], datasets:[{label:'Dir. Fund.',data:[80,220,560,380,580],borderColor:'#1a2744',borderWidth:1.5,pointRadius:2,tension:.4,fill:false},{label:'Tributação',data:[30,120,310,220,300],borderColor:'#b8860b',borderWidth:1.5,pointRadius:2,tension:.4,fill:false},{label:'MP/Penal',data:[20,80,200,180,260],borderColor:'#8b3a1a',borderWidth:1.5,pointRadius:2,tension:.4,fill:false},{label:'Federalismo',data:[40,100,260,180,280],borderColor:'#4a3080',borderWidth:1.5,pointRadius:2,tension:.4,fill:false}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:9}, color:tc, boxWidth:10}}}, scales:{x:{ticks:{font:{size:9}, color:tc}}, y:{grid:{color:gc}, ticks:{font:{size:9}, color:tc}}}}});
+    const cl = document.getElementById('clusterList');
+    DATA.clusters.forEach(c => {
+      const r = document.createElement('div'); r.className='cluster-row';
+      r.innerHTML=`<span style="width:9px;height:9px;border-radius:2px;background:${c.cor};display:inline-block;flex-shrink:0"></span><span style="font-size:11px;font-weight:500;width:165px;flex-shrink:0">${c.tema}</span><div style="display:flex;gap:3px;flex-wrap:wrap">${c.arts.map(a=>`<span class="tag" style="background:${c.cor}18;color:${c.cor};border:1px solid ${c.cor}44">${a}</span>`).join('')}</div>`;
+      cl.appendChild(r);
+    });
+  },
+
+  decidib(el) {
+    el.innerHTML = `
+    <div class="grid2">
+      <div class="card mb">
+        <div class="card-title">Matriz decidibilidade: volume × saturação × dispersão</div>
+        <div style="position:relative;height:240px"><canvas id="ch_dec2"></canvas></div>
+        <div style="font-size:9px;color:var(--muted);margin-top:6px;font-family:'DM Mono',monospace">Tamanho = nº de relatores distintos · X = volume · Y = saturação temática (%)</div>
+      </div>
+      <div class="card mb">
+        <div class="card-title">Índice de decidibilidade (IDC) por classe</div>
+        <div class="bar-list" style="margin-bottom:1rem">${barHTML(DATA.decidib,92,NAVY_RAMP,65)}</div>
+        <div class="info-note">IDC = (saturação × 0,4) + (volume_norm × 0,4) + (1/dispersão_norm × 0,2). ADI lidera com jurisprudência mais consolidada. MI tem maior abertura revisional.</div>
+        <div class="card-title" style="margin-top:1rem">O que significa decidibilidade?</div>
+        <div class="tl" style="margin-top:.5rem">
+          <div class="tl-item"><div class="tl-dot" style="background:#1a2744"></div><div class="tl-text"><strong>Alta decidibilidade</strong><span>Resposta normativa estável. Jurisprudência consolidada. Baixa abertura revisional. ADI e RCL.</span></div></div>
+          <div class="tl-item"><div class="tl-dot" style="background:#b8860b"></div><div class="tl-text"><strong>Baixa decidibilidade</strong><span>Contencioso estrutural aberto. Múltiplos relatores. Pendências de revisão. MI e ARE.</span></div></div>
+        </div>
+      </div>
+    </div>`;
+    const dec2data = [
+      {cls:'ADI',x:2877,y:92,r:18},{cls:'RE',x:2419,y:78,r:22},{cls:'ADPF',x:328,y:71,r:12},
+      {cls:'RCL',x:255,y:82,r:9},{cls:'HC',x:783,y:65,r:15},{cls:'MS',x:628,y:58,r:14},
+      {cls:'ARE',x:378,y:55,r:11},{cls:'MI',x:100,y:48,r:8},
+    ];
+    mkChart('ch_dec2', {type:'bubble', data:{datasets:dec2data.map((d,i)=>({label:d.cls, data:[{x:d.x,y:d.y,r:d.r/2.2}], backgroundColor:COLORS[i]+'bb'}))}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:9}, color:tc, boxWidth:10}}, tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${c.parsed.x.toLocaleString()} dec. · sat. ${c.parsed.y}%`}}}, scales:{x:{title:{display:true, text:'Volume', font:{size:9}, color:tc}, grid:{color:gc}, ticks:{font:{size:9}, color:tc}}, y:{title:{display:true, text:'Saturação (%)', font:{size:9}, color:tc}, grid:{color:gc}, ticks:{font:{size:9}, color:tc}, min:40, max:100}}}});
+  },
+
+  tempo(el) {
+    el.innerHTML = `
+    <div class="grid2">
+      <div class="card mb">
+        <div class="card-title">Tempo médio entre decisões por artigo (anos)</div>
+        <div style="position:relative;height:270px"><canvas id="ch_tempo"></canvas></div>
+      </div>
+      <div class="card mb">
+        <div class="card-title">Artigos mais revisitados — recorrência</div>
+        <div class="bar-list">${barHTML([['Art. 102 – STF',437],['Art. 5º – Dir. Fund.',416],['Art. 37 – Adm.',339],['Art. 150 – Trib.',330],['Art. 24 – Comp.',256],['Art. 129 – MP',228],['Art. 155 – ICMS',210],['Art. 18 – Fed.',200],['Art. 93 – Jud.',352],['Art. 195 – Prev.',154]],437,TEAL_RAMP,130)}</div>
+        <div class="info-note" style="margin-top:10px">Artigos com baixo tempo médio entre decisões = contencioso crônico, tema não pacificado. Artigos com alto intervalo = decisões pontuais, tema estabilizado.</div>
+      </div>
+    </div>`;
+    mkChart('ch_tempo', {type:'bar', data:{labels:DATA.tempo.map(d=>d[0]), datasets:[{data:DATA.tempo.map(d=>d[1]), backgroundColor:DATA.tempo.map(d=>d[1]<2?'#1a2744':d[1]<4?'#3d679c':'#b5c4d9'), borderRadius:3}]}, options:{indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>`${c.parsed.x.toFixed(1)} anos entre decisões`}}}, scales:{x:{title:{display:true, text:'anos', font:{size:9}, color:tc}, grid:{color:gc}, ticks:{font:{size:9}, color:tc}}, y:{ticks:{font:{size:9}, color:tc}}}}});
+  },
+
+  rede(el) {
+    el.innerHTML = `
+    <div class="card mb">
+      <div class="card-title">Rede de co-citação — clusters jurisprudenciais</div>
+      <svg id="redeSVG" width="100%" viewBox="0 0 700 320" style="display:block"></svg>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="card-title">Clusters identificados</div>
+        <div id="coClusterList"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Artigos "ponte" — presentes em múltiplos clusters</div>
+        <div class="bar-list">${barHTML([['Art. 5º – Dir. Fund.',6],['Art. 102 – STF',5],['Art. 37 – Adm.',4],['Art. 103 – Legit.',4],['Art. 129 – MP',3],['Art. 150 – Trib.',3]],6,GOLD_RAMP,140)}</div>
+      </div>
+    </div>`;
+    const nodes = [
+      {id:'ctrl',label:['Controle','concentrado'],x:200,y:110,r:34,c:'#1a2744'},
+      {id:'trib',label:['Tributação'],x:450,y:85,r:28,c:'#b8860b'},
+      {id:'proc',label:['Dir.','processuais'],x:100,y:230,r:26,c:'#0d5c5c'},
+      {id:'pen', label:['MP / Penal'],x:360,y:250,r:26,c:'#8b3a1a'},
+      {id:'fed', label:['Federalismo'],x:560,y:190,r:23,c:'#4a3080'},
+      {id:'prev',label:['Prev./Trab.'],x:470,y:290,r:20,c:'#2d6a2d'},
+      {id:'a5',  label:['Art. 5º'],x:230,y:195,r:17,c:'#243058'},
+      {id:'a102',label:['Art. 102'],x:305,y:135,r:17,c:'#243058'},
+      {id:'a150',label:['Art. 150'],x:510,y:155,r:15,c:'#7a5a07'},
+    ];
+    const edges = [['ctrl','a102',4],['ctrl','proc',3],['ctrl','a5',3],['trib','a150',4],['trib','fed',3],['pen','proc',3],['pen','a5',2],['prev','trib',2],['prev','pen',2],['a5','proc',3],['fed','ctrl',2],['a102','pen',2]];
+    const svg = document.getElementById('redeSVG');
+    edges.forEach(([a,b,w]) => {
+      const na=nodes.find(n=>n.id===a), nb=nodes.find(n=>n.id===b);
+      if (!na||!nb) return;
+      const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+      line.setAttribute('x1',na.x); line.setAttribute('y1',na.y);
+      line.setAttribute('x2',nb.x); line.setAttribute('y2',nb.y);
+      line.setAttribute('stroke','rgba(15,14,13,.1)'); line.setAttribute('stroke-width',w);
+      svg.appendChild(line);
+    });
+    nodes.forEach(n => {
+      const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+      g.style.cursor='pointer';
+      const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('cx',n.x); c.setAttribute('cy',n.y); c.setAttribute('r',n.r);
+      c.setAttribute('fill',n.c); c.setAttribute('opacity','0.9');
+      g.appendChild(c);
+      n.label.forEach((line,i,arr) => {
+        const t = document.createElementNS('http://www.w3.org/2000/svg','text');
+        t.setAttribute('x',n.x); t.setAttribute('y',n.y+(i-(arr.length-1)/2)*12);
+        t.setAttribute('text-anchor','middle'); t.setAttribute('dominant-baseline','central');
+        t.setAttribute('fill','#f5f0e8'); t.setAttribute('font-size','9');
+        t.setAttribute('font-family','DM Mono,monospace'); t.textContent=line;
+        g.appendChild(t);
+      });
+      svg.appendChild(g);
+    });
+    const coCL = document.getElementById('coClusterList');
+    DATA.clusters.forEach(c => {
+      const r=document.createElement('div'); r.className='cluster-row';
+      r.innerHTML=`<span style="width:9px;height:9px;border-radius:2px;background:${c.cor};display:inline-block;flex-shrink:0"></span><span style="font-size:11px;font-weight:500;width:165px;flex-shrink:0">${c.tema}</span><span style="font-size:9px;color:var(--muted);font-family:'DM Mono',monospace">${c.arts.join(' · ')}</span>`;
+      coCL.appendChild(r);
+    });
+  },
+
+  perfil(el) {
+    el.innerHTML = `
+    <div class="grid2">
+      <div class="card mb">
+        <div class="card-title">Perfil decisório — especialização temática</div>
+        <select id="rsel">${Object.keys(DATA.radarData).map(r=>`<option>${r}</option>`).join('')}</select>
+        <div style="position:relative;height:240px"><canvas id="ch_radar"></canvas></div>
+      </div>
+      <div class="card mb">
+        <div class="card-title">Linhas decisórias consolidadas</div>
+        ${[
+          {rel:'Marco Aurélio', linhas:['Contraditório amplo','Presunção de inocência','Igualdade processual','Anti-corporativismo']},
+          {rel:'Gilmar Mendes', linhas:['Proporcionalidade','Federalismo cooperativo','Tributação sistemática','Controle de constitucionalidade']},
+          {rel:'Celso de Mello', linhas:['Dignidade humana','Garantismo processual','Controle concentrado fundacional']},
+          {rel:'Edson Fachin', linhas:['Persecução penal constitucional','Dir. humanos internacionais','Anti-corrupção']},
+          {rel:'Roberto Barroso', linhas:['Democracia e liberdade','Direitos políticos','Neoconstitucionalismo']},
+        ].map(l=>`<div style="margin-bottom:10px"><div style="font-size:11px;font-weight:500;margin-bottom:4px">${l.rel}</div><div style="display:flex;gap:3px;flex-wrap:wrap">${l.linhas.map(x=>`<span class="tag" style="background:var(--paper2);color:var(--ink);border:1px solid var(--border)">${x}</span>`).join('')}</div></div>`).join('')}
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Índice de especialização temática (IET) — top 10</div>
+      <div class="bar-list">${barHTML([['Edson Fachin',82],['Marco Aurélio',78],['Dias Toffoli',75],['Gilmar Mendes',71],['Celso de Mello',68],['Cármen Lúcia',65],['A. Moraes',63],['Roberto Barroso',60],['Luiz Fux',58],['Lewandowski',55]],82,NAVY_RAMP,130)}</div>
+      <div class="info-note">IET = concentração das decisões do relator em um único bloco temático. Quanto maior, mais especializado. Fachin lidera com especialização em Dir. Penal e Humanos.</div>
+    </div>`;
+    let radarInst = null;
+    function buildRadar(name) {
+      if (radarInst) { radarInst.destroy(); }
+      radarInst = new Chart(document.getElementById('ch_radar'), {type:'radar', data:{labels:['Dir. Fund.','Penal','Tributação','Adm.','Federalismo','Previdência'], datasets:[{label:name, data:DATA.radarData[name], backgroundColor:'rgba(26,39,68,.1)', borderColor:'#1a2744', borderWidth:2, pointBackgroundColor:'#b8860b', pointRadius:4}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{r:{ticks:{font:{size:8}, color:tc, backdropColor:'transparent'}, grid:{color:gc}, pointLabels:{font:{size:10}, color:'#6b6355'}, min:0, max:100}}}});
+    }
+    buildRadar('Marco Aurélio');
+    document.getElementById('rsel').addEventListener('change', e => buildRadar(e.target.value));
+  },
+};
+
+// ── BUILD NAV + PANELS ──
+const panelsEl = document.getElementById('panels');
+const navEl = document.getElementById('eixosNav');
+
+PANELS.forEach((p, i) => {
+  const div = document.createElement('div');
+  div.id = 'panel-' + p.id;
+  div.className = 'panel' + (i===0?' active':'');
+  panelsEl.appendChild(div);
+
+  const btn = document.createElement('button');
+  btn.className = 'hnav-btn' + (i===0?' active':'');
+  btn.textContent = p.label;
+  btn.onclick = () => {
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.hnav-btn').forEach(b=>b.classList.remove('active'));
+    div.classList.add('active');
+    btn.classList.add('active');
+    RENDERS[p.id](div);
+    document.getElementById('eixosNav').scrollIntoView({behavior:'smooth', block:'start'});
+  };
+  navEl.appendChild(btn);
+});
+
+// Render first panel
+RENDERS.temporal(document.getElementById('panel-temporal'));
+</script>
+</body>
+</html>
