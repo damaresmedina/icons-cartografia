@@ -41,13 +41,51 @@ body {
   min-height: 100vh;
 }
 
+/* ── PAGE NAV ── */
+.page-nav {
+  background: #0d1828;
+  border-bottom: 1px solid rgba(184,134,11,.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 1rem;
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.page-nav a {
+  color: rgba(245,240,232,.4);
+  text-decoration: none;
+  padding: 3px 12px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.page-nav a:hover { color: rgba(245,240,232,.7); }
+.page-nav a.active {
+  color: #d4a017;
+  border-color: rgba(212,160,23,.3);
+  background: rgba(212,160,23,.08);
+}
+.page-nav .nav-arrow {
+  color: rgba(245,240,232,.2);
+  padding: 3px 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.page-nav .nav-arrow:hover { color: #d4a017; }
+
 /* ── HEADER ── */
 .site-header {
   background: var(--navy);
   color: var(--paper);
   padding: 0;
   position: sticky;
-  top: 0;
+  top: 33px;
   z-index: 100;
   box-shadow: 0 2px 20px rgba(0,0,0,.3);
 }
@@ -331,6 +369,14 @@ select { font-family: var(--ff-mono); font-size: 10px; padding: 4px 8px; border-
 </style>
 </head>
 <body>
+
+<nav class="page-nav">
+  <a href="index.html" class="nav-arrow">←</a>
+  <a href="index.html">Índice</a>
+  <a href="cartografia_stf.html" class="active">Cartografia do Contencioso</a>
+  <a href="linhas_decisorias_stf.html">Oscilação Jurisprudencial</a>
+  <a href="linhas_decisorias_stf.html" class="nav-arrow">→</a>
+</nav>
 
 <!-- HEADER -->
 <header class="site-header">

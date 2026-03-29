@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROJUS · Projeto Justiça Aberta · ICONS</title>
+<title>ICONS · Instituto Constituição Aberta</title>
 <meta name="description" content="Cartografia do contencioso constitucional brasileiro. Mapeamento jurisprudencial das decisões do STF desde 1988. Instituto Constituição Aberta – ICONS.">
-<meta property="og:title" content="PROJUS · Cartografia do Contencioso Constitucional">
-<meta property="og:description" content="Decisões do STF mapeadas. Padrões de decidibilidade, oscilação jurisprudencial e linhas decisórias por artigo.">
+<meta property="og:title" content="ICONS · Cartografia do Contencioso Constitucional">
+<meta property="og:description" content="Cartografia do contencioso constitucional brasileiro. Decisões do STF mapeadas. Padrões de decidibilidade, oscilação jurisprudencial e linhas decisórias por artigo. ICONS — Instituto Constituição Aberta.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,9 +38,49 @@ body {
   overflow-x: hidden;
 }
 
+/* ── PAGE NAV ── */
+.page-nav {
+  background: #0d1828;
+  border-bottom: 1px solid rgba(184,134,11,.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 1rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+}
+.page-nav a {
+  color: rgba(245,240,232,.4);
+  text-decoration: none;
+  padding: 3px 12px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.page-nav a:hover { color: rgba(245,240,232,.7); }
+.page-nav a.active {
+  color: #d4a017;
+  border-color: rgba(212,160,23,.3);
+  background: rgba(212,160,23,.08);
+}
+.page-nav .nav-arrow {
+  color: rgba(245,240,232,.2);
+  padding: 3px 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.page-nav .nav-arrow:hover { color: #d4a017; }
+
 /* ── HEADER ── */
 .site-header {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  position: fixed; top: 33px; left: 0; right: 0; z-index: 100;
   background: rgba(26,39,68,.97);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(184,134,11,.2);
@@ -110,7 +150,7 @@ body {
 
 .hero-inner {
   max-width: 1200px; margin: 0 auto;
-  padding: 8rem 2rem 4rem;
+  padding: 10rem 2rem 4rem;
   flex: 1; display: flex; flex-direction: column; justify-content: center;
   position: relative; z-index: 1;
 }
@@ -403,6 +443,14 @@ body {
 </head>
 <body>
 
+<nav class="page-nav">
+  <a href="linhas_decisorias_stf.html" class="nav-arrow">←</a>
+  <a href="index.html" class="active">Índice</a>
+  <a href="cartografia_stf.html">Cartografia do Contencioso</a>
+  <a href="linhas_decisorias_stf.html">Oscilação Jurisprudencial</a>
+  <a href="cartografia_stf.html" class="nav-arrow">→</a>
+</nav>
+
 <!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
@@ -431,7 +479,7 @@ body {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">PROJUS · Projeto Justiça Aberta · desde 2016</div>
+    <div class="hero-eyebrow">ICONS · Instituto Constituição Aberta · desde 2016</div>
     <h1 class="hero-title">
       Cartografia do<br>
       <em>Contencioso</em><br>
@@ -577,10 +625,9 @@ body {
 <section class="about-section" id="sobre">
   <div class="about-inner">
     <div>
-      <div class="section-label" style="color:var(--gold2)">Sobre o PROJUS</div>
+      <div class="section-label" style="color:var(--gold2)">Sobre o ICONS</div>
       <h2 class="about-title">Instituto<br><em>Constituição Aberta</em></h2>
       <p class="about-text">O ICONS é uma organização da sociedade civil de interesse público, sem fins lucrativos, dedicada à promoção da transparência do Poder Judiciário e ao fortalecimento das relações entre o STF e a sociedade civil.</p>
-      <p class="about-text">O PROJUS — Projeto Justiça Aberta — nasceu de uma proposta de pesquisa interdisciplinar de 2016, coordenada pela Damares Medina, com o objetivo de extrair, tratar e traduzir as decisões do STF em linguagem acessível ao cidadão.</p>
       <p class="about-text" style="margin-top:.85rem;font-family:'DM Mono',monospace;font-size:10px;color:rgba(245,240,232,.35);line-height:1.6">Assim como a Constituição é um projeto aberto, o STF está em constante realização constitucional. — Min. Aliomar Baleeiro, 1968</p>
     </div>
     <div class="about-meta">
@@ -614,7 +661,7 @@ body {
   <div class="footer-inner">
     <div class="footer-logo">ICONS · Instituto Constituição Aberta</div>
     <div class="footer-copy">
-      PROJUS · Projeto Justiça Aberta · Coord. Damares Medina<br>
+      ICONS · Instituto Constituição Aberta · Coord. Damares Medina<br>
       <span class="live-total">...</span> decisões do STF · <span class="live-artigos">...</span> artigos da CF/88 · 1988–2026<br>
       <a href="cartografia_stf.html">Cartografia do Contencioso Constitucional</a> &nbsp;·&nbsp;
       <a href="linhas_decisorias_stf.html">Oscilação Jurisprudencial</a>
