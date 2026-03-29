@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -644,11 +645,47 @@ function spToggle(){
   b.textContent=w.classList.contains('collapsed')?'▼ expandir':'▲ recolher';
 }
 
+// ── SUPABASE ENRICHMENT ──
+const _sb = supabase.createClient(
+  'https://hetuhkhhppxjliiaerlu.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhldHVoa2hocHB4amxpaWFlcmx1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQxOTYzMTIsImV4cCI6MjA4OTc3MjMxMn0.r3U1CzYRdSwlsX7r-akYdNBPMc9Ec3ChShjC-ITyYi0'
+);
+
+async function enrichFromSupabase(){
+  try {
+    const {data,error} = await _sb.rpc('linhas_artigos_list');
+    if(error||!data) return;
+    // Build lookup: ancora_normativa -> live count
+    const liveCounts={};
+    data.forEach(r=>{ if(r.ancora && r.n) liveCounts[r.ancora]=r.n; });
+    // Update totals in A where we have a match (by checking if the id maps to an ancora key)
+    // The ancora format is like "cf-1988-art-5", the id format is like "Art. 5º"
+    // Build a mapping function
+    function artIdToAncora(id){
+      const m=id.match(/(\d+)/);
+      if(!m) return null;
+      return 'cf-1988-art-'+m[1];
+    }
+    let updated=0;
+    A.forEach(art=>{
+      const key=artIdToAncora(art.id);
+      if(key && liveCounts[key]){ art.liveTotal=liveCounts[key]; updated++; }
+    });
+    // Also update SP
+    SP.forEach(sp=>{
+      const key=artIdToAncora(sp.id);
+      if(key && liveCounts[key]) sp.liveTotal=liveCounts[key];
+    });
+    if(updated>0){ rSide(); buildSpine(); }
+  } catch(e){ console.warn('Supabase enrichment failed',e); }
+}
+
 // ── INIT ──
 rSide();
 buildSpine();
 const first=A.find(a=>a.id==='Art. 1º')||A[0];
 if(first)open_(first.id);
+enrichFromSupabase();
 </script>
 </body>
 </html>

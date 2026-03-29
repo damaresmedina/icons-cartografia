@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <style>
 :root {
   --ink: #0f0e0d;
@@ -349,9 +350,9 @@ select { font-family: var(--ff-mono); font-size: 10px; padding: 4px 8px; border-
       <a href="linhas_decisorias_stf.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:1rem;font-family:'DM Mono',monospace;font-size:10px;color:var(--gold2);border:0.5px solid rgba(184,134,11,.4);padding:5px 14px;border-radius:4px;text-decoration:none;transition:all .15s" onmouseover="this.style.background='rgba(184,134,11,.12)'" onmouseout="this.style.background='transparent'">⤷ Linhas decisórias por artigo — mudanças jurisprudenciais</a>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="n">9.014</div><div class="l">decisões mapeadas</div></div>
-      <div class="hero-stat"><div class="n">354</div><div class="l">artigos comentados</div></div>
-      <div class="hero-stat"><div class="n">37 anos</div><div class="l">amplitude máxima</div></div>
+      <div class="hero-stat"><div class="n" id="hero-dec">...</div><div class="l">decisões mapeadas</div></div>
+      <div class="hero-stat"><div class="n" id="hero-art">...</div><div class="l">artigos comentados</div></div>
+      <div class="hero-stat"><div class="n" id="hero-amp">...</div><div class="l">amplitude máxima</div></div>
     </div>
   </div>
 </section>
@@ -361,10 +362,10 @@ select { font-family: var(--ff-mono); font-size: 10px; padding: 4px 8px; border-
 
   <!-- MÉTRICAS SEMPRE VISÍVEIS -->
   <div class="grid4" style="margin-top:1.5rem" id="metrics">
-    <div class="metric-card"><div class="lbl">Decisões mapeadas</div><div class="val">9.014</div><div class="sub">1988–2026</div></div>
-    <div class="metric-card"><div class="lbl">Artigos da CF/88</div><div class="val">354</div><div class="sub">com decisões</div></div>
-    <div class="metric-card"><div class="lbl">Classes processuais</div><div class="val">15</div><div class="sub">ADI lidera 31,9%</div></div>
-    <div class="metric-card"><div class="lbl">Relatores</div><div class="val">80+</div><div class="sub">ministros e ex-ministros</div></div>
+    <div class="metric-card"><div class="lbl">Decisões mapeadas</div><div class="val" id="m-dec">...</div><div class="sub" id="m-dec-sub">carregando</div></div>
+    <div class="metric-card"><div class="lbl">Artigos da CF/88</div><div class="val" id="m-art">...</div><div class="sub">com decisões</div></div>
+    <div class="metric-card"><div class="lbl">Classes processuais</div><div class="val" id="m-cls">...</div><div class="sub" id="m-cls-sub">carregando</div></div>
+    <div class="metric-card"><div class="lbl">Relatores</div><div class="val" id="m-rel">...</div><div class="sub">ministros e ex-ministros</div></div>
   </div>
 
   <!-- EIXOS NAV + PANELS -->
@@ -376,18 +377,18 @@ select { font-family: var(--ff-mono); font-size: 10px; padding: 4px 8px; border-
 
 <footer class="site-footer">
   <strong>ICONS · Instituto Constituição Aberta</strong> · Projeto Justiça Aberta · Coord. Damares Medina<br>
-  Dados extraídos da Constituição Federal Comentada pelas decisões do STF · 9.014 precedentes · 1988–2026
+  Dados extraídos da Constituição Federal Comentada pelas decisões do STF · <span id="ft-total">...</span> precedentes · 1988–2026
 </footer>
 
 <div id="tooltip"></div>
 
 <script>
-// ── DATA ──
+// ── DATA (populated from Supabase) ──
 const DATA = {
-  anos: {1988:5,1989:18,1990:51,1991:67,1992:70,1993:94,1994:93,1995:135,1996:135,1997:101,1998:111,1999:154,2000:120,2001:118,2002:196,2003:143,2004:198,2005:237,2006:279,2007:456,2008:570,2009:476,2010:408,2011:408,2012:225,2013:236,2014:310,2015:178,2016:151,2017:206,2018:222,2019:265,2020:440,2021:289,2022:314,2023:410,2025:84},
-  classes: [['ADI',2877],['RE',2419],['HC',783],['MS',628],['AI',384],['ARE',378],['ADPF',328],['RCL',255],['RMS',140],['ACO',127],['MI',100],['SV',93],['RHC',85],['PET',79],['INQ',77]],
-  relatores: [['Marco Aurélio',671],['Dias Toffoli',603],['Gilmar Mendes',599],['Celso de Mello',588],['Cármen Lúcia',466],['Luiz Fux',401],['R. Lewandowski',376],['Eros Grau',367],['Sepúlveda Pertence',329],['Edson Fachin',328],['Alexandre de Moraes',313],['Ellen Gracie',298],['Joaquim Barbosa',282],['Roberto Barroso',272],['Cezar Peluso',237],['Ayres Britto',236],['Nunes Marques',216],['Carlos Velloso',209],['Rosa Weber',184],['Ilmar Galvão',160]],
-  artigos: [['Art. 102 – Competência STF',437],['Art. 5º – Dir. Fundamentais',416],['Art. 93 – Carreira Judiciária',352],['Art. 37 – Adm. Pública',339],['Art. 150 – Imunidades Tributárias',330],['Art. 24 – Comp. Concorrente',256],['Art. 129 – MP / Inquérito',228],['Art. 102 – Foro Privilegiado',214],['Art. 155 – ICMS',210],['Art. 18 – Federação',200],['Art. 195 – Seguridade Social',154],['Art. 155 – ICMS/Estados',154],['Art. 109 – Justiça Federal',132],['Art. 144 – Segurança Pública',121],['Art. 7º – Salário Mínimo',114],['Art. 14 – Soberania Popular',112],['Art. 9º – Greve',112],['Art. 60 – PECs',104],['Art. 29 – Municípios',92],['Art. 103 – Legitimados ADI',92]],
+  anos: {},
+  classes: [],
+  relatores: [],
+  artigos: [],
   heatRelatores: ['Marco Aurélio','Gilmar Mendes','Celso de Mello','Cármen Lúcia','Dias Toffoli','Eros Grau','Luiz Fux','Lewandowski','Edson Fachin','A. Moraes','Barroso','Velloso','Pertence','E. Gracie','J. Barbosa'],
   buckets: ['88–92','93–97','98–02','03–07','08–12','13–17','18–22','23–26'],
   heatRaw: [[18,62,80,180,180,80,50,21],[0,8,32,150,180,100,75,54],[52,80,110,150,110,50,20,16],[0,0,0,40,160,130,90,46],[0,0,0,80,130,105,160,128],[0,0,5,85,150,80,20,7],[0,0,0,40,120,80,110,51],[0,0,10,60,110,85,70,41],[0,0,0,0,40,80,120,88],[0,0,0,0,50,70,110,83],[0,0,0,0,30,70,95,77],[30,55,75,42,5,0,0,0],[20,85,90,90,30,4,0,0],[0,0,50,85,90,50,15,8],[0,0,5,80,100,60,35,2]],
@@ -523,7 +524,7 @@ const RENDERS = {
       </div>
       <div class="card mb">
         <div class="card-title">Volume absoluto</div>
-        <div class="bar-list">${barHTML(DATA.classes,2877,NAVY_RAMP,55)}</div>
+        <div class="bar-list">${barHTML(DATA.classes,(DATA.classes[0]||[0,1])[1],NAVY_RAMP,55)}</div>
       </div>
     </div>
     <div class="card">
@@ -531,7 +532,7 @@ const RENDERS = {
       <div style="position:relative;height:160px"><canvas id="ch_cevol"></canvas></div>
       <div class="info-note">ADI + RE = 58,7% do contencioso constitucional. ADPF cresce após 2016 como instrumento de controle concentrado. AI foi extinto em 2010 após representar ~4% do volume. Súmulas Vinculantes (93) marcam consolidação doutrinária.</div>
     </div>`;
-    mkChart('ch_cls', {type:'doughnut', data:{labels:DATA.classes.map(c=>c[0]), datasets:[{data:DATA.classes.map(c=>c[1]), backgroundColor:COLORS, borderWidth:2, borderColor:'#f5f0e8'}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:10}, color:'#6b6355', boxWidth:12}}, tooltip:{callbacks:{label:c=>c.label+': '+c.parsed.toLocaleString('pt-BR')+' ('+((c.parsed/9014)*100).toFixed(1)+'%)'}}}}});
+    mkChart('ch_cls', {type:'doughnut', data:{labels:DATA.classes.map(c=>c[0]), datasets:[{data:DATA.classes.map(c=>c[1]), backgroundColor:COLORS, borderWidth:2, borderColor:'#f5f0e8'}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:10}, color:'#6b6355', boxWidth:12}}, tooltip:{callbacks:{label:c=>c.label+': '+c.parsed.toLocaleString('pt-BR')+' ('+((c.parsed/(DATA.classes.reduce((s,x)=>s+x[1],0)||1))*100).toFixed(1)+'%)'}}}}});
     mkChart('ch_cevol', {type:'bar', data:{labels:['88–94','95–01','02–08','09–15','16–26'], datasets:[{label:'ADI',data:[180,420,900,680,697],backgroundColor:'#1a2744'},{label:'RE',data:[100,380,750,600,589],backgroundColor:'#3d679c'},{label:'HC',data:[60,100,200,220,203],backgroundColor:'#0d5c5c'},{label:'ADPF',data:[0,5,40,80,203],backgroundColor:'#b8860b'}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:9}, color:tc, boxWidth:10}}}, scales:{x:{stacked:true, ticks:{font:{size:9}, color:tc}}, y:{stacked:true, grid:{color:gc}, ticks:{font:{size:9}, color:tc}}}}});
   },
 
@@ -540,7 +541,7 @@ const RENDERS = {
     <div class="grid2">
       <div class="card mb">
         <div class="card-title">Top 20 relatores — volume total</div>
-        <div class="bar-list">${barHTML(DATA.relatores,671,TEAL_RAMP,130)}</div>
+        <div class="bar-list">${barHTML(DATA.relatores,(DATA.relatores[0]||[0,1])[1],TEAL_RAMP,130)}</div>
       </div>
       <div class="card mb">
         <div class="card-title">Curva de concentração decisória</div>
@@ -564,7 +565,7 @@ const RENDERS = {
     <div class="grid2">
       <div class="card mb">
         <div class="card-title">Top 20 artigos — litigiosidade</div>
-        <div class="bar-list">${barHTML(DATA.artigos,437,GOLD_RAMP,160)}</div>
+        <div class="bar-list">${barHTML(DATA.artigos,(DATA.artigos[0]||[0,1])[1],GOLD_RAMP,160)}</div>
       </div>
       <div class="card mb">
         <div class="card-title">Por bloco temático</div>
@@ -640,7 +641,7 @@ const RENDERS = {
         <div class="tl-item"><div class="tl-dot" style="background:#b8860b"></div><div class="tl-text"><strong>2ª Turma (17,5%) — 1.580 decisões</strong><span>HC, RHC, MS, RE individuais, causas cíveis, tributárias e administrativas. 5 ministros.</span></div></div>
       </div>
     </div>`;
-    mkChart('ch_org', {type:'doughnut', data:{labels:['Plenário','1ª Turma','2ª Turma','Não ident.'], datasets:[{data:[4820,1680,1580,934], backgroundColor:['#1a2744','#0d5c5c','#b8860b','#9b9186'], borderWidth:2, borderColor:'#f5f0e8'}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:10}, color:tc, boxWidth:12}}, tooltip:{callbacks:{label:c=>c.label+': '+c.parsed.toLocaleString('pt-BR')+' ('+((c.parsed/9014)*100).toFixed(1)+'%)'}}}}});
+    mkChart('ch_org', {type:'doughnut', data:{labels:['Plenário','1ª Turma','2ª Turma','Não ident.'], datasets:[{data:[4820,1680,1580,934], backgroundColor:['#1a2744','#0d5c5c','#b8860b','#9b9186'], borderWidth:2, borderColor:'#f5f0e8'}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:10}, color:tc, boxWidth:12}}, tooltip:{callbacks:{label:c=>c.label+': '+c.parsed.toLocaleString('pt-BR')+' ('+((c.parsed/(DATA.classes.reduce((s,x)=>s+x[1],0)||1))*100).toFixed(1)+'%)'}}}}});
     mkChart('ch_orgcls', {type:'bar', data:{labels:['ADI','RE','HC','MS','ADPF','RCL'], datasets:[{label:'Plenário',data:[2700,800,100,200,300,200],backgroundColor:'#1a2744'},{label:'1ª Turma',data:[80,700,340,220,14,30],backgroundColor:'#0d5c5c'},{label:'2ª Turma',data:[70,750,300,180,10,20],backgroundColor:'#b8860b'}]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{font:{size:9}, color:tc, boxWidth:10}}}, scales:{x:{stacked:true, ticks:{font:{size:9}, color:tc}}, y:{stacked:true, grid:{color:gc}, ticks:{font:{size:9}, color:tc}}}}});
   },
 
@@ -809,31 +810,85 @@ const RENDERS = {
 };
 
 // ── BUILD NAV + PANELS ──
-const panelsEl = document.getElementById('panels');
-const navEl = document.getElementById('eixosNav');
+function buildUI() {
+  const panelsEl = document.getElementById('panels');
+  const navEl = document.getElementById('eixosNav');
+  // Clear previous buttons (keep the label)
+  navEl.querySelectorAll('.hnav-btn').forEach(b=>b.remove());
+  panelsEl.innerHTML = '';
 
-PANELS.forEach((p, i) => {
-  const div = document.createElement('div');
-  div.id = 'panel-' + p.id;
-  div.className = 'panel' + (i===0?' active':'');
-  panelsEl.appendChild(div);
+  PANELS.forEach((p, i) => {
+    const div = document.createElement('div');
+    div.id = 'panel-' + p.id;
+    div.className = 'panel' + (i===0?' active':'');
+    panelsEl.appendChild(div);
 
-  const btn = document.createElement('button');
-  btn.className = 'hnav-btn' + (i===0?' active':'');
-  btn.textContent = p.label;
-  btn.onclick = () => {
-    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-    document.querySelectorAll('.hnav-btn').forEach(b=>b.classList.remove('active'));
-    div.classList.add('active');
-    btn.classList.add('active');
-    RENDERS[p.id](div);
-    document.getElementById('eixosNav').scrollIntoView({behavior:'smooth', block:'start'});
-  };
-  navEl.appendChild(btn);
-});
+    const btn = document.createElement('button');
+    btn.className = 'hnav-btn' + (i===0?' active':'');
+    btn.textContent = p.label;
+    btn.onclick = () => {
+      document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+      document.querySelectorAll('.hnav-btn').forEach(b=>b.classList.remove('active'));
+      div.classList.add('active');
+      btn.classList.add('active');
+      RENDERS[p.id](div);
+      document.getElementById('eixosNav').scrollIntoView({behavior:'smooth', block:'start'});
+    };
+    navEl.appendChild(btn);
+  });
 
-// Render first panel
-RENDERS.temporal(document.getElementById('panel-temporal'));
+  // Render first panel
+  RENDERS.temporal(document.getElementById('panel-temporal'));
+}
+
+// ── SUPABASE LOADER ──
+(async function(){
+  const sb = supabase.createClient(
+    'https://hetuhkhhppxjliiaerlu.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhldHVoa2hocHB4amxpaWFlcmx1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQxOTYzMTIsImV4cCI6MjA4OTc3MjMxMn0.r3U1CzYRdSwlsX7r-akYdNBPMc9Ec3ChShjC-ITyYi0'
+  );
+  const fmt = n => Number(n).toLocaleString('pt-BR');
+  try {
+    const {data, error} = await sb.rpc('cartografia_stats');
+    if(error) throw error;
+
+    // Populate DATA from Supabase
+    if(data.anos_por_decisao) DATA.anos = Object.fromEntries(Object.entries(data.anos_por_decisao).map(([k,v])=>[k,Number(v)]));
+    if(data.classes) DATA.classes = data.classes;
+    if(data.relatores_top) DATA.relatores = data.relatores_top;
+    if(data.artigos_top) DATA.artigos = data.artigos_top;
+
+    // Update hero stats
+    const anoKeys = Object.keys(DATA.anos).filter(a=>a.match(/^\d{4}$/)).map(Number);
+    const amplitude = anoKeys.length ? Math.max(...anoKeys) - Math.min(...anoKeys) : 37;
+    document.getElementById('hero-dec').textContent = fmt(data.total);
+    document.getElementById('hero-art').textContent = fmt(data.artigos);
+    document.getElementById('hero-amp').textContent = amplitude + ' anos';
+
+    // Update metrics
+    document.getElementById('m-dec').textContent = fmt(data.total);
+    document.getElementById('m-dec-sub').textContent = (anoKeys.length ? Math.min(...anoKeys) + '–' + Math.max(...anoKeys) : '1988–2025');
+    document.getElementById('m-art').textContent = fmt(data.artigos);
+    const topCls = DATA.classes[0];
+    document.getElementById('m-cls').textContent = DATA.classes.length;
+    document.getElementById('m-cls-sub').textContent = topCls ? topCls[0]+' lidera '+ (topCls[1]/data.total*100).toFixed(1)+'%' : '';
+    document.getElementById('m-rel').textContent = data.relatores + '+';
+    document.getElementById('ft-total').textContent = fmt(data.total);
+  } catch(e) {
+    console.warn('Supabase load failed, using fallback', e);
+    document.getElementById('hero-dec').textContent = '7.766';
+    document.getElementById('hero-art').textContent = '849';
+    document.getElementById('hero-amp').textContent = '37 anos';
+    document.getElementById('m-dec').textContent = '7.766';
+    document.getElementById('m-dec-sub').textContent = '1988–2025';
+    document.getElementById('m-art').textContent = '849';
+    document.getElementById('m-cls').textContent = '15';
+    document.getElementById('m-cls-sub').textContent = '';
+    document.getElementById('m-rel').textContent = '48+';
+    document.getElementById('ft-total').textContent = '7.766';
+  }
+  buildUI();
+})();
 </script>
 </body>
 </html>

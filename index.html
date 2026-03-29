@@ -6,7 +6,7 @@
 <title>PROJUS · Projeto Justiça Aberta · ICONS</title>
 <meta name="description" content="Cartografia do contencioso constitucional brasileiro. Mapeamento jurisprudencial das decisões do STF desde 1988. Instituto Constituição Aberta – ICONS.">
 <meta property="og:title" content="PROJUS · Cartografia do Contencioso Constitucional">
-<meta property="og:description" content="9.014 decisões do STF mapeadas. Padrões de decidibilidade, oscilação jurisprudencial e linhas decisórias por artigo.">
+<meta property="og:description" content="Decisões do STF mapeadas. Padrões de decidibilidade, oscilação jurisprudencial e linhas decisórias por artigo.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -441,13 +441,13 @@ body {
       Mapeamento jurisprudencial das decisões do Supremo Tribunal Federal desde a promulgação da Constituição Federal de 1988. Padrões de decidibilidade, oscilação jurisprudencial e linhas decisórias por artigo — com dados reais extraídos dos acórdãos.
     </p>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-n">9.014</div><div class="stat-l">decisões mapeadas</div></div>
+      <div class="stat"><div class="stat-n" id="st-dec">...</div><div class="stat-l">decisões mapeadas</div></div>
       <div class="stat-sep"></div>
-      <div class="stat"><div class="stat-n">354</div><div class="stat-l">artigos da CF/88</div></div>
+      <div class="stat"><div class="stat-n" id="st-art">...</div><div class="stat-l">artigos da CF/88</div></div>
       <div class="stat-sep"></div>
-      <div class="stat"><div class="stat-n">37 anos</div><div class="stat-l">amplitude temporal</div></div>
+      <div class="stat"><div class="stat-n" id="st-amp">...</div><div class="stat-l">amplitude temporal</div></div>
       <div class="stat-sep"></div>
-      <div class="stat"><div class="stat-n">80+</div><div class="stat-l">relatores mapeados</div></div>
+      <div class="stat"><div class="stat-n" id="st-rel">...</div><div class="stat-l">relatores mapeados</div></div>
     </div>
     <div class="hero-ctas">
       <a href="cartografia_stf.html" class="cta-primary">Cartografia do contencioso constitucional →</a>
@@ -474,7 +474,7 @@ body {
           <div class="tool-tagline">12 eixos analíticos · visão macro</div>
         </div>
         <div class="tool-card-body">
-          <p class="tool-desc">Visão panorâmica do contencioso constitucional. Distribui as 9.014 decisões por eixos temáticos, temporais, institucionais e processuais para revelar a estrutura do sistema.</p>
+          <p class="tool-desc">Visão panorâmica do contencioso constitucional. Distribui as <span class="live-total">...</span> decisões por eixos temáticos, temporais, institucionais e processuais para revelar a estrutura do sistema.</p>
           <div class="tool-features">
             <div class="tool-feat">Evolução temporal 1988–2026</div>
             <div class="tool-feat">Distribuição por classe processual</div>
@@ -615,12 +615,46 @@ body {
     <div class="footer-logo">ICONS · Instituto Constituição Aberta</div>
     <div class="footer-copy">
       PROJUS · Projeto Justiça Aberta · Coord. Damares Medina<br>
-      9.014 decisões do STF · 354 artigos da CF/88 · 1988–2026<br>
+      <span class="live-total">...</span> decisões do STF · <span class="live-artigos">...</span> artigos da CF/88 · 1988–2026<br>
       <a href="cartografia_stf.html">Cartografia do Contencioso Constitucional</a> &nbsp;·&nbsp;
       <a href="linhas_decisorias_stf.html">Oscilação Jurisprudencial</a>
     </div>
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script>
+(async function(){
+  const sb = supabase.createClient(
+    'https://hetuhkhhppxjliiaerlu.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhldHVoa2hocHB4amxpaWFlcmx1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQxOTYzMTIsImV4cCI6MjA4OTc3MjMxMn0.r3U1CzYRdSwlsX7r-akYdNBPMc9Ec3ChShjC-ITyYi0'
+  );
+  try {
+    const {data} = await sb.rpc('cartografia_stats');
+    if(!data) return;
+    const fmt = n => Number(n).toLocaleString('pt-BR');
+    const anos = data.anos_por_decisao || {};
+    const anoKeys = Object.keys(anos).filter(a=>a.match(/^\d{4}$/)).map(Number);
+    const anoMin = Math.min(...anoKeys);
+    const anoMax = Math.max(...anoKeys);
+    const amplitude = anoMax - anoMin;
+
+    document.getElementById('st-dec').textContent = fmt(data.total);
+    document.getElementById('st-art').textContent = fmt(data.artigos);
+    document.getElementById('st-amp').textContent = amplitude + ' anos';
+    document.getElementById('st-rel').textContent = data.relatores + '+';
+
+    document.querySelectorAll('.live-total').forEach(el => el.textContent = fmt(data.total) + ' decisões');
+    document.querySelectorAll('.live-artigos').forEach(el => el.textContent = fmt(data.artigos) + ' artigos');
+  } catch(e) {
+    document.getElementById('st-dec').textContent = '7.766';
+    document.getElementById('st-art').textContent = '849';
+    document.getElementById('st-amp').textContent = '37 anos';
+    document.getElementById('st-rel').textContent = '48+';
+    document.querySelectorAll('.live-total').forEach(el => el.textContent = '7.766 decisões');
+    document.querySelectorAll('.live-artigos').forEach(el => el.textContent = '849 artigos');
+  }
+})();
+</script>
 </body>
 </html>
