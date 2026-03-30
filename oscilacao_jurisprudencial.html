@@ -257,9 +257,6 @@ body{display:flex;flex-direction:column}
   .sidebar{max-height:40vh}
   .kbd-hint,.hdr-badge{display:none}
 }
-
-/* Highlight sidebar ao hover na espinha */
-.side-item.anc-highlighted { background: rgba(164,127,212,0.12) !important; border-left: 2px solid #a07fd4 !important; }
 </style>
 </head>
 <body>
@@ -854,7 +851,7 @@ function initAncoragem(){
   if(sbEl) sbEl.innerHTML = '<div class="astat">Artigos <span>'+RAW.length+'</span></div><div class="astat">Decisões <span>'+totalDec.toLocaleString('pt-BR')+'</span></div><div class="astat">CRFB/1988 · 1988–2026 <span>ICONS · STF</span></div>';
 
   const ancWrap = document.getElementById('ancCanvasWrap');
-  if(ancWrap) ancWrap.innerHTML = '<canvas id="ancCv"></canvas><div id="ancTt" class="anc-tt"></div><div id="ancPanel" class="anc-panel"></div><div class="anc-zoom-hint" style="position:absolute;bottom:8px;right:12px;font-family:IBM Plex Mono,monospace;font-size:8px;color:rgba(255,255,255,.15)">scroll: zoom · drag: mover · clique: seleciona artigo</div>';
+  if(ancWrap) ancWrap.innerHTML = '<canvas id="ancCv"></canvas><div id="ancTt" class="anc-tt"></div><div id="ancPanel" class="anc-panel"></div><div class="anc-zoom-hint" style="position:absolute;bottom:8px;right:12px;font-family:IBM Plex Mono,monospace;font-size:8px;color:rgba(255,255,255,.15)">scroll: zoom · drag: mover</div>';
 
   setupAncCanvas(RAW);
 }
@@ -1045,14 +1042,6 @@ cv.addEventListener('click',function(e){
   const idx=Math.floor((mx2-lay.startX)/lay.unitW);
   if(idx>=0&&idx<RAW.length&&RAW[idx].total>0){
     buildPanel(RAW[idx]);
-    // Conectar espinha → lateral + centro
-    const artId='Art. '+RAW[idx].art+'º';
-    if(typeof open_==='function'){
-      open_(artId);
-      // Expandir seção de ancoragem se estiver recolhida
-      const sec=document.getElementById('ancSection');
-      if(sec&&!sec.classList.contains('open'))sec.classList.add('open');
-    }
   }
 });
 
