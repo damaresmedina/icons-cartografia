@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Taxa de Provimento no STF · JUDX · 2016–2025</title>
+<title>Taxa de Provimento no STF · JUDX · 2016–2025 (Caricatura)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -223,7 +223,10 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: top;
+  filter: url(#caricature);
 }
+
+/* SVG filter for caricature effect */
 .minister-name {
   color: #c8d8e8;
   font-size: 0.8rem;
@@ -299,6 +302,35 @@ body {
 </style>
 </head>
 <body>
+
+<!-- SVG Caricature Filter -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <filter id="caricature" color-interpolation-filters="sRGB">
+      <!-- Boost contrast and saturation -->
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.4" intercept="-0.1"/>
+        <feFuncG type="linear" slope="1.4" intercept="-0.1"/>
+        <feFuncB type="linear" slope="1.4" intercept="-0.1"/>
+      </feComponentTransfer>
+      <!-- Posterize / reduce color bands for cartoon look -->
+      <feComponentTransfer>
+        <feFuncR type="discrete" tableValues="0 0.1 0.25 0.4 0.55 0.7 0.85 1"/>
+        <feFuncG type="discrete" tableValues="0 0.1 0.25 0.4 0.55 0.7 0.85 1"/>
+        <feFuncB type="discrete" tableValues="0 0.1 0.25 0.4 0.55 0.7 0.85 1"/>
+      </feComponentTransfer>
+      <!-- Slight edge emphasis -->
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="arithmetic" k1="1.5" k2="0.5" k3="-0.8" k4="0"/>
+      <!-- Warm tint -->
+      <feColorMatrix type="matrix" values="
+        1.05 0.05 0 0 0.02
+        0.02 1.0  0 0 0.01
+        0    0    0.9 0 0
+        0    0    0   1 0"/>
+    </filter>
+  </defs>
+</svg>
 
 <header class="site-header">
   <a href="https://judx.com.br" class="site-logo">JUDX · Inteligência Jurisprudencial</a>
