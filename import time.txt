@@ -1,0 +1,39 @@
+import time
+import csv
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+# Configurar o driver (ajuste o caminho se necessário)
+driver = webdriver.Chrome()  # ou webdriver.Firefox() se estiver usando o Firefox
+
+# Abra a página da web com a tabela
+url = "https://transparencia.stf.jus.br/extensions/decisoes/decisoes.html"  # Substitua pela URL real da página
+driver.get(url)
+
+# Aguarde o carregamento completo da página e da tabela
+time.sleep(5)  # Ajuste o tempo conforme necessário para garantir que a página carregue completamente
+
+# Localize a tabela (ajuste o seletor para encontrar a tabela específica)
+table = driver.find_element(By.TAG_NAME, "table")  # Supondo que a tabela tenha uma tag <table>
+
+# Extrai os cabeçalhos da tabela
+headers = [header.text for header in table.find_elements(By.TAG_NAME, "th")]
+
+# Extrai as linhas de dados da tabela
+rows = []
+for row in table.find_elements(By.TAG_NAME, "tr"):
+    cells = row.find_elements(By.TAG_NAME, "td")
+    row_data = [cell.text for cell in cells]
+    if row_data:
+        rows.append(row_data)
+
+# Salva os dados em um arquivo CSV
+with open("tabela_completa.csv", "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerow(headers)  # Escreve os cabeçalhos
+    writer.writerows(rows)    # Escreve os dados
+
+# Fecha o navegador
+driver.quit()
+
+print("Exportação completa! Arquivo salvo como 'tabela_completa.csv'")

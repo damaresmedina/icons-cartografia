@@ -1,0 +1,43 @@
+def extrair_detalhes(url):
+    try:
+        # Fazer a requisição à página com timeout de 10 segundos
+        response = requests.get(url, timeout=10)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        # Extrair o cabeçalho principal (classe, número, origem, relator, etc.)
+        classe_processo = soup.find('div', class_='processo-classe').text.strip()
+        numero_unico = soup.find('div', class_='processo-numero-unico').text.strip()
+        tipo_acao = soup.find('div', class_='processo-tipo').text.strip()
+        origem = soup.find('div', class_='processo-origem').text.strip()
+        relator = soup.find('div', class_='processo-relator').text.strip()
+        apenso = soup.find('div', class_='processo-apenso').text.strip()
+        autor = soup.find('div', class_='processo-autor').text.strip()
+        advogado = soup.find('div', class_='processo-advogado').text.strip()
+        reu = soup.find('div', class_='processo-reu').text.strip()
+
+        # Extrair os andamentos
+        andamentos = []
+        andamento_divs = soup.find_all('div', class_='andamento-item')
+        for andamento in andamento_divs:
+            data = andamento.find('span', class_='data').text.strip()
+            descricao = andamento.find('span', class_='descricao').text.strip()
+            andamentos.append(f"{data}: {descricao}")
+
+        return {
+            'link': url,
+            'classe_processo': classe_processo,
+            'numero_unico': numero_unico,
+            'tipo_acao': tipo_acao,
+            'origem': origem,
+            'relator': relator,
+            'apenso': apenso,
+            'autor': autor,
+            'advogado': advogado,
+            'reu': reu,
+            'andamentos': ' | '.join(andamentos)
+        }
+
+    except requests.exceptions.Timeout:
+        return {'link': url, 'erro': 'Timeout - Página demorou para responder'}
+    except Exception as e:
+        return {'link': url, 'erro': f"Erro ao acessar o link: {e}"}

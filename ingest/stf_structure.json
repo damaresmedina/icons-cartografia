@@ -1,0 +1,3467 @@
+[
+  {
+    "art_id": "art4",
+    "label": "Art. 1&ordm; A República Federativa do Brasil, formada pela união indissolúvel dos Estados e Municíp",
+    "decisions": 91,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 6,
+      "repercussao_geral": 4,
+      "julgados_correlatos": 5
+    }
+  },
+  {
+    "art_id": "art11",
+    "label": "Art. 2&ordm; São Poderes da União, independentes e harmônicos entre si, o Legislativo, o Executivo e",
+    "decisions": 76,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 1,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art12",
+    "label": "Art. 3&ordm; Constituem objetivos fundamentais da República Federativa do Brasil:",
+    "decisions": 33,
+    "editorials": {
+      "controle_concentrado": 4,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art17",
+    "label": "Art. 4&ordm; A República Federativa do Brasil rege-se nas suas relações internacionais pelos seguint",
+    "decisions": 21,
+    "editorials": {
+      "controle_concentrado": 3,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 7
+    }
+  },
+  {
+    "art_id": "art31",
+    "label": "Art. 5&ordm; Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos b",
+    "decisions": 1781,
+    "editorials": {
+      "sumula_vinculante": 41,
+      "controle_concentrado": 7,
+      "repercussao_geral": 62,
+      "julgados_correlatos": 6
+    }
+  },
+  {
+    "art_id": "art136",
+    "label": "Art. 6&ordm; São direitos sociais a educação, a saúde, a alimentação, o trabalho, a moradia, o trans",
+    "decisions": 27,
+    "editorials": {
+      "controle_concentrado": 2,
+      "repercussao_geral": 3,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art137",
+    "label": "Art. 7&ordm; São direitos dos trabalhadores urbanos e rurais, além de outros que visem à melhoria de",
+    "decisions": 174,
+    "editorials": {
+      "sumula_vinculante": 14,
+      "controle_concentrado": 24,
+      "repercussao_geral": 29,
+      "julgados_correlatos": 20
+    }
+  },
+  {
+    "art_id": "art173",
+    "label": "Art. 8&ordm; É livre a associação profissional ou sindical, observado o seguinte:",
+    "decisions": 71,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 7,
+      "repercussao_geral": 4,
+      "julgados_correlatos": 6
+    }
+  },
+  {
+    "art_id": "art183",
+    "label": "Art. 9&ordm; É assegurado o direito de greve, competindo aos trabalhadores decidir sobre a oportunid",
+    "decisions": 5,
+    "editorials": {
+      "repercussao_geral": 1,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art186",
+    "label": "Art. 10. É assegurada a participação dos trabalhadores e empregadores nos colegiados dos órgãos públ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art187",
+    "label": "Art. 11. Nas empresas de mais de duzentos empregados, é assegurada a eleição de um representante des",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art189",
+    "label": "Art. 12. São brasileiros:",
+    "decisions": 11,
+    "editorials": {
+      "julgados_correlatos": 11
+    }
+  },
+  {
+    "art_id": "art212",
+    "label": "Art. 13. A língua portuguesa é o idioma oficial da República Federativa do Brasil.",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art216",
+    "label": "Art. 14. A soberania popular será exercida pelo sufrágio universal e pelo voto direto e secreto, com",
+    "decisions": 55,
+    "editorials": {
+      "sumula_vinculante": 3,
+      "controle_concentrado": 10,
+      "repercussao_geral": 4,
+      "julgados_correlatos": 10
+    }
+  },
+  {
+    "art_id": "art248",
+    "label": "Art. 15. É vedada a cassação de direitos políticos, cuja perda ou suspensão só se dará nos casos de:",
+    "decisions": 6,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art254",
+    "label": "Art. 16. A lei que alterar o processo eleitoral entrará em vigor na data de sua publicação, não se a",
+    "decisions": 13,
+    "editorials": {
+      "repercussao_geral": 2
+    }
+  },
+  {
+    "art_id": "art256",
+    "label": "Art. 17. É livre a criação, fusão, incorporação e extinção de partidos políticos, resguardados a sob",
+    "decisions": 41,
+    "editorials": {
+      "controle_concentrado": 6,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art267",
+    "label": "Art. 18. A organização político-administrativa da República Federativa do Brasil compreende a União,",
+    "decisions": 35,
+    "editorials": {
+      "controle_concentrado": 3,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art272",
+    "label": "Art. 19. É vedado à União, aos Estados, ao Distrito Federal e aos Municípios:",
+    "decisions": 13,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art277",
+    "label": "Art. 20. São bens da União:",
+    "decisions": 28,
+    "editorials": {
+      "controle_concentrado": 5,
+      "repercussao_geral": 4,
+      "julgados_correlatos": 6
+    }
+  },
+  {
+    "art_id": "art291",
+    "label": "Art. 21. Compete à União:",
+    "decisions": 75,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 14,
+      "repercussao_geral": 6,
+      "julgados_correlatos": 7
+    }
+  },
+  {
+    "art_id": "art326",
+    "label": "Art. 22. Compete privativamente à União legislar sobre:",
+    "decisions": 249,
+    "editorials": {
+      "sumula_vinculante": 4,
+      "controle_concentrado": 21,
+      "repercussao_geral": 6,
+      "julgados_correlatos": 7
+    }
+  },
+  {
+    "art_id": "art357",
+    "label": "Art. 23. É competência comum da União, dos Estados, do Distrito Federal e dos Municípios:",
+    "decisions": 31,
+    "editorials": {
+      "controle_concentrado": 10,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art371",
+    "label": "Art. 24. Compete à União, aos Estados e ao Distrito Federal legislar concorrentemente sobre:",
+    "decisions": 155,
+    "editorials": {
+      "controle_concentrado": 20,
+      "repercussao_geral": 4,
+      "julgados_correlatos": 10
+    }
+  },
+  {
+    "art_id": "art393",
+    "label": "Art. 25. Os Estados organizam-se e regem-se pelas Constituições e leis que adotarem, observados os p",
+    "decisions": 23,
+    "editorials": {
+      "controle_concentrado": 4,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art397",
+    "label": "Art. 26. Incluem-se entre os bens dos Estados:",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art402",
+    "label": "Art. 27. O número de Deputados à Assembleia Legislativa corresponderá ao triplo da representação do ",
+    "decisions": 14,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art407",
+    "label": "Art. 28. A eleição do Governador e do Vice-Governador de Estado, para mandato de 4 (quatro) anos, re",
+    "decisions": 5,
+    "editorials": {
+      "controle_concentrado": 3
+    }
+  },
+  {
+    "art_id": "art411",
+    "label": "Art. 29. O Município reger-se-á por lei orgânica, votada em dois turnos, com o interstício mínimo de",
+    "decisions": 30,
+    "editorials": {
+      "controle_concentrado": 7,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 7
+    }
+  },
+  {
+    "art_id": "art435",
+    "label": "Art. 29-A. O total da despesa do Poder Legislativo Municipal, incluídos os subsídios dos Vereadores ",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art446",
+    "label": "Art. 30. Compete aos Municípios:",
+    "decisions": 41,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 4,
+      "repercussao_geral": 6,
+      "julgados_correlatos": 5
+    }
+  },
+  {
+    "art_id": "art456",
+    "label": "Art. 31. A fiscalização do Município será exercida pelo Poder Legislativo Municipal, mediante contro",
+    "decisions": 14,
+    "editorials": {
+      "controle_concentrado": 3,
+      "repercussao_geral": 3,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art463",
+    "label": "Art. 32. O Distrito Federal, vedada sua divisão em Municípios, reger-se-á por lei orgânica, votada e",
+    "decisions": 10,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art469",
+    "label": "Art. 33. A lei disporá sobre a organização administrativa e judiciária dos Territórios.",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art474",
+    "label": "Art. 34. A União não intervirá nos Estados nem no Distrito Federal, exceto para:",
+    "decisions": 14,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 6
+    }
+  },
+  {
+    "art_id": "art489",
+    "label": "Art. 35. O Estado não intervirá em seus Municípios, nem a União nos Municípios localizados em Territ",
+    "decisions": 11,
+    "editorials": {
+      "controle_concentrado": 3,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art494",
+    "label": "Art. 36. A decretação da intervenção dependerá:",
+    "decisions": 6,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art505",
+    "label": "Art. 37. A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do",
+    "decisions": 714,
+    "editorials": {
+      "sumula_vinculante": 35,
+      "controle_concentrado": 22,
+      "repercussao_geral": 64,
+      "julgados_correlatos": 28
+    }
+  },
+  {
+    "art_id": "art555",
+    "label": "Art. 38. Ao servidor público da administração direta, autárquica e fundacional, no exercício de mand",
+    "decisions": 8,
+    "editorials": {
+      "controle_concentrado": 4,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art562",
+    "label": "Art. 39. A União, os Estados, o Distrito Federal e os Municípios instituirão, no âmbito de sua compe",
+    "decisions": 52,
+    "editorials": {
+      "sumula_vinculante": 6,
+      "controle_concentrado": 6,
+      "repercussao_geral": 8,
+      "julgados_correlatos": 5
+    }
+  },
+  {
+    "art_id": "art574",
+    "label": "Art. 40. O regime próprio de previdência social dos servidores titulares de cargos efetivos terá car",
+    "decisions": 158,
+    "editorials": {
+      "sumula_vinculante": 6,
+      "controle_concentrado": 17,
+      "repercussao_geral": 34,
+      "julgados_correlatos": 19
+    }
+  },
+  {
+    "art_id": "art602",
+    "label": "Art. 41. São estáveis após três anos de efetivo exercício os servidores nomeados para cargo de provi",
+    "decisions": 39,
+    "editorials": {
+      "controle_concentrado": 5,
+      "repercussao_geral": 3,
+      "julgados_correlatos": 5
+    }
+  },
+  {
+    "art_id": "art611",
+    "label": "Art. 42.&nbsp;Os membros das Policias Militares e Corpos de Bombeiros Militares, instituições organi",
+    "decisions": 7,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 2,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art616",
+    "label": "Art. 43. Para efeitos administrativos, a União poderá articular sua ação em um mesmo complexo geoeco",
+    "decisions": 1,
+    "editorials": {
+      "repercussao_geral": 1
+    }
+  },
+  {
+    "art_id": "art629",
+    "label": "Art. 44. O Poder Legislativo é exercido pelo Congresso Nacional, que se compõe da Câmara dos Deputad",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art631",
+    "label": "Art. 45. A Câmara dos Deputados compõe-se de representantes do povo, eleitos, pelo sistema proporcio",
+    "decisions": 12,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art634",
+    "label": "Art. 46. O Senado Federal compõe-se de representantes dos Estados e do Distrito Federal, eleitos seg",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art638",
+    "label": "Art. 47. Salvo disposição constitucional em contrário, as deliberações de cada Casa e de suas Comiss",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art640",
+    "label": "Art. 48. Cabe ao Congresso Nacional, com a sanção do Presidente da República, não exigida esta para ",
+    "decisions": 7,
+    "editorials": {
+      "controle_concentrado": 5,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art656",
+    "label": "Art. 49. É da competência exclusiva do Congresso Nacional:",
+    "decisions": 18,
+    "editorials": {
+      "controle_concentrado": 9,
+      "julgados_correlatos": 5
+    }
+  },
+  {
+    "art_id": "art674",
+    "label": "Art. 50. A Câmara dos Deputados e o Senado Federal, ou qualquer de suas Comissões, poderão convocar ",
+    "decisions": 7,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art678",
+    "label": "Art. 51. Compete privativamente à Câmara dos Deputados:",
+    "decisions": 8,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art685",
+    "label": "Art. 52. Compete privativamente ao Senado Federal:",
+    "decisions": 24,
+    "editorials": {
+      "controle_concentrado": 8,
+      "julgados_correlatos": 6
+    }
+  },
+  {
+    "art_id": "art709",
+    "label": "Art. 53. Os Deputados e Senadores são invioláveis, civil e penalmente, por quaisquer de suas opiniõe",
+    "decisions": 39,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art718",
+    "label": "Art. 54. Os Deputados e Senadores não poderão:",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art727",
+    "label": "Art. 55. Perderá o mandato o Deputado ou Senador:",
+    "decisions": 19,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 8
+    }
+  },
+  {
+    "art_id": "art738",
+    "label": "Art. 56. Não perderá o mandato o Deputado ou Senador:",
+    "decisions": 10,
+    "editorials": {
+      "controle_concentrado": 3,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art745",
+    "label": "Art. 57. O Congresso Nacional reunir-se-á, anualmente, na Capital Federal, de 2 de fevereiro a 17 de",
+    "decisions": 13,
+    "editorials": {
+      "controle_concentrado": 4,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art761",
+    "label": "Art. 58. O Congresso Nacional e suas Casas terão comissões permanentes e temporárias, constituídas n",
+    "decisions": 25,
+    "editorials": {
+      "controle_concentrado": 4,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art774",
+    "label": "Art. 59. O processo legislativo compreende a elaboração de:",
+    "decisions": 14,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 2,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art784",
+    "label": "Art. 60. A Constituição poderá ser emendada mediante proposta:",
+    "decisions": 23,
+    "editorials": {
+      "controle_concentrado": 7,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 5
+    }
+  },
+  {
+    "art_id": "art798",
+    "label": "Art. 61. A iniciativa das leis complementares e ordinárias cabe a qualquer membro ou Comissão da Câm",
+    "decisions": 85,
+    "editorials": {
+      "controle_concentrado": 9,
+      "repercussao_geral": 7,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art809",
+    "label": "Art. 62. Em caso de relevância e urgência, o Presidente da República poderá adotar medidas provisóri",
+    "decisions": 42,
+    "editorials": {
+      "controle_concentrado": 11,
+      "repercussao_geral": 3,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art830",
+    "label": "Art. 63. Não será admitido aumento da despesa prevista:",
+    "decisions": 8,
+    "editorials": {
+      "controle_concentrado": 2,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art833",
+    "label": "Art. 64. A discussão e votação dos projetos de lei de iniciativa do Presidente da República, do Supr",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art838",
+    "label": "Art. 65. O projeto de lei aprovado por uma Casa será revisto pela outra, em um só turno de discussão",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art840",
+    "label": "Art. 66. A Casa na qual tenha sido concluída a votação enviará o projeto de lei ao Presidente da Rep",
+    "decisions": 12,
+    "editorials": {
+      "controle_concentrado": 3,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art848",
+    "label": "Art. 67. A matéria constante de projeto de lei rejeitado somente poderá constituir objeto de novo pr",
+    "decisions": 3,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art849",
+    "label": "Art. 68. As leis delegadas serão elaboradas pelo Presidente da República, que deverá solicitar a del",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art856",
+    "label": "Art. 69. As leis complementares serão aprovadas por maioria absoluta.",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art858",
+    "label": "Art. 70. A fiscalização contábil, financeira, orçamentária, operacional e patrimonial da União e das",
+    "decisions": 10,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art860",
+    "label": "Art. 71. O controle externo, a cargo do Congresso Nacional, será exercido com o auxílio do Tribunal ",
+    "decisions": 90,
+    "editorials": {
+      "sumula_vinculante": 6,
+      "controle_concentrado": 7,
+      "repercussao_geral": 3,
+      "julgados_correlatos": 9
+    }
+  },
+  {
+    "art_id": "art876",
+    "label": "Art. 72. A Comissão mista permanente a que se refere o art. 166, &sect;1&ordm;, diante de indícios d",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art879",
+    "label": "Art. 73. O Tribunal de Contas da União, integrado por nove Ministros, tem sede no Distrito Federal, ",
+    "decisions": 30,
+    "editorials": {
+      "controle_concentrado": 5,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art890",
+    "label": "Art. 74. Os Poderes Legislativo, Executivo e Judiciário manterão, de forma integrada, sistema de con",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art897",
+    "label": "Art. 75. As normas estabelecidas nesta seção aplicam-se, no que couber, à organização, composição e ",
+    "decisions": 39,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art901",
+    "label": "Art. 76. O Poder Executivo é exercido pelo Presidente da República, auxiliado pelos Ministros de Est",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art902",
+    "label": "Art. 77. A eleição do Presidente e do Vice-Presidente da República realizar-se-á, simultaneamente, n",
+    "decisions": 3,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art908",
+    "label": "Art. 78. O Presidente e o Vice-Presidente da República tomarão posse em sessão do Congresso Nacional",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art910",
+    "label": "Art. 79. Substituirá o Presidente, no caso de impedimento, e suceder-lhe-á, no de vaga, o Vice-Presi",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art912",
+    "label": "Art. 80. Em caso de impedimento do Presidente e do Vice-Presidente, ou vacância dos respectivos carg",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art913",
+    "label": "Art. 81. Vagando os cargos de Presidente e Vice-Presidente da República, far-se-á eleição noventa di",
+    "decisions": 5,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art916",
+    "label": "Art. 82. O mandato do Presidente da República é de 4 (quatro) anos e terá início em 5 de janeiro do ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art917",
+    "label": "Art. 83. O Presidente e o Vice-Presidente da República não poderão, sem licença do Congresso Naciona",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art919",
+    "label": "Art. 84. Compete privativamente ao Presidente da República:",
+    "decisions": 58,
+    "editorials": {
+      "controle_concentrado": 12,
+      "repercussao_geral": 3,
+      "julgados_correlatos": 11
+    }
+  },
+  {
+    "art_id": "art951",
+    "label": "Art. 85. São crimes de responsabilidade os atos do Presidente da República que atentem contra a Cons",
+    "decisions": 5,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art960",
+    "label": "Art. 86. Admitida a acusação contra o Presidente da República, por dois terços da Câmara dos Deputad",
+    "decisions": 18,
+    "editorials": {
+      "controle_concentrado": 4,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art968",
+    "label": "Art. 87. Os Ministros de Estado serão escolhidos dentre brasileiros maiores de vinte e um anos e no ",
+    "decisions": 10,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art974",
+    "label": "Art. 88. A lei disporá sobre a criação e extinção de Ministérios e órgãos da administração pública. ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art977",
+    "label": "Art. 89. O Conselho da República é órgão superior de consulta do Presidente da República, e dele par",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art985",
+    "label": "Art. 90. Compete ao Conselho da República pronunciar-se sobre:",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art991",
+    "label": "Art. 91. O Conselho de Defesa Nacional é órgão de consulta do Presidente da República nos assuntos r",
+    "decisions": 2,
+    "editorials": {
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1008",
+    "label": "Art. 92. São órgãos do Poder Judiciário:",
+    "decisions": 7,
+    "editorials": {
+      "controle_concentrado": 2,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1017",
+    "label": "Art. 93. Lei complementar, de iniciativa do Supremo Tribunal Federal, disporá sobre o Estatuto da Ma",
+    "decisions": 146,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 16,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 15
+    }
+  },
+  {
+    "art_id": "art1033",
+    "label": "Art. 94. Um quinto dos lugares dos Tribunais Regionais Federais, dos Tribunais dos Estados, e do Dis",
+    "decisions": 20,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1035",
+    "label": "Art. 95. Os juízes gozam das seguintes garantias:",
+    "decisions": 15,
+    "editorials": {
+      "controle_concentrado": 5,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 6
+    }
+  },
+  {
+    "art_id": "art1043",
+    "label": "Art. 96. Compete privativamente:",
+    "decisions": 64,
+    "editorials": {
+      "controle_concentrado": 9,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1058",
+    "label": "Art. 97. Somente pelo voto da maioria absoluta de seus membros ou dos membros do respectivo órgão es",
+    "decisions": 33,
+    "editorials": {
+      "sumula_vinculante": 8,
+      "controle_concentrado": 2,
+      "repercussao_geral": 2
+    }
+  },
+  {
+    "art_id": "art1059",
+    "label": "Art. 98. A União, no Distrito Federal e nos Territórios, e os Estados criarão:",
+    "decisions": 21,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 3,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1063",
+    "label": "Art. 99. Ao Poder Judiciário é assegurada autonomia administrativa e financeira.",
+    "decisions": 10,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1068",
+    "label": "Art. 100. Os pagamentos devidos pelas Fazendas Públicas Federal, Estaduais, Distrital e Municipais, ",
+    "decisions": 73,
+    "editorials": {
+      "sumula_vinculante": 1,
+      "controle_concentrado": 8,
+      "repercussao_geral": 12,
+      "julgados_correlatos": 5
+    }
+  },
+  {
+    "art_id": "art1077",
+    "label": "Art. 101. O Supremo Tribunal Federal compõe-se de onze Ministros, escolhidos dentre cidadãos com mai",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1079",
+    "label": "Art. 102. Compete ao Supremo Tribunal Federal, precipuamente, a guarda da Constituição, cabendo-lhe:",
+    "decisions": 622,
+    "editorials": {
+      "sumula_vinculante": 4,
+      "controle_concentrado": 29,
+      "repercussao_geral": 84,
+      "julgados_correlatos": 29
+    }
+  },
+  {
+    "art_id": "art1106",
+    "label": "Art. 103. Podem propor a ação direta de inconstitucionalidade e a ação declaratória de constituciona",
+    "decisions": 60,
+    "editorials": {
+      "controle_concentrado": 13,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art8715",
+    "label": "Art. 103-A. O Supremo Tribunal Federal poderá, de ofício ou por provocação, mediante decisão de dois",
+    "decisions": 9,
+    "editorials": {
+      "sumula_vinculante": 5,
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art8750",
+    "label": "Art. 103-B - O Conselho Nacional de Justiça compõe-se de 15 (quinze) membros com mandato de 2 (dois)",
+    "decisions": 36,
+    "editorials": {
+      "controle_concentrado": 5,
+      "julgados_correlatos": 10
+    }
+  },
+  {
+    "art_id": "art1121",
+    "label": "Art. 104. O Superior Tribunal de Justiça compõe-se de, no mínimo, trinta e três Ministros.",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1125",
+    "label": "Art. 105. Compete ao Superior Tribunal de Justiça:",
+    "decisions": 74,
+    "editorials": {
+      "controle_concentrado": 4,
+      "repercussao_geral": 6,
+      "julgados_correlatos": 15
+    }
+  },
+  {
+    "art_id": "art1145",
+    "label": "Art. 106. São órgãos da Justiça Federal:",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1148",
+    "label": "Art. 107. Os Tribunais Regionais Federais compõem-se de, no mínimo, sete juízes, recrutados, quando ",
+    "decisions": 5,
+    "editorials": {
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1152",
+    "label": "Art. 108. Compete aos Tribunais Regionais Federais:",
+    "decisions": 13,
+    "editorials": {
+      "repercussao_geral": 3,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art1160",
+    "label": "Art. 109. Aos juízes federais compete processar e julgar:",
+    "decisions": 110,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 4,
+      "repercussao_geral": 11,
+      "julgados_correlatos": 10
+    }
+  },
+  {
+    "art_id": "art1176",
+    "label": "Art. 110. Cada Estado, bem como o Distrito Federal, constituirá uma seção judiciária que terá por se",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1179",
+    "label": "Art. 111. São órgãos da Justiça do Trabalho:",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art8891",
+    "label": "Art. 111-A. O Tribunal Superior do Trabalho compõe-se de vinte e sete Ministros, escolhidos dentre b",
+    "decisions": 3,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1186",
+    "label": "Art. 112. A lei criará varas da Justiça do Trabalho, podendo, nas comarcas não abrangidas por sua ju",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1187",
+    "label": "Art. 113. A lei disporá sobre a constituição, investidura, jurisdição, competência, garantias e cond",
+    "decisions": 3,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1188",
+    "label": "Art. 114. Compete à Justiça do Trabalho processar e julgar: (Redação da EC 45/2004)",
+    "decisions": 56,
+    "editorials": {
+      "sumula_vinculante": 6,
+      "controle_concentrado": 5,
+      "repercussao_geral": 9,
+      "julgados_correlatos": 8
+    }
+  },
+  {
+    "art_id": "art1192",
+    "label": "Art. 115. Os Tribunais Regionais do Trabalho compõem-se de, no mínimo, sete juízes, recrutados, quan",
+    "decisions": 6,
+    "editorials": {
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1196",
+    "label": "Art. 116. Nas Varas do Trabalho, a jurisdição será exercida por um juiz singular. (Redação da EC 24/",
+    "decisions": 0,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art14996",
+    "label": "Art. 117. (Revogado pela EC 24/1999).",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1198",
+    "label": "Art. 118. São órgãos da Justiça Eleitoral:",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1203",
+    "label": "Art. 119. O Tribunal Superior Eleitoral compor-se-á, no mínimo, de sete membros, escolhidos:",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1209",
+    "label": "Art. 120. Haverá um Tribunal Regional Eleitoral na Capital de cada Estado e no Distrito Federal.",
+    "decisions": 3,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1217",
+    "label": "Art. 121. Lei complementar disporá sobre a organização e competência dos tribunais, dos juízes de di",
+    "decisions": 19,
+    "editorials": {
+      "controle_concentrado": 3,
+      "julgados_correlatos": 6
+    }
+  },
+  {
+    "art_id": "art1228",
+    "label": "Art. 122. São órgãos da Justiça Militar:",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1231",
+    "label": "Art. 123. Os Ministros civis serão escolhidos pelo Presidente da República dentre brasileiros com ma",
+    "decisions": 3,
+    "editorials": {
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1235",
+    "label": "Art. 124.&nbsp;À Justiça Militar compete processar e julgar os crimes militares definidos em lei.",
+    "decisions": 17,
+    "editorials": {
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1238",
+    "label": "Art. 125. Os Estados organizarão sua Justiça, observados os princípios estabelecidos nesta Constitui",
+    "decisions": 49,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 4,
+      "repercussao_geral": 4,
+      "julgados_correlatos": 5
+    }
+  },
+  {
+    "art_id": "art1243",
+    "label": "Art. 126. Para dirimir conflitos fundiários, o Tribunal de Justiça proporá a criação de varas especi",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1247",
+    "label": "Art. 127. O Ministério Público é instituição permanente, essencial à função jurisdicional do Estado,",
+    "decisions": 42,
+    "editorials": {
+      "controle_concentrado": 4,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1251",
+    "label": "Art. 128. O Ministério Público abrange:",
+    "decisions": 54,
+    "editorials": {
+      "controle_concentrado": 8,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 12
+    }
+  },
+  {
+    "art_id": "art1273",
+    "label": "Art. 129. São funções institucionais do Ministério Público:",
+    "decisions": 103,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 7,
+      "repercussao_geral": 3,
+      "julgados_correlatos": 12
+    }
+  },
+  {
+    "art_id": "art1287",
+    "label": "Art. 130. Aos membros do Ministério Público junto aos Tribunais de Contas aplicam-se as disposições ",
+    "decisions": 9,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art8950",
+    "label": "Art. 130-A. O Conselho Nacional do Ministério Público compõe-se de quatorze membros nomeados pelo Pr",
+    "decisions": 19,
+    "editorials": {
+      "controle_concentrado": 3,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art1289",
+    "label": "Art. 131. A&nbsp; Advocacia-Geral da União é a instituição que, diretamente ou através de órgão vinc",
+    "decisions": 18,
+    "editorials": {
+      "controle_concentrado": 3,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1293",
+    "label": "Art. 132. Os Procuradores dos Estados e do Distrito Federal, organizados em carreira, na qual o ingr",
+    "decisions": 26,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1296",
+    "label": "Art. 133. O advogado é indispensável à administração da justiça, sendo inviolável por seus atos e ma",
+    "decisions": 29,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 2,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1297",
+    "label": "Art. 134. A Defensoria Pública é instituição permanente, essencial à função jurisdicional do Estado,",
+    "decisions": 36,
+    "editorials": {
+      "sumula_vinculante": 3,
+      "controle_concentrado": 5,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1299",
+    "label": "Art. 135. Os servidores integrantes das carreiras disciplinadas nas Seções II e III deste Capítulo s",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1303",
+    "label": "Art. 136. O Presidente da República pode, ouvidos o Conselho da República e o Conselho de Defesa Nac",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1321",
+    "label": "Art. 137. O Presidente da República pode, ouvidos o Conselho da República e o Conselho de Defesa Nac",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1325",
+    "label": "Art. 138. O decreto do estado de sítio indicará sua duração, as normas necessárias a sua execução e ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1329",
+    "label": "Art. 139. Na vigência do estado de sítio decretado com fundamento no art. 137, I, só poderão ser tom",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1339",
+    "label": "Art. 140. A Mesa do Congresso Nacional, ouvidos os líderes partidários, designará Comissão composta ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1340",
+    "label": "Art. 141. Cessado o estado de defesa ou o estado de sítio, cessarão também seus efeitos, sem prejuíz",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1343",
+    "label": "Art. 142. As Forças Armadas, constituídas pela Marinha, pelo Exército e pela Aeronáutica, são instit",
+    "decisions": 29,
+    "editorials": {
+      "sumula_vinculante": 5,
+      "controle_concentrado": 5,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 10
+    }
+  },
+  {
+    "art_id": "art1356",
+    "label": "Art. 143. O serviço militar é obrigatório nos termos da lei.",
+    "decisions": 6,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1360",
+    "label": "Art. 144. A segurança pública, dever do Estado, direito e responsabilidade de todos, é exercida para",
+    "decisions": 52,
+    "editorials": {
+      "sumula_vinculante": 1,
+      "controle_concentrado": 10,
+      "repercussao_geral": 3,
+      "julgados_correlatos": 8
+    }
+  },
+  {
+    "art_id": "art1382",
+    "label": "Art. 145. A União, os Estados, o Distrito Federal e os Municípios poderão instituir os seguintes tri",
+    "decisions": 75,
+    "editorials": {
+      "sumula_vinculante": 5,
+      "controle_concentrado": 4,
+      "repercussao_geral": 3,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art1388",
+    "label": "Art. 146. Cabe à lei complementar:",
+    "decisions": 45,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 7,
+      "repercussao_geral": 7,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art1401",
+    "label": "Art. 146-A. Lei complementar poderá estabelecer critérios especiais de tributação, com o objetivo de",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1402",
+    "label": "Art. 147. Competem à União, em Território Federal, os impostos estaduais e, se o Território não for ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1403",
+    "label": "Art. 148. A União, mediante lei complementar, poderá instituir empréstimos compulsórios:",
+    "decisions": 6,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1407",
+    "label": "Art. 149. Compete exclusivamente à União instituir contribuições sociais, de intervenção no domínio ",
+    "decisions": 39,
+    "editorials": {
+      "sumula_vinculante": 1,
+      "controle_concentrado": 4,
+      "repercussao_geral": 7,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1418",
+    "label": "Art. 149-A Os Municípios e o Distrito Federal poderão instituir contribuição, na forma das respectiv",
+    "decisions": 2,
+    "editorials": {
+      "repercussao_geral": 2
+    }
+  },
+  {
+    "art_id": "art90333",
+    "label": "Art. 149-B&nbsp;Os tributos previstos nos arts. 156-A e 195, V, observarão as mesmas regras em relaç",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art90455",
+    "label": "Art. 149-C&nbsp;O produto da arrecadação do imposto previsto no art. 156-A e da contribuição previst",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1421",
+    "label": "Art. 150. Sem prejuízo de outras garantias asseguradas ao contribuinte, é vedado à União, aos Estado",
+    "decisions": 247,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 15,
+      "repercussao_geral": 24,
+      "julgados_correlatos": 17
+    }
+  },
+  {
+    "art_id": "art1442",
+    "label": "Art. 151. É vedado à União:",
+    "decisions": 13,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1446",
+    "label": "Art. 152. É vedado aos Estados, ao Distrito Federal e aos Municípios estabelecer diferença tributári",
+    "decisions": 11,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1448",
+    "label": "Art. 153. Compete à União instituir impostos sobre:",
+    "decisions": 53,
+    "editorials": {
+      "controle_concentrado": 4,
+      "repercussao_geral": 11,
+      "julgados_correlatos": 10
+    }
+  },
+  {
+    "art_id": "art1471",
+    "label": "Art. 154. A União poderá instituir:",
+    "decisions": 7,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 3,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1475",
+    "label": "Art. 155. Compete aos Estados e ao Distrito Federal instituir impostos sobre: (Redação da EC 3/1993)",
+    "decisions": 167,
+    "editorials": {
+      "sumula_vinculante": 4,
+      "controle_concentrado": 14,
+      "repercussao_geral": 35,
+      "julgados_correlatos": 16
+    }
+  },
+  {
+    "art_id": "art1534",
+    "label": "Art. 156. Compete aos Municípios instituir impostos sobre:",
+    "decisions": 44,
+    "editorials": {
+      "sumula_vinculante": 5,
+      "controle_concentrado": 2,
+      "repercussao_geral": 11,
+      "julgados_correlatos": 5
+    }
+  },
+  {
+    "art_id": "art91133",
+    "label": "Art. 156-A. Lei complementar instituirá imposto sobre bens e serviços de competência compartilhada e",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art91238",
+    "label": "Art. 156-B. Os Estados, o Distrito Federal e os Municípios exercerão de forma integrada, exclusivame",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1549",
+    "label": "Art. 157. Pertencem aos Estados e ao Distrito Federal:",
+    "decisions": 7,
+    "editorials": {
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1552",
+    "label": "Art. 158. Pertencem aos Municípios:",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 3,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1560",
+    "label": "Art. 159. A União entregará:&nbsp;",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art90602",
+    "label": "Art. 159-A. Fica instituído o Fundo Nacional de Desenvolvimento Regional, com o objetivo de reduzir ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1571",
+    "label": "Art. 160. É vedada a retenção ou qualquer restrição à entrega e ao emprego dos recursos atribuídos, ",
+    "decisions": 8,
+    "editorials": {
+      "controle_concentrado": 2,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1575",
+    "label": "Art. 161. Cabe à lei complementar:",
+    "decisions": 7,
+    "editorials": {
+      "controle_concentrado": 3,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1580",
+    "label": "Art. 162. A União, os Estados, o Distrito Federal e os Municípios divulgarão, até o último dia do mê",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1584",
+    "label": "Art. 163. Lei complementar disporá sobre:",
+    "decisions": 3,
+    "editorials": {
+      "controle_concentrado": 3
+    }
+  },
+  {
+    "art_id": "art86945",
+    "label": "Art. 163-A. A União, os Estados, o Distrito Federal e os Municípios disponibilizarão suas informaçõe",
+    "decisions": 2,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1592",
+    "label": "Art. 164. A competência da União para emitir moeda será exercida exclusivamente pelo Banco Central.",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art86996",
+    "label": "Art. 164-A. A União, os Estados, o Distrito Federal e os Municípios devem conduzir suas políticas fi",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1597",
+    "label": "Art. 165. Leis de iniciativa do Poder Executivo estabelecerão:",
+    "decisions": 21,
+    "editorials": {
+      "controle_concentrado": 11,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1615",
+    "label": "Art. 166. Os projetos de lei relativos ao plano plurianual, às diretrizes orçamentárias, ao orçament",
+    "decisions": 13,
+    "editorials": {
+      "controle_concentrado": 9
+    }
+  },
+  {
+    "art_id": "art81118",
+    "label": "Art. 166-A. As emendas individuais impositivas apresentadas ao projeto de lei orçamentária anual pod",
+    "decisions": 1,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1634",
+    "label": "Art. 167. São vedados:",
+    "decisions": 37,
+    "editorials": {
+      "controle_concentrado": 8,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art86999",
+    "label": "Art. 167-A. Apurado que, no período de 12 (doze) meses, a relação entre despesas correntes e receita",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art87014",
+    "label": "Art. 167-B. Durante a vigência de estado de calamidade pública de âmbito nacional, decretado pelo Co",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art87015",
+    "label": "Art. 167-C. Com o propósito exclusivo de enfrentamento da calamidade pública e de seus efeitos socia",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art87036",
+    "label": "Art. 167-D. As proposições legislativas e os atos do Poder Executivo com propósito exclusivo de enfr",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art87037",
+    "label": "Art. 167-E. Fica dispensada, durante a integralidade do exercício financeiro em que vigore a calamid",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art87022",
+    "label": "Art. 167-F. Durante a vigência da calamidade pública de âmbito nacional de que trata o art. 167-B de",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art87030",
+    "label": "Art. 167-G. Na hipótese de que trata o art. 167-B, aplicam-se à União, até o término da calamidade p",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1650",
+    "label": "Art. 168. Os recursos correspondentes às dotações orçamentárias, compreendidos os créditos suplement",
+    "decisions": 6,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1651",
+    "label": "Art. 169. A despesa com pessoal ativo e inativo e pensionistas da União, dos Estados, do Distrito Fe",
+    "decisions": 12,
+    "editorials": {
+      "controle_concentrado": 5,
+      "repercussao_geral": 4,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1665",
+    "label": "Art. 170. A ordem econômica, fundada na valorização do trabalho humano e na livre iniciativa, tem po",
+    "decisions": 77,
+    "editorials": {
+      "sumula_vinculante": 4,
+      "controle_concentrado": 10,
+      "repercussao_geral": 10,
+      "julgados_correlatos": 5
+    }
+  },
+  {
+    "art_id": "art17073",
+    "label": "Art. 171. (Revogado pela EC 6/1995).",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1676",
+    "label": "Art. 172. A lei disciplinará, com base no interesse nacional, os investimentos de capital estrangeir",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1677",
+    "label": "Art. 173. Ressalvados os casos previstos nesta Constituição, a exploração direta de atividade econôm",
+    "decisions": 30,
+    "editorials": {
+      "controle_concentrado": 5,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 5
+    }
+  },
+  {
+    "art_id": "art1688",
+    "label": "Art. 174. Como agente normativo e regulador da atividade econômica, o Estado exercerá, na forma da l",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 2,
+      "repercussao_geral": 1
+    }
+  },
+  {
+    "art_id": "art1693",
+    "label": "Art. 175. Incumbe ao Poder Público, na forma da lei, diretamente ou sob regime de concessão ou permi",
+    "decisions": 29,
+    "editorials": {
+      "controle_concentrado": 5,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1699",
+    "label": "Art. 176. As jazidas, em lavra ou não, e demais recursos minerais e os potenciais de energia hidrául",
+    "decisions": 6,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1704",
+    "label": "Art. 177. Constituem monopólio da União:",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1724",
+    "label": "Art. 178. A lei disporá sobre a ordenação dos transportes aéreo, aquático e terrestre, devendo, quan",
+    "decisions": 7,
+    "editorials": {
+      "repercussao_geral": 4,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1726",
+    "label": "Art. 179. A União, os Estados, o Distrito Federal e os Municípios dispensarão às microempresas e às ",
+    "decisions": 5,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1727",
+    "label": "Art. 180. A União, os Estados, o Distrito Federal e os Municípios promoverão e incentivarão o turism",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1728",
+    "label": "Art. 181. O atendimento de requisição de documento ou informação de natureza comercial, feita por au",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1730",
+    "label": "Art. 182. A política de desenvolvimento urbano, executada pelo Poder Público municipal, conforme dir",
+    "decisions": 12,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art1738",
+    "label": "Art. 183. Aquele que possuir como sua área urbana de até duzentos e cinqüenta metros quadrados, por ",
+    "decisions": 3,
+    "editorials": {
+      "repercussao_geral": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1743",
+    "label": "Art. 184. Compete à União desapropriar por interesse social, para fins de reforma agrária, o imóvel ",
+    "decisions": 21,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art1749",
+    "label": "Art. 185. São insuscetíveis de desapropriação para fins de reforma agrária:",
+    "decisions": 15,
+    "editorials": {
+      "controle_concentrado": 3,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1753",
+    "label": "Art. 186. A função social é cumprida quando a propriedade rural atende, simultaneamente, segundo cri",
+    "decisions": 2,
+    "editorials": {
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1758",
+    "label": "Art. 187. A política agrícola será planejada e executada na forma da lei, com a participação efetiva",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 2
+    }
+  },
+  {
+    "art_id": "art1769",
+    "label": "Art. 188. A destinação de terras públicas e devolutas será compatibilizada com a política agrícola e",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1772",
+    "label": "Art. 189. Os beneficiários da distribuição de imóveis rurais pela reforma agrária receberão títulos ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1774",
+    "label": "Art. 190. A lei regulará e limitará a aquisição ou o arrendamento de propriedade rural por pessoa fí",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1775",
+    "label": "Art. 191. Aquele que, não sendo proprietário de imóvel rural ou urbano, possua como seu, por cinco a",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1778",
+    "label": "Art. 192. O sistema financeiro nacional, estruturado de forma a promover o desenvolvimento equilibra",
+    "decisions": 6,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 1,
+      "repercussao_geral": 8,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1781",
+    "label": "Art. 193. A ordem social tem como base o primado do trabalho, e como objetivo o bem-estar e a justiç",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art1784",
+    "label": "Art. 194. A seguridade social compreende um conjunto integrado de ações de iniciativa dos Poderes Pú",
+    "decisions": 7,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1793",
+    "label": "Art. 195. A seguridade social será financiada por toda a sociedade, de forma direta e indireta, nos ",
+    "decisions": 135,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 12,
+      "repercussao_geral": 30,
+      "julgados_correlatos": 13
+    }
+  },
+  {
+    "art_id": "art1815",
+    "label": "Art. 196. A saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econô",
+    "decisions": 49,
+    "editorials": {
+      "sumula_vinculante": 1,
+      "controle_concentrado": 1,
+      "repercussao_geral": 6
+    }
+  },
+  {
+    "art_id": "art1816",
+    "label": "Art. 197. São de relevância pública as ações e serviços de saúde, cabendo ao Poder Público dispor, n",
+    "decisions": 6,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1817",
+    "label": "Art. 198. As ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e co",
+    "decisions": 25,
+    "editorials": {
+      "sumula_vinculante": 1,
+      "controle_concentrado": 7,
+      "repercussao_geral": 8,
+      "julgados_correlatos": 6
+    }
+  },
+  {
+    "art_id": "art1831",
+    "label": "Art. 199. A assistência à saúde é livre à iniciativa privada.",
+    "decisions": 8,
+    "editorials": {
+      "controle_concentrado": 2,
+      "repercussao_geral": 3,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1836",
+    "label": "Art. 200. Ao sistema único de saúde compete, além de outras atribuições, nos termos da lei:",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art1846",
+    "label": "Art. 201. A previdência social será organizada sob a forma do Regime Geral de Previdência Social, de",
+    "decisions": 71,
+    "editorials": {
+      "controle_concentrado": 4,
+      "repercussao_geral": 15,
+      "julgados_correlatos": 10
+    }
+  },
+  {
+    "art_id": "art1866",
+    "label": "Art. 202. O regime de previdência privada, de caráter complementar e organizado de forma autônoma em",
+    "decisions": 7,
+    "editorials": {
+      "controle_concentrado": 2,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1874",
+    "label": "Art. 203. A assistência social será prestada a quem dela necessitar, independentemente de contribuiç",
+    "decisions": 7,
+    "editorials": {
+      "repercussao_geral": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1880",
+    "label": "Art. 204. As ações governamentais na área da assistência social serão realizadas com recursos do orç",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art1889",
+    "label": "Art. 205. A educação, direito de todos e dever do Estado e da família, será promovida e incentivada ",
+    "decisions": 16,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1890",
+    "label": "Art. 206. O ensino será ministrado com base nos seguintes princípios:",
+    "decisions": 26,
+    "editorials": {
+      "sumula_vinculante": 3,
+      "controle_concentrado": 6,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1898",
+    "label": "Art. 207. As universidades gozam de autonomia didático-científica, administrativa e de gestão financ",
+    "decisions": 23,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1901",
+    "label": "Art. 208. O dever do Estado com a educação será efetivado mediante a garantia de:",
+    "decisions": 15,
+    "editorials": {
+      "controle_concentrado": 4,
+      "repercussao_geral": 3,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1912",
+    "label": "Art. 209. O ensino é livre à iniciativa privada, atendidas as seguintes condições:",
+    "decisions": 3,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1915",
+    "label": "Art. 210. Serão fixados conteúdos mínimos para o ensino fundamental, de maneira a assegurar formação",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art1918",
+    "label": "Art. 211. A União, os Estados, o Distrito Federal e os Municípios organizarão em regime de colaboraç",
+    "decisions": 7,
+    "editorials": {
+      "controle_concentrado": 3,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1923",
+    "label": "Art. 212. A União aplicará, anualmente, nunca menos de dezoito, e os Estados, o Distrito Federal e o",
+    "decisions": 10,
+    "editorials": {
+      "controle_concentrado": 3,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art86915",
+    "label": "Art. 212-A. Os Estados, o Distrito Federal e os Municípios destinarão parte dos recursos a que se re",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1929",
+    "label": "Art. 213. Os recursos públicos serão destinados às escolas públicas, podendo ser dirigidos a escolas",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art1934",
+    "label": "Art. 214 - A lei estabelecerá o plano nacional de educação, de duração decenal, com o objetivo de ar",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1941",
+    "label": "Art. 215. O Estado garantirá a todos o pleno exercício dos direitos culturais e acesso às fontes da ",
+    "decisions": 8,
+    "editorials": {
+      "controle_concentrado": 3,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art1944",
+    "label": "Art. 216. Constituem patrimônio cultural brasileiro os bens de natureza material e imaterial, tomado",
+    "decisions": 10,
+    "editorials": {
+      "controle_concentrado": 3,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art64955",
+    "label": "Art. 216-A. O Sistema Nacional de Cultura, organizado em regime de colaboração, de forma descentrali",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art1960",
+    "label": "Art. 217. É dever do Estado fomentar práticas desportivas formais e não formais, como direito de cad",
+    "decisions": 9,
+    "editorials": {
+      "controle_concentrado": 7,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1969",
+    "label": "Art. 218. O Estado promoverá e incentivará o desenvolvimento científico, a pesquisa, a capacitação c",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 2
+    }
+  },
+  {
+    "art_id": "art1975",
+    "label": "Art. 219. O mercado interno integra o patrimônio nacional e será incentivado de modo a viabilizar o ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art69020",
+    "label": "Art. 219-A. A União, os Estados, o Distrito Federal e os Municípios poderão firmar instrumentos de c",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art69003",
+    "label": "Art. 219-B. O Sistema Nacional de Ciência, Tecnologia e Inovação (SNCTI) será organizado em regime d",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1977",
+    "label": "Art. 220. A manifestação do pensamento, a criação, a expressão e a informação, sob qualquer forma, p",
+    "decisions": 25,
+    "editorials": {
+      "controle_concentrado": 6,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art1986",
+    "label": "Art. 221. A produção e a programação das emissoras de rádio e televisão atenderão aos seguintes prin",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 2,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art1991",
+    "label": "Art. 222. A propriedade de empresa jornalística e de radiodifusão sonora e de sons e imagens é priva",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art1997",
+    "label": "Art. 223. Compete ao Poder Executivo outorgar e renovar concessão, permissão e autorização para o se",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2003",
+    "label": "Art. 224. Para os efeitos do disposto neste capítulo, o Congresso Nacional instituirá, como seu órgã",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2005",
+    "label": "Art. 225. Todos têm direito ao meio ambiente ecologicamente equilibrado, bem de uso comum do povo e ",
+    "decisions": 69,
+    "editorials": {
+      "controle_concentrado": 10,
+      "repercussao_geral": 5,
+      "julgados_correlatos": 8
+    }
+  },
+  {
+    "art_id": "art2020",
+    "label": "Art. 226. A família, base da sociedade, tem especial proteção do Estado.",
+    "decisions": 27,
+    "editorials": {
+      "controle_concentrado": 3,
+      "repercussao_geral": 6,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art2029",
+    "label": "Art. 227. É dever da família, da sociedade e do Estado assegurar à criança, ao adolescente e ao jove",
+    "decisions": 42,
+    "editorials": {
+      "controle_concentrado": 7,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 5
+    }
+  },
+  {
+    "art_id": "art2046",
+    "label": "Art. 228. São penalmente inimputáveis os menores de dezoito anos, sujeitos às normas da legislação e",
+    "decisions": 2,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2047",
+    "label": "Art. 229. Os pais têm o dever de assistir, criar e educar os filhos menores, e os filhos maiores têm",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2048",
+    "label": "Art. 230. A família, a sociedade e o Estado têm o dever de amparar as pessoas idosas, assegurando su",
+    "decisions": 8,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2052",
+    "label": "Art. 231. São reconhecidos aos índios sua organização social, costumes, línguas, crenças e tradições",
+    "decisions": 22,
+    "editorials": {
+      "controle_concentrado": 2,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 7
+    }
+  },
+  {
+    "art_id": "art2060",
+    "label": "Art. 232. Os índios, suas comunidades e organizações são partes legítimas para ingressar em juízo em",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art53217",
+    "label": "Art. 233. (Revogado pela EC 28/2000).",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2062",
+    "label": "Art. 234. É vedado à União, direta ou indiretamente, assumir, em decorrência da criação de Estado, e",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2063",
+    "label": "Art. 235. Nos dez primeiros anos da criação de Estado, serão observadas as seguintes normas básicas:",
+    "decisions": 8,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art2079",
+    "label": "Art. 236. Os serviços notariais e de registro são exercidos em caráter privado, por delegação do Pod",
+    "decisions": 55,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "controle_concentrado": 4,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art2083",
+    "label": "Art. 237. A fiscalização e o controle sobre o comércio exterior, essenciais à defesa dos interesses ",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2084",
+    "label": "Art. 238. A lei ordenará a venda e revenda de combustíveis de petróleo, álcool carburante e outros c",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2085",
+    "label": "Art. 239. A arrecadação decorrente das contribuições para o Programa de Integração Social, criado pe",
+    "decisions": 5,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2090",
+    "label": "Art. 240. Ficam ressalvadas do disposto no art. 195 as atuais contribuições compulsórias dos emprega",
+    "decisions": 5,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2091",
+    "label": "Art. 241. A União, os Estados, o Distrito Federal e os Municípios disciplinarão por meio de lei os c",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2092",
+    "label": "Art. 242. O princípio do art. 206, IV, não se aplica às instituições educacionais oficiais criadas p",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2095",
+    "label": "Art. 243. As propriedades rurais e urbanas de qualquer região do País onde forem localizadas cultura",
+    "decisions": 4,
+    "editorials": {
+      "repercussao_geral": 2,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art2097",
+    "label": "Art. 244. A lei disporá sobre a adaptação dos logradouros, dos edifícios de uso público e dos veícul",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2098",
+    "label": "Art. 245. A lei disporá sobre as hipóteses e condições em que o Poder Público dará assistência aos h",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2099",
+    "label": "Art. 246. É vedada a adoção de medida provisória na regulamentação de artigo da Constituição cuja re",
+    "decisions": 9,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2100",
+    "label": "Art. 247. As leis previstas no inciso III do &sect; 1&ordm; do art. 41 e no &sect; 7&ordm; do art. 1",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2102",
+    "label": "Art. 248. Os benefícios pagos, a qualquer título, pelo órgão responsável pelo regime geral de previd",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2103",
+    "label": "Art. 249. Com o objetivo de assegurar recursos para o pagamento de proventos de aposentadoria e pens",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2104",
+    "label": "Art. 250. Com o objetivo de assegurar recursos para o pagamento dos benefícios concedidos pelo regim",
+    "decisions": 3,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2106",
+    "label": "Art. 1&ordm;. O Presidente da República, o Presidente do Supremo Tribunal Federal e os membros do Co",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2107",
+    "label": "Art. 2&ordm; No dia 7 de setembro de 1993 o eleitorado definirá, através de plebiscito, a forma (rep",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2110",
+    "label": "Art. 3&ordm;. A revisão constitucional será realizada após cinco anos, contados da promulgação da Co",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2111",
+    "label": "Art. 4&ordm;. O mandato do atual Presidente da República terminará em 15 de março de 1990.",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2116",
+    "label": "Art. 5&ordm;. Não se aplicam às eleições previstas para 15 de novembro de 1988 o disposto no art. 16",
+    "decisions": 3,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art2122",
+    "label": "Art. 6&ordm;. Nos seis meses posteriores à promulgação da Constituição, parlamentares federais, reun",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2125",
+    "label": "Art. 7&ordm;. O Brasil propugnará pela formação de um tribunal internacional dos direitos humanos.",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2126",
+    "label": "Art. 8&ordm;. É concedida anistia aos que, no período de 18 de setembro de 1946 até a data da promul",
+    "decisions": 41,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art2132",
+    "label": "Art. 9&ordm;. Os que, por motivos exclusivamente políticos, foram cassados ou tiveram seus direitos ",
+    "decisions": 7,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2134",
+    "label": "Art. 10. Até que seja promulgada a lei complementar a que se refere o art. 7&ordm;, I, da Constituiç",
+    "decisions": 14,
+    "editorials": {
+      "controle_concentrado": 3,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art2142",
+    "label": "Art. 11. Cada Assembleia Legislativa, com poderes constituintes, elaborará a Constituição do Estado,",
+    "decisions": 9,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2144",
+    "label": "Art. 12. Será criada, dentro de noventa dias da promulgação da Constituição, Comissão de Estudos Ter",
+    "decisions": 4,
+    "editorials": {
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art2150",
+    "label": "Art. 13. É criado o Estado do Tocantins, pelo desmembramento da área descrita neste artigo, dando-se",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 2
+    }
+  },
+  {
+    "art_id": "art2162",
+    "label": "Art. 14. Os Territórios Federais de Roraima e do Amapá são transformados em Estados Federados, manti",
+    "decisions": 8,
+    "editorials": {
+      "controle_concentrado": 3,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art2167",
+    "label": "Art. 15. Fica extinto o Território Federal de Fernando de Noronha, sendo sua área reincorporada ao E",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2168",
+    "label": "Art. 16. Até que se efetive o disposto no art. 32, &sect; 2&ordm;, da Constituição, caberá ao Presid",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2172",
+    "label": "Art. 17. Os vencimentos, a remuneração, as vantagens e os adicionais, bem como os proventos de apose",
+    "decisions": 20,
+    "editorials": {
+      "controle_concentrado": 2,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art2175",
+    "label": "Art. 18. Ficam extintos os efeitos jurídicos de qualquer ato legislativo ou administrativo, lavrado ",
+    "decisions": 2,
+    "editorials": {
+      "sumula_vinculante": 2,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art87041",
+    "label": "Art. 18-A. Os atos administrativos praticados no Estado do Tocantins, decorrentes de sua instalação,",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2176",
+    "label": "Art. 19. Os servidores públicos civis da União, dos Estados, do Distrito Federal e dos Municípios, d",
+    "decisions": 19,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art2180",
+    "label": "Art. 20. Dentro de cento e oitenta dias, proceder-se-á à revisão dos direitos dos servidores público",
+    "decisions": 5,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2181",
+    "label": "Art. 21. Os juízes togados de investidura limitada no tempo, admitidos mediante concurso público de ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2183",
+    "label": "Art. 22. É assegurado aos defensores públicos investidos na função até a data de instalação da Assem",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2184",
+    "label": "Art. 23. Até que se edite a regulamentação do art. 21, XVI, da Constituição, os atuais ocupantes do ",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2186",
+    "label": "Art. 24. A União, os Estados, o Distrito Federal e os Municípios editarão leis que estabeleçam crité",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2187",
+    "label": "Art. 25. Ficam revogados, a partir de cento e oitenta dias da promulgação da Constituição, sujeito e",
+    "decisions": 6,
+    "editorials": {
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art2195",
+    "label": "Art. 26. No prazo de um ano a contar da promulgação da Constituição, o Congresso Nacional promoverá,",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2198",
+    "label": "Art. 27. O Superior Tribunal de Justiça será instalado sob a Presidência do Supremo Tribunal Federal",
+    "decisions": 15,
+    "editorials": {
+      "controle_concentrado": 2,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art2211",
+    "label": "Art. 28. Os juízes federais de que trata o art. 123, &sect; 2&ordm;, da Constituição de 1967, com a ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2213",
+    "label": "Art. 29. Enquanto não aprovadas as leis complementares relativas ao Ministério Público e à Advocacia",
+    "decisions": 6,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 4
+    }
+  },
+  {
+    "art_id": "art2219",
+    "label": "Art. 30. A legislação que criar a justiça de paz manterá os atuais juízes de paz até a posse dos nov",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2220",
+    "label": "Art. 31. Serão estatizadas as serventias do foro judicial, assim definidas em lei, respeitados os di",
+    "decisions": 6,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2221",
+    "label": "Art. 32. O disposto no art. 236 não se aplica aos serviços notariais e de registro que já tenham sid",
+    "decisions": 3,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2222",
+    "label": "Art. 33. Ressalvados os créditos de natureza alimentar, o valor dos precatórios judiciais pendentes ",
+    "decisions": 7,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2224",
+    "label": "Art. 34. O sistema tributário nacional entrará em vigor a partir do primeiro dia do quinto mês segui",
+    "decisions": 13,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 6
+    }
+  },
+  {
+    "art_id": "art2243",
+    "label": "Art. 35. O disposto no art. 165, &sect; 7&ordm;, será cumprido de forma progressiva, no prazo de até",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2254",
+    "label": "Art. 36. Os fundos existentes na data da promulgação da Constituição, excetuados os resultantes de i",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2255",
+    "label": "Art. 37. A adaptação ao que estabelece o art. 167, III, deverá processar-se no prazo de cinco anos, ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2256",
+    "label": "Art. 38. Até a promulgação da lei complementar referida no art. 169, a União, os Estados, o Distrito",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2258",
+    "label": "Art. 39. Para efeito do cumprimento das disposições constitucionais que impliquem variações de despe",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2260",
+    "label": "Art. 40. É mantida a Zona Franca de Manaus, com suas características de área livre de comércio, de e",
+    "decisions": 8,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1
+    }
+  },
+  {
+    "art_id": "art2262",
+    "label": "Art. 41. Os Poderes Executivos da União, dos Estados, do Distrito Federal e dos Municípios reavaliar",
+    "decisions": 5,
+    "editorials": {
+      "repercussao_geral": 1,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art2266",
+    "label": "Art. 42. Durante 40 (quarenta) anos, a União aplicará dos recursos destinados à irrigação: (Redação ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2269",
+    "label": "Art. 43. Na data da promulgação da lei que disciplinar a pesquisa e a lavra de recursos e jazidas mi",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2270",
+    "label": "Art. 44. As atuais empresas brasileiras titulares de autorização de pesquisa, concessão de lavra de ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2274",
+    "label": "Art. 45. Ficam excluídas do monopólio estabelecido pelo art. 177, II, da Constituição as refinarias ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2276",
+    "label": "Art. 46. São sujeitos à correção monetária desde o vencimento, até seu efetivo pagamento, sem interr",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2282",
+    "label": "Art. 47. Na liquidação dos débitos, inclusive suas renegociações e composições posteriores, ainda qu",
+    "decisions": 44,
+    "editorials": {
+      "julgados_correlatos": 9
+    }
+  },
+  {
+    "art_id": "art2297",
+    "label": "Art. 48. O Congresso Nacional, dentro de cento e vinte dias da promulgação da Constituição, elaborar",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2298",
+    "label": "Art. 49. A lei disporá sobre o instituto da enfiteuse em imóveis urbanos, sendo facultada aos foreir",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2303",
+    "label": "Art. 50. Lei agrícola a ser promulgada no prazo de um ano disporá, nos termos da Constituição, sobre",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2304",
+    "label": "Art. 51. Serão revistos pelo Congresso Nacional, através de Comissão mista, nos três anos a contar d",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2308",
+    "label": "Art. 52. Até que sejam fixadas as condições do art. 192, são vedados: (Redação da EC 40/2003)",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2312",
+    "label": "Art. 53. Ao ex-combatente que tenha efetivamente participado de operações bélicas durante a Segunda ",
+    "decisions": 13,
+    "editorials": {
+      "controle_concentrado": 3,
+      "julgados_correlatos": 6
+    }
+  },
+  {
+    "art_id": "art2320",
+    "label": "Art. 54. Os seringueiros recrutados nos termos do Decreto-Lei n&ordm; 5.813, de 14 de setembro de 19",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art68076",
+    "label": "Art. 54-A. Os seringueiros de que trata o art. 54 deste Ato das Disposições Constitucionais Transitó",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2324",
+    "label": "Art. 55. Até que seja aprovada a lei de diretrizes orçamentárias, trinta por cento, no mínimo, do or",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2325",
+    "label": "Art. 56. Até que a lei disponha sobre o art. 195, I, a arrecadação decorrente de, no mínimo, cinco d",
+    "decisions": 6,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2326",
+    "label": "Art. 57. Os débitos dos Estados e dos Municípios relativos às contribuições previdenciárias até 30 d",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2331",
+    "label": "Art. 58. Os benefícios de prestação continuada, mantidos pela previdência social na data da promulga",
+    "decisions": 8,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2333",
+    "label": "Art. 59. Os projetos de lei relativos à organização da seguridade social e aos planos de custeio e d",
+    "decisions": 4,
+    "editorials": {
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art2335",
+    "label": "Art. 60. A complementação da União referida no inciso IV do caput do art. 212-A da Constituição Fede",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 2,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art86984",
+    "label": "Art. 60-A. Os critérios de distribuição da complementação da União e dos fundos a que se refere o in",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2343",
+    "label": "Art. 61. As entidades educacionais a que se refere o art. 213, bem como as fundações de ensino e pes",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2344",
+    "label": "Art. 62. A lei criará o Serviço Nacional de Aprendizagem Rural (SENAR) nos moldes da legislação rela",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2345",
+    "label": "Art. 63. É criada uma Comissão composta de nove membros, sendo três do Poder Legislativo, três do Po",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2347",
+    "label": "Art. 64. A Imprensa Nacional e demais gráficas da União, dos Estados, do Distrito Federal e dos Muni",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2348",
+    "label": "Art. 65. O Poder Legislativo regulamentará, no prazo de doze meses, o art. 220, &sect; 4&ordm;.",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2349",
+    "label": "Art. 66. São mantidas as concessões de serviços públicos de telecomunicações atualmente em vigor, no",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2350",
+    "label": "Art. 67. A União concluirá a demarcação das terras indígenas no prazo de cinco anos a partir da prom",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2351",
+    "label": "Art. 68. Aos remanescentes das comunidades dos quilombos que estejam ocupando suas terras é reconhec",
+    "decisions": 3,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2352",
+    "label": "Art. 69. Será permitido aos Estados manter consultorias jurídicas separadas de suas Procuradorias-Ge",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2353",
+    "label": "Art. 70. Fica mantida atual competência dos tribunais estaduais até a mesma seja definida na Constit",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2354",
+    "label": "Art. 71. É instituído, nos exercícios financeiros de 1994 e 1995, bem assim nos períodos de 01/01/19",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2358",
+    "label": "Art. 72. Integram o Fundo Social de Emergência: (Incluído pela ECR 1/1994)",
+    "decisions": 1,
+    "editorials": {
+      "repercussao_geral": 1
+    }
+  },
+  {
+    "art_id": "art2370",
+    "label": "Art. 73. Na regulação do Fundo Social de Emergência não poderá ser utilizado o instrumento previsto ",
+    "decisions": 1,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2371",
+    "label": "Art. 74. A União poderá instituir contribuição provisória sobre movimentação ou transmissão de valor",
+    "decisions": 2,
+    "editorials": {
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2376",
+    "label": "Art. 75. É prorrogada, por trinta e seis meses, a cobrança da contribuição provisória sobre moviment",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 2
+    }
+  },
+  {
+    "art_id": "art2380",
+    "label": "&nbsp;Art. 76. São desvinculados de órgão, fundo ou despesa, até 31 de dezembro de2032, 30% (trinta ",
+    "decisions": 0,
+    "editorials": {
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art73598",
+    "label": "Art. 76-A. São desvinculados de órgão, fundo ou despesa, até 31 de dezembro de 2023, 30% (trinta por",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art73622",
+    "label": "Art. 76-B. São desvinculadas de órgão, fundo ou despesa, até 31 de dezembro de 2032, as receitas dos",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2383",
+    "label": "Art. 77. Até o exercício financeiro de 2004, os recursos mínimos aplicados nas ações e serviços públ",
+    "decisions": 1,
+    "editorials": {
+      "repercussao_geral": 1
+    }
+  },
+  {
+    "art_id": "art2393",
+    "label": "Art. 78. Ressalvados os créditos definidos em lei como de pequeno valor, os de natureza alimentícia,",
+    "decisions": 13,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 2,
+      "julgados_correlatos": 3
+    }
+  },
+  {
+    "art_id": "art2398",
+    "label": "Art. 79. É instituído, para vigorar até o ano de 2010, no âmbito do Poder Executivo Federal, o Fundo",
+    "decisions": 1,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2400",
+    "label": "Art. 80. Compõem o Fundo de Combate e Erradicação da Pobreza: (Incluído pela EC 31/2000)",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2409",
+    "label": "Art. 81. É instituído Fundo constituído pelos recursos recebidos pela União em decorrência da desest",
+    "decisions": 2,
+    "editorials": {
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art2413",
+    "label": "Art. 82. Os Estados, o Distrito Federal e os Municípios devem instituir Fundos de Combate à Pobreza,",
+    "decisions": 6,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2416",
+    "label": "Art. 83. Lei federal definirá os produtos e serviços supérfluos a que se referem os arts. 80, II, e ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2417",
+    "label": "Art. 84. A contribuição provisória sobre movimentação ou transmissão de valores e de créditos e dire",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2425",
+    "label": "Art. 85. A contribuição a que se refere o art. 84 deste Ato das Disposições Constitucionais Transitó",
+    "decisions": 1,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art2437",
+    "label": "Art. 86. Serão pagos conforme disposto no art. 100 da Constituição Federal, não se lhes aplicando a ",
+    "decisions": 1,
+    "editorials": {
+      "repercussao_geral": 1
+    }
+  },
+  {
+    "art_id": "art2444",
+    "label": "Art. 87. Para efeito do que dispõem o &sect; 3&ordm; do art. 100 da Constituição Federal e o art. 78",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 1,
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2448",
+    "label": "Art. 88. Enquanto lei complementar não disciplinar o disposto nos incisos I e III do &sect; 3&ordm; ",
+    "decisions": 3,
+    "editorials": {
+      "controle_concentrado": 2
+    }
+  },
+  {
+    "art_id": "art2451",
+    "label": "Art. 89. Os integrantes da carreira policial militar e os servidores municipais do ex-Território Fed",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2453",
+    "label": "Art. 90. O prazo previsto no caput",
+    "decisions": 2,
+    "editorials": {
+      "repercussao_geral": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2456",
+    "label": "&nbsp;Art. 91. (Revogado pela EC n. 109/2021)",
+    "decisions": 0,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art2461",
+    "label": "Art. 92. São acrescidos dez anos ao prazo fixado no art. 40 deste Ato das Disposições Constitucionai",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art68415",
+    "label": "Art. 92-A. São acrescidos 50 (cinquenta) anos ao prazo fixado pelo art. 92 deste Ato das Disposições",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96777",
+    "label": "Art. 92-B. As leis instituidoras dos tributos previstos nos arts. 156-A e 195, V, da Constituição Fe",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2462",
+    "label": "Art. 93. A vigência do disposto no art. 159, III, e &sect; 4&ordm;, iniciará somente após a edição d",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art2463",
+    "label": "Art. 94. Os regimes especiais de tributação para microempresas e empresas de pequeno porte próprios ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art43665",
+    "label": "Art. 95. Os nascidos no estrangeiro entre 7 de junho de 1994 e a data da promulgação desta Emenda Co",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art48982",
+    "label": "Art. 96. Ficam convalidados os atos de criação, fusão, incorporação e desmembramento de Municípios, ",
+    "decisions": 4,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art55921",
+    "label": "Art. 97. Até que seja editada a lei complementar de que trata o &sect; 15 do art. 100 da Constituiçã",
+    "decisions": 7,
+    "editorials": {
+      "controle_concentrado": 6,
+      "repercussao_geral": 1
+    }
+  },
+  {
+    "art_id": "art67935",
+    "label": "Art. 98. O número de defensores públicos na unidade jurisdicional será proporcional à efetiva demand",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art69137",
+    "label": "Art. 99. Para efeito do disposto no inciso VII do &sect; 2&ordm; do art. 155, no caso de operações e",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art69561",
+    "label": "Art. 100. Até que entre em vigor a lei complementar de que trata o inciso II do &sect; 1&ordm; do ar",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1,
+      "julgados_correlatos": 1
+    }
+  },
+  {
+    "art_id": "art74140",
+    "label": "Art. 101. Os Estados, o Distrito Federal e os Municípios que, em 25 de março de 2015, se encontravam",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 2
+    }
+  },
+  {
+    "art_id": "art74105",
+    "label": "Art. 102. Enquanto viger o regime especial previsto nesta Emenda Constitucional, pelo menos 50% (cin",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art74144",
+    "label": "Art. 103. Enquanto os Estados, o Distrito Federal e os Municípios estiverem efetuando o pagamento da",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art74145",
+    "label": "Art. 104. Se os recursos referidos no art. 101 deste Ato das Disposições Constitucionais Transitória",
+    "decisions": 2,
+    "editorials": {
+      "julgados_correlatos": 2
+    }
+  },
+  {
+    "art_id": "art74107",
+    "label": "Art. 105. Enquanto viger o regime de pagamento de precatórios previsto no art. 101 deste Ato das Dis",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art74155",
+    "label": "Art. 106.&nbsp;(Revogado pela EC n. 126/2022)",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art74156",
+    "label": "Art. 107.  (Revogado pela EC n. 126/2022)",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art86803",
+    "label": "Art. 107-A. Até o fim de 2026, fica estabelecido, para cada exercício financeiro, limite para alocaç",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art74193",
+    "label": "&nbsp;Art. 108.&nbsp;  (Revogado pela EC n. 113/2021)",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art74195",
+    "label": "Art. 109.&nbsp;(Revogado pela EC n. 126/2022)",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art74210",
+    "label": "Art. 110. (Revogado pela EC n. 126/2022)",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art74161",
+    "label": "&nbsp;Art. 111.&nbsp;(Revogado pela EC n. 126/2022)",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art88164",
+    "label": "Art. 111-A. (Revogado pela EC n. 126/2022)",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art74162",
+    "label": "Art. 112.&nbsp;(Revogado pela EC n. 126/2022)",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art74165",
+    "label": "Art. 113. A proposição legislativa que crie ou altere despesa obrigatória ou renúncia de receita dev",
+    "decisions": 2,
+    "editorials": {
+      "controle_concentrado": 1
+    }
+  },
+  {
+    "art_id": "art74166",
+    "label": "&nbsp;Art. 114.&nbsp; (Revogado pela EC n. 126/2022)",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art86804",
+    "label": "Art. 115. Fica excepcionalmente autorizado o parcelamento das contribuições previdenciárias e dos de",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art87042",
+    "label": "Art. 116. Fica excepcionalmente autorizado o parcelamento dos débitos decorrentes de contribuições p",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96635",
+    "label": "Art. 116-A. Fica excepcionalmente autorizado o parcelamento dos débitos decorrentes de contribuições",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art87035",
+    "label": "Art. 117. A formalização dos parcelamentos de que tratam os arts. 115, 116 e 116-A deste Ato das Dis",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art87059",
+    "label": "Art. 118. Os limites, as condições, as normas de acesso e os demais requisitos para o atendimento do",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art87076",
+    "label": "Art. 119. Em decorrência do estado de calamidade pública provocado pela pandemia da Covid-19, os Est",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art87465",
+    "label": "Art. 120. Fica reconhecido, no ano de 2022, o estado de emergência decorrente da elevação extraordin",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art88165",
+    "label": "Art. 121. As contas referentes aos patrimônios acumulados de que trata o &sect; 2&ordm; do art. 239 ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art88184",
+    "label": "Art. 122. As transferências financeiras realizadas pelo Fundo Nacional de Saúde e pelo Fundo Naciona",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art88944",
+    "label": "Art. 123. Todos os termos de credenciamentos, contratos, aditivos e outras formas de ajuste de permi",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96234",
+    "label": "Art. 124. A transição para os tributos previstos no art. 156-A e no art. 195, V, todos da Constituiç",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96200",
+    "label": "Art. 125. Em 2026, o imposto previsto no art. 156-A será cobrado à alíquota estadual de 0,1% (um déc",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96204",
+    "label": "Art. 126. A partir de 2027: (Incluído pela EC n. 132/2023)",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96208",
+    "label": "Art. 127. Em 2027 e 2028, o imposto previsto no art. 156-A da Constituição Federal será cobrado à al",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96209",
+    "label": "Art. 128. De 2029 a 2032, as alíquotas dos impostos previstos nos arts. 155, II, e 156, III, da Cons",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96248",
+    "label": "Art. 129. Ficam extintos, a partir de 2033, os impostos previstos nos arts. 155, II, e 156, III, da ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96249",
+    "label": "Art. 130. Resolução do Senado Federal fixará, para todas as esferas federativas, as alíquotas de ref",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96287",
+    "label": "Art. 131. De 2029 a 2077, o produto da arrecadação dos Estados, do Distrito Federal e dos Municípios",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96413",
+    "label": "Art. 132. Do imposto dos Estados, do Distrito Federal e dos Municípios apurado com base nas alíquota",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96436",
+    "label": "Art. 133. Os tributos de que tratam os arts. 153, IV, 155, II, 156, III, e 195, I, &quot;b&quot;, e ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96437",
+    "label": "Art. 134. Os saldos credores relativos ao imposto previsto no art. 155, II, da Constituição Federal,",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96426",
+    "label": "Art. 135. Lei complementar disciplinará a forma de utilização dos créditos, inclusive presumidos, do",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96427",
+    "label": "Art. 136. Os Estados que possuíam, em 30 de abril de 2023, fundos destinados a investimentos em obra",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96429",
+    "label": "Art. 137. Os saldos financeiros dos recursos transferidos pelo Fundo Nacional de Saúde e pelo Fundo ",
+    "decisions": 0,
+    "editorials": {}
+  },
+  {
+    "art_id": "art96430",
+    "label": "Art. 138. Até 2032, qualquer criação, alteração ou prorrogação de vinculação legal ou constitucional",
+    "decisions": 0,
+    "editorials": {}
+  }
+]

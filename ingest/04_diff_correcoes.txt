@@ -1,0 +1,2009 @@
+CORREÇÕES APLICADAS
+===================
+
+Total de linhas originais: 25584
+Total de linhas normalizadas: 24848
+Linhas com diferenças: 24726
+URLs encontradas: 2
+
+--- Linha 2 ---
+ANTES: (Atualizada até a EC n° 106, de 7/05/2020 - DOU 8/05/2020)
+DEPOIS: (Atualizada até a EC nº 106, de 7/05/2020 - DOU 8/05/2020)
+
+--- Linha 4 ---
+ANTES: TÍTULO I   -  Dos Princípios Fundamentais (art. 1° ao 4°)
+DEPOIS: TÍTULO I - Dos Princípios Fundamentais (art. 1º ao 4º )
+
+--- Linha 5 ---
+ANTES: TÍTULO II  -  Dos Direitos e Garantias Fundamentais (art. 5° ao 17)
+DEPOIS: TÍTULO II - Dos Direitos e Garantias Fundamentais (art. 5º ao 17)
+
+--- Linha 6 ---
+ANTES: CAPÍTULO I -  DOS DIREITOS E DEVERES INDIVIDUAIS E COLETIVOS
+DEPOIS: CAPÍTULO I - DOS DIREITOS E DEVERES INDIVIDUAIS E COLETIVOS
+
+--- Linha 7 ---
+ANTES: CAPÍTULO II-  DOS DIREITOS SOCIAISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+DEPOIS: CAPÍTULO II- DOS DIREITOS SOCIAISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+--- Linha 8 ---
+ANTES: CAPÍTULO III-  DA NACIONALIDADEXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+DEPOIS: CAPÍTULO III- DA NACIONALIDADEXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+--- Linha 9 ---
+ANTES: CAPÍTULO IV-  DOS DIREITOS POLÍTICOSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+DEPOIS: CAPÍTULO IV- DOS DIREITOS POLÍTICOSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+--- Linha 10 ---
+ANTES: CAPÍTULO V-  DOS PARTIDOS POLÍTICOSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+DEPOIS: CAPÍTULO V- DOS PARTIDOS POLÍTICOSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+--- Linha 11 ---
+ANTES: TÍTULO III    -  Da Organização do Estado (art. 18 ao 43)
+DEPOIS: TÍTULO III - Da Organização do Estado (art. 18ª o 43)
+
+--- Linha 15 ---
+ANTES: CAPÍTULO IV-  DOS MUNICÍPIOSxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DEPOIS: CAPÍTULO IV- DOS MUNICÍPIOSxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+--- Linha 16 ---
+ANTES: CAPÍTULO V-  DO DISTRITO FEDERAL E DOS TERRITÓRIOSxxxxxxx
+DEPOIS: CAPÍTULO V- DO DISTRITO FEDERAL E DOS TERRITÓRIOSxxxxxxx
+
+--- Linha 22 ---
+ANTES: Seção I -  DISPOSIÇÕES GERAIS
+DEPOIS: Seção I - DISPOSIÇÕES GERAIS
+
+--- Linha 23 ---
+ANTES: Seção II -  DOS SERVIDORES PÚBLICOS
+DEPOIS: Seção II - DOS SERVIDORES PÚBLICOS
+
+--- Linha 24 ---
+ANTES: Seção III-  DOS MILITARES DOS ESTADOS, DO
+DEPOIS: Seção III- DOS MILITARES DOS ESTADOS, DO
+
+--- Linha 26 ---
+ANTES: Seção IV -  DAS REGIÕES
+DEPOIS: Seção IV - DAS REGIÕES
+
+--- Linha 27 ---
+ANTES: TÍTULO IV    -  Da Organização dos Poderes (art. 44 ao 135)
+DEPOIS: TÍTULO IV - Da Organização dos Poderes (art. 44ª o 135)
+
+--- Linha 28 ---
+ANTES: CAPÍTULO I -  DO PODER LEGISLATIVO
+DEPOIS: CAPÍTULO I - DO PODER LEGISLATIVO
+
+--- Linha 41 ---
+ANTES: CAPÍTULO II-  DO PODER EXECUTIVO
+DEPOIS: CAPÍTULO II- DO PODER EXECUTIVO
+
+--- Linha 50 ---
+ANTES: CAPÍTULO III-  DO PODER JUDICIÁRIO
+DEPOIS: CAPÍTULO III- DO PODER JUDICIÁRIO
+
+--- Linha 59 ---
+ANTES: CAPÍTULO IV-  DAS FUNÇÕES ESSENCIAIS À JUSTIÇA
+DEPOIS: CAPÍTULO IV- DAS FUNÇÕES ESSENCIAIS À JUSTIÇA
+
+--- Linha 63 ---
+ANTES: TÍTULO V - Da Defesa do Estado e Das Instituições Democráticas (art.136 ao 144)
+DEPOIS: TÍTULO V - Da Defesa do Estado e Das Instituições Democráticas (art. 136ª o 144)
+
+--- Linha 70 ---
+ANTES: TÍTULO VI    -  Da Tributação e do Orçamento (art. 145 ao 169)
+DEPOIS: TÍTULO VI - Da Tributação e do Orçamento (art. 145ª o 169)
+
+--- Linha 85 ---
+ANTES: TÍTULO VII    -  Da Ordem Econômica e Financeira (art. 170 ao 192)
+DEPOIS: TÍTULO VII - Da Ordem Econômica e Financeira (art. 170ª o 192)
+
+--- Linha 90 ---
+ANTES: TÍTULO VIII    -  Da Ordem Social (art. 193 ao 232)
+DEPOIS: TÍTULO VIII - Da Ordem Social (art. 193ª o 232)
+
+--- Linha 91 ---
+ANTES: CAPÍTULO I -  DISPOSIÇÃO GERAL
+DEPOIS: CAPÍTULO I - DISPOSIÇÃO GERAL
+
+--- Linha 92 ---
+ANTES: CAPÍTULO II-  DA SEGURIDADE SOCIALxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DEPOIS: CAPÍTULO II- DA SEGURIDADE SOCIALxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+--- Linha 97 ---
+ANTES: CAPÍTULO III-  DA EDUCAÇÃO, DA CULTURA E DO DESPORTOxxxxxxxxxxxxxxxxxxxxxxxxx
+DEPOIS: CAPÍTULO III- DA EDUCAÇÃO, DA CULTURA E DO DESPORTOxxxxxxxxxxxxxxxxxxxxxxxxx
+
+--- Linha 101 ---
+ANTES: CAPÍTULO IV-  DA CIÊNCIA E TECNOLOGIA E INOVAÇÃOxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DEPOIS: CAPÍTULO IV- DA CIÊNCIA E TECNOLOGIA E INOVAÇÃOxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+--- Linha 102 ---
+ANTES: CAPÍTULO V-  DA COMUNICAÇÃO SOCIALxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DEPOIS: CAPÍTULO V- DA COMUNICAÇÃO SOCIALxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+--- Linha 103 ---
+ANTES: CAPÍTULO VI-  DO MEIO AMBIENTExxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DEPOIS: CAPÍTULO VI- DO MEIO AMBIENTExxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+--- Linha 104 ---
+ANTES: CAPÍTULO VII -  DA FAMÍLIA, DA CRIANÇA, DO ADOLESCENTE, DO JOVEM  E DO IDOSO
+DEPOIS: CAPÍTULO VII - DA FAMÍLIA, DA CRIANÇA, DO ADOLESCENTE, DO JOVEM E DO IDOSO
+
+--- Linha 105 ---
+ANTES: CAPÍTULO VIII-  DOS ÍNDIOSxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+DEPOIS: CAPÍTULO VIII- DOS ÍNDIOSxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+--- Linha 106 ---
+ANTES: TÍTULO IX    -  Das Disposições Constitucionais Gerais (art. 233 ao 250)
+DEPOIS: TÍTULO IX - Das Disposições Constitucionais Gerais (art. 233ª o 250)
+
+--- Linha 107 ---
+ANTES: TÍTULO X     -  Ato das Disposições Constituicionais Transitórias (art. 1° ao 114)
+DEPOIS: TÍTULO X - Ato das Disposições Constituicionais Transitórias (art. 1º ao 114)
+
+--- Linha 108 ---
+ANTES: Nós, representantes do povo brasileiro, reunidos em Assembleia Nacional Constituinte para instituir um Estado Democrátic
+DEPOIS: Nós, representantes do povo brasileiro, reunidos em Assembleia Nacional Constituinte para instituir um Estado Democrátic
+
+--- Linha 110 ---
+ANTES: Não apenas o Estado haverá de ser convocado para formular as políticas públicas que podem conduzir ao bem-estar, à igual
+DEPOIS: Não apenas o Estado haverá de ser convocado para formular as políticas públicas que podem conduzir ao bem-estar, à igual
+
+--- Linha 111 ---
+ANTES: Preâmbulo da Constituição: não constitui norma central. Invocação da proteção de Deus: não se trata de norma de reproduç
+DEPOIS: Preâmbulo da Constituição: não constitui norma central. Invocação da proteção de Deus: não se trata de norma de reproduç
+
+--- Linha 113 ---
+ANTES: A construção e o efetivo alcance de uma sociedade fraternal, pluralista e sem preconceitos, tal como previsto no preâmbu
+DEPOIS: A construção e o efetivo alcance de uma sociedade fraternal, pluralista e sem preconceitos, tal como previsto no preâmbu
+
+--- Linha 119 ---
+ANTES: O erro no processo de formação das leis que distorça a manifestação de vontade do Poder Legislativo enseja a inconstituc
+DEPOIS: O erro no processo de formação das leis que distorça a manifestação de vontade do Poder Legislativo enseja a inconstituc
+
+--- Linha 120 ---
+ANTES: Lei complementar estadual. Permuta nacional entre membros dos Ministérios Públicos Estaduais e do Distrito Federal e Ter
+DEPOIS: Lei complementar estadual. Permuta nacional entre membros dos Ministérios Públicos Estaduais e do Distrito Federal e Ter
+
+--- Linha 121 ---
+ANTES: Art. 28, §12, da Lei Federal 9.504/1997 (Lei das Eleições). Prestação de Contas das doações de partidos para candidatos.
+DEPOIS: Art. 28, §12, da Lei Federal 9.504/1997 (Lei das Eleições). Prestação de Contas das doações de partidos para candidatos.
+
+--- Linha 122 ---
+ANTES: Ofensa aos princípios fundamentais democrático e da igualdade política. Premissas teóricas. Postura particularista e exp
+DEPOIS: Ofensa aos princípios fundamentais democrático e da igualdade política. Premissas teóricas. Postura particularista e exp
+
+--- Linha 123 ---
+ANTES: Lei 6.683/1979, a chamada "Lei de Anistia". (...) princípio democrático e princípio republicano: não violação. (...) No 
+DEPOIS: Lei 6.683/1979, a chamada "Lei de Anistia". (...) princípio democrático e princípio republicano: não violação. (...) No 
+
+--- Linha 124 ---
+ANTES: O pacto federativo, sustentando-se na harmonia que deve presidir as relações institucionais entre as comunidades polític
+DEPOIS: O pacto federativo, sustentando-se na harmonia que deve presidir as relações institucionais entre as comunidades polític
+
+--- Linha 126 ---
+ANTES: Controle jurisdicional da atividade persecutória do Estado: uma exigência inerente ao Estado Democrático de Direito. O E
+DEPOIS: Controle jurisdicional da atividade persecutória do Estado: uma exigência inerente ao Estado Democrático de Direito. O E
+
+--- Linha 127 ---
+ANTES: A LEP é de ser interpretada com os olhos postos em seu art. 1º. Artigo que institui a lógica da prevalência de mecanismo
+DEPOIS: A LEP é de ser interpretada com os olhos postos em seu art. 1º . Artigo que institui a lógica da prevalência de mecanism
+
+--- Linha 128 ---
+ANTES: Cancelamento da Súmula 394/STF (RTJ 179/912-913). Nada pode autorizar o desequilíbrio entre os cidadãos da República. O 
+DEPOIS: Cancelamento da Súmula 394/STF (RTJ 179/912-913). Nada pode autorizar o desequilíbrio entre os cidadãos da República. O 
+
+--- Linha 131 ---
+ANTES: O art. 1º da Constituição assenta como um dos fundamentos do Estado brasileiro a sua soberania – que significa o poder p
+DEPOIS: O art. 1º da Constituição assenta como um dos fundamentos do Estado brasileiro a sua soberania – que significa o poder p
+
+--- Linha 132 ---
+ANTES: As "terras indígenas" versadas pela CF de 1988 fazem parte de um território estatal-brasileiro sobre o qual incide, com 
+DEPOIS: As "terras indígenas" versadas pela CF de 1988 fazem parte de um território estatal-brasileiro sobre o qual incide, com 
+
+--- Linha 133 ---
+ANTES: A imprescindibilidade do uso do idioma nacional nos atos processuais, além de corresponder a uma exigência que decorre d
+DEPOIS: A imprescindibilidade do uso do idioma nacional nos atos processuais, além de corresponder a uma exigência que decorre d
+
+--- Linha 136 ---
+ANTES: A Lei 8.899/1994 é parte das políticas públicas para inserir os portadores de necessidades especiais na sociedade e obje
+DEPOIS: A Lei 8.899/1994 é parte das políticas públicas para inserir os portadores de necessidades especiais na sociedade e obje
+
+--- Linha 138 ---
+ANTES: Análise da recepção da Lei nº 6.683, de 28 de agosto de 1979, em relação aos crimes permanentes e àqueles que caracteriz
+DEPOIS: Análise da recepção da Lei nº 6.683, de 28 de agosto de 1979, em relação aos crimes permanentes e àqueles que caracteriz
+
+--- Linha 140 ---
+ANTES: Ninguém é obrigado a cumprir ordem ilegal, ou a ela se submeter, ainda que emanada de autoridade judicial. Mais: é dever
+DEPOIS: Ninguém é obrigado a cumprir ordem ilegal, ou a ela se submeter, ainda que emanada de autoridade judicial. Mais: é dever
+
+--- Linha 143 ---
+ANTES: A falta de estabelecimento penal adequado não autoriza a manutenção do condenado em regime prisional mais gravoso, deven
+DEPOIS: A falta de estabelecimento penal adequado não autoriza a manutenção do condenado em regime prisional mais gravoso, deven
+
+--- Linha 145 ---
+ANTES: Concurso público. Exames ginecológicos invasivos. Discriminação de gênero. (...) A determinação de exames ginecológicos 
+DEPOIS: Concurso público. Exames ginecológicos invasivos. Discriminação de gênero. (...) A determinação de exames ginecológicos 
+
+--- Linha 146 ---
+ANTES: Concurso público. Exames ginecológicos invasivos. Discriminação de gênero. (...) A determinação de exames ginecológicos 
+DEPOIS: Concurso público. Exames ginecológicos invasivos. Discriminação de gênero. (...) A determinação de exames ginecológicos 
+
+--- Linha 147 ---
+ANTES: [ARE 1.551.254 AgR, rel. min. Cristiano Zanin, j. 22-12-2025, P, DJE de 2-2-2026.]
+DEPOIS: [ARE 1.551.254ª gR, rel. min. Cristiano Zanin, j. 22-12-2025, P, DJE de 2-2-2026.]
+
+--- Linha 148 ---
+ANTES: “1. A Convenção da Haia de 1980 sobre os aspectos civis da subtração internacional de crianças é compatível com a Consti
+DEPOIS: "1. A Convenção da Haia de 1980 sobre os aspectos civis da subtração internacional de crianças é compatível com a Consti
+
+--- Linha 149 ---
+ANTES: Nas diligências para a localização do bem móvel dado em garantia em alienação fiduciária e em sua apreensão, previstas n
+DEPOIS: Nas diligências para a localização do bem móvel dado em garantia em alienação fiduciária e em sua apreensão, previstas n
+
+--- Linha 150 ---
+ANTES: (...) é necessário garantir aos homens e mulheres trans acesso igualitário a todas as ações e programas de saúde do SUS,
+DEPOIS: (...) é necessário garantir aos homens e mulheres trans acesso igualitário a todas as ações e programas de saúde do SUS,
+
+--- Linha 151 ---
+ANTES: Impugnado o art. 3º, § 2º, da Lei nº 12.910/2013 do Estado da Bahia, que impõe prazo à regularização fundiária das terra
+DEPOIS: Impugnado o art. 3º , § 2º , da Lei nº 12.910/2013 do Estado da Bahia, que impõe prazo à regularização fundiária das ter
+
+--- Linha 152 ---
+ANTES: Lei 3.528 de 2019 do estado do Tocantins. Cadastro estadual de usuários e dependentes de drogas. (...) Materialmente (..
+DEPOIS: Lei 3.528 de 2019 do estado do Tocantins. Cadastro estadual de usuários e dependentes de drogas. (...) Materialmente (..
+
+--- Linha 153 ---
+ANTES: População em situação de rua no Brasil. Omissões do poder público que resultam em um potencial estado de coisas inconsti
+DEPOIS: População em situação de rua no Brasil. Omissões do poder público que resultam em um potencial estado de coisas inconsti
+
+--- Linha 154 ---
+ANTES: A “legítima defesa da honra” é recurso argumentativo/retórico odioso, desumano e cruel utilizado pelas defesas de acusad
+DEPOIS: A "legítima defesa da honra" é recurso argumentativo/retórico odioso, desumano e cruel utilizado pelas defesas de acusad
+
+--- Linha 155 ---
+ANTES: (...) programas de reinserção de presos e de egressos do sistema carcerário são medidas que dão concretude aos direitos 
+DEPOIS: (...) programas de reinserção de presos e de egressos do sistema carcerário são medidas que dão concretude aos direitos 
+
+--- Linha 156 ---
+ANTES: Restrição de doação de sangue a grupos e não condutas de risco. Discriminação por orientação sexual. (...) O estabelecim
+DEPOIS: Restrição de doação de sangue a grupos e não condutas de risco. Discriminação por orientação sexual. (...) O estabelecim
+
+--- Linha 157 ---
+ANTES: Na condução coercitiva, resta evidente que o investigado é conduzido para demonstrar sua submissão à força, o que desres
+DEPOIS: Na condução coercitiva, resta evidente que o investigado é conduzido para demonstrar sua submissão à força, o que desres
+
+--- Linha 158 ---
+ANTES: Deixar a cargo da mulher autora da representação a decisão sobre o início da persecução penal significa desconsiderar o 
+DEPOIS: Deixar a cargo da mulher autora da representação a decisão sobre o início da persecução penal significa desconsiderar o 
+
+--- Linha 159 ---
+ANTES: Reconhecimento do direito à preferência sexual como direta emanação do princípio da “dignidade da pessoa humana”: direit
+DEPOIS: Reconhecimento do direito à preferência sexual como direta emanação do princípio da "dignidade da pessoa humana": direit
+
+--- Linha 160 ---
+ANTES: A pesquisa científica com células-tronco embrionárias, autorizada pela Lei 11.105/2005, objetiva o enfrentamento e cura 
+DEPOIS: A Lei 8.899/1994 é parte das políticas públicas para inserir os portadores de necessidades especiais na sociedade e obje
+
+--- Linha 161 ---
+ANTES: A Lei 8.899/1994 é parte das políticas públicas para inserir os portadores de necessidades especiais na sociedade e obje
+DEPOIS: Ofende os princípios da igualdade e da dignidade da pessoa humana a perquirição da vítima, em processos apuratórios e ju
+
+--- Linha 162 ---
+ANTES: Ofende os princípios da igualdade e da dignidade da pessoa humana a perquirição da vítima, em processos apuratórios e ju
+DEPOIS: Repercussão geral
+
+--- Linha 163 ---
+ANTES: Repercussão geral
+DEPOIS: "1. Em visitas sociais nos presídios ou estabelecimentos de segregação é inadmissível a revista íntima vexatória com o d
+
+--- Linha 164 ---
+ANTES: “1. Em visitas sociais nos presídios ou estabelecimentos de segregação é inadmissível a revista íntima vexatória com o d
+DEPOIS: Análise da recepção da Lei nº 6.683, de 28 de agosto de 1979, em relação aos crimes permanentes e àqueles que caracteriz
+
+--- Linha 165 ---
+ANTES: Análise da recepção da Lei nº 6.683, de 28 de agosto de 1979, em relação aos crimes permanentes e àqueles que caracteriz
+DEPOIS: Análise da recepção da Lei nº 6.683, de 28 de agosto de 1979, em relação aos crimes permanentes e àqueles que caracteriz
+
+--- Linha 166 ---
+ANTES: Análise da recepção da Lei nº 6.683, de 28 de agosto de 1979, em relação aos crimes permanentes e àqueles que caracteriz
+DEPOIS: Possibilidade, ou não, de reconhecimento de anistia a crime de ocultação de cadáver (crime permanente), cujo início da e
+
+--- Linha 167 ---
+ANTES: Possibilidade, ou não, de reconhecimento de anistia a crime de ocultação de cadáver (crime permanente), cujo início da e
+DEPOIS: Separação obrigatória de bens nos casamentos e uniões estáveis com pessoa maior de setenta anos. (...) O dispositivo aqu
+
+--- Linha 168 ---
+ANTES: Separação obrigatória de bens nos casamentos e uniões estáveis com pessoa maior de setenta anos. (...) O dispositivo aqu
+DEPOIS: O pagamento dos proventos de aposentadoria por invalidez ao curador, independentemente de qualquer análise acerca da cap
+
+--- Linha 169 ---
+ANTES: O pagamento dos proventos de aposentadoria por invalidez ao curador, independentemente de qualquer análise acerca da cap
+DEPOIS: O transgênero tem direito fundamental subjetivo à alteração de seu prenome e de sua classificação de gênero no registro 
+
+--- Linha 170 ---
+ANTES: O transgênero tem direito fundamental subjetivo à alteração de seu prenome e de sua classificação de gênero no registro 
+DEPOIS: Considerando que é dever do Estado, imposto pelo sistema normativo, manter em seus presídios os padrões mínimos de human
+
+--- Linha 171 ---
+ANTES: Considerando que é dever do Estado, imposto pelo sistema normativo, manter em seus presídios os padrões mínimos de human
+DEPOIS: A legislação sobre execução penal atende aos direitos fundamentais dos sentenciados. No entanto, o plano legislativo est
+
+--- Linha 172 ---
+ANTES: A legislação sobre execução penal atende aos direitos fundamentais dos sentenciados. No entanto, o plano legislativo est
+DEPOIS: (...) os crimes de lesão corporal praticados contra a mulher no âmbito doméstico e familiar são de ação penal pública in
+
+--- Linha 173 ---
+ANTES: (...) os crimes de lesão corporal praticados contra a mulher no âmbito doméstico e familiar são de ação penal pública in
+DEPOIS: Contravenção penal. Posse não justificada de instrumento de emprego usual na prática de furto (art. 25 do DL 3.688/1941)
+
+--- Linha 174 ---
+ANTES: Contravenção penal. Posse não justificada de instrumento de emprego usual na prática de furto (art. 25 do DL 3.688/1941)
+DEPOIS: Recurso Extraordinário conhecido e com proposta de submissão ao regime de Repercussão Geral, com a fixação do seguinte T
+
+--- Linha 175 ---
+ANTES: Recurso Extraordinário conhecido e com proposta de submissão ao regime de Repercussão Geral, com a fixação do seguinte T
+DEPOIS: [RE 1.346.152, rel. min. Alexandre de Moraes, red. do ac. min. Flávio Dino, j. 26-11-2025, 1ª T, DJE de 5-3-2026.]
+
+--- Linha 176 ---
+ANTES: [RE 1.346.152, rel. min. Alexandre de Moraes, red. do ac. min. Flávio Dino, j. 26-11-2025, 1ª T, DJE de 5-3-2026.]
+DEPOIS: Julgados correlatos
+
+--- Linha 177 ---
+ANTES: Julgados correlatos
+DEPOIS: Nos termos do Tema 622-RG, tanto os vínculos originados da ascendência biológica, como aqueles de filiação construídos p
+
+--- Linha 178 ---
+ANTES: Nos termos do Tema 622-RG, tanto os vínculos originados da ascendência biológica, como aqueles de filiação construídos p
+DEPOIS: Habeas corpus coletivo. Cumprimento de medidas socioeducativas de internação. Impetração voltada a corrigir alegada supe
+
+--- Linha 179 ---
+ANTES: Habeas corpus coletivo. Cumprimento de medidas socioeducativas de internação. Impetração voltada a corrigir alegada supe
+DEPOIS: Direito civil e constitucional. Ação de investigação de paternidade cumulada com petição de herança. Filho adulterino. P
+
+--- Linha 180 ---
+ANTES: Direito civil e constitucional. Ação de investigação de paternidade cumulada com petição de herança. Filho adulterino. P
+DEPOIS: Suspensão de inclusão de novos beneficiários. Operadora de plano de saúde. GEAP [Autogestão em Saúde]. Óbice ao ingresso
+
+--- Linha 181 ---
+ANTES: Suspensão de inclusão de novos beneficiários. Operadora de plano de saúde. GEAP [Autogestão em Saúde]. Óbice ao ingresso
+DEPOIS: Autorizar que se viabilize o cancelamento de registro civil por inexistência de filiação, no caso em que o declarante fo
+
+--- Linha 182 ---
+ANTES: Autorizar que se viabilize o cancelamento de registro civil por inexistência de filiação, no caso em que o declarante fo
+DEPOIS: A "escravidão moderna" é mais sutil do que a do século 19 e o cerceamento à liberdade pode decorrer de diversos constran
+
+--- Linha 183 ---
+ANTES: A "escravidão moderna" é mais sutil do que a do século 19 e o cerceamento à liberdade pode decorrer de diversos constran
+DEPOIS: A cláusula da reserva do possível – que não pode ser invocada, pelo poder público, com o propósito de fraudar, de frustr
+
+--- Linha 184 ---
+ANTES: A cláusula da reserva do possível – que não pode ser invocada, pelo poder público, com o propósito de fraudar, de frustr
+DEPOIS: Reconhecimento e qualificação da união homoafetiva como entidade familiar. O STF – apoiando-se em valiosa hermenêutica c
+
+--- Linha 185 ---
+ANTES: Reconhecimento e qualificação da união homoafetiva como entidade familiar. O STF – apoiando-se em valiosa hermenêutica c
+DEPOIS: Prisão preventiva. (...) Autos instruídos com documentos comprobatórios do debilitado estado de saúde do paciente, que p
+
+--- Linha 186 ---
+ANTES: Prisão preventiva. (...) Autos instruídos com documentos comprobatórios do debilitado estado de saúde do paciente, que p
+DEPOIS: O direito de defesa constitui pedra angular do sistema de proteção dos direitos individuais e materializa uma das expres
+
+--- Linha 187 ---
+ANTES: O direito de defesa constitui pedra angular do sistema de proteção dos direitos individuais e materializa uma das expres
+DEPOIS: A duração prolongada, abusiva e irrazoável da prisão cautelar de alguém ofende, de modo frontal, o postulado da dignidad
+
+--- Linha 188 ---
+ANTES: A duração prolongada, abusiva e irrazoável da prisão cautelar de alguém ofende, de modo frontal, o postulado da dignidad
+DEPOIS: Denúncias genéricas, que não descrevem os fatos na sua devida conformação, não se coadunam com os postulados básicos do 
+
+--- Linha 189 ---
+ANTES: Denúncias genéricas, que não descrevem os fatos na sua devida conformação, não se coadunam com os postulados básicos do 
+DEPOIS: O fato de o paciente estar condenado por delito tipificado como hediondo não enseja, por si só, uma proibição objetiva i
+
+--- Linha 190 ---
+ANTES: O fato de o paciente estar condenado por delito tipificado como hediondo não enseja, por si só, uma proibição objetiva i
+DEPOIS: Sendo fundamento da República Federativa do Brasil a dignidade da pessoa humana, o exame da constitucionalidade de ato n
+
+--- Linha 191 ---
+ANTES: Sendo fundamento da República Federativa do Brasil a dignidade da pessoa humana, o exame da constitucionalidade de ato n
+DEPOIS: A mera instauração de inquérito, quando evidente a atipicidade da conduta, constitui meio hábil a impor violação aos dir
+
+--- Linha 192 ---
+ANTES: A mera instauração de inquérito, quando evidente a atipicidade da conduta, constitui meio hábil a impor violação aos dir
+DEPOIS: Publicação de livros: antissemitismo. Racismo. (...) Fundamento do núcleo do pensamento do nacional-socialismo de que os
+
+--- Linha 193 ---
+ANTES: Publicação de livros: antissemitismo. Racismo. (...) Fundamento do núcleo do pensamento do nacional-socialismo de que os
+DEPOIS: O direito ao nome insere-se no conceito de dignidade da pessoa humana, princípio alçado a fundamento da República Federa
+
+--- Linha 194 ---
+ANTES: O direito ao nome insere-se no conceito de dignidade da pessoa humana, princípio alçado a fundamento da República Federa
+DEPOIS: Discrepa, a mais não poder, de garantias constitucionais implícitas e explícitas – preservação da dignidade humana, da i
+
+--- Linha 195 ---
+ANTES: Discrepa, a mais não poder, de garantias constitucionais implícitas e explícitas – preservação da dignidade humana, da i
+DEPOIS: IV - os valores sociais do trabalho e da livre iniciativa;
+
+--- Linha 196 ---
+ANTES: A simples referência normativa à tortura, constante da descrição típica consubstanciada no art. 233 do ECA, exterioriza 
+DEPOIS: Na ausência de previsão legal específica ou de norma coletiva em sentido diverso, o recreio escolar (educação básica) e 
+
+--- Linha 197 ---
+ANTES: IV - os valores sociais do trabalho e da livre iniciativa;
+DEPOIS: [ADPF 1.058 MC-Ref, rel. min. Gilmar Mendes, j. 13-11-2025, P, Informativo STF 1.199.]
+
+--- Linha 198 ---
+ANTES: Na ausência de previsão legal específica ou de norma coletiva em sentido diverso, o recreio escolar (educação básica) e 
+DEPOIS: Controle concentrado de constitucionalidade
+
+--- Linha 199 ---
+ANTES: [ADPF 1.058 MC-Ref, rel. min. Gilmar Mendes, j. 13-11-2025, P, Informativo STF 1.199.]
+DEPOIS: "São inconstitucionais as leis que obrigam supermercados ou similares a fornecer gratuitamente sacolas ou embalagens par
+
+--- Linha 200 ---
+ANTES: Controle concentrado de constitucionalidade
+DEPOIS: Contrato de trabalho intermitente. Regras instituídas pela Lei nº 13.467/2017 e pela Medida Provisória nº 808/2017. (...
+
+--- Linha 201 ---
+ANTES: “São inconstitucionais as leis que obrigam supermercados ou similares a fornecer gratuitamente sacolas ou embalagens par
+DEPOIS: A livre iniciativa (CF, art. 1º , IV e 170, caput) não se revela um fim em si mesmo, mas um meio para atingir os objetiv
+
+--- Linha 202 ---
+ANTES: Contrato de trabalho intermitente. Regras instituídas pela Lei nº 13.467/2017 e pela Medida Provisória nº 808/2017. (...
+DEPOIS: São válidos os contratos de parceria celebrados entre trabalhador do ramo da beleza (cabeleireiro, barbeiro, esteticista
+
+--- Linha 203 ---
+ANTES: A livre iniciativa (CF, art. 1º, IV e 170, caput) não se revela um fim em si mesmo, mas um meio para atingir os objetivo
+DEPOIS: A norma do art. 129 da Lei 11.196/2005 harmoniza-se com as diretrizes constitucionais, especialmente com o inc. IV do ar
+
+--- Linha 204 ---
+ANTES: São válidos os contratos de parceria celebrados entre trabalhador do ramo da beleza (cabeleireiro, barbeiro, esteticista
+DEPOIS: (...) a Medida Provisória 927/2020 foi editada para tentar atenuar os trágicos efeitos sociais e econômicos decorrentes 
+
+--- Linha 205 ---
+ANTES: A norma do art. 129 da Lei 11.196/2005 harmoniza-se com as diretrizes constitucionais, especialmente com o inc. IV do ar
+DEPOIS: O motorista particular, em sua atividade laboral, é protegido pela liberdade fundamental insculpida no art. 5º , XIII, d
+
+--- Linha 206 ---
+ANTES: (...) a Medida Provisória 927/2020 foi editada para tentar atenuar os trágicos efeitos sociais e econômicos decorrentes 
+DEPOIS: O serviço postal não consubstancia atividade econômica em sentido estrito, a ser explorada pela empresa privada. Por iss
+
+--- Linha 207 ---
+ANTES: O motorista particular, em sua atividade laboral, é protegido pela liberdade fundamental insculpida no art. 5º, XIII, da
+DEPOIS: A livre iniciativa é expressão de liberdade titulada não apenas pela empresa mas também pelo trabalho. Por isso a Consti
+
+--- Linha 208 ---
+ANTES: O serviço postal não consubstancia atividade econômica em sentido estrito, a ser explorada pela empresa privada. Por iss
+DEPOIS: Repercussão geral
+
+--- Linha 209 ---
+ANTES: A livre iniciativa é expressão de liberdade titulada não apenas pela empresa mas também pelo trabalho. Por isso a Consti
+DEPOIS: Competência e ônus da prova nos processos que discutem a existência de fraude no contrato civil/comercial de prestação d
+
+--- Linha 210 ---
+ANTES: Repercussão geral
+DEPOIS: Discussão sobre a exclusividade da propriedade industrial em razão da demora na concessão do registro de marca pelo INPI
+
+--- Linha 211 ---
+ANTES: Competência e ônus da prova nos processos que discutem a existência de fraude no contrato civil/comercial de prestação d
+DEPOIS: A proibição ou restrição da atividade de transporte privado individual por motorista cadastrado em aplicativo é inconsti
+
+--- Linha 212 ---
+ANTES: Discussão sobre a exclusividade da propriedade industrial em razão da demora na concessão do registro de marca pelo INPI
+DEPOIS: O princípio da livre iniciativa, plasmado no art. 1º , IV, da Constituição como fundamento da República e reiterado no a
+
+--- Linha 213 ---
+ANTES: A proibição ou restrição da atividade de transporte privado individual por motorista cadastrado em aplicativo é inconsti
+DEPOIS: É lícita a terceirização ou qualquer outra forma de divisão do trabalho entre pessoas jurídicas distintas, independentem
+
+--- Linha 214 ---
+ANTES: O princípio da livre iniciativa, plasmado no art. 1º, IV, da Constituição como fundamento da República e reiterado no ar
+DEPOIS: Julgados correlatos
+
+--- Linha 215 ---
+ANTES: É lícita a terceirização ou qualquer outra forma de divisão do trabalho entre pessoas jurídicas distintas, independentem
+DEPOIS: Tema nº 725 da Repercussão Geral (RE nº 958.252) e ADPF nº 324. (...) Existência de aderência estrita entre o ato reclam
+
+--- Linha 216 ---
+ANTES: Julgados correlatos
+DEPOIS: Lei Estadual 7.595/17 do Rio de Janeiro. Obrigatoriedade de oferta por restaurantes vendedores de bebidas destiladas de,
+
+--- Linha 217 ---
+ANTES: Tema nº 725 da Repercussão Geral (RE nº 958.252) e ADPF nº 324. (...) Existência de aderência estrita entre o ato reclam
+DEPOIS: O princípio da livre iniciativa não pode ser invocado para afastar regras de regulamentação do mercado e de defesa do co
+
+--- Linha 218 ---
+ANTES: Lei Estadual 7.595/17 do Rio de Janeiro. Obrigatoriedade de oferta por restaurantes vendedores de bebidas destiladas de,
+DEPOIS: A fixação de horário de funcionamento de estabelecimento comercial é matéria de competência municipal, considerando impr
+
+--- Linha 219 ---
+ANTES: O princípio da livre iniciativa não pode ser invocado para afastar regras de regulamentação do mercado e de defesa do co
+DEPOIS: Transporte rodoviário interestadual de passageiros. Não pode ser dispensada, a título de proteção da livre iniciativa, a
+
+--- Linha 220 ---
+ANTES: A má-fé do candidato à vaga de juiz classista resta configurada quando viola preceito constante dos atos constitutivos d
+DEPOIS: V - o pluralismo político.
+
+--- Linha 221 ---
+ANTES: A fixação de horário de funcionamento de estabelecimento comercial é matéria de competência municipal, considerando impr
+DEPOIS: Controle concentrado de constitucionalidade
+
+--- Linha 222 ---
+ANTES: Transporte rodoviário interestadual de passageiros. Não pode ser dispensada, a título de proteção da livre iniciativa, a
+DEPOIS: Emenda nº 48/22 à Constituição do Estado do Tocantins. Eleições concomitantes da mesa diretora da Assembleia Legislativa
+
+--- Linha 223 ---
+ANTES: V - o pluralismo político.
+DEPOIS: Art. 109, § 2º , e art. 111 do Código Eleitoral. Caput e § 2º do art. 11 e art. 13 da Resolução n. 23.677/2021 do Tribun
+
+--- Linha 224 ---
+ANTES: Controle concentrado de constitucionalidade
+DEPOIS: Normas que condicionaram o número de candidatos às câmaras municipais ao número de representantes do respectivo partido 
+
+--- Linha 225 ---
+ANTES: Emenda nº 48/22 à Constituição do Estado do Tocantins. Eleições concomitantes da mesa diretora da Assembleia Legislativa
+DEPOIS: Lei 8.624/1993, que dispõe sobre o plebiscito destinado a definir a forma e o sistema de governo. Regulamentação do art.
+
+--- Linha 226 ---
+ANTES: Art. 109, § 2º, e art. 111 do Código Eleitoral. Caput e § 2º do art. 11 e art. 13 da Resolução n. 23.677/2021 do Tribuna
+DEPOIS: Parágrafo único. Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente, nos termos 
+
+--- Linha 227 ---
+ANTES: Normas que condicionaram o número de candidatos às câmaras municipais ao número de representantes do respectivo partido 
+DEPOIS: Art. 2º São Poderes da União, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.
+
+--- Linha 228 ---
+ANTES: Lei 8.624/1993, que dispõe sobre o plebiscito destinado a definir a forma e o sistema de governo. Regulamentação do art.
+DEPOIS: Não cabe ao Poder Judiciário, que não tem função legislativa, aumentar vencimentos de servidores públicos sob o fundamen
+
+--- Linha 229 ---
+ANTES: Parágrafo único. Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente, nos termos 
+DEPOIS: É inconstitucional a criação, por Constituição estadual, de órgão de controle administrativo do Poder Judiciário do qual
+
+--- Linha 230 ---
+ANTES: Art. 2º São Poderes da União, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.
+DEPOIS: Controle concentrado de constitucionalidade
+
+--- Linha 231 ---
+ANTES: Não cabe ao Poder Judiciário, que não tem função legislativa, aumentar vencimentos de servidores públicos sob o fundamen
+DEPOIS: A Constituição Federal (artigos 70ª 74) prevê os sistemas de controle interno e externo como mecanismos autônomos e coop
+
+--- Linha 232 ---
+ANTES: É inconstitucional a criação, por Constituição estadual, de órgão de controle administrativo do Poder Judiciário do qual
+DEPOIS: A competência do Tribunal de Contas para emissão do parecer prévio a que se refere o art. 71, I, da Constituição Federal
+
+--- Linha 233 ---
+ANTES: Controle concentrado de constitucionalidade
+DEPOIS: (...) o REINTEGRA, como política pública, vai ao encontro das normas constitucionais. Reconheço ainda a importância da i
+
+--- Linha 234 ---
+ANTES: A Constituição Federal (artigos 70 a 74) prevê os sistemas de controle interno e externo como mecanismos autônomos e coo
+DEPOIS: Redação do art. 702, I, f e §§ 3º e 4º , da Consolidação das Leis do Trabalho (Decreto-lei 5.452/1943), conferida pela L
+
+--- Linha 235 ---
+ANTES: A competência do Tribunal de Contas para emissão do parecer prévio a que se refere o art. 71, I, da Constituição Federal
+DEPOIS: Bloqueio institucional entre os poderes executivo e legislativo do Estado de Minas Gerais. Persistente inércia quanto à 
+
+--- Linha 236 ---
+ANTES: (...) o REINTEGRA, como política pública, vai ao encontro das normas constitucionais. Reconheço ainda a importância da i
+DEPOIS: A adoção do rito de urgência em proposições legislativas é matéria genuinamente interna corporis, não cabendo ao STF ade
+
+--- Linha 237 ---
+ANTES: Redação do art. 702, I, f e §§ 3º e 4º, da Consolidação das Leis do Trabalho (Decreto-lei 5.452/1943), conferida pela Le
+DEPOIS: É competência do legislador, dentro de sua atribuição constitucional, estabelecer, quando da elaboração da Lei Orçamenta
+
+--- Linha 238 ---
+ANTES: Bloqueio institucional entre os poderes executivo e legislativo do Estado de Minas Gerais. Persistente inércia quanto à 
+DEPOIS: Caso o Tribunal venha a conhecer da arguição de inconstitucionalidade material, é fato induvidoso que a questão da auton
+
+--- Linha 239 ---
+ANTES: A adoção do rito de urgência em proposições legislativas é matéria genuinamente interna corporis, não cabendo ao STF ade
+DEPOIS: As normas questionadas, que fixam metas de desempenho a serem atingidas pelos órgãos judiciários e a possível aplicação 
+
+--- Linha 240 ---
+ANTES: É competência do legislador, dentro de sua atribuição constitucional, estabelecer, quando da elaboração da Lei Orçamenta
+DEPOIS: Atos de constrição do patrimônio de estatal prestadora de serviço público essencial, em regime não concorrencial: afront
+
+--- Linha 241 ---
+ANTES: Caso o Tribunal venha a conhecer da arguição de inconstitucionalidade material, é fato induvidoso que a questão da auton
+DEPOIS: Verbas estaduais não podem ser objeto de bloqueio, penhora e/ou sequestro para pagamento de valores devidos em ações tra
+
+--- Linha 242 ---
+ANTES: As normas questionadas, que fixam metas de desempenho a serem atingidas pelos órgãos judiciários e a possível aplicação 
+DEPOIS: Ação Direta de Inconstitucionalidade. Lei Complementar 101/2000. Lei de Responsabilidade Fiscal (LRF). (...) A norma est
+
+--- Linha 243 ---
+ANTES: Atos de constrição do patrimônio de estatal prestadora de serviço público essencial, em regime não concorrencial: afront
+DEPOIS: Na forma do artigo 43, inciso I, § 1º , da Lei 4.320/1964, eventual superávit apurado ao final do exercício financeiro h
+
+--- Linha 244 ---
+ANTES: Verbas estaduais não podem ser objeto de bloqueio, penhora e/ou sequestro para pagamento de valores devidos em ações tra
+DEPOIS: Nos limites desse processo, diante de incitamento ao fechamento do STF, de ameaça de morte ou de prisão de seus membros,
+
+--- Linha 245 ---
+ANTES: Ação Direta de Inconstitucionalidade. Lei Complementar 101/2000. Lei de Responsabilidade Fiscal (LRF). (...) A norma est
+DEPOIS: Lei complementar 101/2000. Lei de responsabilidade fiscal (LRF). Artigo 20, II, "a", "b", "c" e "d", §§ 1º , 4º e 5º . P
+
+--- Linha 246 ---
+ANTES: Na forma do artigo 43, inciso I, § 1º, da Lei 4.320/1964, eventual superávit apurado ao final do exercício financeiro há
+DEPOIS: Art. 10, II (...), da Lei 10.542/1997 do Estado de Santa Catarina. Normas que exigem prévia e específica autorização leg
+
+--- Linha 247 ---
+ANTES: Nos limites desse processo, diante de incitamento ao fechamento do STF, de ameaça de morte ou de prisão de seus membros,
+DEPOIS: A separação dos poderes, sob o enfoque da pré-compreensão das funções institucionais e constitucionais, proporciona a in
+
+--- Linha 248 ---
+ANTES: Lei complementar 101/2000. Lei de responsabilidade fiscal (LRF). Artigo 20, II, “a”, “b”, “c” e “d”, §§ 1º, 4º e 5º. Pri
+DEPOIS: As restrições impostas ao exercício das competências constitucionais conferidas ao Poder Executivo, incluída a definição
+
+--- Linha 249 ---
+ANTES: Art. 10, II (...), da Lei 10.542/1997 do Estado de Santa Catarina. Normas que exigem prévia e específica autorização leg
+DEPOIS: LC 11.370/1999 do Estado do Rio Grande do Sul. Limitação do poder-dever de autotutela da administração. Submissão obriga
+
+--- Linha 250 ---
+ANTES: A separação dos poderes, sob o enfoque da pré-compreensão das funções institucionais e constitucionais, proporciona a in
+DEPOIS: A disciplina normativa pertinente ao processo de criação, estruturação e definição das atribuições dos órgãos e entidade
+
+--- Linha 251 ---
+ANTES: As restrições impostas ao exercício das competências constitucionais conferidas ao Poder Executivo, incluída a definição
+DEPOIS: É inconstitucional qualquer tentativa do Poder Legislativo de definir previamente conteúdos ou estabelecer prazos para q
+
+--- Linha 252 ---
+ANTES: Agência Estadual de Regulação dos Serviços Públicos Delegados do Rio Grande do Sul (AGERGS). (...) Demissão por atuação 
+DEPOIS: Ofende a denominada reserva de administração, decorrência do conteúdo nuclear do princípio da separação de poderes (CF, 
+
+--- Linha 253 ---
+ANTES: LC 11.370/1999 do Estado do Rio Grande do Sul. Limitação do poder-dever de autotutela da administração. Submissão obriga
+DEPOIS: Ação direta de inconstitucionalidade. Lei 5.913/1997 do Estado de Alagoas. Criação da Central de Pagamentos de Salários 
+
+--- Linha 254 ---
+ANTES: A disciplina normativa pertinente ao processo de criação, estruturação e definição das atribuições dos órgãos e entidade
+DEPOIS: Importância do controle jurisdicional da razoabilidade das leis restritivas do poder cautelar deferido aos juízes e trib
+
+--- Linha 255 ---
+ANTES: É inconstitucional qualquer tentativa do Poder Legislativo de definir previamente conteúdos ou estabelecer prazos para q
+DEPOIS: Lei distrital 1.713, de 3-9-1997. Quadras residenciais do Plano Piloto da Asa Norte e da Asa Sul. (...) Tombamento. Comp
+
+--- Linha 256 ---
+ANTES: Ofende a denominada reserva de administração, decorrência do conteúdo nuclear do princípio da separação de poderes (CF, 
+DEPOIS: O compartilhamento-compensação ambiental de que trata o art. 36 da Lei 9.985/2000 não ofende o princípio da legalidade, 
+
+--- Linha 257 ---
+ANTES: Ação direta de inconstitucionalidade. Lei 5.913/1997 do Estado de Alagoas. Criação da Central de Pagamentos de Salários 
+DEPOIS: Esta Corte em oportunidades anteriores definiu que a aprovação, pelo Legislativo, da indicação dos presidentes das entid
+
+--- Linha 258 ---
+ANTES: Importância do controle jurisdicional da razoabilidade das leis restritivas do poder cautelar deferido aos juízes e trib
+DEPOIS: A Constituição do Brasil – art. 70 – estabelece que compete ao Tribunal de Contas auxiliar o Legislativo na função de fi
+
+--- Linha 259 ---
+ANTES: Lei distrital 1.713, de 3-9-1997. Quadras residenciais do Plano Piloto da Asa Norte e da Asa Sul. (...) Tombamento. Comp
+DEPOIS: Cumpre ao Poder Judiciário a administração e os rendimentos referentes à conta única de depósitos judiciais e extrajudic
+
+--- Linha 260 ---
+ANTES: O compartilhamento-compensação ambiental de que trata o art. 36 da Lei 9.985/2000 não ofende o princípio da legalidade, 
+DEPOIS: Trata-se de ação direta na qual se pretende seja declarada inconstitucional lei amazonense que dispõe sobre a realização
+
+--- Linha 261 ---
+ANTES: Esta Corte em oportunidades anteriores definiu que a aprovação, pelo Legislativo, da indicação dos presidentes das entid
+DEPOIS: Conforme entendimento consolidado da Corte, os requisitos constitucionais legitimadores da edição de medidas provisórias
+
+--- Linha 262 ---
+ANTES: A Constituição do Brasil – art. 70 – estabelece que compete ao Tribunal de Contas auxiliar o Legislativo na função de fi
+DEPOIS: Os dispositivos impugnados contemplam a possibilidade de a Assembleia Legislativa capixaba convocar o presidente do Trib
+
+--- Linha 263 ---
+ANTES: Cumpre ao Poder Judiciário a administração e os rendimentos referentes à conta única de depósitos judiciais e extrajudic
+DEPOIS: Condicionar a aprovação de licenciamento ambiental à prévia autorização da Assembleia Legislativa implica indevida inter
+
+--- Linha 264 ---
+ANTES: Anistia de infrações disciplinares de servidores estaduais: competência do Estado-membro respectivo. Só quando se cuidar
+DEPOIS: Não há falar em quebra do pacto federativo e do princípio da interdependência e harmonia entre os Poderes em razão da ap
+
+--- Linha 265 ---
+ANTES: Trata-se de ação direta na qual se pretende seja declarada inconstitucional lei amazonense que dispõe sobre a realização
+DEPOIS: A fiscalização legislativa da ação administrativa do Poder Executivo é um dos contrapesos da CF à separação e independên
+
+--- Linha 266 ---
+ANTES: Conforme entendimento consolidado da Corte, os requisitos constitucionais legitimadores da edição de medidas provisórias
+DEPOIS: Afronta os princípios constitucionais da harmonia e independência entre os Poderes e da liberdade de locomoção norma est
+
+--- Linha 267 ---
+ANTES: O Ministério Público pode deflagrar o processo legislativo de lei concernente à política remuneratória e aos planos de c
+DEPOIS: Lei 1.952, de 19-3-1999, do Estado de Mato Grosso do Sul, que transfere os depósitos judiciais, referentes a tributos es
+
+--- Linha 268 ---
+ANTES: Os dispositivos impugnados contemplam a possibilidade de a Assembleia Legislativa capixaba convocar o presidente do Trib
+DEPOIS: Processo legislativo da União: observância compulsória pelos Estados de seus princípios básicos, por sua implicação com 
+
+--- Linha 269 ---
+ANTES: Condicionar a aprovação de licenciamento ambiental à prévia autorização da Assembleia Legislativa implica indevida inter
+DEPOIS: Na formulação positiva do constitucionalismo republicano brasileiro, o autogoverno do Judiciário – além de espaços variá
+
+--- Linha 270 ---
+ANTES: Não há falar em quebra do pacto federativo e do princípio da interdependência e harmonia entre os Poderes em razão da ap
+DEPOIS: Norma que subordina convênios, acordos, contratos e atos de secretários de Estado à aprovação da Assembleia Legislativa:
+
+--- Linha 271 ---
+ANTES: A fiscalização legislativa da ação administrativa do Poder Executivo é um dos contrapesos da CF à separação e independên
+DEPOIS: É plausível, em face do ordenamento constitucional brasileiro, o reconhecimento da admissibilidade das leis interpretati
+
+--- Linha 272 ---
+ANTES: Afronta os princípios constitucionais da harmonia e independência entre os Poderes e da liberdade de locomoção norma est
+DEPOIS: Repercussão geral
+
+--- Linha 273 ---
+ANTES: Lei 1.952, de 19-3-1999, do Estado de Mato Grosso do Sul, que transfere os depósitos judiciais, referentes a tributos es
+DEPOIS: "É infraconstitucional a controvérsia sobre o excesso de poder regulamentar no estabelecimento de limitação ao pagamento
+
+--- Linha 274 ---
+ANTES: Processo legislativo da União: observância compulsória pelos Estados de seus princípios básicos, por sua implicação com 
+DEPOIS: "Em respeito ao princípio da separação dos poderes, previsto no art. 2º da Constituição Federal, quando não caracterizad
+
+--- Linha 275 ---
+ANTES: Na formulação positiva do constitucionalismo republicano brasileiro, o autogoverno do Judiciário – além de espaços variá
+DEPOIS: "1. A intervenção do Poder Judiciário em políticas públicas voltadas à realização de direitos fundamentais, em caso de a
+
+--- Linha 276 ---
+ANTES: Norma que subordina convênios, acordos, contratos e atos de secretários de Estado à aprovação da Assembleia Legislativa:
+DEPOIS: Afronta o princípio da separação dos poderes a anulação judicial de cláusula de contrato de concessão firmado por Agênci
+
+--- Linha 277 ---
+ANTES: Alegada violação ao princípio da independência e harmonia entre os Poderes. (...) Orientação assentada no STF no sentido
+DEPOIS: É lícito ao Judiciário impor à administração pública obrigação de fazer, consistente na promoção de medidas ou na execuç
+
+--- Linha 278 ---
+ANTES: É plausível, em face do ordenamento constitucional brasileiro, o reconhecimento da admissibilidade das leis interpretati
+DEPOIS: Julgados correlatos
+
+--- Linha 279 ---
+ANTES: Repercussão geral
+DEPOIS: O art. 7º , inciso I, do Decreto-Lei nº 201/1967 não condiciona a instauração de processo político-administrativo contra
+
+--- Linha 280 ---
+ANTES: “É infraconstitucional a controvérsia sobre o excesso de poder regulamentar no estabelecimento de limitação ao pagamento
+DEPOIS: Direito do trabalho. Ação civil pública. Shopping center. Obrigação de fazer do art. 389, §§ 1º e 2º , da CLT. Instalaçã
+
+--- Linha 281 ---
+ANTES: "Em respeito ao princípio da separação dos poderes, previsto no art. 2º da Constituição Federal, quando não caracterizad
+DEPOIS: A moratória é hipótese de suspensão da exigibilidade do crédito tributário, e sua concessão está sujeita à discricionari
+
+--- Linha 282 ---
+ANTES: “1. A intervenção do Poder Judiciário em políticas públicas voltadas à realização de direitos fundamentais, em caso de a
+DEPOIS: Não ofende os princípios da separação e da harmonia entre os Poderes do Estado a decisão do STF que, em inquérito destin
+
+--- Linha 283 ---
+ANTES: Afronta o princípio da separação dos poderes a anulação judicial de cláusula de contrato de concessão firmado por Agênci
+DEPOIS: É defeso ao Poder Judiciário questionar os critérios utilizados na convocação de sessão extraordinária para eleger membr
+
+--- Linha 284 ---
+ANTES: É lícito ao Judiciário impor à administração pública obrigação de fazer, consistente na promoção de medidas ou na execuç
+DEPOIS: Compete ao Judiciário, no conflito de interesses, fazer valer a vontade concreta da lei (...). Para isso, há de interpre
+
+--- Linha 285 ---
+ANTES: Julgados correlatos
+DEPOIS: O Poder Judiciário, em situações excepcionais, pode determinar que a administração pública adote medidas assecuratórias 
+
+--- Linha 286 ---
+ANTES: O art. 7º, inciso I, do Decreto-Lei nº 201/1967 não condiciona a instauração de processo político-administrativo contra 
+DEPOIS: A Constituição não submete a decisão do Poder Judiciário à complementação por ato de qualquer outro órgão ou Poder da Re
+
+--- Linha 287 ---
+ANTES: Direito do trabalho. Ação civil pública. Shopping center. Obrigação de fazer do art. 389, §§ 1º e 2º, da CLT. Instalação
+DEPOIS: Esta Corte já firmou a orientação de que é possível a imposição de multa diária contra o poder público quando esse descu
+
+--- Linha 288 ---
+ANTES: A moratória é hipótese de suspensão da exigibilidade do crédito tributário, e sua concessão está sujeita à discricionari
+DEPOIS: A jurisprudência desta Suprema Corte entende plenamente cabível o controle de constitucionalidade dos atos de imposição 
+
+--- Linha 289 ---
+ANTES: Não ofende os princípios da separação e da harmonia entre os Poderes do Estado a decisão do STF que, em inquérito destin
+DEPOIS: O princípio constitucional da reserva de administração impede a ingerência normativa do Poder Legislativo em matérias su
+
+--- Linha 290 ---
+ANTES: É defeso ao Poder Judiciário questionar os critérios utilizados na convocação de sessão extraordinária para eleger membr
+DEPOIS: O princípio da separação dos Poderes (art. 2º da CRFB) indica não competir ao STF rever o mérito de decisão do president
+
+--- Linha 291 ---
+ANTES: Compete ao Judiciário, no conflito de interesses, fazer valer a vontade concreta da lei (...). Para isso, há de interpre
+DEPOIS: É absolutamente incompossível ao Poder Legislativo, por meio de decreto legislativo, interferir em ato espontâneo de ade
+
+--- Linha 292 ---
+ANTES: O Poder Judiciário, em situações excepcionais, pode determinar que a administração pública adote medidas assecuratórias 
+DEPOIS: Formação de quadrilha e gestão fraudulenta de instituição financeira. Competência. Especialização de vara por resolução 
+
+--- Linha 293 ---
+ANTES: A Constituição não submete a decisão do Poder Judiciário à complementação por ato de qualquer outro órgão ou Poder da Re
+DEPOIS: Não cabe, ao Poder Judiciário, em tema regido pelo postulado constitucional da reserva de lei, atuar na anômala condição
+
+--- Linha 294 ---
+ANTES: Esta Corte já firmou a orientação de que é possível a imposição de multa diária contra o poder público quando esse descu
+DEPOIS: Cabe ao Poder Judiciário verificar a regularidade dos atos normativos e de administração do poder público em relação às 
+
+--- Linha 295 ---
+ANTES: A jurisprudência desta Suprema Corte entende plenamente cabível o controle de constitucionalidade dos atos de imposição 
+DEPOIS: Extradição: Colômbia: crimes relacionados à participação do extraditando – então sacerdote da Igreja Católica – em ação 
+
+--- Linha 296 ---
+ANTES: O princípio constitucional da reserva de administração impede a ingerência normativa do Poder Legislativo em matérias su
+DEPOIS: O acerto ou desacerto da concessão de liminar em mandado de segurança, por traduzir ato jurisdicional, não pode ser exam
+
+--- Linha 297 ---
+ANTES: O princípio da separação dos Poderes (art. 2º da CRFB) indica não competir ao STF rever o mérito de decisão do president
+DEPOIS: Embora resida, primariamente, nos Poderes Legislativo e Executivo, a prerrogativa de formular e executar políticas públi
+
+--- Linha 298 ---
+ANTES: É absolutamente incompossível ao Poder Legislativo, por meio de decreto legislativo, interferir em ato espontâneo de ade
+DEPOIS: Os atos administrativos que envolvem a aplicação de "conceitos indeterminados" estão sujeitos ao exame e controle do Pod
+
+--- Linha 299 ---
+ANTES: Formação de quadrilha e gestão fraudulenta de instituição financeira. Competência. Especialização de vara por resolução 
+DEPOIS: Ação cível originária. Mandado de segurança. Quebra de sigilo de dados bancários determinada por CPI de Assembleia Legis
+
+--- Linha 300 ---
+ANTES: Não cabe, ao Poder Judiciário, em tema regido pelo postulado constitucional da reserva de lei, atuar na anômala condição
+DEPOIS: O Poder Judiciário, quando intervém para assegurar as franquias constitucionais e para garantir a integridade e a suprem
+
+--- Linha 301 ---
+ANTES: Cabe ao Poder Judiciário verificar a regularidade dos atos normativos e de administração do poder público em relação às 
+DEPOIS: Revela-se inconstitucional, porque ofensivo aos postulados da Federação e da separação de poderes, o diploma legislativo
+
+--- Linha 302 ---
+ANTES: Extradição: Colômbia: crimes relacionados à participação do extraditando – então sacerdote da Igreja Católica – em ação 
+DEPOIS: I - construir uma sociedade livre, justa e solidária;
+
+--- Linha 303 ---
+ANTES: O acerto ou desacerto da concessão de liminar em mandado de segurança, por traduzir ato jurisdicional, não pode ser exam
+DEPOIS: Controle concentrado de constitucionalidade
+
+--- Linha 304 ---
+ANTES: Embora resida, primariamente, nos Poderes Legislativo e Executivo, a prerrogativa de formular e executar políticas públi
+DEPOIS: Os Municípios não possuem competência legislativa para editar normas que interfiram em currículos, conteúdos programátic
+
+--- Linha 305 ---
+ANTES: Os atos administrativos que envolvem a aplicação de "conceitos indeterminados" estão sujeitos ao exame e controle do Pod
+DEPOIS: [ADPF 522, rel. min. Marco Aurélio, red. do ac. min. Cristiano Zanin, j. 15-10-2025, P, DJE de 23-2-2026.]
+
+--- Linha 306 ---
+ANTES: Ação cível originária. Mandado de segurança. Quebra de sigilo de dados bancários determinada por CPI de Assembleia Legis
+DEPOIS: Ação Direta de Inconstitucionalidade proposta em face dos arts. 1º , caput e § 1º , e 6º , todos da Lei nº 12.990/2014, 
+
+--- Linha 307 ---
+ANTES: O Poder Judiciário, quando intervém para assegurar as franquias constitucionais e para garantir a integridade e a suprem
+DEPOIS: O seguro obrigatório, em especial, tem nítida conotação de seguro social, que resguarda a coletividade das vítimas poten
+
+--- Linha 308 ---
+ANTES: Revela-se inconstitucional, porque ofensivo aos postulados da Federação e da separação de poderes, o diploma legislativo
+DEPOIS: Julgados correlatos
+
+--- Linha 309 ---
+ANTES: A expulsão de estrangeiros – que constitui manifestação da soberania do Estado brasileiro – qualifica-se como típica med
+DEPOIS: O fluxo da imigração massiva é evento extraordinário, imprevisível, excepcional, e seu impacto no Estado-autor decorre d
+
+--- Linha 310 ---
+ANTES: Art. 3º Constituem objetivos fundamentais da República Federativa do Brasil:
+DEPOIS: No exercício de sua competência privativa, a União editou a Lei 13.45/2017 – Lei de Migração – a qual afirma entre os pr
+
+--- Linha 311 ---
+ANTES: I - construir uma sociedade livre, justa e solidária;
+DEPOIS: É inegável que a atuação sorrateira de agente público, em coautoria com pessoa de sua confiança, que desvia suas ativida
+
+--- Linha 312 ---
+ANTES: Controle concentrado de constitucionalidade
+DEPOIS: Além de revelar o fim socialmente regenerador do cumprimento da pena, o art. 1º da LEP alberga um critério de interpreta
+
+--- Linha 313 ---
+ANTES: Os Municípios não possuem competência legislativa para editar normas que interfiram em currículos, conteúdos programátic
+DEPOIS: O sistema público de previdência social é fundamentado no princípio da solidariedade (art. 3º , I, da Constituição do Br
+
+--- Linha 314 ---
+ANTES: [ADPF 522, rel. min. Marco Aurélio, red. do ac. min. Cristiano Zanin, j. 15-10-2025, P, DJE de 23-2-2026.]
+DEPOIS: II - garantir o desenvolvimento nacional;
+
+--- Linha 315 ---
+ANTES: Ação Direta de Inconstitucionalidade proposta em face dos arts. 1º, caput e § 1º, e 6º, todos da Lei nº 12.990/2014, que
+DEPOIS: Controle concentrado de constitucionalidade
+
+--- Linha 316 ---
+ANTES: O seguro obrigatório, em especial, tem nítida conotação de seguro social, que resguarda a coletividade das vítimas poten
+DEPOIS: (...) o REINTEGRA, como política pública, vai ao encontro das normas constitucionais. Reconheço ainda a importância da i
+
+--- Linha 317 ---
+ANTES: Julgados correlatos
+DEPOIS: A questão do desenvolvimento nacional (CF, art. 3º , II) e a necessidade de preservação da integridade do meio ambiente 
+
+--- Linha 318 ---
+ANTES: O fluxo da imigração massiva é evento extraordinário, imprevisível, excepcional, e seu impacto no Estado-autor decorre d
+DEPOIS: Julgado correlato
+
+--- Linha 319 ---
+ANTES: No exercício de sua competência privativa, a União editou a Lei 13.45/2017 – Lei de Migração – a qual afirma entre os pr
+DEPOIS: Ao poder público de todas as dimensões federativas o que incumbe não é subestimar, e muito menos hostilizar, comunidades
+
+--- Linha 320 ---
+ANTES: É inegável que a atuação sorrateira de agente público, em coautoria com pessoa de sua confiança, que desvia suas ativida
+DEPOIS: III - erradicar a pobreza e a marginalização e reduzir as desigualdades sociais e regionais;
+
+--- Linha 321 ---
+ANTES: Além de revelar o fim socialmente regenerador do cumprimento da pena, o art. 1º da LEP alberga um critério de interpreta
+DEPOIS: Controle concentrado de constitucionalidade
+
+--- Linha 322 ---
+ANTES: O sistema público de previdência social é fundamentado no princípio da solidariedade (art. 3º, I, da Constituição do Bra
+DEPOIS: Ação Direta de Inconstitucionalidade proposta em face dos arts. 1º , caput e § 1º , e 6º , todos da Lei nº 12.990/2014, 
+
+--- Linha 323 ---
+ANTES: II - garantir o desenvolvimento nacional;
+DEPOIS: População em situação de rua no Brasil. Omissões do poder público que resultam em um potencial estado de coisas inconsti
+
+--- Linha 324 ---
+ANTES: Controle concentrado de constitucionalidade
+DEPOIS: É constitucional — por não ofender o direito de propriedade e os princípios da ordem econômica e do equilíbrio econômico
+
+--- Linha 325 ---
+ANTES: (...) o REINTEGRA, como política pública, vai ao encontro das normas constitucionais. Reconheço ainda a importância da i
+DEPOIS: Instituído pela Lei nº 13.649/2018, o Serviço de Retransmissão de Rádio na Amazônia Legal viabiliza mecanismo de integra
+
+--- Linha 326 ---
+ANTES: A questão do desenvolvimento nacional (CF, art. 3º, II) e a necessidade de preservação da integridade do meio ambiente (
+DEPOIS: Julgados correlatos
+
+--- Linha 327 ---
+ANTES: Julgado correlato
+DEPOIS: Configura inobservância do princípio da igualdade e do objetivo constitucional de erradicar a pobreza e as desigualdades
+
+--- Linha 328 ---
+ANTES: Ao poder público de todas as dimensões federativas o que incumbe não é subestimar, e muito menos hostilizar, comunidades
+DEPOIS: O fluxo da imigração massiva é evento extraordinário, imprevisível, excepcional, e seu impacto no Estado-autor decorre d
+
+--- Linha 329 ---
+ANTES: III - erradicar a pobreza e a marginalização e reduzir as desigualdades sociais e regionais;
+DEPOIS: No exercício de sua competência privativa, a União editou a Lei 13.45/2017 – Lei de Migração – a qual afirma entre os pr
+
+--- Linha 330 ---
+ANTES: Controle concentrado de constitucionalidade
+DEPOIS: Decreto 420/1992. Lei 8.393/1991. IPI. Alíquota regionalizada incidente sobre o açúcar. Alegada ofensa ao disposto nos a
+
+--- Linha 331 ---
+ANTES: Ação Direta de Inconstitucionalidade proposta em face dos arts. 1º, caput e § 1º, e 6º, todos da Lei nº 12.990/2014, que
+DEPOIS: IV - promover o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discrimina
+
+--- Linha 332 ---
+ANTES: População em situação de rua no Brasil. Omissões do poder público que resultam em um potencial estado de coisas inconsti
+DEPOIS: Controle concentrado de constitucionalidade
+
+--- Linha 333 ---
+ANTES: É constitucional — por não ofender o direito de propriedade e os princípios da ordem econômica e do equilíbrio econômico
+DEPOIS: Os Municípios não possuem competência legislativa para editar normas que interfiram em currículos, conteúdos programátic
+
+--- Linha 334 ---
+ANTES: Instituído pela Lei nº 13.649/2018, o Serviço de Retransmissão de Rádio na Amazônia Legal viabiliza mecanismo de integra
+DEPOIS: [ADPF 522, rel. min. Marco Aurélio, red. do ac. min. Cristiano Zanin, j. 15-10-2025, P, DJE de 23-2-2026.]
+
+--- Linha 335 ---
+ANTES: Julgados correlatos
+DEPOIS: (...) é necessário garantir aos homens e mulheres trans acesso igualitário a todas as ações e programas de saúde do SUS,
+
+--- Linha 336 ---
+ANTES: Configura inobservância do princípio da igualdade e do objetivo constitucional de erradicar a pobreza e as desigualdades
+DEPOIS: A interpretação de que o art. 11 da Lei n. 2.108/1993, do Estado do Rio de Janeiro, pode restringir o acesso de mulheres
+
+--- Linha 337 ---
+ANTES: O fluxo da imigração massiva é evento extraordinário, imprevisível, excepcional, e seu impacto no Estado-autor decorre d
+DEPOIS: O Estado Democrático de Direito é definido por um sentido expandido de igualdade. Entre os objetivos da República Federa
+
+--- Linha 338 ---
+ANTES: No exercício de sua competência privativa, a União editou a Lei 13.45/2017 – Lei de Migração – a qual afirma entre os pr
+DEPOIS: Ação Direta de Inconstitucionalidade proposta em face dos arts. 1º , caput e § 1º , e 6º , todos da Lei nº 12.990/2014, 
+
+--- Linha 339 ---
+ANTES: Decreto 420/1992. Lei 8.393/1991. IPI. Alíquota regionalizada incidente sobre o açúcar. Alegada ofensa ao disposto nos a
+DEPOIS: A prisão especial constitui o recolhimento provisório em local distinto, cuja concessão se admite, à luz da Constituição
+
+--- Linha 340 ---
+ANTES: IV - promover o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discrimina
+DEPOIS: Não se pode permitir que a lei faça uso de expressões pejorativas e discriminatórias, ante o reconhecimento do direito à
+
+--- Linha 341 ---
+ANTES: Controle concentrado de constitucionalidade
+DEPOIS: Proibição de discriminação das pessoas em razão do sexo, seja no plano da dicotomia homem/mulher (gênero), seja no plano
+
+--- Linha 342 ---
+ANTES: Os Municípios não possuem competência legislativa para editar normas que interfiram em currículos, conteúdos programátic
+DEPOIS: Repercussão geral
+
+--- Linha 343 ---
+ANTES: [ADPF 522, rel. min. Marco Aurélio, red. do ac. min. Cristiano Zanin, j. 15-10-2025, P, DJE de 23-2-2026.]
+DEPOIS: "A presença de símbolos religiosos em prédios públicos, pertencentes a qualquer dos Poderes da União, dos Estados, do Di
+
+--- Linha 344 ---
+ANTES: (...) é necessário garantir aos homens e mulheres trans acesso igualitário a todas as ações e programas de saúde do SUS,
+DEPOIS: Separação obrigatória de bens nos casamentos e uniões estáveis com pessoa maior de setenta anos. (...) O dispositivo aqu
+
+--- Linha 345 ---
+ANTES: A interpretação de que o art. 11 da Lei n. 2.108/1993, do Estado do Rio de Janeiro, pode restringir o acesso de mulheres
+DEPOIS: O transgênero tem direito fundamental subjetivo à alteração de seu prenome e de sua classificação de gênero no registro 
+
+--- Linha 346 ---
+ANTES: O Estado Democrático de Direito é definido por um sentido expandido de igualdade. Entre os objetivos da República Federa
+DEPOIS: Julgados correlatos
+
+--- Linha 347 ---
+ANTES: Ação Direta de Inconstitucionalidade proposta em face dos arts. 1º, caput e § 1º, e 6º, todos da Lei nº 12.990/2014, que
+DEPOIS: A Constituição Federal protege a intimidade e a privacidade como direitos individuais (art. 5º , X). Também prevê como o
+
+--- Linha 348 ---
+ANTES: A prisão especial constitui o recolhimento provisório em local distinto, cuja concessão se admite, à luz da Constituição
+DEPOIS: Lei do Estado do Amazonas 2.894/2004, que cria sistema de cotas para preenchimento de vagas em universidade estadual par
+
+--- Linha 349 ---
+ANTES: Não se pode permitir que a lei faça uso de expressões pejorativas e discriminatórias, ante o reconhecimento do direito à
+DEPOIS: A construção e o efetivo alcance de uma sociedade fraternal, pluralista e sem preconceitos, tal como previsto no preâmbu
+
+--- Linha 350 ---
+ANTES: Proibição de discriminação das pessoas em razão do sexo, seja no plano da dicotomia homem/mulher (gênero), seja no plano
+DEPOIS: Art. 4º A República Federativa do Brasil rege-se nas suas relações internacionais pelos seguintes princípios:
+
+--- Linha 351 ---
+ANTES: Repercussão geral
+DEPOIS: Controle concentrado de constitucionalidade
+
+--- Linha 352 ---
+ANTES: “A presença de símbolos religiosos em prédios públicos, pertencentes a qualquer dos Poderes da União, dos Estados, do Di
+DEPOIS: (...) gostaria (...) de tecer algumas considerações sobre a Convenção da Haia e a sua aplicação pelo Poder Judiciário br
+
+--- Linha 353 ---
+ANTES: Separação obrigatória de bens nos casamentos e uniões estáveis com pessoa maior de setenta anos. (...) O dispositivo aqu
+DEPOIS: I - independência nacional;
+
+--- Linha 354 ---
+ANTES: O transgênero tem direito fundamental subjetivo à alteração de seu prenome e de sua classificação de gênero no registro 
+DEPOIS: Julgado correlato
+
+--- Linha 355 ---
+ANTES: Julgados correlatos
+DEPOIS: O art. 1º da Constituição assenta como um dos fundamentos do Estado brasileiro a sua soberania – que significa o poder p
+
+--- Linha 356 ---
+ANTES: A Constituição Federal protege a intimidade e a privacidade como direitos individuais (art. 5º, X). Também prevê como ob
+DEPOIS: II - prevalência dos direitos humanos;
+
+--- Linha 357 ---
+ANTES: Lei do Estado do Amazonas 2.894/2004, que cria sistema de cotas para preenchimento de vagas em universidade estadual par
+DEPOIS: Repercussão geral
+
+--- Linha 358 ---
+ANTES: A construção e o efetivo alcance de uma sociedade fraternal, pluralista e sem preconceitos, tal como previsto no preâmbu
+DEPOIS: Análise da recepção da Lei nº 6.683, de 28 de agosto de 1979, em relação aos crimes permanentes e àqueles que caracteriz
+
+--- Linha 359 ---
+ANTES: Art. 4º A República Federativa do Brasil rege-se nas suas relações internacionais pelos seguintes princípios:
+DEPOIS: Controvérsia inédita no âmbito desta Suprema Corte, estando em questão a derrotabilidade de regra imunizante de jurisdiç
+
+--- Linha 360 ---
+ANTES: Controle concentrado de constitucionalidade
+DEPOIS: Julgados correlatos
+
+--- Linha 361 ---
+ANTES: (...) gostaria (...) de tecer algumas considerações sobre a Convenção da Haia e a sua aplicação pelo Poder Judiciário br
+DEPOIS: A anuência do extraditando ao pedido de sua entrega não desobriga o Estado requerente de instruir devidamente esse pedid
+
+--- Linha 362 ---
+ANTES: I - independência nacional;
+DEPOIS: No Estado de Direito Democrático, devem ser intransigentemente respeitados os princípios que garantem a prevalência dos 
+
+--- Linha 363 ---
+ANTES: Julgado correlato
+DEPOIS: A comunidade internacional, em 28-7-1951, imbuída do propósito de consolidar e de valorizar o processo de afirmação hist
+
+--- Linha 364 ---
+ANTES: O art. 1º da Constituição assenta como um dos fundamentos do Estado brasileiro a sua soberania – que significa o poder p
+DEPOIS: A essencialidade da cooperação internacional na repressão penal aos delitos comuns não exonera o Estado brasileiro – e, 
+
+--- Linha 365 ---
+ANTES: II - prevalência dos direitos humanos;
+DEPOIS: III - autodeterminação dos povos;
+
+--- Linha 366 ---
+ANTES: Repercussão geral
+DEPOIS: IV - não intervenção;
+
+--- Linha 367 ---
+ANTES: Análise da recepção da Lei nº 6.683, de 28 de agosto de 1979, em relação aos crimes permanentes e àqueles que caracteriz
+DEPOIS: V - igualdade entre os Estados;
+
+--- Linha 368 ---
+ANTES: Controvérsia inédita no âmbito desta Suprema Corte, estando em questão a derrotabilidade de regra imunizante de jurisdiç
+DEPOIS: Controle concentrado de constitucionalidade
+
+--- Linha 369 ---
+ANTES: Julgados correlatos
+DEPOIS: Arguição de descumprimento dos preceitos fundamentais constitucionalmente estabelecidos: decisões judiciais nacionais pe
+
+--- Linha 370 ---
+ANTES: A anuência do extraditando ao pedido de sua entrega não desobriga o Estado requerente de instruir devidamente esse pedid
+DEPOIS: Repercussão geral
+
+--- Linha 371 ---
+ANTES: No Estado de Direito Democrático, devem ser intransigentemente respeitados os princípios que garantem a prevalência dos 
+DEPOIS: Os Estados estrangeiros não dispõem de imunidade de jurisdição, perante o Poder Judiciário brasileiro, nas causas de nat
+
+--- Linha 372 ---
+ANTES: A comunidade internacional, em 28-7-1951, imbuída do propósito de consolidar e de valorizar o processo de afirmação hist
+DEPOIS: Julgados correlatos
+
+--- Linha 373 ---
+ANTES: A essencialidade da cooperação internacional na repressão penal aos delitos comuns não exonera o Estado brasileiro – e, 
+DEPOIS: Imunidade de jurisdição. Execução fiscal movida pela União contra a República da Coreia. É da jurisprudência do Supremo 
+
+--- Linha 374 ---
+ANTES: III - autodeterminação dos povos;
+DEPOIS: O mero procedimento citatório não produz qualquer efeito atentatório à soberania nacional ou à ordem pública, apenas pos
+
+--- Linha 375 ---
+ANTES: IV - não intervenção;
+DEPOIS: Não pode o STF avaliar o mérito dos elementos formadores da prova, inclusive a autoria e a materialidade dos delitos com
+
+--- Linha 376 ---
+ANTES: V - igualdade entre os Estados;
+DEPOIS: Cabe, assim, à Justiça do Estado requerente reconhecer soberanamente – desde que o permita a sua própria legislação pena
+
+--- Linha 377 ---
+ANTES: Controle concentrado de constitucionalidade
+DEPOIS: VI - defesa da paz;
+
+--- Linha 378 ---
+ANTES: Arguição de descumprimento dos preceitos fundamentais constitucionalmente estabelecidos: decisões judiciais nacionais pe
+DEPOIS: VII - solução pacífica dos conflitos;
+
+--- Linha 379 ---
+ANTES: Repercussão geral
+DEPOIS: VIII - repúdio ao terrorismo e ao racismo;
+
+--- Linha 380 ---
+ANTES: Os Estados estrangeiros não dispõem de imunidade de jurisdição, perante o Poder Judiciário brasileiro, nas causas de nat
+DEPOIS: Julgados correlatos
+
+--- Linha 381 ---
+ANTES: Julgados correlatos
+DEPOIS: O repúdio ao terrorismo: um compromisso ético-jurídico assumido pelo Brasil, quer em face de sua própria Constituição, q
+
+--- Linha 382 ---
+ANTES: Imunidade de jurisdição. Execução fiscal movida pela União contra a República da Coreia. É da jurisprudência do Supremo 
+DEPOIS: Raça e racismo. A divisão dos seres humanos em raças resulta de um processo de conteúdo meramente político-social. Desse
+
+--- Linha 383 ---
+ANTES: O mero procedimento citatório não produz qualquer efeito atentatório à soberania nacional ou à ordem pública, apenas pos
+DEPOIS: IX - cooperação entre os povos para o progresso da humanidade;
+
+--- Linha 384 ---
+ANTES: Não pode o STF avaliar o mérito dos elementos formadores da prova, inclusive a autoria e a materialidade dos delitos com
+DEPOIS: Controle concentrado de constitucionalidade
+
+--- Linha 385 ---
+ANTES: Cabe, assim, à Justiça do Estado requerente reconhecer soberanamente – desde que o permita a sua própria legislação pena
+DEPOIS: O art. 11 do Marco Civil da Internet, que encontra respaldo no art. 18 da Convenção de Budapeste, é norma específica em 
+
+--- Linha 386 ---
+ANTES: VI - defesa da paz;
+DEPOIS: Julgado correlato
+
+--- Linha 387 ---
+ANTES: VII - solução pacífica dos conflitos;
+DEPOIS: No plano da cooperação internacional, é possível a participação das autoridades estrangeiras, desde que não haja nenhuma
+
+--- Linha 388 ---
+ANTES: VIII - repúdio ao terrorismo e ao racismo;
+DEPOIS: X - concessão de asilo político.
+
+--- Linha 390 ---
+ANTES: O repúdio ao terrorismo: um compromisso ético-jurídico assumido pelo Brasil, quer em face de sua própria Constituição, q
+DEPOIS: Questão sobre existência jurídica, validez e eficácia de ato administrativo que conceda refúgio ao extraditando é matéri
+
+--- Linha 391 ---
+ANTES: Raça e racismo. A divisão dos seres humanos em raças resulta de um processo de conteúdo meramente político-social. Desse
+DEPOIS: Extradição: Colômbia: crimes relacionados à participação do extraditando – então sacerdote da Igreja Católica – em ação 
+
+--- Linha 392 ---
+ANTES: IX - cooperação entre os povos para o progresso da humanidade;
+DEPOIS: Parágrafo único. A República Federativa do Brasil buscará a integração econômica, política, social e cultural dos povos 
+
+--- Linha 393 ---
+ANTES: Controle concentrado de constitucionalidade
+DEPOIS: Julgado correlato
+
+--- Linha 394 ---
+ANTES: O art. 11 do Marco Civil da Internet, que encontra respaldo no art. 18 da Convenção de Budapeste, é norma específica em 
+DEPOIS: Sob a égide do modelo constitucional brasileiro, mesmo cuidando-se de tratados de integração, ainda subsistem os clássic
+
+--- Linha 395 ---
+ANTES: Julgado correlato
+DEPOIS: TÍTULO II
+
+--- Linha 396 ---
+ANTES: No plano da cooperação internacional, é possível a participação das autoridades estrangeiras, desde que não haja nenhuma
+DEPOIS: Dos Direitos e Garantias Fundamentais
+
+--- Linha 397 ---
+ANTES: X - concessão de asilo político.
+DEPOIS: SUMÁRIO
+
+--- Linha 398 ---
+ANTES: Julgados correlatos
+DEPOIS: CAPÍTULO I
+
+--- Linha 399 ---
+ANTES: Questão sobre existência jurídica, validez e eficácia de ato administrativo que conceda refúgio ao extraditando é matéri
+DEPOIS: Dos Direitos e Deveres Individuais e Coletivos
+
+--- Linha 400 ---
+ANTES: Extradição: Colômbia: crimes relacionados à participação do extraditando – então sacerdote da Igreja Católica – em ação 
+DEPOIS: SUMÁRIO
+
+--- Linha 401 ---
+ANTES: Parágrafo único. A República Federativa do Brasil buscará a integração econômica, política, social e cultural dos povos 
+DEPOIS: Art. 5º Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrange
+
+--- Linha 402 ---
+ANTES: Julgado correlato
+DEPOIS: Não cabe ao Poder Judiciário, que não tem função legislativa, aumentar vencimentos de servidores públicos sob o fundamen
+
+--- Linha 403 ---
+ANTES: Sob a égide do modelo constitucional brasileiro, mesmo cuidando-se de tratados de integração, ainda subsistem os clássic
+DEPOIS: [Súmula Vinculante 37.]
+
+--- Linha 404 ---
+ANTES: TÍTULO II
+DEPOIS: Não viola a Constituição o estabelecimento de remuneração inferior ao salário mínimo para as praças prestadoras de servi
+
+--- Linha 405 ---
+ANTES: Dos Direitos e Garantias Fundamentais
+DEPOIS: [Súmula Vinculante 6.]
+
+--- Linha 406 ---
+ANTES: SUMÁRIO
+DEPOIS: Controle concentrado de constitucionalidade
+
+--- Linha 407 ---
+ANTES: CAPÍTULO I
+DEPOIS: Decretos 11.366/2023 e 11.615/2023. Atos normativos que promoveram a regulamentação do Estatuto do Desarmamento (Lei 10.
+
+--- Linha 408 ---
+ANTES: Dos Direitos e Deveres Individuais e Coletivos
+DEPOIS: A incorporação de gratificação concedida a servidores públicos que desempenham funções de segurança, com fundamento na e
+
+--- Linha 409 ---
+ANTES: SUMÁRIO
+DEPOIS: É constitucional — e não ofende os princípios da isonomia (CF/1988, art. 5º , caput), da liberdade religiosa (CF/1988, a
+
+--- Linha 410 ---
+ANTES: Art. 5º Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrange
+DEPOIS: A Constituição Federal atribui à União a competência para dispor sobre normas gerais relativas à organização do Ministér
+
+--- Linha 411 ---
+ANTES: Não cabe ao Poder Judiciário, que não tem função legislativa, aumentar vencimentos de servidores públicos sob o fundamen
+DEPOIS: "De fato, não há qualquer dúvida razoável de que a Resolução-CNJ 344/2020 consubstancia uma mudança de paradigma na estr
+
+--- Linha 412 ---
+ANTES: [Súmula Vinculante 37.]
+DEPOIS: "A Lei nº 13.134/15, relativamente aos prazos de carência do seguro-desemprego e ao período máximo variável de concessão
+
+--- Linha 413 ---
+ANTES: Não viola a Constituição o estabelecimento de remuneração inferior ao salário mínimo para as praças prestadoras de servi
+DEPOIS: Nos autos da ADI 4616/DF, apreciada em conjunto com a presente ação direta, o Supremo Tribunal Federal reconheceu a cons
+
+--- Linha 414 ---
+ANTES: [Súmula Vinculante 6.]
+DEPOIS: Art. 10, § 5º , da Lei Complementar 994/2015, do município de Blumenau/SC. Proibição do uso das expressões "ideologia de
+
+--- Linha 415 ---
+ANTES: Controle concentrado de constitucionalidade
+DEPOIS: A transformação do cargo de Técnico da Receita Federal em cargo de Analista-Tributário da Receita Federal do Brasil se m
+
+--- Linha 416 ---
+ANTES: Decretos 11.366/2023 e 11.615/2023. Atos normativos que promoveram a regulamentação do Estatuto do Desarmamento (Lei 10.
+DEPOIS: Lei 3.528 de 2019 do estado do Tocantins. Cadastro estadual de usuários e dependentes de drogas. (...) Materialmente (..
+
+--- Linha 417 ---
+ANTES: A incorporação de gratificação concedida a servidores públicos que desempenham funções de segurança, com fundamento na e
+DEPOIS: A "legítima defesa da honra" é recurso argumentativo/retórico odioso, desumano e cruel utilizado pelas defesas de acusad
+
+--- Linha 418 ---
+ANTES: É constitucional — e não ofende os princípios da isonomia (CF/1988, art. 5º, caput), da liberdade religiosa (CF/1988, ar
+DEPOIS: Os direitos à vida e à segurança são dotados não apenas de dimensão negativa, senão também de dimensão positiva, constit
+
+--- Linha 419 ---
+ANTES: A Constituição Federal atribui à União a competência para dispor sobre normas gerais relativas à organização do Ministér
+DEPOIS: Decretos Presidenciais que dispõem sobre aquisição, cadastro, registro, posse e porte de armas de fogo, acessórios e mun
+
+--- Linha 420 ---
+ANTES: “De fato, não há qualquer dúvida razoável de que a Resolução-CNJ 344/2020 consubstancia uma mudança de paradigma na estr
+DEPOIS: Plano Nacional de Segurança Pública e Defesa Social 2021-2030. Retrocesso pela ausência de menção dos objetivos e ações 
+
+--- Linha 421 ---
+ANTES: “A Lei nº 13.134/15, relativamente aos prazos de carência do seguro-desemprego e ao período máximo variável de concessão
+DEPOIS: Lei n. 3.228/2003, do Distrito Federal. Obrigatoriedade às distribuidoras de combustíveis, no Distrito Federal, a coloca
+
+--- Linha 422 ---
+ANTES: Nos autos da ADI 4616/DF, apreciada em conjunto com a presente ação direta, o Supremo Tribunal Federal reconheceu a cons
+DEPOIS: A prisão especial constitui o recolhimento provisório em local distinto, cuja concessão se admite, à luz da Constituição
+
+--- Linha 423 ---
+ANTES: A interpretação de que o art. 11 da Lei n. 2.108/1993, do Estado do Rio de Janeiro, pode restringir o acesso de mulheres
+DEPOIS: O conteúdo normativo dos direitos à vida e à segurança exige do Estado prestação ativa no sentido de construir uma polít
+
+--- Linha 424 ---
+ANTES: Art. 10, § 5º, da Lei Complementar 994/2015, do município de Blumenau/SC. Proibição do uso das expressões “ideologia de 
+DEPOIS: Não ofende o postulado da isonomia assegurado no art. 5º , caput , da Constituição da República, o fator de discrímen ad
+
+--- Linha 425 ---
+ANTES: A transformação do cargo de Técnico da Receita Federal em cargo de Analista-Tributário da Receita Federal do Brasil se m
+DEPOIS: A noção de igualdade não se encerra em sua dimensão meramente formal, de igualdade perante a lei. Ela contempla ainda um
+
+--- Linha 426 ---
+ANTES: Art. 55, caput, incisos I, II e III, e §1º, da Lei 11.440/2006, nos trechos que estabelece critérios etários para a tran
+DEPOIS: "O art. 35, III e V, da Lei nº 9.250/1995 introduz uma discriminação indireta contra as pessoas com deficiência. A apare
+
+--- Linha 427 ---
+ANTES: Lei 3.528 de 2019 do estado do Tocantins. Cadastro estadual de usuários e dependentes de drogas. (...) Materialmente (..
+DEPOIS: O trabalho do preso, cuja remuneração é fixada em três quartos do salário mínimo o patamar base de remuneração do trabal
+
+--- Linha 428 ---
+ANTES: A “legítima defesa da honra” é recurso argumentativo/retórico odioso, desumano e cruel utilizado pelas defesas de acusad
+DEPOIS: A necessidade de formação e o aprimoramento profissional no âmbito da Administração Pública (art. 39, § 2º , da CF) perm
+
+--- Linha 429 ---
+ANTES: Os direitos à vida e à segurança são dotados não apenas de dimensão negativa, senão também de dimensão positiva, constit
+DEPOIS: Lei federal que disciplina o uso dos instrumentos de menor potencial ofensivo pelos agentes de segurança pública e que v
+
+--- Linha 430 ---
+ANTES: Decretos Presidenciais que dispõem sobre aquisição, cadastro, registro, posse e porte de armas de fogo, acessórios e mun
+DEPOIS: Conforme a Jurisprudência desta Suprema Corte, a adoção de requisitos de capacidade física para o acesso a cargos públic
+
+--- Linha 431 ---
+ANTES: Plano Nacional de Segurança Pública e Defesa Social 2021-2030. Retrocesso pela ausência de menção dos objetivos e ações 
+DEPOIS: O princípio da igualdade material é prestigiados por ações afirmativas. No entanto, utilizar, para qualquer outro fim, a
+
+--- Linha 432 ---
+ANTES: Lei n. 3.228/2003, do Distrito Federal. Obrigatoriedade às distribuidoras de combustíveis, no Distrito Federal, a coloca
+DEPOIS: Novo marco regulatório da televisão por assinatura (Lei 12.485/2011). Serviço de acesso condicionado (SeAC). Inconstituc
+
+--- Linha 433 ---
+ANTES: A prisão especial constitui o recolhimento provisório em local distinto, cuja concessão se admite, à luz da Constituição
+DEPOIS: É constitucional a Lei 12.990/2014, que reserva a pessoas negras 20% das vagas oferecidas nos concursos públicos para pr
+
+--- Linha 434 ---
+ANTES: O conteúdo normativo dos direitos à vida e à segurança exige do Estado prestação ativa no sentido de construir uma polít
+DEPOIS: Programa Universidade para Todos (PROUNI). Ações afirmativas do Estado. Cumprimento do princípio constitucional da isono
+
+--- Linha 435 ---
+ANTES: Não ofende o postulado da isonomia assegurado no art. 5º, caput , da Constituição da República, o fator de discrímen ado
+DEPOIS: Atos que instituíram sistema de reserva de vagas com base em critério étnico-racial (cotas) no processo de seleção para 
+
+--- Linha 436 ---
+ANTES: A noção de igualdade não se encerra em sua dimensão meramente formal, de igualdade perante a lei. Ela contempla ainda um
+DEPOIS: Na inicial, pede-se a declaração de inconstitucionalidade, com eficácia para todos e efeito vinculante, da interpretação
+
+--- Linha 437 ---
+ANTES: “O art. 35, III e V, da Lei nº 9.250/1995 introduz uma discriminação indireta contra as pessoas com deficiência. A apare
+DEPOIS: A lei impugnada realiza materialmente o princípio constitucional da isonomia, uma vez que o tratamento diferenciado aos 
+
+--- Linha 438 ---
+ANTES: O trabalho do preso, cuja remuneração é fixada em três quartos do salário mínimo o patamar base de remuneração do trabal
+DEPOIS: Ação direta de inconstitucionalidade. Art. 4º da Lei 3.769, de 27-1-2006, que veda a realização de processo seletivo par
+
+--- Linha 439 ---
+ANTES: A necessidade de formação e o aprimoramento profissional no âmbito da Administração Pública (art. 39, § 2º, da CF) permi
+DEPOIS: O Magno Texto Federal não dispõe sobre o início da vida humana ou o preciso instante em que ela começa. Não faz de todo 
+
+--- Linha 440 ---
+ANTES: Lei federal que disciplina o uso dos instrumentos de menor potencial ofensivo pelos agentes de segurança pública e que v
+DEPOIS: É inconstitucional o preceito segundo o qual, na análise de licitações, serão considerados, para averiguação da proposta
+
+--- Linha 441 ---
+ANTES: Conforme a Jurisprudência desta Suprema Corte, a adoção de requisitos de capacidade física para o acesso a cargos públic
+DEPOIS: MP 2.226, de 4-9-2001. (...) A introdução, no art. 6º da Lei 9.469/1997, de dispositivo que afasta, no caso de transação
+
+--- Linha 442 ---
+ANTES: O princípio da igualdade material é prestigiados por ações afirmativas. No entanto, utilizar, para qualquer outro fim, a
+DEPOIS: Proibição imposta aos candidatos (...) referente à participação em inauguração de obras públicas nos três meses que prec
+
+--- Linha 443 ---
+ANTES: Novo marco regulatório da televisão por assinatura (Lei 12.485/2011). Serviço de acesso condicionado (SeAC). Inconstituc
+DEPOIS: Concurso público. (...) Prova de títulos: exercício de funções públicas. Viola o princípio constitucional da isonomia no
+
+--- Linha 444 ---
+ANTES: É constitucional a Lei 12.990/2014, que reserva a pessoas negras 20% das vagas oferecidas nos concursos públicos para pr
+DEPOIS: (...) é consentânea com a Carta da República previsão normativa asseguradora, ao militar e ao dependente estudante, do a
+
+--- Linha 445 ---
+ANTES: A ampliação de prazo para a oposição de embargos do devedor pela Fazenda Pública, inserida no art. 1º-B da Lei 9.494/199
+DEPOIS: Lei 1.952, de 19-3-1999, do Estado de Mato Grosso do Sul, que transfere os depósitos judiciais, referentes a tributos es
+
+--- Linha 446 ---
+ANTES: Programa Universidade para Todos (PROUNI). Ações afirmativas do Estado. Cumprimento do princípio constitucional da isono
+DEPOIS: Edital de concurso público da Corregedoria-Geral de Justiça do Estado de Alagoas. Previsão de pontuação aos servidores n
+
+--- Linha 447 ---
+ANTES: Atos que instituíram sistema de reserva de vagas com base em critério étnico-racial (cotas) no processo de seleção para 
+DEPOIS: Repercussão geral
+
+--- Linha 448 ---
+ANTES: Na inicial, pede-se a declaração de inconstitucionalidade, com eficácia para todos e efeito vinculante, da interpretação
+DEPOIS: O artigo 144-A da Lei n. 6.880/19, conhecida como Estatuto dos Militares, viola o direito à igualdade e ao princípio da 
+
+--- Linha 449 ---
+ANTES: O sexo das pessoas, salvo disposição constitucional expressa ou implícita em sentido contrário, não se presta como fator
+DEPOIS: Compatibilidade do artigo 144-A, da Lei n. 6.880/1980 (Estatuto dos Militares) com a Constituição Federal, em razão de r
+
+--- Linha 450 ---
+ANTES: A lei impugnada realiza materialmente o princípio constitucional da isonomia, uma vez que o tratamento diferenciado aos 
+DEPOIS: Competência e ônus da prova nos processos que discutem a existência de fraude no contrato civil/comercial de prestação d
+
+--- Linha 451 ---
+ANTES: Ação direta de inconstitucionalidade. Art. 4º da Lei 3.769, de 27-1-2006, que veda a realização de processo seletivo par
+DEPOIS: Separação obrigatória de bens nos casamentos e uniões estáveis com pessoa maior de setenta anos. (...) O dispositivo aqu
+
+--- Linha 452 ---
+ANTES: O Magno Texto Federal não dispõe sobre o início da vida humana ou o preciso instante em que ela começa. Não faz de todo 
+DEPOIS: É aplicável às condenações da Fazenda Pública envolvendo relações jurídicas não tributárias o índice de juros moratórios
+
+--- Linha 453 ---
+ANTES: É inconstitucional o preceito segundo o qual, na análise de licitações, serão considerados, para averiguação da proposta
+DEPOIS: É imune ao pagamento de taxas para registro da regularização migratória o estrangeiro que demonstre sua condição de hipo
+
+--- Linha 454 ---
+ANTES: MP 2.226, de 4-9-2001. (...) A introdução, no art. 6º da Lei 9.469/1997, de dispositivo que afasta, no caso de transação
+DEPOIS: A multa mínima prevista no artigo 33 da Lei 11.343/06 é opção legislativa legítima para a quantificação da pena, não cab
+
+--- Linha 455 ---
+ANTES: Proibição imposta aos candidatos (...) referente à participação em inauguração de obras públicas nos três meses que prec
+DEPOIS: É compatível com a Constituição da República de 1988ª ampliação para 30 (trinta) dias do prazo de oposição de embargos à
+
+--- Linha 456 ---
+ANTES: Concurso público. (...) Prova de títulos: exercício de funções públicas. Viola o princípio constitucional da isonomia no
+DEPOIS: O princípio constitucional da isonomia (CRFB, art. 5º , caput), no seu núcleo essencial, revela que o art. 1º -F da Lei 
+
+--- Linha 457 ---
+ANTES: (...) é consentânea com a Carta da República previsão normativa asseguradora, ao militar e ao dependente estudante, do a
+DEPOIS: Não cabe ao Poder Judiciário, que não tem função legislativa, aumentar vencimentos de servidores públicos sob fundamento
+
+--- Linha 458 ---
+ANTES: Lei 1.952, de 19-3-1999, do Estado de Mato Grosso do Sul, que transfere os depósitos judiciais, referentes a tributos es
+DEPOIS: Servidor público. Extensão de gratificação com fundamento no princípio da isonomia. Vedação. Enunciado 339 da Súmula des
+
+--- Linha 459 ---
+ANTES: Edital de concurso público da Corregedoria-Geral de Justiça do Estado de Alagoas. Previsão de pontuação aos servidores n
+DEPOIS: Contravenção penal. Posse não justificada de instrumento de emprego usual na prática de furto (art. 25 do DL 3.688/1941)
+
+--- Linha 460 ---
+ANTES: Repercussão geral
+DEPOIS: Inexistência de direito constitucional à remarcação de provas em razão de circunstâncias pessoais dos candidatos. Segura
+
+--- Linha 461 ---
+ANTES: O artigo 144-A da Lei n. 6.880/19, conhecida como Estatuto dos Militares, viola o direito à igualdade e ao princípio da 
+DEPOIS: (...) Supremo tem entendido (...) que o estabelecimento de limite de idade para inscrição em concurso público apenas é l
+
+--- Linha 462 ---
+ANTES: Compatibilidade do artigo 144-A, da Lei n. 6.880/1980 (Estatuto dos Militares) com a Constituição Federal, em razão de r
+DEPOIS: (...) tendo em vista que o critério utilizado pela Universidade Federal do Rio Grande do Sul – reserva de 30% de vagas p
+
+--- Linha 463 ---
+ANTES: Competência e ônus da prova nos processos que discutem a existência de fraude no contrato civil/comercial de prestação d
+DEPOIS: Taxa Selic. Incidência para atualização de débitos tributários. Legitimidade. Inexistência de violação aos princípios da
+
+--- Linha 464 ---
+ANTES: Separação obrigatória de bens nos casamentos e uniões estáveis com pessoa maior de setenta anos. (...) O dispositivo aqu
+DEPOIS: Serviço militar obrigatório. Soldo. Valor inferior ao salário mínimo. Violação aos arts. 1º , III; 5º , caput; e 7º , IV
+
+--- Linha 465 ---
+ANTES: É aplicável às condenações da Fazenda Pública envolvendo relações jurídicas não tributárias o índice de juros moratórios
+DEPOIS: Discute-se a constitucionalidade do art. 1º -F da Lei 9.494, de 10-9-1997, o qual decorre da MP 2.180-35, de 24-8-2001. 
+
+--- Linha 466 ---
+ANTES: É imune ao pagamento de taxas para registro da regularização migratória o estrangeiro que demonstre sua condição de hipo
+DEPOIS: Isonomia. Concurso público. Prova de aptidão física. Lesão temporária. Nova data para o teste. Inadmissibilidade. Mandad
+
+--- Linha 467 ---
+ANTES: A multa mínima prevista no artigo 33 da Lei 11.343/06 é opção legislativa legítima para a quantificação da pena, não cab
+DEPOIS: Julgados correlatos
+
+--- Linha 468 ---
+ANTES: É compatível com a Constituição da República de 1988 a ampliação para 30 (trinta) dias do prazo de oposição de embargos 
+DEPOIS: Bonificação para classificação no curso de medicina em Universidade Federal. Critério regional. Alegação de afronta ao j
+
+--- Linha 469 ---
+ANTES: O princípio constitucional da isonomia (CRFB, art. 5º, caput), no seu núcleo essencial, revela que o art. 1º-F da Lei 9.
+DEPOIS: Lei do Estado do Amazonas 2.894/2004, que cria sistema de cotas para preenchimento de vagas em universidade estadual par
+
+--- Linha 470 ---
+ANTES: Não cabe ao Poder Judiciário, que não tem função legislativa, aumentar vencimentos de servidores públicos sob fundamento
+DEPOIS: A jurisprudência do Supremo Tribunal Federal consolidou-se no sentido de que não é dever legal a reposição de verbas rec
+
+--- Linha 471 ---
+ANTES: Servidor público. Extensão de gratificação com fundamento no princípio da isonomia. Vedação. Enunciado 339 da Súmula des
+DEPOIS: Inconstitucionalidade da incidência do tipo penal do aborto no caso de interrupção voluntária da gestação no primeiro tr
+
+--- Linha 472 ---
+ANTES: Contravenção penal. Posse não justificada de instrumento de emprego usual na prática de furto (art. 25 do DL 3.688/1941)
+DEPOIS: É inconstitucional a atribuição supervalorizada de pontos, na prova de títulos em concurso público para o cargo de notár
+
+--- Linha 473 ---
+ANTES: Inexistência de direito constitucional à remarcação de provas em razão de circunstâncias pessoais dos candidatos. Segura
+DEPOIS: Concurso público. Prova de esforço físico. Caso a caso, há de perquirir-se a sintonia da exigência, no que implica fator
+
+--- Linha 474 ---
+ANTES: (...) Supremo tem entendido (...) que o estabelecimento de limite de idade para inscrição em concurso público apenas é l
+DEPOIS: Controle e constitucionalidade das leis penais. Mandatos constitucionais de criminalização. A Constituição de 1988 conté
+
+--- Linha 475 ---
+ANTES: (...) tendo em vista que o critério utilizado pela Universidade Federal do Rio Grande do Sul – reserva de 30% de vagas p
+DEPOIS: Evidencio (...) que a condição de estrangeiro sem residência no País não afasta, por si só, o benefício da substituição 
+
+--- Linha 476 ---
+ANTES: Taxa Selic. Incidência para atualização de débitos tributários. Legitimidade. Inexistência de violação aos princípios da
+DEPOIS: Isonomia. Paradigmas beneficiados por decisão judicial. Impropriedade. Descabe ter como inobservado o princípio isonômic
+
+--- Linha 477 ---
+ANTES: Serviço militar obrigatório. Soldo. Valor inferior ao salário mínimo. Violação aos arts. 1º, III; 5º, caput; e 7º, IV, d
+DEPOIS: Tratamento igualitário de brasileiros e estrangeiros residentes no Brasil. O alcance do disposto na cabeça do art. 5º da
+
+--- Linha 478 ---
+ANTES: Discute-se a constitucionalidade do art. 1º-F da Lei 9.494, de 10-9-1997, o qual decorre da MP 2.180-35, de 24-8-2001. A
+DEPOIS: Eficácia dos direitos fundamentais nas relações privadas. As violações a direitos fundamentais não ocorrem somente no âm
+
+--- Linha 479 ---
+ANTES: Isonomia. Concurso público. Prova de aptidão física. Lesão temporária. Nova data para o teste. Inadmissibilidade. Mandad
+DEPOIS: O direito à saúde – além de qualificar-se como direito fundamental que assiste a todas as pessoas – representa consequên
+
+--- Linha 480 ---
+ANTES: Julgados correlatos
+DEPOIS: Razoabilidade da exigência de altura mínima para ingresso na carreira de delegado de polícia, dada a natureza do cargo a
+
+--- Linha 481 ---
+ANTES: Bonificação para classificação no curso de medicina em Universidade Federal. Critério regional. Alegação de afronta ao j
+DEPOIS: Concurso público. Fator altura. Caso a caso, há de perquirir-se a sintonia da exigência, no que implica fator de tratame
+
+--- Linha 482 ---
+ANTES: Lei do Estado do Amazonas 2.894/2004, que cria sistema de cotas para preenchimento de vagas em universidade estadual par
+DEPOIS: Enquanto os direitos de primeira geração (direitos civis e políticos) – que compreendem as liberdades clássicas, negativ
+
+--- Linha 483 ---
+ANTES: A jurisprudência do Supremo Tribunal Federal consolidou-se no sentido de que não é dever legal a reposição de verbas rec
+DEPOIS: Concurso público: princípio de igualdade: ofensa inexistente. Não ofende o princípio da igualdade o regulamento de concu
+
+--- Linha 484 ---
+ANTES: Inconstitucionalidade da incidência do tipo penal do aborto no caso de interrupção voluntária da gestação no primeiro tr
+DEPOIS: O princípio da isonomia, que se reveste de autoaplicabilidade, não é – enquanto postulado fundamental de nossa ordem pol
+
+--- Linha 485 ---
+ANTES: É inconstitucional a atribuição supervalorizada de pontos, na prova de títulos em concurso público para o cargo de notár
+DEPOIS: A vedação constitucional de diferença de critério de admissão por motivo de idade (CF, art. 7º , XXX) é corolário, na es
+
+--- Linha 486 ---
+ANTES: Concurso público. Prova de esforço físico. Caso a caso, há de perquirir-se a sintonia da exigência, no que implica fator
+DEPOIS: I - homens e mulheres são iguais em direitos e obrigações, nos termos desta Constituição;
+
+--- Linha 487 ---
+ANTES: Controle e constitucionalidade das leis penais. Mandatos constitucionais de criminalização. A Constituição de 1988 conté
+DEPOIS: Concurso público. Exames ginecológicos invasivos. Discriminação de gênero. (...) A determinação de exames ginecológicos 
+
+--- Linha 488 ---
+ANTES: Evidencio (...) que a condição de estrangeiro sem residência no País não afasta, por si só, o benefício da substituição 
+DEPOIS: [ARE 1.551.254ª gR, rel. min. Cristiano Zanin, j. 22-12-2025, P, DJE de 2-2-2026.]
+
+--- Linha 489 ---
+ANTES: O súdito estrangeiro, mesmo aquele sem domicílio no Brasil, tem direito a todas as prerrogativas básicas que lhe assegur
+DEPOIS: Controle concentrado de constitucionalidade
+
+--- Linha 490 ---
+ANTES: A igualdade, desde Platão e Aristóteles, consiste em tratar-se de modo desigual os desiguais. Prestigia-se a igualdade, 
+DEPOIS: O RenovaBio, instituído pela Lei n. 13.576/2017, concretiza compromissos internacionais de mitigação de gases de efeito 
+
+--- Linha 491 ---
+ANTES: Isonomia. Paradigmas beneficiados por decisão judicial. Impropriedade. Descabe ter como inobservado o princípio isonômic
+DEPOIS: Ofende os princípios da igualdade e da dignidade da pessoa humana a perquirição da vítima, em processos apuratórios e ju
+
+--- Linha 492 ---
+ANTES: Tratamento igualitário de brasileiros e estrangeiros residentes no Brasil. O alcance do disposto na cabeça do art. 5º da
+DEPOIS: A exegese do art. 2º , § 2º , da Lei 3.498, de 19 de abril de 2010, do Estado do Amazonas, na redação que lhe foi confer
+
+--- Linha 493 ---
+ANTES: Eficácia dos direitos fundamentais nas relações privadas. As violações a direitos fundamentais não ocorrem somente no âm
+DEPOIS: O art. 10, § 3º , da Lei 9.504/1997 foi alterado pela Lei 12.034/2009, passando a prescrever, em caráter imperativo, que
+
+--- Linha 494 ---
+ANTES: O direito à saúde – além de qualificar-se como direito fundamental que assiste a todas as pessoas – representa consequên
+DEPOIS: (...) Lei Estadual 8.008/2018 do Rio de Janeiro, que impõe a obrigatoriedade de que as crianças e adolescentes do sexo f
+
+--- Linha 495 ---
+ANTES: Razoabilidade da exigência de altura mínima para ingresso na carreira de delegado de polícia, dada a natureza do cargo a
+DEPOIS: Violência doméstica. (...) O art. 1º da Lei 11.340/2006 surge, sob o ângulo do tratamento diferenciado entre os gêneros 
+
+--- Linha 496 ---
+ANTES: Os direitos e garantias individuais não têm caráter absoluto. Não há, no sistema constitucional brasileiro, direitos ou 
+DEPOIS: No tocante à violência doméstica, há de considerar-se a necessidade da intervenção estatal. (...) No caso presente, não 
+
+--- Linha 497 ---
+ANTES: Concurso público. Fator altura. Caso a caso, há de perquirir-se a sintonia da exigência, no que implica fator de tratame
+DEPOIS: [ADI 4.424, rel. min. Marco Aurélio, j. 9-2-2012, P, DJE de 1º -8-2014.]
+
+--- Linha 498 ---
+ANTES: Ao recorrente, por não ser francês, não obstante trabalhar para a empresa francesa, no Brasil, não foi aplicado o Estatu
+DEPOIS: = ARE 773.765 RG, rel. min. Gilmar Mendes, j. 3-4-2014, P, DJE de 28-4-2014, Tema 713
+
+--- Linha 499 ---
+ANTES: Enquanto os direitos de primeira geração (direitos civis e políticos) – que compreendem as liberdades clássicas, negativ
+DEPOIS: Plano de previdência complementar. Cláusula que exige o mesmo tempo de contribuição para homens e mulheres para recebime
+
+--- Linha 500 ---
+ANTES: Concurso público: princípio de igualdade: ofensa inexistente. Não ofende o princípio da igualdade o regulamento de concu
+DEPOIS: [RE 1.415.115 RG, rel. min. Alexandre de Moraes, j. 6-2-2026, P, DJE de 2-3-2026, Tema 1.423, com mérito pendente.]
+
+--- Linha 501 ---
+ANTES: O princípio da isonomia, que se reveste de autoaplicabilidade, não é – enquanto postulado fundamental de nossa ordem pol
+DEPOIS: Repercussão geral
+
+--- Linha 502 ---
+ANTES: A vedação constitucional de diferença de critério de admissão por motivo de idade (CF, art. 7º, XXX) é corolário, na esf
+DEPOIS: À luz do art. 227 da CF que confere proteção integral da criança com absoluta prioridade, bem como do princípio da isono
+
+--- Linha 503 ---
+ANTES: I - homens e mulheres são iguais em direitos e obrigações, nos termos desta Constituição;
+DEPOIS: É inconstitucional, por transgressão ao princípio da isonomia entre homens e mulheres (CF, art. 5º , I), a exigência de 
+
+--- Linha 504 ---
+ANTES: Concurso público. Exames ginecológicos invasivos. Discriminação de gênero. (...) A determinação de exames ginecológicos 
+DEPOIS: Revela-se inconstitucional, por violação ao princípio da isonomia (art. 5º , I, da Constituição da República), cláusula 
+
+--- Linha 505 ---
+ANTES: [ARE 1.551.254 AgR, rel. min. Cristiano Zanin, j. 22-12-2025, P, DJE de 2-2-2026.]
+DEPOIS: Não fere o direito à saúde, tampouco a autonomia profissional do médico, o normativo que veda, no âmbito do SUS, a assis
+
+--- Linha 506 ---
+ANTES: Controle concentrado de constitucionalidade
+DEPOIS: Julgados correlatos
+
+--- Linha 507 ---
+ANTES: O RenovaBio, instituído pela Lei n. 13.576/2017, concretiza compromissos internacionais de mitigação de gases de efeito 
+DEPOIS: O princípio da isonomia material, conforme a tese do Tema 452, impõe que a aplicação das normas regulamentares dos plano
+
+--- Linha 508 ---
+ANTES: Ofende os princípios da igualdade e da dignidade da pessoa humana a perquirição da vítima, em processos apuratórios e ju
+DEPOIS: Legislação que trata do efetivo feminino da Polícia Militar do estado de Sergipe. Criação da Companhia de Polícia Femini
+
+--- Linha 509 ---
+ANTES: A exegese do art. 2º, § 2º, da Lei 3.498, de 19 de abril de 2010, do Estado do Amazonas, na redação que lhe foi conferid
+DEPOIS: O inciso I do art. 100 do CPC, com redação dada pela Lei 6.515/1977, foi recepcionado pela CF de 1988. O foro especial p
+
+--- Linha 510 ---
+ANTES: O art. 10, § 3º, da Lei 9.504/1997 foi alterado pela Lei 12.034/2009, passando a prescrever, em caráter imperativo, que,
+DEPOIS: A adoção de critérios diferenciados para o licenciamento dos militares temporários, em razão do sexo, não viola o princí
+
+--- Linha 511 ---
+ANTES: (...) Lei Estadual 8.008/2018 do Rio de Janeiro, que impõe a obrigatoriedade de que as crianças e adolescentes do sexo f
+DEPOIS: Pensão por morte de servidora pública estadual, ocorrida antes da EC 20/1998: cônjuge varão: exigência de requisito de i
+
+--- Linha 512 ---
+ANTES: Violência doméstica. (...) O art. 1º da Lei 11.340/2006 surge, sob o ângulo do tratamento diferenciado entre os gêneros 
+DEPOIS: Promoção de militares dos sexos masculino e feminino: critérios diferenciados: carreiras regidas por legislação específi
+
+--- Linha 513 ---
+ANTES: No tocante à violência doméstica, há de considerar-se a necessidade da intervenção estatal. (...) No caso presente, não 
+DEPOIS: Pensão: extensão ao viúvo. Princípio da igualdade. Necessidade de lei específica. CF, art. 5º , I; art. 195 e seu § 5º ;
+
+--- Linha 514 ---
+ANTES: [ADI 4.424, rel. min. Marco Aurélio, j. 9-2-2012, P, DJE de 1º-8-2014.]
+DEPOIS: Concurso público. Critério de admissão. Sexo. A regra direciona no sentido da inconstitucionalidade da diferença de crit
+
+--- Linha 515 ---
+ANTES: = ARE 773.765 RG, rel. min. Gilmar Mendes, j. 3-4-2014, P, DJE de 28-4-2014, Tema 713
+DEPOIS: II - ninguém será obrigado a fazer ou deixar de fazer alguma coisa senão em virtude de lei;
+
+--- Linha 516 ---
+ANTES: Plano de previdência complementar. Cláusula que exige o mesmo tempo de contribuição para homens e mulheres para recebime
+DEPOIS: A lei penal mais grave aplica-se ao crime continuado ou ao crime permanente, se a sua vigência é anterior à cessação da 
+
+--- Linha 517 ---
+ANTES: [RE 1.415.115 RG, rel. min. Alexandre de Moraes, j. 6-2-2026, P, DJE de 2-3-2026, Tema 1.423, com mérito pendente.]
+DEPOIS: [Súmula 711.]
+
+--- Linha 518 ---
+ANTES: Repercussão geral
+DEPOIS: Só por lei se pode sujeitar a exame psicotécnico a habilitação de candidato a cargo público.
+
+--- Linha 519 ---
+ANTES: À luz do art. 227 da CF que confere proteção integral da criança com absoluta prioridade, bem como do princípio da isono
+DEPOIS: [Súmula 686.]
+
+--- Linha 520 ---
+ANTES: O art. 384 da CLT, em relação ao período anterior à edição da Lei n. 13.467/2017, foi recepcionado pela Constituição Fed
+DEPOIS: Não cabe recurso extraordinário por contrariedade ao princípio constitucional da legalidade, quando a sua verificação pr
+
+--- Linha 521 ---
+ANTES: É inconstitucional, por transgressão ao princípio da isonomia entre homens e mulheres (CF, art. 5º, I), a exigência de r
+DEPOIS: [Súmula 636.]
+
+--- Linha 522 ---
+ANTES: Revela-se inconstitucional, por violação ao princípio da isonomia (art. 5º, I, da Constituição da República), cláusula d
+DEPOIS: Na ausência de previsão legal específica ou de norma coletiva em sentido diverso, o recreio escolar (educação básica) e 
+
+--- Linha 523 ---
+ANTES: Não fere o direito à saúde, tampouco a autonomia profissional do médico, o normativo que veda, no âmbito do SUS, a assis
+DEPOIS: [ADPF 1.058 MC-Ref, rel. min. Gilmar Mendes, j. 13-11-2025, P, Informativo STF 1.199.]
+
+--- Linha 524 ---
+ANTES: Os crimes de lesão corporal praticados contra a mulher no âmbito doméstico e familiar são de ação penal pública incondic
+DEPOIS: O STF declarou a inconstitucionalidade da incorporação de quintos referente ao período entre a edição da Lei nº 9.624, d
+
+--- Linha 525 ---
+ANTES: Julgados correlatos
+DEPOIS: [RE 1.393.330ª gR, rel. min. André Mendonça, j. 20.05.2025, 2º T, DJE de 14.08.2025.]
+
+--- Linha 526 ---
+ANTES: O princípio da isonomia material, conforme a tese do Tema 452, impõe que a aplicação das normas regulamentares dos plano
+DEPOIS: (...) Código de Trânsito Brasileiro – CTB. (...) É inconstitucional o estabelecimento de sanção por parte do Conselho Na
+
+--- Linha 527 ---
+ANTES: Legislação que trata do efetivo feminino da Polícia Militar do estado de Sergipe. Criação da Companhia de Polícia Femini
+DEPOIS: [ADI 2.998, red. do ac. min. Ricardo Lewandowski, j. 10-4-2019, P, DJE de 1º -10-2020.]
+
+--- Linha 528 ---
+ANTES: O inciso I do art. 100 do CPC, com redação dada pela Lei 6.515/1977, foi recepcionado pela CF de 1988. O foro especial p
+DEPOIS: O recurso a processos de fertilização artificial não implica o dever da tentativa de nidação no corpo da mulher de todos
+
+--- Linha 529 ---
+ANTES: A adoção de critérios diferenciados para o licenciamento dos militares temporários, em razão do sexo, não viola o princí
+DEPOIS: [ADI 3.510, rel. min. Ayres Britto, j. 29-5-2008, P, DJE de 28-5-2010.]
+
+--- Linha 530 ---
+ANTES: Pensão por morte de servidora pública estadual, ocorrida antes da EC 20/1998: cônjuge varão: exigência de requisito de i
+DEPOIS: O compartilhamento-compensação ambiental de que trata o art. 36 da Lei 9.985/2000 não ofende o princípio da legalidade, 
+
+--- Linha 531 ---
+ANTES: Promoção de militares dos sexos masculino e feminino: critérios diferenciados: carreiras regidas por legislação específi
+DEPOIS: [ADI 3.378, rel. min. Ayres Britto, j. 9-4-2008, P, DJE de 20-6-2008.]
+
+--- Linha 532 ---
+ANTES: Pensão: extensão ao viúvo. Princípio da igualdade. Necessidade de lei específica. CF, art. 5º, I; art. 195 e seu § 5º; e
+DEPOIS: O princípio constitucional da reserva de lei formal traduz limitação ao exercício das atividades administrativas e juris
+
+--- Linha 533 ---
+ANTES: Concurso público. Critério de admissão. Sexo. A regra direciona no sentido da inconstitucionalidade da diferença de crit
+DEPOIS: [ADI 2.075 MC, rel. min. Celso de Mello, j. 7-2-2001, P, DJ de 27-6-2003.]
+
+--- Linha 534 ---
+ANTES: II - ninguém será obrigado a fazer ou deixar de fazer alguma coisa senão em virtude de lei;
+DEPOIS: "Assentada a constitucionalidade das Resoluções ANTT 233/2003 e 3.075/2009, é infraconstitucional, a ela aplicando-se os
+
+--- Linha 535 ---
+ANTES: A lei penal mais grave aplica-se ao crime continuado ou ao crime permanente, se a sua vigência é anterior à cessação da 
+DEPOIS: [ARE 1.423.084 RG, rel. min. Rosa Weber, j. 21.08.2023, P, DJE de 28.08.2023, Tema 1.263, com repercussão geral negada.]
+
+--- Linha 536 ---
+ANTES: [Súmula 711.]
+DEPOIS: O áudio que amparou a aplicação da penalidade disciplinar foi espontaneamente divulgado pela agravante em grupo de Promo
+
+--- Linha 537 ---
+ANTES: Só por lei se pode sujeitar a exame psicotécnico a habilitação de candidato a cargo público.
+DEPOIS: [MS 37.325ª gR, rel. min. Rosa Weber, j. 30-8-2021, 1ª T, DJE de 20-9-2021.]
+
+--- Linha 538 ---
+ANTES: [Súmula 686.]
+DEPOIS: (...) ofende o princípio da legalidade a decisão que concede a incorporação de quintos pelo exercício de função comissio
+
+--- Linha 539 ---
+ANTES: Não cabe recurso extraordinário por contrariedade ao princípio constitucional da legalidade, quando a sua verificação pr
+DEPOIS: [RE 638.115, rel. min. Gilmar Mendes, j. 19-3-2015, P, DJE de 3-8-2015, Tema 395, com mérito julgado.]
+
+--- Linha 540 ---
+ANTES: [Súmula 636.]
+DEPOIS: Vide RE 1.498.930ª gR, rel. min. André Mendonça, j. 07.10.2024, 2ª T, DJE de 23.10.2024
+
+--- Linha 541 ---
+ANTES: Na ausência de previsão legal específica ou de norma coletiva em sentido diverso, o recreio escolar (educação básica) e 
+DEPOIS: Direito do trabalho. Ação civil pública. Shopping center. Obrigação de fazer do art. 389, §§ 1º e 2º , da CLT. Instalaçã
+
+--- Linha 542 ---
+ANTES: [ADPF 1.058 MC-Ref, rel. min. Gilmar Mendes, j. 13-11-2025, P, Informativo STF 1.199.]
+DEPOIS: [ARE 1.499.584ª gR, rel. min. Dias Toffoli, j. 25.2.2025, 2ª T, DJE de 15.09.2025.]
+
+--- Linha 543 ---
+ANTES: O STF declarou a inconstitucionalidade da incorporação de quintos referente ao período entre a edição da Lei nº 9.624, d
+DEPOIS: Banco Postal. Obrigatoriedade de adoção de medidas de segurança. Inexistência de norma que imponha tais obrigações aos c
+
+--- Linha 544 ---
+ANTES: [RE 1.393.330 AgR, rel. min. André Mendonça, j. 20.05.2025, 2ºT, DJE de 14.08.2025.]
+DEPOIS: [RE 1.111.950ª gR-segundo, rel. min. Gilmar Mendes, j. 30-8-2021, 2ª T, DJE de 8-9-2021.]
+
+--- Linha 545 ---
+ANTES: (...) Código de Trânsito Brasileiro – CTB. (...) É inconstitucional o estabelecimento de sanção por parte do Conselho Na
+DEPOIS: ANP – Agência Nacional do Petróleo. Possibilidade de aplicação de multa. Recepção de decreto como lei ordinária pela Con
+
+--- Linha 546 ---
+ANTES: [ADI 2.998, red. do ac. min. Ricardo Lewandowski, j. 10-4-2019, P, DJE de 1º-10-2020.]
+DEPOIS: [ARE 1.039.542ª gR-segundo, rel. min. Roberto Barroso, j. 26-10-2018, 1ª T, DJE de 8-11-2018.]
+
+--- Linha 547 ---
+ANTES: O recurso a processos de fertilização artificial não implica o dever da tentativa de nidação no corpo da mulher de todos
+DEPOIS: = ARE 1.046.163ª gR, rel. min. Dias Toffoli, j. 8-8-2017, 2ª T, DJE de 29-8-2017
+
+--- Linha 548 ---
+ANTES: [ADI 3.510, rel. min. Ayres Britto, j. 29-5-2008, P, DJE de 28-5-2010.]
+DEPOIS: Por não se confundir a associação de moradores com o condomínio disciplinado pela Lei 4.591/1964, descabe, a pretexto de
+
+--- Linha 549 ---
+ANTES: O compartilhamento-compensação ambiental de que trata o art. 36 da Lei 9.985/2000 não ofende o princípio da legalidade, 
+DEPOIS: [RE 432.106, rel. min. Marco Aurélio, j. 20-9-2011, 1ª T, DJE de 4-11-2011.]
+
+--- Linha 550 ---
+ANTES: [ADI 3.378, rel. min. Ayres Britto, j. 9-4-2008, P, DJE de 20-6-2008.]
+DEPOIS: Antiga é a jurisprudência desta Corte no sentido de que a exigência de avaliação psicológica ou teste psicotécnico, como
+
+--- Linha 551 ---
+ANTES: O princípio constitucional da reserva de lei formal traduz limitação ao exercício das atividades administrativas e juris
+DEPOIS: [AI 758.533 QO-RG, rel. min. Gilmar Mendes, j. 23-6-2010, P, DJE de 13-8-2010, Tema 338, com mérito julgado.]
+
+--- Linha 552 ---
+ANTES: [ADI 2.075 MC, rel. min. Celso de Mello, j. 7-2-2001, P, DJ de 27-6-2003.]
+DEPOIS: Orientação predominante no STF no sentido de que o cometimento de falta grave, durante a execução da pena privativa de l
+
+--- Linha 553 ---
+ANTES: “Assentada a constitucionalidade das Resoluções ANTT 233/2003 e 3.075/2009, é infraconstitucional, a ela aplicando-se os
+DEPOIS: [HC 95.401, rel. min. Ellen Gracie, j. 21-10-2008, 2ª T, DJE de 8-11-2008.]
+
+--- Linha 554 ---
+ANTES: [ARE 1.423.084 RG, rel. min. Rosa Weber, j. 21.08.2023, P, DJE de 28.08.2023, Tema 1.263, com repercussão geral negada.]
+DEPOIS: = HC 96.060, rel. min. Cármen Lúcia, j. 19-5-2009, 1ª T, DJE de 19-6-2009
+
+--- Linha 555 ---
+ANTES: O áudio que amparou a aplicação da penalidade disciplinar foi espontaneamente divulgado pela agravante em grupo de Promo
+DEPOIS: Especializar varas e atribuir competência por natureza de feitos não é matéria alcançada pela reserva da lei em sentido 
+
+--- Linha 556 ---
+ANTES: [MS 37.325 AgR, rel. min. Rosa Weber, j. 30-8-2021, 1ª T, DJE de 20-9-2021.]
+DEPOIS: [HC 85.060, rel. min. Eros Grau, j. 23-9-2008, 1ª T, DJE de 13-2-2009.]
+
+--- Linha 557 ---
+ANTES: (...) ofende o princípio da legalidade a decisão que concede a incorporação de quintos pelo exercício de função comissio
+DEPOIS: Nenhum ato regulamentar pode criar obrigações ou restringir direitos, sob pena de incidir em domínio constitucionalmente
+
+--- Linha 558 ---
+ANTES: [RE 638.115, rel. min. Gilmar Mendes, j. 19-3-2015, P, DJE de 3-8-2015, Tema 395, com mérito julgado.]
+DEPOIS: [AC 1.033ª gR-QO, rel. min. Celso de Mello, j. 25-5-2006, P, DJ de 16-6-2006.]
+
+--- Linha 559 ---
+ANTES: Vide RE 1.498.930 AgR, rel. min. André Mendonça, j. 07.10.2024, 2ª T, DJE de 23.10.2024
+DEPOIS: A inobservância ao princípio da legalidade pressupõe o reconhecimento de preceito de lei dispondo de determinada forma e
+
+--- Linha 560 ---
+ANTES: Direito do trabalho. Ação civil pública. Shopping center. Obrigação de fazer do art. 389, §§ 1º e 2º, da CLT. Instalação
+DEPOIS: [AI 147.203ª gR, rel. min. Marco Aurélio, j. 18-5-1993, 2ª T, DJ de 11-6-1993.]
+
+--- Linha 561 ---
+ANTES: [ARE 1.499.584 AgR, rel. min. Dias Toffoli, j. 25.2.2025, 2ª T, DJE de 15.09.2025.]
+DEPOIS: III - ninguém será submetido a tortura nem a tratamento desumano ou degradante;
+
+--- Linha 562 ---
+ANTES: Banco Postal. Obrigatoriedade de adoção de medidas de segurança. Inexistência de norma que imponha tais obrigações aos c
+DEPOIS: Só é lícito o uso de algemas em casos de resistência e de fundado receio de fuga ou de perigo à integridade física própr
+
+--- Linha 563 ---
+ANTES: [RE 1.111.950 AgR-segundo, rel. min. Gilmar Mendes, j. 30-8-2021, 2ª T, DJE de 8-9-2021.]
+DEPOIS: [Súmula Vinculante 11.]
+
+--- Linha 564 ---
+ANTES: ANP – Agência Nacional do Petróleo. Possibilidade de aplicação de multa. Recepção de decreto como lei ordinária pela Con
+DEPOIS: A vedação à tortura e a tratamentos desumanos ou degradantes decorre diretamente da Constituição de 1988, o que importa 
+
+--- Linha 565 ---
+ANTES: [ARE 1.039.542 AgR-segundo, rel. min. Roberto Barroso, j. 26-10-2018, 1ª T, DJE de 8-11-2018.]
+DEPOIS: [ADPF 607, rel. min. Dias Toffoli, j. 28-3-2022, P, DJE de 1º -6-2022.]
+
+--- Linha 566 ---
+ANTES: = ARE 1.046.163 AgR, rel. min. Dias Toffoli, j. 8-8-2017, 2ª T, DJE de 29-8-2017
+DEPOIS: A chamada Lei da Anistia veicula uma decisão política assumida naquele momento – o momento da transição conciliada de 19
+
+--- Linha 567 ---
+ANTES: Por não se confundir a associação de moradores com o condomínio disciplinado pela Lei 4.591/1964, descabe, a pretexto de
+DEPOIS: [ADPF 153, rel. min. Eros Grau, j. 29-4-2010, P, DJE de 6-8-2010.]
+
+--- Linha 568 ---
+ANTES: [RE 432.106, rel. min. Marco Aurélio, j. 20-9-2011, 1ª T, DJE de 4-11-2011.]
+DEPOIS: "1. Em visitas sociais nos presídios ou estabelecimentos de segregação é inadmissível a revista íntima vexatória com o d
+
+--- Linha 569 ---
+ANTES: Antiga é a jurisprudência desta Corte no sentido de que a exigência de avaliação psicológica ou teste psicotécnico, como
+DEPOIS: [ARE 959.620, rel. min. Edson Fachin, j. 02.04.2025, P, DJE de 02.07.2025, Tema 998, com mérito julgado.]
+
+--- Linha 570 ---
+ANTES: [AI 758.533 QO-RG, rel. min. Gilmar Mendes, j. 23-6-2010, P, DJE de 13-8-2010, Tema 338, com mérito julgado.]
+DEPOIS: O uso de algemas durante audiência de instrução e julgamento pode ser determinado pelo magistrado quando presentes, de m
+
+--- Linha 571 ---
+ANTES: Orientação predominante no STF no sentido de que o cometimento de falta grave, durante a execução da pena privativa de l
+DEPOIS: [Rcl 9.468ª gR, rel. min. Ricardo Lewandowski, j. 24-3-2011, P, DJE de 11-4-2011.]
+
+--- Linha 572 ---
+ANTES: [HC 95.401, rel. min. Ellen Gracie, j. 21-10-2008, 2ª T, DJE de 8-11-2008.]
+DEPOIS: = Rcl 10.479ª gR, rel. min. Dias Toffoli, j. 23-5-2013, P, DJE de 1º -8-2013
+
+--- Linha 573 ---
+ANTES: = HC 96.060, rel. min. Cármen Lúcia, j. 19-5-2009, 1ª T, DJE de 19-6-2009
+DEPOIS: (...) o policial militar que, a pretexto de exercer atividade de repressão criminal em nome do Estado, inflige, mediante
+
+--- Linha 574 ---
+ANTES: Especializar varas e atribuir competência por natureza de feitos não é matéria alcançada pela reserva da lei em sentido 
+DEPOIS: [HC 70.389, rel. min. Celso de Mello, j. 23-6-1994, P, DJ de 10-8-2001.]
+
+--- Linha 575 ---
+ANTES: [HC 85.060, rel. min. Eros Grau, j. 23-9-2008, 1ª T, DJE de 13-2-2009.]
+DEPOIS: IV - é livre a manifestação do pensamento, sendo vedado o anonimato;
+
+--- Linha 576 ---
+ANTES: Nenhum ato regulamentar pode criar obrigações ou restringir direitos, sob pena de incidir em domínio constitucionalmente
+DEPOIS: A proibição de determinada variação linguística do idioma oficial constitui, por si só, uma injustificável restrição à l
+
+--- Linha 577 ---
+ANTES: [AC 1.033 AgR-QO, rel. min. Celso de Mello, j. 25-5-2006, P, DJ de 16-6-2006.]
+DEPOIS: [ADPF 1.151, rel. min. Dias Toffoli, j. 09.12.2024, P, DJE de 13.12.2024.]
+
+--- Linha 578 ---
+ANTES: A inobservância ao princípio da legalidade pressupõe o reconhecimento de preceito de lei dispondo de determinada forma e
+DEPOIS: Lei 3.528 de 2019 do estado do Tocantins. Cadastro estadual de usuários e dependentes de drogas. (...) Materialmente (..
+
+--- Linha 579 ---
+ANTES: [AI 147.203 AgR, rel. min. Marco Aurélio, j. 18-5-1993, 2ª T, DJ de 11-6-1993.]
+DEPOIS: [ADI 6.561, rel. min. Edson Fachin, j. 4-9-2023, P, DJE de 3-11-2023.]
+
+--- Linha 580 ---
+ANTES: III - ninguém será submetido a tortura nem a tratamento desumano ou degradante;
+DEPOIS: Artigo 166 do Decreto-Lei nº 1.001, de 21 de outubro de 1969. Código Penal Militar. (...) Na espécie, está-se diante de 
+
+--- Linha 581 ---
+ANTES: Só é lícito o uso de algemas em casos de resistência e de fundado receio de fuga ou de perigo à integridade física própr
+DEPOIS: [ADPF 475, rel. min. Dias Toffoli, j. 13-4-2023, P, DJE de 4-5-2023.]
+
+--- Linha 582 ---
+ANTES: [Súmula Vinculante 11.]
+DEPOIS: Vide ADPF 734, rel. min. Dias Toffoli, j. 13-4-2023, P, DJE de 4-5-2023ª rtigo 31, incisos IV e V, da Lei nº 6.425/72 do
+
+--- Linha 583 ---
+ANTES: A vedação à tortura e a tratamentos desumanos ou degradantes decorre diretamente da Constituição de 1988, o que importa 
+DEPOIS: [ADPF 734, rel. min. Dias Toffoli, j. 13-4-2023, P, DJE de 4-5-2023.]
+
+--- Linha 584 ---
+ANTES: [ADPF 607, rel. min. Dias Toffoli, j. 28-3-2022, P, DJE de 1º-6-2022.]
+DEPOIS: Vide ADPF 475, rel. min. Dias Toffoli, j. 13-4-2023, P, DJE de 4-5-2023ª tividade de inteligência do Ministério da Justi
+
+--- Linha 585 ---
+ANTES: A chamada Lei da Anistia veicula uma decisão política assumida naquele momento – o momento da transição conciliada de 19
+DEPOIS: [ADPF 722, rel. min. Cármen Lúcia, j. 16-5-2022, P, DJE de 9-6-2022.]
+
+--- Linha 586 ---
+ANTES: [ADPF 153, rel. min. Eros Grau, j. 29-4-2010, P, DJE de 6-8-2010.]
+DEPOIS: Afronta aos princípios da liberdade de manifestação de pensamento e da autonomia universitária. (...) Inconstitucionalid
+
+--- Linha 587 ---
+ANTES: “1. Em visitas sociais nos presídios ou estabelecimentos de segregação é inadmissível a revista íntima vexatória com o d
+DEPOIS: [ADPF 548, rel. min. Cármen Lúcia, j. 15-5-2020, P, DJE de 9-6-2020.]
+
+--- Linha 588 ---
+ANTES: [ARE 959.620, rel. min. Edson Fachin, j. 02.04.2025, P, DJE de 02.07.2025, Tema 998, com mérito julgado.]
+DEPOIS: A Democracia não existirá e a livre participação política não florescerá onde a liberdade de expressão for ceifada, pois
+
+--- Linha 589 ---
+ANTES: O uso de algemas durante audiência de instrução e julgamento pode ser determinado pelo magistrado quando presentes, de m
+DEPOIS: [ADI 4.451, rel. min. Alexandre de Moraes, j. 21-6-2018, P, DJE de 6-3-2019.]
+
+--- Linha 590 ---
+ANTES: [Rcl 9.468 AgR, rel. min. Ricardo Lewandowski, j. 24-3-2011, P, DJE de 11-4-2011.]
+DEPOIS: A liberdade religiosa não é exercível apenas em privado, mas também no espaço público, e inclui o direito de tentar conv
+
+--- Linha 591 ---
+ANTES: = Rcl 10.479 AgR, rel. min. Dias Toffoli, j. 23-5-2013, P, DJE de 1º-8-2013
+DEPOIS: [ADI 2.566, rel. min. Alexandre de Moraes, red. do ac. min. Edson Fachin, j. 16-5-2018, P, DJE de 23-10-2018.]
+
+... e mais 24226 diferenças
