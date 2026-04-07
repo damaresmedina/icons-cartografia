@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Damares Medina — Ontologia v9 · Cartografia do Litigioso Brasileiro</title>
+<style>
+:root {
+  --bg:#0c0c14;--bg2:#12121e;--bg3:#1a1a2e;
+  --text:#d0d0dc;--text2:#8888a0;--text3:#606078;
+  --accent:#4a9e8e;--t:#404060;
+  --amber:#c08020;--amber-bg:rgba(192,128,32,.08);--amber-s:rgba(192,128,32,.35);--amber-t:#e8c060;
+  --blue:#2070b8;--blue-bg:rgba(32,112,184,.08);--blue-s:rgba(32,112,184,.35);--blue-t:#60a8e8;
+  --teal:#208868;--teal-bg:rgba(32,136,104,.08);--teal-s:rgba(32,136,104,.35);--teal-t:#50d0a0;
+  --purple:#7068c8;--purple-bg:rgba(112,104,200,.08);--purple-s:rgba(112,104,200,.35);--purple-t:#a8a0f0;
+  --coral:#c05030;--coral-bg:rgba(192,80,48,.08);--coral-s:rgba(192,80,48,.35);--coral-t:#e88060;
+  --red:#a83030;--red-bg:rgba(168,48,48,.08);--red-s:rgba(168,48,48,.35);--red-t:#e06060;
+  --gray:#505068;--gray-bg:rgba(80,80,104,.06);--gray-s:rgba(80,80,104,.3);--gray-t:#9090a8;
+  --green:#2a8848;--green-bg:rgba(42,136,72,.08);--green-s:rgba(42,136,72,.35);--green-t:#60c878;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);padding:20px;max-width:740px;margin:0 auto}
+.hero{text-align:center;padding:32px 20px 28px}
+.hero-author{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.hero-title{font-size:22px;font-weight:300;color:#fff;letter-spacing:1px;margin-bottom:6px}
+.hero-title strong{font-weight:600}
+.hero-sub{font-size:12px;color:var(--text2);margin-bottom:12px}
+.hero-meta{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text3)}
+.tab-bar{display:flex;gap:4px;margin:20px 0 16px;padding:4px;background:var(--bg2);border-radius:12px;border:1px solid rgba(255,255,255,.04)}
+.tab{flex:1;padding:9px 6px;border-radius:9px;font-size:10px;cursor:pointer;color:var(--text2);text-align:center;transition:all .2s;user-select:none}
+.tab:hover{color:var(--text);background:rgba(255,255,255,.03)}
+.tab.active{background:var(--bg3);color:#fff;font-weight:500;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.view{display:none;animation:fadeIn .3s ease}
+.view.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--bg2);border:1px solid rgba(255,255,255,.04);border-radius:14px;padding:24px 18px;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent)}
+svg{width:100%;height:auto;display:block}
+.c-amber rect{fill:var(--amber-bg);stroke:var(--amber-s)}.c-amber text{fill:var(--amber-t)}
+.c-blue rect{fill:var(--blue-bg);stroke:var(--blue-s)}.c-blue text{fill:var(--blue-t)}
+.c-teal rect{fill:var(--teal-bg);stroke:var(--teal-s)}.c-teal text{fill:var(--teal-t)}
+.c-purple rect{fill:var(--purple-bg);stroke:var(--purple-s)}.c-purple text{fill:var(--purple-t)}
+.c-coral rect{fill:var(--coral-bg);stroke:var(--coral-s)}.c-coral text{fill:var(--coral-t)}
+.c-red rect{fill:var(--red-bg);stroke:var(--red-s)}.c-red text{fill:var(--red-t)}
+.c-gray rect{fill:var(--gray-bg);stroke:var(--gray-s)}.c-gray text{fill:var(--gray-t)}
+.c-green rect{fill:var(--green-bg);stroke:var(--green-s)}.c-green text{fill:var(--green-t)}
+.th{font-size:11.5px;font-weight:600}.ts{font-size:9.5px;font-weight:400}
+.expandable{cursor:pointer}.expandable:hover rect{filter:brightness(1.3)}
+#tooltip{position:fixed;background:var(--bg3);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px;font-size:11px;color:var(--text);pointer-events:none;opacity:0;transition:opacity .2s;max-width:300px;line-height:1.6;z-index:100;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.footer{text-align:center;padding:28px 0 0;border-top:1px solid rgba(255,255,255,.04);margin-top:24px}
+.footer p{font-size:10px;color:var(--text3);letter-spacing:1px;margin:3px 0}
+.footer .name{color:var(--accent)}
+@media(max-width:520px){body{padding:10px}.tab{padding:7px 3px;font-size:8.5px}.th{font-size:10px}.ts{font-size:8px}.card{padding:14px 10px}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-author">Damares Medina</div>
+  <div class="hero-title"><strong>Ontologia</strong> Integrada v9</div>
+  <div class="hero-sub">Cartografia do Litigioso Brasileiro</div>
+  <div class="hero-meta">Protocolo Universal &middot; 28 princ&iacute;pios &middot; 4 primitivos &middot; 2026</div>
+</div>
+
+<div id="tooltip"></div>
+
+<nav class="tab-bar">
+  <div class="tab active">Arquitetura</div>
+  <div class="tab">Primitivos</div>
+  <div class="tab">Taxonomias</div>
+  <div class="tab">Ecologia</div>
+  <div class="tab">Autoensino</div>
+  <div class="tab">Expans&atilde;o</div>
+</nav>
+
+<!-- ══ ARQUITETURA ══ -->
+<div id="view-arquitetura" class="view active"><div class="card">
+<svg viewBox="0 0 680 920">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="var(--t)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="c-amber"><rect x="30" y="20" width="620" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="36" text-anchor="middle" dominant-baseline="central">Camada 0 &mdash; Dom&iacute;nios (N, hier&aacute;rquicos)</text>
+<text class="ts" x="340" y="54" text-anchor="middle" dominant-baseline="central">transversal &middot; normativo &middot; juridico &middot; executivo &middot; mp &middot; legislativo &middot; controle</text></g>
+<line x1="340" y1="64" x2="340" y2="82" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<g class="c-blue"><rect x="30" y="82" width="620" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="98" text-anchor="middle" dominant-baseline="central">Camada 1 &mdash; Taxonomias Vivas</text>
+<text class="ts" x="340" y="116" text-anchor="middle" dominant-baseline="central">object_types(+ontological) &middot; actor_types(+actor) &middot; event_types(+event) &middot; edge_types(+epistemic) &middot; state_types</text></g>
+<line x1="340" y1="126" x2="340" y2="144" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<g class="c-teal"><rect x="30" y="144" width="620" height="28" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="158" text-anchor="middle" dominant-baseline="central">Camada 2 &mdash; 4 Primitivos Universais (schema fixo, nunca muda)</text></g>
+
+<g class="expandable" onclick="show('primitivos')">
+<g class="c-teal"><rect x="30" y="180" width="145" height="56" rx="6" stroke-width="0.5"/>
+<text class="th" x="102" y="198" text-anchor="middle" dominant-baseline="central">objects</text>
+<text class="ts" x="102" y="216" text-anchor="middle" dominant-baseline="central">id uuid &middot; slug &middot; payload</text></g>
+<g class="c-purple"><rect x="189" y="180" width="145" height="56" rx="6" stroke-width="0.5"/>
+<text class="th" x="261" y="198" text-anchor="middle" dominant-baseline="central">actors</text>
+<text class="ts" x="261" y="216" text-anchor="middle" dominant-baseline="central">id uuid &middot; slug &middot; payload</text></g>
+<g class="c-coral"><rect x="348" y="180" width="145" height="56" rx="6" stroke-width="0.5"/>
+<text class="th" x="420" y="198" text-anchor="middle" dominant-baseline="central">events</text>
+<text class="ts" x="420" y="216" text-anchor="middle" dominant-baseline="central">aggregate_id &middot; actor_id</text></g>
+<g class="c-blue"><rect x="507" y="180" width="143" height="56" rx="6" stroke-width="0.5"/>
+<text class="th" x="578" y="198" text-anchor="middle" dominant-baseline="central">edges</text>
+<text class="ts" x="578" y="216" text-anchor="middle" dominant-baseline="central">source_id &middot; target_id</text></g>
+</g>
+<line x1="340" y1="236" x2="340" y2="256" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<g class="c-amber"><rect x="30" y="256" width="620" height="52" rx="7" stroke-width="0.5"/>
+<text class="th" x="340" y="274" text-anchor="middle" dominant-baseline="central">Camadas Especializadas (sem alterar primitivos)</text>
+<text class="ts" x="340" y="296" text-anchor="middle" dominant-baseline="central">argumentos &middot; sinais decis&oacute;rios &middot; impacto or&ccedil;ament&aacute;rio &middot; vida processual &middot; ecologia</text></g>
+<line x1="340" y1="308" x2="340" y2="328" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<g class="c-red"><rect x="30" y="328" width="620" height="44" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="344" text-anchor="middle" dominant-baseline="central">Camada 3 &mdash; Provenance (rastreabilidade horizontal)</text>
+<text class="ts" x="340" y="362" text-anchor="middle" dominant-baseline="central">target_id uuid &middot; source_type &middot; pipeline_version &middot; confidence &middot; hash_input/output</text></g>
+<line x1="340" y1="372" x2="340" y2="392" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<g class="c-purple"><rect x="30" y="392" width="620" height="44" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="408" text-anchor="middle" dominant-baseline="central">Camada 4 &mdash; Derivados (reconstru&iacute;veis)</text>
+<text class="ts" x="340" y="426" text-anchor="middle" dominant-baseline="central">chunks &middot; embeddings &middot; published_objects</text></g>
+<line x1="340" y1="436" x2="340" y2="456" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<g class="c-green"><rect x="30" y="456" width="620" height="56" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="472" text-anchor="middle" dominant-baseline="central">Camada 5 &mdash; Views Materializadas + Perfis + Membrana</text>
+<text class="ts" x="340" y="492" text-anchor="middle" dominant-baseline="central">23 views: estruturais &middot; preditivas &middot; ambiente &middot; perfis decis&oacute;rios &middot; features ML</text></g>
+<line x1="340" y1="512" x2="340" y2="532" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<g class="expandable" onclick="show('autoensino')">
+<g class="c-coral"><rect x="30" y="532" width="300" height="72" rx="7" stroke-width="0.5"/>
+<text class="th" x="180" y="552" text-anchor="middle" dominant-baseline="central">Sistema Autoensn&aacute;vel</text>
+<text class="ts" x="180" y="572" text-anchor="middle" dominant-baseline="central">learned_decision_profiles</text>
+<text class="ts" x="180" y="590" text-anchor="middle" dominant-baseline="central">perfis por relator &middot; &oacute;rg&atilde;o &middot; ambiente</text></g>
+<g class="c-red"><rect x="350" y="532" width="300" height="72" rx="7" stroke-width="0.5"/>
+<text class="th" x="500" y="552" text-anchor="middle" dominant-baseline="central">Membrana Ontol&oacute;gica</text>
+<text class="ts" x="500" y="572" text-anchor="middle" dominant-baseline="central">ontology_proposals</text>
+<text class="ts" x="500" y="590" text-anchor="middle" dominant-baseline="central">observa&ccedil;&atilde;o &rarr; proposta &rarr; incorpora&ccedil;&atilde;o</text></g>
+</g>
+<line x1="340" y1="604" x2="340" y2="624" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a)"/>
+
+<g class="c-gray"><rect x="30" y="624" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="638" text-anchor="middle" dominant-baseline="central">Identidade Dual: UUID (interno, FK) + Slug (p&uacute;blico, leg&iacute;vel)</text>
+<text class="ts" x="340" y="654" text-anchor="middle" dominant-baseline="central">12 n&iacute;veis de identidade multin&iacute;vel</text></g>
+
+<g class="c-blue"><rect x="30" y="676" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="692" text-anchor="middle" dominant-baseline="central">Tr&ecirc;s tempos irredut&iacute;veis</text>
+<text class="ts" x="340" y="708" text-anchor="middle" dominant-baseline="central">occurred_at (quando aconteceu) &middot; valid_from/to (vig&ecirc;ncia) &middot; recorded_at (quando soube)</text></g>
+
+<g class="expandable" onclick="show('expansao')">
+<g class="c-gray"><rect x="30" y="728" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="742" text-anchor="middle" dominant-baseline="central">Expans&atilde;o por fases &mdash; INSERT, nunca redesenho &rarr; ver expans&atilde;o</text>
+<text class="ts" x="340" y="758" text-anchor="middle" dominant-baseline="central">17 passos de pipeline &middot; 28 erros proibidos &middot; 12 f&oacute;rmulas anal&iacute;ticas</text></g>
+</g>
+
+<g class="c-teal"><rect x="30" y="780" width="620" height="52" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="798" text-anchor="middle" dominant-baseline="central">Regra de Ouro</text>
+<text class="ts" x="340" y="818" text-anchor="middle" dominant-baseline="central">O &aacute;tomo de hoje &eacute; a cartografia do contencioso constitucional.</text>
+<text class="ts" x="340" y="832" text-anchor="middle" dominant-baseline="central">O cosmos de amanh&atilde; &eacute; INSERT.</text></g>
+
+<g class="c-amber"><rect x="30" y="848" width="620" height="52" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="866" text-anchor="middle" dominant-baseline="central">Princ&iacute;pio Final</text>
+<text class="ts" x="340" y="886" text-anchor="middle" dominant-baseline="central">A cartografia n&atilde;o apenas mapeia o passado &mdash; ela projeta o futuro.</text>
+<text class="ts" x="340" y="900" text-anchor="middle" dominant-baseline="central">O banco aprende; a ontologia decide o que pode virar conhecimento estrutural.</text></g>
+</svg>
+</div></div>
+
+<!-- ══ PRIMITIVOS ══ -->
+<div id="view-primitivos" class="view"><div class="card">
+<svg viewBox="0 0 680 560">
+<g class="c-blue"><rect x="30" y="20" width="620" height="28" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central">4 primitivos universais &mdash; schema fixo, nunca muda</text></g>
+
+<g class="c-teal"><rect x="30" y="64" width="295" height="150" rx="8" stroke-width="0.5"/>
+<text class="th" x="177" y="86" text-anchor="middle" dominant-baseline="central">objects</text>
+<text class="ts" x="50" y="108" dominant-baseline="central">id              uuid PK</text>
+<text class="ts" x="50" y="124" dominant-baseline="central">slug            text UNIQUE</text>
+<text class="ts" x="50" y="140" dominant-baseline="central">type_slug       FK &rarr; object_types</text>
+<text class="ts" x="50" y="156" dominant-baseline="central">payload         jsonb</text>
+<text class="ts" x="50" y="172" dominant-baseline="central">hash_content    text</text>
+<text class="ts" x="50" y="188" dominant-baseline="central">valid_from/to   timestamptz</text>
+<text class="ts" x="50" y="204" dominant-baseline="central">recorded_at     timestamptz</text></g>
+
+<g class="c-purple"><rect x="355" y="64" width="295" height="150" rx="8" stroke-width="0.5"/>
+<text class="th" x="502" y="86" text-anchor="middle" dominant-baseline="central">actors</text>
+<text class="ts" x="375" y="108" dominant-baseline="central">id              uuid PK</text>
+<text class="ts" x="375" y="124" dominant-baseline="central">slug            text UNIQUE</text>
+<text class="ts" x="375" y="140" dominant-baseline="central">type_slug       FK &rarr; actor_types</text>
+<text class="ts" x="375" y="156" dominant-baseline="central">payload         jsonb</text>
+<text class="ts" x="375" y="172" dominant-baseline="central">dedup_hash      text</text>
+<text class="ts" x="375" y="188" dominant-baseline="central">valid_from/to   timestamptz</text>
+<text class="ts" x="375" y="204" dominant-baseline="central">recorded_at     timestamptz</text></g>
+
+<g class="c-coral"><rect x="30" y="234" width="295" height="150" rx="8" stroke-width="0.5"/>
+<text class="th" x="177" y="256" text-anchor="middle" dominant-baseline="central">events &mdash; append-only, imut&aacute;vel</text>
+<text class="ts" x="50" y="278" dominant-baseline="central">event_id        uuid PK</text>
+<text class="ts" x="50" y="294" dominant-baseline="central">type_slug       FK &rarr; event_types</text>
+<text class="ts" x="50" y="310" dominant-baseline="central">aggregate_id    uuid (object/actor)</text>
+<text class="ts" x="50" y="326" dominant-baseline="central">actor_id        uuid NOT NULL</text>
+<text class="ts" x="50" y="342" dominant-baseline="central">payload         jsonb</text>
+<text class="ts" x="50" y="358" dominant-baseline="central">causation_id    uuid FK &rarr; events</text>
+<text class="ts" x="50" y="374" dominant-baseline="central">occurred_at     timestamptz</text></g>
+
+<g class="c-blue"><rect x="355" y="234" width="295" height="150" rx="8" stroke-width="0.5"/>
+<text class="th" x="502" y="256" text-anchor="middle" dominant-baseline="central">edges &mdash; grafo tipado universal</text>
+<text class="ts" x="375" y="278" dominant-baseline="central">edge_id         uuid PK</text>
+<text class="ts" x="375" y="294" dominant-baseline="central">type_slug       FK &rarr; edge_types</text>
+<text class="ts" x="375" y="310" dominant-baseline="central">source_id       uuid NOT NULL</text>
+<text class="ts" x="375" y="326" dominant-baseline="central">target_id       uuid NOT NULL</text>
+<text class="ts" x="375" y="342" dominant-baseline="central">weight          float</text>
+<text class="ts" x="375" y="358" dominant-baseline="central">valid_from/to   timestamptz</text>
+<text class="ts" x="375" y="374" dominant-baseline="central">causation_event uuid</text></g>
+
+<g class="c-gray"><rect x="30" y="404" width="620" height="44" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="418" text-anchor="middle" dominant-baseline="central">toda entidade &eacute; inst&acirc;ncia de um destes quatro</text>
+<text class="ts" x="340" y="438" text-anchor="middle" dominant-baseline="central">constituicao = object &middot; ministro = actor &middot; julgamento = event &middot; interpreta = edge &middot; argumento = object</text></g>
+
+<g class="c-blue"><rect x="30" y="464" width="620" height="72" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="482" text-anchor="middle" dominant-baseline="central">identidade dual + tr&ecirc;s tempos</text>
+<text class="ts" x="340" y="502" text-anchor="middle" dominant-baseline="central">UUID = identidade interna irredut&iacute;vel &middot; Slug = identidade p&uacute;blica leg&iacute;vel</text>
+<text class="ts" x="340" y="518" text-anchor="middle" dominant-baseline="central">occurred_at (mundo real) &middot; valid_from/to (vig&ecirc;ncia) &middot; recorded_at (sistema)</text>
+<text class="ts" x="340" y="534" text-anchor="middle" dominant-baseline="central">rela&ccedil;&otilde;es ancoram em UUID &middot; interfaces exp&otilde;em slugs</text></g>
+</svg>
+</div></div>
+
+<!-- ══ TAXONOMIAS ══ -->
+<div id="view-taxonomias" class="view"><div class="card">
+<svg viewBox="0 0 680 580">
+<g class="c-blue"><rect x="30" y="20" width="620" height="28" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central">taxonomias vivas &mdash; dados, nunca enums &mdash; cada uma com sua classe</text></g>
+
+<g class="c-teal"><rect x="30" y="64" width="200" height="100" rx="7" stroke-width="0.5"/>
+<text class="th" x="130" y="82" text-anchor="middle" dominant-baseline="central">object_types</text>
+<text class="ts" x="130" y="102" text-anchor="middle" dominant-baseline="central">+ ontological_class</text>
+<text class="ts" x="130" y="118" text-anchor="middle" dominant-baseline="central">estrutural &middot; processual</text>
+<text class="ts" x="130" y="134" text-anchor="middle" dominant-baseline="central">semantico &middot; editorial</text>
+<text class="ts" x="130" y="150" text-anchor="middle" dominant-baseline="central">argumentativo &middot; analitico &middot; preditivo</text></g>
+
+<g class="c-purple"><rect x="240" y="64" width="200" height="100" rx="7" stroke-width="0.5"/>
+<text class="th" x="340" y="82" text-anchor="middle" dominant-baseline="central">actor_types</text>
+<text class="ts" x="340" y="102" text-anchor="middle" dominant-baseline="central">+ actor_class</text>
+<text class="ts" x="340" y="122" text-anchor="middle" dominant-baseline="central">institucional</text>
+<text class="ts" x="340" y="138" text-anchor="middle" dominant-baseline="central">automatizado</text></g>
+
+<g class="c-coral"><rect x="450" y="64" width="200" height="100" rx="7" stroke-width="0.5"/>
+<text class="th" x="550" y="82" text-anchor="middle" dominant-baseline="central">event_types</text>
+<text class="ts" x="550" y="102" text-anchor="middle" dominant-baseline="central">+ event_class</text>
+<text class="ts" x="550" y="122" text-anchor="middle" dominant-baseline="central">juridico &middot; normativo</text>
+<text class="ts" x="550" y="138" text-anchor="middle" dominant-baseline="central">manutencao &middot; fiscal</text></g>
+
+<g class="c-blue"><rect x="30" y="184" width="410" height="116" rx="7" stroke-width="0.5"/>
+<text class="th" x="235" y="202" text-anchor="middle" dominant-baseline="central">edge_types + epistemic_class</text>
+<text class="ts" x="235" y="222" text-anchor="middle" dominant-baseline="central">estrutural &middot; normativa &middot; interpretativa</text>
+<text class="ts" x="235" y="238" text-anchor="middle" dominant-baseline="central">classificatoria &middot; editorial &middot; institucional</text>
+<text class="ts" x="235" y="254" text-anchor="middle" dominant-baseline="central">argumentativa &middot; fiscal &middot; preditiva</text>
+<text class="ts" x="235" y="278" text-anchor="middle" dominant-baseline="central">+ allows_multiple &middot; weight_semantics &middot; weight_required</text>
+<text class="ts" x="235" y="294" text-anchor="middle" dominant-baseline="central">source [verbo] target &mdash; sempre</text></g>
+
+<g class="c-amber"><rect x="450" y="184" width="200" height="116" rx="7" stroke-width="0.5"/>
+<text class="th" x="550" y="202" text-anchor="middle" dominant-baseline="central">state_types</text>
+<text class="ts" x="550" y="222" text-anchor="middle" dominant-baseline="central">PK composta:</text>
+<text class="ts" x="550" y="238" text-anchor="middle" dominant-baseline="central">(type_slug, object_type)</text>
+<text class="ts" x="550" y="262" text-anchor="middle" dominant-baseline="central">vigente &middot; suspensa &middot; revogada</text>
+<text class="ts" x="550" y="278" text-anchor="middle" dominant-baseline="central">distribuida &middot; pautada</text>
+<text class="ts" x="550" y="294" text-anchor="middle" dominant-baseline="central">julgada &middot; transitada</text></g>
+
+<g class="c-gray"><rect x="30" y="320" width="620" height="52" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="338" text-anchor="middle" dominant-baseline="central">dom&iacute;nio &ne; classe ontol&oacute;gica</text>
+<text class="ts" x="340" y="358" text-anchor="middle" dominant-baseline="central">dom&iacute;nio = a que sistema pertence &middot; classe = o que &eacute; &middot; epist&ecirc;mica = que tipo de verdade</text></g>
+
+<g class="c-teal"><rect x="30" y="392" width="620" height="80" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="410" text-anchor="middle" dominant-baseline="central">sinais decis&oacute;rios obrigat&oacute;rios no julgamento</text>
+<text class="ts" x="340" y="430" text-anchor="middle" dominant-baseline="central">outcome &middot; outcome_polarity &middot; decision_unanimity &middot; merits_reached</text>
+<text class="ts" x="340" y="446" text-anchor="middle" dominant-baseline="central">decision_direction &middot; rights_effect &middot; uses_modulation &middot; reasoning_style</text>
+<text class="ts" x="340" y="462" text-anchor="middle" dominant-baseline="central">decision_body &middot; adjudication_environment &middot; fiscal_effect &middot; extraction_method &middot; confidence</text></g>
+
+<g class="c-amber"><rect x="30" y="492" width="620" height="60" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="510" text-anchor="middle" dominant-baseline="central">payload &eacute; conven&ccedil;&atilde;o, n&atilde;o schema</text>
+<text class="ts" x="340" y="530" text-anchor="middle" dominant-baseline="central">estrutura definida por type_slug &middot; valida&ccedil;&atilde;o no pipeline &middot; rastreabilidade obrigat&oacute;ria</text>
+<text class="ts" x="340" y="546" text-anchor="middle" dominant-baseline="central">fonte de verdade: text_content, sibling_order &middot; cache: path_slug, depth_level, is_leaf</text></g>
+</svg>
+</div></div>
+
+<!-- ══ ECOLOGIA ══ -->
+<div id="view-ecologia" class="view"><div class="card">
+<svg viewBox="0 0 680 600">
+<g class="c-blue"><rect x="30" y="20" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="32" text-anchor="middle" dominant-baseline="central">vida processual + ecologia decis&oacute;ria + ambiente institucional</text>
+<text class="ts" x="340" y="48" text-anchor="middle" dominant-baseline="central">processo = linha de vida &middot; evento = acontecimento &middot; estado = s&iacute;ntese derivada</text></g>
+
+<g class="c-teal"><rect x="30" y="72" width="192" height="80" rx="7" stroke-width="0.5"/>
+<text class="th" x="126" y="90" text-anchor="middle" dominant-baseline="central">contrato m&iacute;nimo</text>
+<text class="ts" x="126" y="110" text-anchor="middle" dominant-baseline="central">1 relator (obr)</text>
+<text class="ts" x="126" y="126" text-anchor="middle" dominant-baseline="central">1 &oacute;rg&atilde;o (obr)</text>
+<text class="ts" x="126" y="142" text-anchor="middle" dominant-baseline="central">1 ambiente (obr)</text></g>
+
+<g class="c-purple"><rect x="234" y="72" width="192" height="80" rx="7" stroke-width="0.5"/>
+<text class="th" x="330" y="90" text-anchor="middle" dominant-baseline="central">ambiente</text>
+<text class="ts" x="330" y="110" text-anchor="middle" dominant-baseline="central">virtual &middot; presencial &middot; h&iacute;brido</text>
+<text class="ts" x="330" y="126" text-anchor="middle" dominant-baseline="central">s&iacute;ncrono &middot; ass&iacute;ncrono &middot; misto</text>
+<text class="ts" x="330" y="142" text-anchor="middle" dominant-baseline="central">can&ocirc;nico via v_judgment_env</text></g>
+
+<g class="c-coral"><rect x="438" y="72" width="212" height="80" rx="7" stroke-width="0.5"/>
+<text class="th" x="544" y="90" text-anchor="middle" dominant-baseline="central">atores relevantes</text>
+<text class="ts" x="544" y="110" text-anchor="middle" dominant-baseline="central">divergente &middot; vista &middot; destaque</text>
+<text class="ts" x="544" y="126" text-anchor="middle" dominant-baseline="central">AGU &middot; PGR &middot; amicus</text>
+<text class="ts" x="544" y="142" text-anchor="middle" dominant-baseline="central">payload resume; edges explicam</text></g>
+
+<g class="c-amber"><rect x="30" y="172" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="184" text-anchor="middle" dominant-baseline="central">14 correla&ccedil;&otilde;es obrigat&oacute;rias</text>
+<text class="ts" x="340" y="200" text-anchor="middle" dominant-baseline="central">relator&times;ambiente &middot; &oacute;rg&atilde;o&times;ambiente &middot; tema&times;ambiente &middot; resultado&times;ambiente &middot; fiscal&times;atores ...</text></g>
+
+<g class="c-green"><rect x="30" y="228" width="300" height="100" rx="7" stroke-width="0.5"/>
+<text class="th" x="180" y="246" text-anchor="middle" dominant-baseline="central">views de vida processual</text>
+<text class="ts" x="180" y="268" text-anchor="middle" dominant-baseline="central">v_process_lifecycle</text>
+<text class="ts" x="180" y="284" text-anchor="middle" dominant-baseline="central">v_process_trajectory_patterns</text>
+<text class="ts" x="180" y="300" text-anchor="middle" dominant-baseline="central">v_judgment_ecology</text>
+<text class="ts" x="180" y="316" text-anchor="middle" dominant-baseline="central">v_collegial_dynamics</text></g>
+
+<g class="c-blue"><rect x="350" y="228" width="300" height="100" rx="7" stroke-width="0.5"/>
+<text class="th" x="500" y="246" text-anchor="middle" dominant-baseline="central">f&oacute;rmulas de vida</text>
+<text class="ts" x="500" y="268" text-anchor="middle" dominant-baseline="central">DVP = dura&ccedil;&atilde;o da vida processual</text>
+<text class="ts" x="500" y="284" text-anchor="middle" dominant-baseline="central">IIP = &iacute;ndice de interrup&ccedil;&atilde;o</text>
+<text class="ts" x="500" y="300" text-anchor="middle" dominant-baseline="central">ICT = complexidade da trajet&oacute;ria</text>
+<text class="ts" x="500" y="316" text-anchor="middle" dominant-baseline="central">TCVP = convers&atilde;o virtual&rarr;presencial</text></g>
+
+<g class="c-gray"><rect x="30" y="348" width="620" height="44" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="364" text-anchor="middle" dominant-baseline="central">4 planos temporais</text>
+<text class="ts" x="340" y="382" text-anchor="middle" dominant-baseline="central">occurred_at (acontecimento) &middot; valid_from/to (validade) &middot; recorded_at (registro) &middot; sequ&ecirc;ncia (trajet&oacute;ria)</text></g>
+
+<g class="c-red"><rect x="30" y="412" width="620" height="60" rx="7" stroke-width="0.5"/>
+<text class="th" x="340" y="430" text-anchor="middle" dominant-baseline="central">regras</text>
+<text class="ts" x="340" y="450" text-anchor="middle" dominant-baseline="central">nenhuma linha de v_judgment_ecology sem relator + &oacute;rg&atilde;o + ambiente + panel_size + votes_present</text>
+<text class="ts" x="340" y="466" text-anchor="middle" dominant-baseline="central">tempo e ambiente s&atilde;o dimens&otilde;es constitutivas do evento, n&atilde;o contexto externo</text></g>
+
+<g class="c-teal"><rect x="30" y="492" width="620" height="80" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="512" text-anchor="middle" dominant-baseline="central">princ&iacute;pio final da ecologia</text>
+<text class="ts" x="340" y="534" text-anchor="middle" dominant-baseline="central">o acontecimento decis&oacute;rio &eacute; uma ecologia institucional temporalmente situada,</text>
+<text class="ts" x="340" y="550" text-anchor="middle" dominant-baseline="central">e n&atilde;o uma rela&ccedil;&atilde;o bin&aacute;ria entre processo e resultado.</text>
+<text class="ts" x="340" y="566" text-anchor="middle" dominant-baseline="central">o corpus ensina a ontologia; a ontologia n&atilde;o se redefine sozinha.</text></g>
+</svg>
+</div></div>
+
+<!-- ══ AUTOENSINO ══ -->
+<div id="view-autoensino" class="view"><div class="card">
+<svg viewBox="0 0 680 540">
+<defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="var(--t)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="c-coral"><rect x="200" y="20" width="280" height="44" rx="10" stroke-width="0.5"/>
+<text class="th" x="340" y="36" text-anchor="middle" dominant-baseline="central">decis&otilde;es novas</text>
+<text class="ts" x="340" y="54" text-anchor="middle" dominant-baseline="central">ingest&atilde;o cont&iacute;nua do corpus</text></g>
+<line x1="340" y1="64" x2="340" y2="88" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a2)"/>
+
+<g class="c-teal"><rect x="30" y="88" width="295" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="177" y="104" text-anchor="middle" dominant-baseline="central">extra&ccedil;&atilde;o de sinais</text>
+<text class="ts" x="177" y="122" text-anchor="middle" dominant-baseline="central">outcome &middot; direction &middot; modulation &middot; fiscal</text></g>
+
+<g class="c-purple"><rect x="355" y="88" width="295" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="502" y="104" text-anchor="middle" dominant-baseline="central">agrega&ccedil;&atilde;o</text>
+<text class="ts" x="502" y="122" text-anchor="middle" dominant-baseline="central">por relator &middot; por &oacute;rg&atilde;o &middot; por ambiente</text></g>
+<line x1="340" y1="132" x2="340" y2="156" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a2)"/>
+
+<g class="c-blue"><rect x="130" y="156" width="420" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="340" y="172" text-anchor="middle" dominant-baseline="central">detec&ccedil;&atilde;o de regularidades</text>
+<text class="ts" x="340" y="190" text-anchor="middle" dominant-baseline="central">frequ&ecirc;ncias &middot; desvios &middot; clusters &middot; correla&ccedil;&otilde;es &middot; anomalias</text></g>
+<line x1="340" y1="200" x2="340" y2="224" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a2)"/>
+
+<g class="c-amber"><rect x="130" y="224" width="420" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="340" y="240" text-anchor="middle" dominant-baseline="central">gera&ccedil;&atilde;o de hip&oacute;tese</text>
+<text class="ts" x="340" y="258" text-anchor="middle" dominant-baseline="central">"Relator X modula mais em virtual nos &uacute;ltimos 18 meses"</text></g>
+<line x1="340" y1="268" x2="340" y2="292" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a2)"/>
+
+<g class="c-red"><rect x="80" y="292" width="520" height="80" rx="10" stroke-width="0.8"/>
+<text class="th" x="340" y="312" text-anchor="middle" dominant-baseline="central">MEMBRANA ONTOL&Oacute;GICA</text>
+<text class="ts" x="340" y="334" text-anchor="middle" dominant-baseline="central">N&iacute;vel 1: observa&ccedil;&atilde;o livre &middot; N&iacute;vel 2: proposta controlada &middot; N&iacute;vel 3: incorpora&ccedil;&atilde;o condicionada</text>
+<text class="ts" x="340" y="354" text-anchor="middle" dominant-baseline="central">recorr&ecirc;ncia m&iacute;nima &middot; estabilidade temporal &middot; ganho preditivo &middot; compatibilidade ontol&oacute;gica</text></g>
+<line x1="340" y1="372" x2="340" y2="396" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a2)"/>
+
+<g class="c-green"><rect x="30" y="396" width="295" height="56" rx="7" stroke-width="0.5"/>
+<text class="th" x="177" y="414" text-anchor="middle" dominant-baseline="central">learned_decision_profiles</text>
+<text class="ts" x="177" y="434" text-anchor="middle" dominant-baseline="central">relator &middot; orgao &middot; relator_orgao</text>
+<text class="ts" x="177" y="446" text-anchor="middle" dominant-baseline="central">relator_env &middot; orgao_env</text></g>
+
+<g class="c-green"><rect x="355" y="396" width="295" height="56" rx="7" stroke-width="0.5"/>
+<text class="th" x="502" y="414" text-anchor="middle" dominant-baseline="central">ontology_proposals</text>
+<text class="ts" x="502" y="434" text-anchor="middle" dominant-baseline="central">proposed &rarr; validated &rarr; incorporated</text>
+<text class="ts" x="502" y="446" text-anchor="middle" dominant-baseline="central">ou rejected &middot; ou superseded</text></g>
+
+<g class="c-gray"><rect x="30" y="472" width="620" height="44" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="488" text-anchor="middle" dominant-baseline="central">core fixo: 4 primitivos + identidade + classes + provenance &mdash; NUNCA muda</text>
+<text class="ts" x="340" y="508" text-anchor="middle" dominant-baseline="central">autoensn&aacute;vel: perfis + clusters + features &mdash; muda por INSERT, mediado pela membrana</text></g>
+</svg>
+</div></div>
+
+<!-- ══ EXPANSÃO ══ -->
+<div id="view-expansao" class="view"><div class="card">
+<svg viewBox="0 0 680 540">
+<defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="var(--t)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="c-gray"><rect x="30" y="20" width="620" height="28" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central">expans&atilde;o &mdash; sempre INSERT, nunca redesenho</text></g>
+
+<g class="c-amber"><rect x="30" y="64" width="295" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="177" y="80" text-anchor="middle" dominant-baseline="central">passo 1 &mdash; INSERT domains</text>
+<text class="ts" x="177" y="98" text-anchor="middle" dominant-baseline="central">novo sistema institucional</text></g>
+<g class="c-blue"><rect x="355" y="64" width="295" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="502" y="80" text-anchor="middle" dominant-baseline="central">passo 2 &mdash; INSERT *_types</text>
+<text class="ts" x="502" y="98" text-anchor="middle" dominant-baseline="central">vocabul&aacute;rio + classes</text></g>
+<line x1="340" y1="108" x2="340" y2="128" stroke="var(--t)" stroke-width="1" fill="none" marker-end="url(#a3)"/>
+
+<g class="c-teal"><rect x="30" y="128" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="142" text-anchor="middle" dominant-baseline="central">fase 1 &mdash; hoje &middot; CF-1988 + STF + pol&iacute;edro m&iacute;nimo</text>
+<text class="ts" x="340" y="156" text-anchor="middle" dominant-baseline="central">2 dom&iacute;nios &middot; objects normativos + jur&iacute;dicos &middot; actors(ministros) &middot; edges(cross)</text></g>
+<line x1="340" y1="164" x2="340" y2="184" stroke="var(--teal)" stroke-width="1.5" fill="none" marker-end="url(#a3)"/>
+
+<g class="c-purple"><rect x="30" y="184" width="620" height="44" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="200" text-anchor="middle" dominant-baseline="central">fase 2 &mdash; Executivo + AGU + PGR + MP</text>
+<text class="ts" x="340" y="218" text-anchor="middle" dominant-baseline="central">INSERT domains + actor_types + edge_types + fatos</text></g>
+<line x1="340" y1="228" x2="340" y2="248" stroke="var(--purple)" stroke-width="1.5" fill="none" marker-end="url(#a3)"/>
+
+<g class="c-amber"><rect x="30" y="248" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="262" text-anchor="middle" dominant-baseline="central">fase 3 &mdash; CNJ + STJ + TST + TCU</text>
+<text class="ts" x="340" y="276" text-anchor="middle" dominant-baseline="central">INSERT domains + actor_types + fatos &middot; mesmo schema</text></g>
+<line x1="340" y1="284" x2="340" y2="304" stroke="var(--amber)" stroke-width="1.5" fill="none" marker-end="url(#a3)"/>
+
+<g class="c-coral"><rect x="30" y="304" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="318" text-anchor="middle" dominant-baseline="central">fase 4 &mdash; Justi&ccedil;a Federal + Estadual</text>
+<text class="ts" x="340" y="332" text-anchor="middle" dominant-baseline="central">INSERT domains + object_types + fatos &middot; mesmo schema</text></g>
+<line x1="340" y1="340" x2="340" y2="360" stroke="var(--coral)" stroke-width="1.5" fill="none" marker-end="url(#a3)"/>
+
+<g class="c-blue"><rect x="30" y="360" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="374" text-anchor="middle" dominant-baseline="central">fase 5 &mdash; Legislativo completo</text>
+<text class="ts" x="340" y="388" text-anchor="middle" dominant-baseline="central">INSERT domains + object_types + actor_types + fatos</text></g>
+<line x1="340" y1="396" x2="340" y2="416" stroke="var(--blue)" stroke-width="1.5" fill="none" marker-end="url(#a3)"/>
+
+<g class="c-gray"><rect x="30" y="416" width="620" height="36" rx="6" stroke-width="0.5"/>
+<text class="th" x="340" y="430" text-anchor="middle" dominant-baseline="central">fase N &mdash; cosmos</text>
+<text class="ts" x="340" y="444" text-anchor="middle" dominant-baseline="central">IA como ator &middot; direito supranacional &middot; soft law &middot; mesmo schema</text></g>
+
+<g class="c-teal"><rect x="30" y="472" width="620" height="44" rx="7" stroke-width="0.5"/>
+<text class="th" x="340" y="488" text-anchor="middle" dominant-baseline="central">invariante de expans&atilde;o</text>
+<text class="ts" x="340" y="508" text-anchor="middle" dominant-baseline="central">nunca ALTER TABLE &middot; nunca redesenho &middot; nunca partir do zero &middot; o cosmos de amanh&atilde; &eacute; INSERT</text></g>
+</svg>
+</div></div>
+
+<div class="footer">
+  <p><strong>Protocolo Ontol&oacute;gico Universal</strong></p>
+  <p class="name">Damares Medina &middot; v9 &middot; 2026</p>
+</div>
+
+<script>
+const keys=['arquitetura','primitivos','taxonomias','ecologia','autoensino','expansao'];
+function show(v){
+  document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(el=>el.classList.remove('active'));
+  const el=document.getElementById('view-'+v);
+  if(el){el.classList.add('active');el.style.animation='none';el.offsetHeight;el.style.animation=''}
+  const idx=keys.indexOf(v);
+  if(idx>=0)document.querySelectorAll('.tab')[idx].classList.add('active');
+}
+document.querySelectorAll('.tab').forEach((el,i)=>{el.onclick=()=>show(keys[i])});
+function tip(e,text){
+  const t=document.getElementById('tooltip');
+  t.textContent=text;t.style.opacity='1';
+  t.style.left=Math.min(e.clientX+12,window.innerWidth-320)+'px';
+  t.style.top=(e.clientY-10)+'px';
+  setTimeout(()=>t.style.opacity='0',3500);
+}
+document.addEventListener('click',e=>{if(!e.target.closest('.expandable'))document.getElementById('tooltip').style.opacity='0'});
+</script>
+</body>
+</html>

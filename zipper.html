@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CF/88 × STF — Visualizador Zíper</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --cf: #1a1a2e;
+  --cf-mid: #2d2d4e;
+  --cf-light: #e8e8f0;
+  --dec: #0f2027;
+  --dec-mid: #1e3a4a;
+  --dec-light: #e6f0f4;
+  --spine: #c8a96e;
+  --spine-light: #f5e6c8;
+  --cc: #1a4a7a;
+  --rg: #1a5c2e;
+  --jc: #3a2a6e;
+  --sv: #7a1a1a;
+  --sv-bg: #fff0f0;
+  --cc-bg: #f0f5ff;
+  --rg-bg: #f0fff5;
+  --jc-bg: #f5f0ff;
+  --text: #1a1a2e;
+  --muted: #6b6b8a;
+  --border: rgba(26,26,46,0.1);
+  --bg: #fafaf7;
+  --card-bg: #ffffff;
+  --serif: 'Crimson Pro', Georgia, serif;
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── Header ── */
+.site-header {
+  background: var(--cf);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--spine);
+  position: sticky;
+  top: 38px;
+  z-index: 100;
+}
+.site-title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: .03em;
+}
+.site-title strong { font-weight: 600; color: var(--spine); }
+.site-meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(255,255,255,.5);
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* ── Coluna headers ── */
+.col-headers {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  padding: 0 0 0 0;
+  border-bottom: 1px solid var(--border);
+  background: white;
+  position: sticky;
+  top: 52px;
+  z-index: 99;
+}
+.col-label {
+  padding: .6rem 1.5rem;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.col-label.right { justify-content: flex-end; border-left: 1px solid var(--border); }
+.col-label-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.dot-cf { background: var(--cf); }
+.dot-dec { background: var(--spine); }
+
+/* ── Spine ── */
+.spine-header {
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Main grid ── */
+.zipper-main {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  min-height: calc(100vh - 100px);
+}
+
+/* ── CF Column ── */
+.col-cf {
+  padding: 2rem 1.5rem 4rem 2rem;
+  border-right: 1px solid var(--border);
+}
+
+/* ── Spine ── */
+.col-spine {
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 0;
+  position: relative;
+}
+.spine-track {
+  width: 1px;
+  background: linear-gradient(to bottom, var(--spine), rgba(200,169,110,.2));
+  flex: 1;
+  margin: 0 auto;
+}
+
+/* ── Dec Column ── */
+.col-dec {
+  padding: 2rem 2rem 4rem 1.5rem;
+}
+
+/* ── Dispositivo ── */
+.disp-group {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+.disp-section-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--spine);
+  margin-bottom: .5rem;
+  font-weight: 500;
+}
+.disp-titulo {
+  font-family: var(--serif);
+  font-size: .8rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: .02em;
+  margin-bottom: .4rem;
+  font-style: italic;
+}
+.disp-caput {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--cf);
+  line-height: 1.7;
+  margin-bottom: .5rem;
+}
+.disp-caput strong { font-weight: 600; }
+.disp-inciso {
+  font-family: var(--serif);
+  font-size: .95rem;
+  color: var(--cf-mid);
+  margin: .3rem 0 .3rem 1.4rem;
+  line-height: 1.65;
+  position: relative;
+}
+.disp-inciso::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: .6em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--spine);
+  opacity: .6;
+}
+.disp-par {
+  font-family: var(--serif);
+  font-size: .9rem;
+  color: var(--muted);
+  margin: .4rem 0 .4rem .8rem;
+  line-height: 1.65;
+  border-left: 2px solid var(--spine-light);
+  padding-left: .6rem;
+  font-style: italic;
+}
+.disp-alinea {
+  font-family: var(--serif);
+  font-size: .88rem;
+  color: var(--cf-mid);
+  margin: .25rem 0 .25rem 2.2rem;
+  line-height: 1.6;
+}
+
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .6rem;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--spine);
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--spine-light);
+  border-radius: 3px;
+  padding: .25rem .6rem;
+  letter-spacing: .04em;
+  transition: all .15s;
+}
+.toggle-btn:hover {
+  background: var(--spine-light);
+  border-color: var(--spine);
+}
+.toggle-btn .arrow { transition: transform .2s; display: inline-block; }
+.toggle-btn.open .arrow { transform: rotate(90deg); }
+.n-decisoes { font-weight: 500; }
+
+/* ── Decisões ── */
+.dec-section {
+  margin-bottom: 2rem;
+}
+.dec-section-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: .75rem;
+  padding-bottom: .35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.dec-card {
+  margin-bottom: .75rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: box-shadow .15s;
+}
+.dec-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+
+.dec-card-head {
+  padding: .4rem .75rem;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+.dec-card-head .locus {
+  font-size: 8.5px;
+  opacity: .7;
+  letter-spacing: .04em;
+}
+
+.dec-card.cc .dec-card-head { background: var(--cc-bg); color: var(--cc); border-bottom: 1px solid rgba(26,74,122,.12); }
+.dec-card.rg .dec-card-head { background: var(--rg-bg); color: var(--rg); border-bottom: 1px solid rgba(26,92,46,.12); }
+.dec-card.jc .dec-card-head { background: var(--jc-bg); color: var(--jc); border-bottom: 1px solid rgba(58,42,110,.12); }
+.dec-card.sv .dec-card-head { background: var(--sv-bg); color: var(--sv); border-bottom: 1px solid rgba(122,26,26,.12); }
+
+.dec-card-body {
+  padding: .65rem .75rem .55rem;
+  background: var(--card-bg);
+}
+.dec-conteudo {
+  font-family: var(--serif);
+  font-size: .9rem;
+  color: var(--text);
+  line-height: 1.65;
+  max-height: 120px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height .3s ease;
+}
+.dec-conteudo.expanded { max-height: 2000px; }
+.dec-conteudo:not(.expanded)::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 40px;
+  background: linear-gradient(transparent, white);
+}
+.dec-ref {
+  margin-top: .45rem;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.dec-ref a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.dec-expand {
+  display: inline-block;
+  margin-top: .3rem;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--spine);
+  cursor: pointer;
+  letter-spacing: .04em;
+}
+.dec-expand:hover { text-decoration: underline; }
+
+/* ── Placeholder ── */
+.placeholder {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--muted);
+}
+.placeholder-icon {
+  font-size: 2rem;
+  margin-bottom: .75rem;
+  opacity: .3;
+}
+.placeholder p {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ── Legenda ── */
+.legenda {
+  padding: .75rem 2rem;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.leg-item {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+.leg-dot {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+}
+.leg-cc { background: var(--cc); }
+.leg-rg { background: var(--rg); }
+.leg-jc { background: var(--jc); }
+.leg-sv { background: var(--sv); }
+.leg-total {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: .06em;
+}
+
+/* ── Artigo nav ── */
+.art-nav {
+  padding: .75rem 2rem;
+  background: var(--cf-light);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.art-nav-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: .25rem;
+}
+.art-pill {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: .2rem .5rem;
+  border-radius: 3px;
+  border: 1px solid rgba(26,26,46,.15);
+  background: white;
+  color: var(--cf-mid);
+  cursor: pointer;
+  transition: all .15s;
+  letter-spacing: .02em;
+}
+.art-pill:hover, .art-pill.ativo { background: var(--cf); color: white; border-color: var(--cf); }
+
+/* ── Page nav ICONS ── */
+.page-nav{background:rgb(13,24,40);border-bottom:1px solid rgba(184,134,11,.15);display:flex;align-items:center;justify-content:center;gap:4px;padding:6px 1rem;font-family:'DM Mono',monospace;font-size:10px;position:fixed;top:0;left:0;right:0;z-index:300}
+.page-nav a{color:rgba(245,240,232,.5);text-decoration:none;padding:5px 16px;border-radius:4px;border:1px solid rgba(245,240,232,.12);background:rgba(255,255,255,.03);transition:.15s;white-space:nowrap}
+.page-nav a:hover{color:rgba(245,240,232,.9);background:rgba(255,255,255,.08);border-color:rgba(245,240,232,.25)}
+.page-nav a.active{color:rgb(212,160,23);border-color:rgba(212,160,23,.4);background:rgba(212,160,23,.12);font-weight:500}
+.page-nav .nav-arrow{color:rgba(245,240,232,.25);padding:5px 10px;cursor:pointer;text-decoration:none;border:1px solid rgba(245,240,232,.08);background:rgba(255,255,255,.02)}
+.page-nav .nav-arrow:hover{color:rgba(245,240,232,.7);background:rgba(255,255,255,.06);border-color:rgba(245,240,232,.2)}
+
+/* ajuste body para nav fixo */
+body { padding-top: 38px; }
+</style>
+</head>
+<body>
+<nav class="page-nav"><a href="oscilacao_jurisprudencial.html" class="nav-arrow">&#8592;</a><a href="index.html">ICONS &middot; Cartografia do Contencioso Constitucional</a><a href="cartografia_stf.html">ICONS &middot; Cartografia</a><a href="oscilacao_jurisprudencial.html">ICONS &middot; Oscila&ccedil;&otilde;es Jurisprudenciais</a><a href="zipper.html" class="active">CF/88 &middot; Constitui&ccedil;&atilde;o e Jurisprud&ecirc;ncia</a><a href="index.html" class="nav-arrow">&#8594;</a></nav>
+
+
+<header class="site-header">
+  <div class="site-title">
+    <strong>CF/88 × STF</strong> — Constituição e Jurisprudência
+  </div>
+  <div class="site-meta">
+    Banco ICONS · 7.766 vínculos normativos<br>
+    126.545 registros jurisprudenciais
+  </div>
+</header>
+
+<div class="legenda">
+  <span class="art-nav-label">Filtro:</span>
+  <button class="art-pill ativo" onclick="filtrarArt(this,'todos')">Todos</button>
+  <button class="art-pill" onclick="filtrarArt(this,'1')">Art. 1º</button>
+  <button class="art-pill" onclick="filtrarArt(this,'2')">Art. 2º</button>
+  <button class="art-pill" onclick="filtrarArt(this,'5')">Art. 5º</button>
+  <button class="art-pill" onclick="filtrarArt(this,'37')">Art. 37</button>
+  <button class="art-pill" onclick="filtrarArt(this,'102')">Art. 102</button>
+  <div class="leg-total">▲ Clique em "N decisões" para abrir o zíper</div>
+</div>
+
+<div class="legenda">
+  <span class="leg-item"><span class="leg-dot leg-cc"></span>Controle concentrado</span>
+  <span class="leg-item"><span class="leg-dot leg-rg"></span>Repercussão geral</span>
+  <span class="leg-item"><span class="leg-dot leg-jc"></span>Julgados correlatos</span>
+  <span class="leg-item"><span class="leg-dot leg-sv"></span>Súmula vinculante</span>
+</div>
+
+<div class="col-headers">
+  <div class="col-label"><span class="col-label-dot dot-cf"></span>Texto constitucional — CF/88</div>
+  <div class="spine-header"></div>
+  <div class="col-label right">Jurisprudência do STF<span class="col-label-dot dot-dec"></span></div>
+</div>
+
+<div class="zipper-main">
+
+  <!-- COLUNA CF -->
+  <div class="col-cf" id="col-cf"></div>
+
+  <!-- ESPINHA -->
+  <div class="col-spine">
+    <div class="spine-track"></div>
+  </div>
+
+  <!-- COLUNA DECISÕES -->
+  <div class="col-dec" id="col-dec">
+    <div class="placeholder" id="placeholder">
+      <div class="placeholder-icon">⟷</div>
+      <p>Clique em "N decisões" ao lado do dispositivo constitucional<br>para abrir o zíper e ver a jurisprudência ancorada naquele locus.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ── Supabase config ───────────────────────────────────────────
+const SB_URL  = 'https://hetuhkhhppxjliiaerlu.supabase.co';
+const SB_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhldHVoa2hocHB4amxpaWFlcmx1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQxOTYzMTIsImV4cCI6MjA4OTc3MjMxMn0.r3U1CzYRdSwlsX7r-akYdNBPMc9Ec3ChShjC-ITyYi0';
+
+const CAMADA_MAP = {
+  controle_concentrado: { label: 'Controle concentrado', cls: 'cc' },
+  repercussao_geral:    { label: 'Repercussão geral',    cls: 'rg' },
+  julgados_correlatos:  { label: 'Julgado correlato',    cls: 'jc' },
+  sumula:               { label: 'Súmula',               cls: 'sv' },
+  sumula_vinculante:    { label: 'Súmula vinculante',     cls: 'sv' },
+};
+
+// Cache local — evita re-buscar o mesmo locus
+const cache = {};
+// Set de locus abertos
+const abertos = new Set();
+// Contagens por dispositivo (buscadas junto com os artigos)
+const contagens = {};
+
+// ── Estrutura da CF — todos os artigos ───────────────────────
+const CF = [
+  {
+    id: 'art-1',
+    label: 'Título I · Princípios Fundamentais',
+    titulo: 'Art. 1º — Estado Democrático de Direito',
+    caput: '<strong>Art. 1º</strong> A República Federativa do Brasil, formada pela união indissolúvel dos Estados e Municípios e do Distrito Federal, constitui-se em Estado Democrático de Direito e tem como fundamentos:',
+    incisos: [
+      { id:'inc-i',   texto:'I — a soberania;' },
+      { id:'inc-ii',  texto:'II — a cidadania;' },
+      { id:'inc-iii', texto:'III — a dignidade da pessoa humana;' },
+      { id:'inc-iv',  texto:'IV — os valores sociais do trabalho e da livre iniciativa;' },
+      { id:'inc-v',   texto:'V — o pluralismo político.' },
+    ],
+    pars: ['Parágrafo único. Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente, nos termos desta Constituição.']
+  },
+  {
+    id: 'art-2', label: null,
+    titulo: 'Art. 2º — Separação dos Poderes',
+    caput: '<strong>Art. 2º</strong> São Poderes da União, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.',
+    incisos: [], pars: []
+  },
+  {
+    id: 'art-3', label: null,
+    titulo: 'Art. 3º — Objetivos fundamentais',
+    caput: '<strong>Art. 3º</strong> Constituem objetivos fundamentais da República Federativa do Brasil:',
+    incisos: [
+      { id:'inc-i',   texto:'I — construir uma sociedade livre, justa e solidária;' },
+      { id:'inc-ii',  texto:'II — garantir o desenvolvimento nacional;' },
+      { id:'inc-iii', texto:'III — erradicar a pobreza e a marginalização e reduzir as desigualdades sociais e regionais;' },
+      { id:'inc-iv',  texto:'IV — promover o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação.' },
+    ],
+    pars: []
+  },
+  {
+    id: 'art-4', label: null,
+    titulo: 'Art. 4º — Relações internacionais',
+    caput: '<strong>Art. 4º</strong> A República Federativa do Brasil rege-se nas suas relações internacionais pelos seguintes princípios:',
+    incisos: [
+      { id:'inc-i',   texto:'I — independência nacional;' },
+      { id:'inc-ii',  texto:'II — prevalência dos direitos humanos;' },
+      { id:'inc-iii', texto:'III — autodeterminação dos povos;' },
+      { id:'inc-iv',  texto:'IV — não-intervenção;' },
+      { id:'inc-ix',  texto:'IX — cooperação entre os povos para o progresso da humanidade;' },
+      { id:'inc-x',   texto:'X — concessão de asilo político.' },
+    ],
+    pars: ['Parágrafo único. A República Federativa do Brasil buscará a integração econômica, política, social e cultural dos povos da América Latina, visando à formação de uma comunidade latino-americana de nações.']
+  },
+  {
+    id: 'art-5', label: 'Título II · Direitos e Garantias Fundamentais',
+    titulo: 'Art. 5º — Direitos e garantias individuais',
+    caput: '<strong>Art. 5º</strong> Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade, nos termos seguintes:',
+    incisos: [
+      { id:'inc-i',      texto:'I — homens e mulheres são iguais em direitos e obrigações;' },
+      { id:'inc-ii',     texto:'II — ninguém será obrigado a fazer ou deixar de fazer alguma coisa senão em virtude de lei;' },
+      { id:'inc-iii',    texto:'III — ninguém será submetido a tortura nem a tratamento desumano ou degradante;' },
+      { id:'inc-iv',     texto:'IV — é livre a manifestação do pensamento, sendo vedado o anonimato;' },
+      { id:'inc-vi',     texto:'VI — é inviolável a liberdade de consciência e de crença;' },
+      { id:'inc-ix',     texto:'IX — é livre a expressão da atividade intelectual, artística, científica e de comunicação;' },
+      { id:'inc-x',      texto:'X — são invioláveis a intimidade, a vida privada, a honra e a imagem das pessoas;' },
+      { id:'inc-xi',     texto:'XI — a casa é asilo inviolável do indivíduo;' },
+      { id:'inc-xii',    texto:'XII — é inviolável o sigilo da correspondência e das comunicações;' },
+      { id:'inc-xiii',   texto:'XIII — é livre o exercício de qualquer trabalho, ofício ou profissão;' },
+      { id:'inc-xvi',    texto:'XVI — todos podem reunir-se pacificamente, sem armas;' },
+      { id:'inc-xvii',   texto:'XVII — é plena a liberdade de associação para fins lícitos;' },
+      { id:'inc-xxii',   texto:'XXII — é garantido o direito de propriedade;' },
+      { id:'inc-xxiii',  texto:'XXIII — a propriedade atenderá a sua função social;' },
+      { id:'inc-xxxv',   texto:'XXXV — a lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito;' },
+      { id:'inc-xxxvi',  texto:'XXXVI — a lei não prejudicará o direito adquirido, o ato jurídico perfeito e a coisa julgada;' },
+      { id:'inc-xxxvii', texto:'XXXVII — não haverá juízo ou tribunal de exceção;' },
+      { id:'inc-xxxix',  texto:'XXXIX — não há crime sem lei anterior que o defina;' },
+      { id:'inc-xl',     texto:'XL — a lei penal não retroagirá, salvo para beneficiar o réu;' },
+      { id:'inc-xlii',   texto:'XLII — a prática do racismo constitui crime inafiançável e imprescritível;' },
+      { id:'inc-xlvi',   texto:'XLVI — a lei regulará a individualização da pena;' },
+      { id:'inc-xlvii',  texto:'XLVII — não haverá penas de morte, de caráter perpétuo ou cruéis;' },
+      { id:'inc-liii',   texto:'LIII — ninguém será processado senão pela autoridade competente;' },
+      { id:'inc-liv',    texto:'LIV — ninguém será privado da liberdade sem o devido processo legal;' },
+      { id:'inc-lv',     texto:'LV — são assegurados o contraditório e a ampla defesa;' },
+      { id:'inc-lvi',    texto:'LVI — são inadmissíveis as provas obtidas por meios ilícitos;' },
+      { id:'inc-lvii',   texto:'LVII — ninguém será considerado culpado até o trânsito em julgado;' },
+      { id:'inc-lxiii',  texto:'LXIII — o preso será informado de seus direitos, entre os quais o de permanecer calado;' },
+      { id:'inc-lxviii', texto:'LXVIII — conceder-se-á habeas corpus sempre que alguém sofrer coação em sua liberdade;' },
+      { id:'inc-lxix',   texto:'LXIX — conceder-se-á mandado de segurança para proteger direito líquido e certo;' },
+      { id:'inc-lxxi',   texto:'LXXI — conceder-se-á mandado de injunção sempre que a falta de norma regulamentadora torne inviável o exercício de direitos constitucionais;' },
+      { id:'inc-lxxiii', texto:'LXXIII — qualquer cidadão é parte legítima para propor ação popular;' },
+      { id:'inc-lxxviii',texto:'LXXVIII — a todos são assegurados a razoável duração do processo e os meios que garantam a celeridade de sua tramitação.' },
+    ],
+    pars: [
+      '§ 1º As normas definidoras dos direitos e garantias fundamentais têm aplicação imediata.',
+      '§ 2º Os direitos e garantias expressos nesta Constituição não excluem outros decorrentes do regime e dos princípios por ela adotados, ou dos tratados internacionais em que a República Federativa do Brasil seja parte.',
+    ]
+  },
+  {
+    id: 'art-37', label: 'Título III · Da Organização do Estado',
+    titulo: 'Art. 37 — Administração pública',
+    caput: '<strong>Art. 37</strong> A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência.',
+    incisos: [
+      { id:'inc-i',    texto:'I — cargos, empregos e funções públicas são acessíveis aos brasileiros que preencham os requisitos estabelecidos em lei;' },
+      { id:'inc-ii',   texto:'II — a investidura em cargo ou emprego público depende de aprovação prévia em concurso público;' },
+      { id:'inc-iv',   texto:'IV — durante o prazo improrrogável previsto no edital de convocação, o aprovado em concurso público poderá ser convocado para assumir o cargo;' },
+      { id:'inc-xi',   texto:'XI — a remuneração e o subsídio dos ocupantes de cargos, funções e empregos públicos observarão o teto constitucional;' },
+      { id:'inc-xiii', texto:'XIII — é vedada a vinculação ou equiparação de quaisquer espécies remuneratórias para o efeito de remuneração de pessoal do serviço público;' },
+      { id:'inc-xvi',  texto:'XVI — é vedada a acumulação remunerada de cargos públicos, exceto quando houver compatibilidade de horários;' },
+    ],
+    pars: [
+      '§ 4º Os atos de improbidade administrativa importarão a suspensão dos direitos políticos, a perda da função pública, a indisponibilidade dos bens e o ressarcimento ao erário.',
+      '§ 6º As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes causarem a terceiros.',
+    ]
+  },
+  {
+    id: 'art-102', label: 'Título IV · Do Poder Judiciário',
+    titulo: 'Art. 102 — Competências do STF',
+    caput: '<strong>Art. 102</strong> Compete ao Supremo Tribunal Federal, precipuamente, a guarda da Constituição.',
+    incisos: [
+      { id:'inc-i',    texto:'I — processar e julgar, originariamente: [alíneas a-q]' },
+      { id:'inc-ii',   texto:'II — julgar, em recurso ordinário: [alíneas a-b]' },
+      { id:'inc-iii',  texto:'III — julgar, mediante recurso extraordinário, as causas decididas em única ou última instância.' },
+    ],
+    pars: [
+      '§ 1º A arguição de descumprimento de preceito fundamental decorrente desta Constituição será apreciada pelo Supremo Tribunal Federal.',
+      '§ 2º As decisões definitivas de mérito, proferidas pelo STF, nas ações diretas de inconstitucionalidade e nas ações declaratórias de constitucionalidade produzirão eficácia contra todos e efeito vinculante.',
+      '§ 3º No recurso extraordinário o recorrente deverá demonstrar a repercussão geral das questões constitucionais discutidas no caso.',
+    ]
+  },
+];
+
+// ── Busca do Supabase ─────────────────────────────────────────
+async function buscarDecisoes(slug) {
+  if (cache[slug]) return cache[slug];
+
+  // Busca via PostgREST com JOIN via RPC não disponível — usa query direta
+  const query = `
+    SELECT
+      t.slug AS disp_slug,
+      s.payload->>'conteudo' AS conteudo,
+      s.payload->>'camada_editorial' AS camada,
+      s.payload->>'rotulo_final' AS rotulo,
+      (s.payload->>'ordem_editorial')::int AS ordem
+    FROM edges e
+    JOIN objects t ON t.id = e.target_id
+    JOIN objects s ON s.id = e.source_id
+    WHERE e.type_slug = 'ancora_normativa'
+      AND t.slug = '${slug}'
+      AND s.type_slug = 'registro_jurisprudencial'
+    ORDER BY ordem
+  `.trim();
+
+  const res = await fetch(`${SB_URL}/rest/v1/rpc/executar_sql`, {
+    method: 'POST',
+    headers: {
+      'apikey': SB_KEY,
+      'Authorization': 'Bearer ' + SB_KEY,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ query })
+  });
+
+  // PostgREST não expõe SQL direto — usa a view/função se existir
+  // Alternativa: buscar via tabelas diretamente com filtros
+  // Usa abordagem de buscar objects pelo slug e depois edges
+  const objRes = await fetch(
+    `${SB_URL}/rest/v1/objects?slug=eq.${encodeURIComponent(slug)}&select=id`,
+    { headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY } }
+  );
+  const objData = await objRes.json();
+  if (!objData || !objData.length) { cache[slug] = []; return []; }
+
+  const targetId = objData[0].id;
+
+  // Busca edges onde target_id = dispositivo
+  const edgesRes = await fetch(
+    `${SB_URL}/rest/v1/edges?target_id=eq.${targetId}&type_slug=eq.ancora_normativa&select=source_id`,
+    { headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY } }
+  );
+  const edgesData = await edgesRes.json();
+  if (!edgesData || !edgesData.length) { cache[slug] = []; return []; }
+
+  const sourceIds = edgesData.map(e => e.source_id);
+
+  // Busca os registros jurisprudenciais
+  const rjRes = await fetch(
+    `${SB_URL}/rest/v1/objects?id=in.(${sourceIds.join(',')})&type_slug=eq.registro_jurisprudencial&select=slug,payload`,
+    { headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY } }
+  );
+  const rjData = await rjRes.json();
+
+  const decisoes = (rjData || []).map(r => ({
+    disp_slug: slug,
+    conteudo: r.payload?.conteudo || '',
+    camada: r.payload?.camada_editorial || '',
+    rotulo: r.payload?.rotulo_final || '',
+    ordem: r.payload?.ordem_editorial || 0,
+  })).sort((a,b) => a.ordem - b.ordem);
+
+  cache[slug] = decisoes;
+  return decisoes;
+}
+
+// Busca contagem de decisões para um artigo inteiro (todos os seus dispositivos)
+async function buscarContagem(artId) {
+  if (contagens[artId] !== undefined) return contagens[artId];
+
+  const objRes = await fetch(
+    `${SB_URL}/rest/v1/objects?slug=eq.${encodeURIComponent(artId)}&select=id`,
+    { headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY } }
+  );
+  const objData = await objRes.json();
+  if (!objData || !objData.length) { contagens[artId] = 0; return 0; }
+
+  const targetId = objData[0].id;
+  const edgesRes = await fetch(
+    `${SB_URL}/rest/v1/edges?target_id=eq.${targetId}&type_slug=eq.ancora_normativa&select=source_id`,
+    { headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY } }
+  );
+  const edgesData = await edgesRes.json();
+  const n = edgesData ? edgesData.length : 0;
+  contagens[artId] = n;
+  return n;
+}
+
+// ── Render ────────────────────────────────────────────────────
+function camadaInfo(camada) {
+  return CAMADA_MAP[camada] || { label: camada || 'Decisão', cls: 'jc' };
+}
+
+function renderDecCard(d, index) {
+  const ci = camadaInfo(d.camada);
+  const idContent = `dc-${index}-${Date.now()}`;
+  const locus = (d.disp_slug || '').replace('cf-1988-','').replace(/-inc-/,'·').replace(/-par-/,'§');
+  return `
+  <div class="dec-card ${ci.cls}">
+    <div class="dec-card-head">
+      <span>${ci.label}</span>
+      <span class="locus">${locus}</span>
+    </div>
+    <div class="dec-card-body">
+      <div class="dec-conteudo" id="${idContent}">${d.conteudo}</div>
+      <span class="dec-expand" onclick="expandDec('${idContent}',this)">▸ ler completo</span>
+      <div class="dec-ref">[${d.rotulo}]</div>
+    </div>
+  </div>`;
+}
+
+function expandDec(id, btn) {
+  const el = document.getElementById(id);
+  el.classList.toggle('expanded');
+  btn.textContent = el.classList.contains('expanded') ? '▴ recolher' : '▸ ler completo';
+}
+
+function renderCF() {
+  const colCF = document.getElementById('col-cf');
+  let html = '';
+  CF.forEach(art => {
+    const artSlug = 'cf-1988-' + art.id;
+    html += `<div class="disp-group" id="disp-${art.id}" data-art="${art.id.replace('art-','')}">`;
+    if (art.label) html += `<div class="disp-section-label">${art.label}</div>`;
+    html += `<div class="disp-titulo">${art.titulo}</div>`;
+    html += `<div class="disp-caput">${art.caput}</div>`;
+
+    art.incisos.forEach(inc => {
+      const incSlug = `${artSlug}-${inc.id}`;
+      html += `<div class="disp-inciso" data-locus="${incSlug}">${inc.texto}
+        <button class="toggle-btn" id="btn-${incSlug}" onclick="toggleLocus('${incSlug}', this)">
+          <span class="arrow">▶</span> <span class="n-decisoes" id="n-${incSlug}">…</span> decisões
+        </button></div>`;
+    });
+
+    art.pars.forEach(p => { html += `<div class="disp-par">${p}</div>`; });
+
+    html += `<button class="toggle-btn" id="btn-${artSlug}" onclick="toggleLocus('${artSlug}', this)" style="margin-top:.75rem">
+      <span class="arrow">▶</span> <span class="n-decisoes" id="n-${artSlug}">…</span> decisões no art.
+    </button>`;
+
+    html += `</div>`;
+  });
+  colCF.innerHTML = html;
+
+  // Busca contagens em background
+  CF.forEach(art => {
+    const artSlug = 'cf-1988-' + art.id;
+    // Contagem do artigo
+    buscarContagem(artSlug).then(n => {
+      const el = document.getElementById(`n-${artSlug}`);
+      if (el) el.textContent = n;
+      const btn = document.getElementById(`btn-${artSlug}`);
+      if (btn && n === 0) btn.style.display = 'none';
+    });
+    // Contagens dos incisos
+    art.incisos.forEach(inc => {
+      const incSlug = `${artSlug}-${inc.id}`;
+      buscarContagem(incSlug).then(n => {
+        const el = document.getElementById(`n-${incSlug}`);
+        if (el) el.textContent = n;
+        const btn = document.getElementById(`btn-${incSlug}`);
+        if (btn && n === 0) btn.style.display = 'none';
+      });
+    });
+  });
+}
+
+async function toggleLocus(locus, btn) {
+  const ph = document.getElementById('placeholder');
+
+  if (abertos.has(locus)) {
+    abertos.delete(locus);
+    btn.classList.remove('open');
+  } else {
+    // Mostra loading
+    const colDec = document.getElementById('col-dec');
+    if (ph) ph.style.display = 'none';
+    if (!abertos.size) {
+      colDec.innerHTML = `<div class="placeholder"><div class="placeholder-icon">⟳</div><p>Buscando decisões...</p></div>`;
+    }
+    abertos.add(locus);
+    btn.classList.add('open');
+    // Busca do banco se não está em cache
+    if (!cache[locus]) {
+      await buscarDecisoes(locus);
+    }
+  }
+  renderDecColumn();
+}
+
+function renderDecColumn() {
+  const colDec = document.getElementById('col-dec');
+  if (abertos.size === 0) {
+    colDec.innerHTML = `<div class="placeholder" id="placeholder">
+      <div class="placeholder-icon">⟷</div>
+      <p>Clique em "N decisões" ao lado do dispositivo constitucional<br>para abrir o zíper e ver a jurisprudência ancorada naquele locus.</p>
+    </div>`;
+    return;
+  }
+
+  const ordemCamada = { controle_concentrado:0, repercussao_geral:1, julgados_correlatos:2, sumula:3, sumula_vinculante:3 };
+
+  let html = '';
+  let idx = 0;
+  [...abertos].forEach(locus => {
+    const decs = cache[locus] || [];
+    if (!decs.length) {
+      html += `<div class="dec-section"><div class="dec-section-label">⟵ ${locus.replace('cf-1988-','').toUpperCase()} — sem decisões carregadas</div></div>`;
+      return;
+    }
+    const label = locus.replace('cf-1988-','').replace(/-inc-/,'·').replace(/-par-/,'§').toUpperCase();
+    html += `<div class="dec-section"><div class="dec-section-label">⟵ ${label} (${decs.length})</div>`;
+    [...decs].sort((a,b) => (ordemCamada[a.camada]||9)-(ordemCamada[b.camada]||9))
+      .forEach(d => { html += renderDecCard(d, idx++); });
+    html += `</div>`;
+  });
+
+  colDec.innerHTML = html;
+}
+
+function filtrarArt(btn, art) {
+  document.querySelectorAll('.art-pill').forEach(p => p.classList.remove('ativo'));
+  btn.classList.add('ativo');
+  document.querySelectorAll('.disp-group').forEach(g => {
+    if (art === 'todos' || g.dataset.art === art || !g.dataset.art) {
+      g.style.display = '';
+    } else {
+      g.style.display = 'none';
+    }
+  });
+}
+
+// ── Init ──────────────────────────────────────────────────────
+renderCF();
+</script>
+</body>
+</html>
