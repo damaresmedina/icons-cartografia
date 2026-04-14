@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond Judicial Review — Damares Medina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+SC:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest:   #1a3d2b;
+    --forest2:  #243d30;
+    --gold:     #b8962e;
+    --gold-lt:  #d4b05a;
+    --cream:    #f5f0e8;
+    --cream2:   #ede7d9;
+    --ink:      #1c1c1c;
+    --mist:     #8a9e90;
+    --rule:     rgba(26,61,43,0.18);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 100%; height: 100%;
+    background: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    overflow: hidden;
+    cursor: none;
+  }
+
+  /* ── Custom cursor ── */
+  #cursor {
+    position: fixed; z-index: 9999;
+    width: 10px; height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.15s ease, opacity 0.2s;
+    transform: translate(-50%,-50%);
+  }
+  #cursor-ring {
+    position: fixed; z-index: 9998;
+    width: 36px; height: 36px;
+    border: 1px solid var(--gold-lt);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.35s ease, opacity 0.2s;
+    transform: translate(-50%,-50%);
+    opacity: 0.5;
+  }
+
+  /* ── Deck wrapper ── */
+  #deck {
+    width: 100vw; height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── Slides ── */
+  .slide {
+    position: absolute; inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1);
+  }
+  .slide.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* ── Progress bar ── */
+  #progress {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: rgba(255,255,255,0.07);
+    z-index: 100;
+  }
+  #progress-fill {
+    height: 100%;
+    background: var(--gold);
+    transition: width 0.6s ease;
+  }
+
+  /* ── Nav dots ── */
+  #nav-dots {
+    position: fixed; right: 28px; top: 50%;
+    transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 10px;
+    z-index: 100;
+  }
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .dot.active { background: var(--gold); transform: scale(1.4); }
+  .dot:hover { background: var(--gold-lt); }
+
+  /* ── Slide counter ── */
+  #counter {
+    position: fixed; left: 36px; bottom: 22px;
+    font-family: 'Cormorant SC', serif;
+    font-size: 11px; letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.25);
+    z-index: 100;
+  }
+
+  /* ── Arrow nav ── */
+  #nav-arrows {
+    position: fixed; bottom: 18px; right: 36px;
+    display: flex; gap: 12px; z-index: 100;
+  }
+  .arrow-btn {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: transparent; color: rgba(255,255,255,0.4);
+    cursor: pointer; font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.25s;
+  }
+  .arrow-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* ══════════════════════════════════════════
+     SLIDE 1 — Cover
+  ══════════════════════════════════════════ */
+  #s1 {
+    background: var(--forest);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #s1 .left {
+    padding: 80px 64px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+  #s1 .court-img {
+    position: relative; overflow: hidden;
+  }
+  #s1 .court-img::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, var(--forest) 0%, transparent 40%);
+    z-index: 1;
+  }
+  #s1 .court-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: saturate(0.7) brightness(0.85);
+  }
+  .eyebrow {
+    font-family: 'Cormorant SC', serif;
+    font-size: 10px; letter-spacing: 0.22em;
+    color: var(--gold); margin-bottom: 28px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .eyebrow::before {
+    content: ''; display: block;
+    width: 28px; height: 1px; background: var(--gold);
+  }
+  .cover-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.18;
+    margin-bottom: 20px;
+  }
+  .cover-title em { font-style: italic; color: var(--gold-lt); }
+  .cover-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px; font-style: italic;
+    color: var(--mist);
+    margin-bottom: 48px;
+    line-height: 1.6;
+  }
+  .author-block {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+  }
+  .author-name {
+    font-family: 'Cormorant SC', serif;
+    font-size: 15px; letter-spacing: 0.08em;
+    color: var(--cream); margin-bottom: 4px;
+  }
+  .author-role {
+    font-size: 12px; color: var(--mist); line-height: 1.6;
+  }
+
+  /* ══════════════════════════════════════════
+     SLIDE 2 — The Transformation (timeline)
+  ══════════════════════════════════════════ */
+  #s2 {
+    background: var(--cream);
+    padding: 72px 80px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .slide-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 400; color: var(--forest);
+    margin-bottom: 56px;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  .slide-heading::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0;
+    width: 48px; height: 2px; background: var(--gold);
+  }
+  .timeline {
+    display: flex; gap: 0;
+    position: relative;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute; top: 28px; left: 28px; right: 28px;
+    height: 1px; background: var(--forest);
+    opacity: 0.15;
+  }
+  .tl-item {
+    flex: 1; padding: 0 24px;
+    display: flex; flex-direction: column;
+    align-items: center; text-align: center;
+  }
+  .tl-num {
+    width: 56px; height: 56px;
+    border: 1.5px solid var(--forest);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant SC', serif;
+    font-size: 18px; color: var(--forest);
+    background: var(--cream);
+    position: relative; z-index: 1;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+  }
+  .tl-item:hover .tl-num {
+    background: var(--forest); color: var(--cream);
+  }
+  .tl-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px; font-weight: 500;
+    color: var(--forest); margin-bottom: 10px;
+  }
+  .tl-desc {
+    font-size: 13px; color: #5a6e61; line-height: 1.65;
+    max-width: 220px;
+  }
+  .slide-footnote {
+    margin-top: auto;
+    padding-top: 40px;
+    border-top: 1px solid var(--rule);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px; font-style: italic;
+    color: var(--forest); opacity: 0.6;
+    line-height: 1.7;
+  }
+
+  /* ══════════════════════════════════════════
+     SLIDE 3 — Historical Context
+  ══════════════════════════════════════════ */
+  #s3 {
+    background: var(--forest);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+  #s3 .content {
+    padding: 72px 64px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  #s3 .img-col {
+    position: relative; overflow: hidden;
+  }
+  #s3 .img-col img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: saturate(0.5) brightness(0.6);
+  }
+  #s3 .img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, var(--forest) 0%, transparent 50%);
+  }
+  .s3-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 3vw, 40px);
+    font-weight: 300; color: var(--cream);
+    margin-bottom: 28px; line-height: 1.2;
+  }
+  .s3-lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px; font-style: italic;
+    color: var(--mist); line-height: 1.75;
+    margin-bottom: 40px;
+  }
+  .milestone-list {
+    list-style: none; display: flex; flex-direction: column; gap: 14px;
+  }
+  .milestone-list li {
+    display: flex; align-items: flex-start; gap: 14px;
+    font-size: 13.5px; color: var(--cream); opacity: 0.85;
+    line-height: 1.55;
+  }
+  .milestone-list li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 20px; height: 1px;
+    background: var(--gold);
+    margin-top: 10px;
+  }
+  .s3-quote {
+    margin-top: 36px;
+    padding-left: 20px;
+    border-left: 2px solid var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px; font-style: italic;
+    color: var(--mist); line-height: 1.8;
+  }
+
+  /* ══════════════════════════════════════════
+     SLIDE 4 — Recent Innovations
+  ══════════════════════════════════════════ */
+  #s4 {
+    background: var(--cream);
+    padding: 72px 80px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .cards-3 {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; margin-bottom: 40px;
+  }
+  .card {
+    background: white;
+    border: 1px solid var(--rule);
+    padding: 36px 28px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(26,61,43,0.1);
+  }
+  .card-num {
+    width: 40px; height: 40px;
+    background: var(--forest);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--cream);
+    font-family: 'Cormorant SC', serif;
+    font-size: 16px; margin-bottom: 20px;
+  }
+  .card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px; font-weight: 500;
+    color: var(--forest); margin-bottom: 12px;
+  }
+  .card-desc {
+    font-size: 13px; color: #5a6e61;
+    line-height: 1.7;
+  }
+  .card-tag {
+    position: absolute; bottom: 20px; right: 20px;
+    font-size: 10px; letter-spacing: 0.12em;
+    color: var(--mist);
+    font-family: 'Cormorant SC', serif;
+  }
+  .nusol-note {
+    background: var(--forest);
+    padding: 22px 32px;
+    font-size: 13.5px; color: var(--cream); opacity: 0.9;
+    line-height: 1.7;
+    border-left: 3px solid var(--gold);
+  }
+  .nusol-note strong { color: var(--gold-lt); font-weight: 500; }
+
+  /* ══════════════════════════════════════════
+     SLIDE 5 — The Debate
+  ══════════════════════════════════════════ */
+  #s5 {
+    background: var(--ink);
+    padding: 72px 80px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  #s5 .slide-heading { color: var(--cream); }
+  #s5 .slide-heading::after { background: var(--gold); }
+  .debate-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 32px; margin-bottom: 36px;
+  }
+  .debate-col { padding: 32px; }
+  .debate-col.pro {
+    background: rgba(26,61,43,0.6);
+    border: 1px solid rgba(26,61,43,1);
+    border-top: 3px solid var(--gold);
+  }
+  .debate-col.con {
+    background: rgba(180,40,40,0.08);
+    border: 1px solid rgba(180,40,40,0.2);
+    border-top: 3px solid #c04a4a;
+  }
+  .debate-col-title {
+    font-family: 'Cormorant SC', serif;
+    font-size: 12px; letter-spacing: 0.15em;
+    margin-bottom: 20px;
+  }
+  .pro .debate-col-title { color: var(--gold-lt); }
+  .con .debate-col-title { color: #c07070; }
+  .debate-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .debate-list li {
+    font-size: 13.5px; color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    display: flex; align-items: flex-start; gap: 10px;
+  }
+  .pro .debate-list li::before { content: '+'; color: var(--gold); font-weight: 600; flex-shrink: 0; }
+  .con .debate-list li::before { content: '—'; color: #c07070; flex-shrink: 0; }
+  .debate-crux {
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 22px 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px; font-style: italic;
+    color: rgba(255,255,255,0.55); line-height: 1.75;
+  }
+  .debate-crux em { color: var(--gold-lt); font-style: italic; }
+
+  /* ══════════════════════════════════════════
+     SLIDE 6 — Empirical 123 Cases
+  ══════════════════════════════════════════ */
+  #s6 {
+    background: var(--cream);
+    padding: 64px 72px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .cases-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 48px; align-items: center;
+  }
+  .big-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(80px, 10vw, 128px);
+    font-weight: 300; color: var(--forest);
+    line-height: 1;
+    position: relative;
+  }
+  .big-number::after {
+    content: 'cases mapped';
+    display: block;
+    font-size: 13px; letter-spacing: 0.12em;
+    color: var(--mist);
+    font-family: 'Cormorant SC', serif;
+    margin-top: 8px;
+  }
+  .cases-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .case-item {
+    padding: 18px 20px;
+    border: 1px solid var(--rule);
+    background: white;
+    display: flex; align-items: center; gap: 14px;
+    transition: border-color 0.25s;
+  }
+  .case-item:hover { border-color: var(--forest); }
+  .case-count {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 300;
+    color: var(--forest); min-width: 44px;
+  }
+  .case-label { font-size: 12px; color: #5a6e61; line-height: 1.5; }
+  .case-label strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px; color: var(--forest);
+    margin-bottom: 2px; font-weight: 500;
+  }
+  .cases-note {
+    margin-top: 28px;
+    grid-column: 1 / -1;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px; font-style: italic;
+    color: var(--forest); opacity: 0.55;
+    line-height: 1.7;
+  }
+
+  /* ══════════════════════════════════════════
+     SLIDE 7 — Thematic Diversity
+  ══════════════════════════════════════════ */
+  #s7 {
+    background: var(--forest2);
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+  #s7 .img-col { position: relative; overflow: hidden; }
+  #s7 .img-col img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: saturate(0.45) brightness(0.5);
+  }
+  #s7 .img-col::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to left, var(--forest2) 0%, transparent 60%);
+  }
+  #s7 .content {
+    padding: 64px 60px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .theme-clusters {
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .cluster {
+    padding: 22px 24px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+  }
+  .cluster-title {
+    font-family: 'Cormorant SC', serif;
+    font-size: 11px; letter-spacing: 0.16em;
+    color: var(--gold); margin-bottom: 12px;
+  }
+  .cluster-items {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .tag {
+    font-size: 11.5px; color: rgba(255,255,255,0.65);
+    background: rgba(255,255,255,0.06);
+    padding: 4px 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* ══════════════════════════════════════════
+     SLIDE 8 — Asymmetries
+  ══════════════════════════════════════════ */
+  #s8 {
+    background: var(--cream);
+    padding: 64px 72px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .asymmetry-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 48px; align-items: start;
+  }
+  .geo-block {
+    background: var(--forest);
+    padding: 32px 28px; color: var(--cream);
+  }
+  .geo-title {
+    font-family: 'Cormorant SC', serif;
+    font-size: 11px; letter-spacing: 0.16em;
+    color: var(--gold); margin-bottom: 16px;
+  }
+  .geo-text {
+    font-size: 13.5px; line-height: 1.75;
+    color: rgba(255,255,255,0.8); margin-bottom: 24px;
+  }
+  .geo-question {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px; font-style: italic;
+    color: var(--gold-lt); line-height: 1.75;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 18px;
+  }
+  .ranking-table { width: 100%; border-collapse: collapse; }
+  .ranking-table tr {
+    border-bottom: 1px solid var(--rule);
+    transition: background 0.2s;
+  }
+  .ranking-table tr:hover { background: rgba(26,61,43,0.04); }
+  .ranking-table td {
+    padding: 11px 8px;
+    font-size: 13px; color: var(--ink);
+  }
+  .ranking-table td:first-child {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14.5px; color: var(--forest);
+  }
+  .ranking-table td:last-child {
+    text-align: right;
+    font-family: 'Cormorant SC', serif;
+    font-size: 11px; letter-spacing: 0.08em;
+    color: var(--mist);
+  }
+  .bar-cell { padding: 11px 8px; }
+  .bar-fill {
+    height: 4px; background: var(--forest);
+    opacity: 0.25;
+    transition: width 0.8s ease;
+  }
+  .bar-fill.top { opacity: 0.8; background: var(--gold); }
+
+  /* ══════════════════════════════════════════
+     SLIDE 9 — Procedural Inconsistencies
+  ══════════════════════════════════════════ */
+  #s9 {
+    background: var(--ink);
+    padding: 72px 80px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  #s9 .slide-heading { color: var(--cream); }
+  #s9 .slide-heading::after { background: var(--gold); }
+  .stats-row {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 32px; margin-bottom: 40px;
+  }
+  .stat-block {
+    text-align: center;
+    padding: 40px 24px;
+    border: 1px solid rgba(255,255,255,0.07);
+    position: relative; overflow: hidden;
+  }
+  .stat-block::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+  }
+  .stat-block.s-gold::before { background: var(--gold); }
+  .stat-block.s-mist::before { background: var(--mist); }
+  .stat-block.s-green::before { background: var(--forest); }
+  .stat-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 7vw, 80px);
+    font-weight: 300; line-height: 1;
+    margin-bottom: 12px;
+  }
+  .s-gold .stat-value { color: var(--gold); }
+  .s-mist .stat-value { color: var(--mist); }
+  .s-green .stat-value { color: var(--cream); }
+  .stat-label {
+    font-family: 'Cormorant SC', serif;
+    font-size: 11px; letter-spacing: 0.16em;
+    color: rgba(255,255,255,0.4); margin-bottom: 10px;
+  }
+  .stat-sub { font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.6; }
+  .inconsistency-note {
+    padding: 24px 32px;
+    border-left: 3px solid var(--gold);
+    background: rgba(255,255,255,0.03);
+  }
+  .inconsistency-note p {
+    font-size: 13.5px; color: rgba(255,255,255,0.6);
+    line-height: 1.75; margin-bottom: 10px;
+  }
+  .inconsistency-note p:last-child { margin-bottom: 0; }
+  .inconsistency-note strong { color: var(--gold-lt); font-weight: 500; }
+
+  /* ══════════════════════════════════════════
+     SLIDE 10 — Conclusion
+  ══════════════════════════════════════════ */
+  #s10 {
+    background: var(--forest);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #s10 .left {
+    padding: 72px 60px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  #s10 .right {
+    position: relative; overflow: hidden;
+  }
+  #s10 .right img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: saturate(0.4) brightness(0.5);
+  }
+  #s10 .right::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, var(--forest) 0%, transparent 55%);
+    z-index: 1;
+  }
+  .conclusion-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 3.5vw, 46px);
+    font-weight: 300; color: var(--cream);
+    margin-bottom: 16px; line-height: 1.2;
+  }
+  .conclusion-heading em { font-style: italic; color: var(--gold-lt); }
+  .concl-sub {
+    font-size: 12px; letter-spacing: 0.16em;
+    color: var(--gold); font-family: 'Cormorant SC', serif;
+    margin-bottom: 36px;
+  }
+  .concl-questions {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 14px;
+    margin-bottom: 40px;
+  }
+  .concl-questions li {
+    display: flex; gap: 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px; font-style: italic;
+    color: rgba(255,255,255,0.8); line-height: 1.55;
+  }
+  .concl-questions li::before {
+    content: '?';
+    color: var(--gold); font-style: normal;
+    font-family: 'Cormorant SC', serif;
+    font-size: 14px; padding-top: 3px; flex-shrink: 0;
+  }
+  .concl-thesis {
+    padding: 22px 24px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.2);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px; font-style: italic;
+    color: var(--cream); line-height: 1.8;
+    opacity: 0.9;
+  }
+  .concl-thesis strong { font-style: normal; color: var(--gold-lt); font-weight: 400; }
+
+  /* ── Entrance animations ── */
+  .slide.active .anim-up {
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .slide.active .anim-up:nth-child(2) { animation-delay: 0.1s; }
+  .slide.active .anim-up:nth-child(3) { animation-delay: 0.2s; }
+  .slide.active .anim-up:nth-child(4) { animation-delay: 0.3s; }
+  .slide.active .anim-up:nth-child(5) { animation-delay: 0.4s; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* pre-anim state */
+  .anim-up { opacity: 0; }
+
+  /* ── Keyboard hint ── */
+  #hint {
+    position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
+    font-size: 11px; color: rgba(255,255,255,0.18);
+    letter-spacing: 0.1em; font-family: 'Cormorant SC', serif;
+    z-index: 100;
+    transition: opacity 1s;
+  }
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<div id="deck">
+
+  <!-- ══ SLIDE 1 — Cover ══ -->
+  <section class="slide active" id="s1">
+    <div class="left">
+      <div class="eyebrow anim-up">Congress Presentation · 2025</div>
+      <h1 class="cover-title anim-up">
+        Beyond<br><em>Judicial Review:</em><br>
+        Mediation &amp; Conciliation<br>in the Brazilian Supreme Court
+      </h1>
+      <p class="cover-sub anim-up">
+        An institutional approach to the procedural<br>
+        transformation of Brazil's highest court
+      </p>
+      <div class="author-block anim-up">
+        <div class="author-name">Damares Medina</div>
+        <div class="author-role">Professor of Constitutional Law<br>
+        Researcher, PROJUS / ICONS · judx.com.br · icons.org.br</div>
+      </div>
+    </div>
+    <div class="court-img">
+      <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80" alt="Brazilian Supreme Court building" onerror="this.style.display='none'">
+    </div>
+  </section>
+
+  <!-- ══ SLIDE 2 — Transformation ══ -->
+  <section class="slide" id="s2">
+    <h2 class="slide-heading anim-up">The Transformation of Brazil's Supreme Court</h2>
+    <div class="timeline">
+      <div class="tl-item anim-up">
+        <div class="tl-num">1</div>
+        <div class="tl-label">Historical Approach</div>
+        <div class="tl-desc">The STF has historically been marked by hermeticism and judicial verticality — a closed, top-down model of constitutional adjudication.</div>
+      </div>
+      <div class="tl-item anim-up">
+        <div class="tl-num">2</div>
+        <div class="tl-label">Current Shift</div>
+        <div class="tl-desc">The Court now increasingly experiments with dialogical and participatory practices, opening new procedural avenues beyond classic adjudication.</div>
+      </div>
+      <div class="tl-item anim-up">
+        <div class="tl-num">3</div>
+        <div class="tl-label">Institutional Tension</div>
+        <div class="tl-desc">A growing tension between the STF's adjudicative authority and emergent forms of procedural openness — neither linear nor pacified.</div>
+      </div>
+    </div>
+    <p class="slide-footnote anim-up">
+      "This transformation demands both historical contextualization and analytical precision. Understanding it requires mapping not only what changed, but how the Court repositioned itself within Brazil's democratic architecture."
+    </p>
+  </section>
+
+  <!-- ══ SLIDE 3 — Historical Context ══ -->
+  <section class="slide" id="s3">
+    <div class="content">
+      <h2 class="s3-heading anim-up">Historical Context:<br>From Hermeticism<br>to Openness</h2>
+      <p class="s3-lead anim-up">
+        The roots of this transition trace to the 1980s, during Brazil's redemocratization — a conscious institutional effort to open the Court to society.
+      </p>
+      <ul class="milestone-list anim-up">
+        <li>Adoption of laws on abstract judicial review</li>
+        <li>Introduction of <em>amicus curiae</em> briefs</li>
+        <li>Implementation of public hearings (<em>audiências públicas</em>)</li>
+      </ul>
+      <blockquote class="s3-quote anim-up">
+        "While these mechanisms formally expanded the deliberative perimeter of constitutional adjudication, their practical reach remained limited and often curated." — Fabiana Luci de Oliveira
+      </blockquote>
+    </div>
+    <div class="img-col">
+      <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&q=75" alt="Democratization movement" onerror="this.style.display='none'">
+      <div class="img-overlay"></div>
+    </div>
+  </section>
+
+  <!-- ══ SLIDE 4 — Innovations ══ -->
+  <section class="slide" id="s4">
+    <h2 class="slide-heading anim-up">Recent Innovations in Participatory Justice</h2>
+    <div class="cards-3">
+      <div class="card anim-up">
+        <div class="card-num">1</div>
+        <div class="card-title">Mediation Sessions</div>
+        <div class="card-desc">Structured dialogue between parties designed to reach mutually acceptable solutions outside the strict adjudicative framework.</div>
+        <span class="card-tag">NUSOL</span>
+      </div>
+      <div class="card anim-up">
+        <div class="card-num">2</div>
+        <div class="card-title">Conciliation Hearings</div>
+        <div class="card-desc">Court-facilitated negotiations aimed at resolving complex disputes — particularly structural cases — without formal final adjudication.</div>
+        <span class="card-tag">NUSOL</span>
+      </div>
+      <div class="card anim-up">
+        <div class="card-num">3</div>
+        <div class="card-title">Contextualization Hearings</div>
+        <div class="card-desc"><em>Audiências de contextualização</em> providing deeper factual and technical understanding of complex constitutional cases.</div>
+        <span class="card-tag">NUSOL</span>
+      </div>
+    </div>
+    <div class="nusol-note anim-up">
+      These mechanisms are organized by the <strong>Núcleo de Solução de Conflitos (NUSOL)</strong>, created in 2020 under the presidency of Justice Dias Toffoli — the STF's first dedicated conflict resolution unit.
+    </div>
+  </section>
+
+  <!-- ══ SLIDE 5 — The Debate ══ -->
+  <section class="slide" id="s5">
+    <h2 class="slide-heading anim-up">The Debate: Benefits vs. Concerns</h2>
+    <div class="debate-grid">
+      <div class="debate-col pro anim-up">
+        <div class="debate-col-title">Proponents Argue</div>
+        <ul class="debate-list">
+          <li>Rationalizes structural and polycentric litigation</li>
+          <li>Fosters federative and institutional dialogue</li>
+          <li>Produces context-sensitive, durable solutions</li>
+          <li>Overcomes the rigidity of traditional adjudication</li>
+        </ul>
+      </div>
+      <div class="debate-col con anim-up">
+        <div class="debate-col-title">Critics Warn</div>
+        <ul class="debate-list">
+          <li>May erode the constitutional authority of the Court</li>
+          <li>Problematic in cases with structural power asymmetries</li>
+          <li>Often lacks procedural transparency and consistency</li>
+          <li>Insufficient normative safeguards for high-stakes cases</li>
+        </ul>
+      </div>
+    </div>
+    <div class="debate-crux anim-up">
+      At the heart of this debate lies the concept of <em>processo estrutural</em> — frequently invoked to justify these innovations, yet remaining elusive in definition. Is it a genuine procedural category, or a rhetorical reformulation of longstanding institutional dilemmas?
+    </div>
+  </section>
+
+  <!-- ══ SLIDE 6 — 123 Cases ══ -->
+  <section class="slide" id="s6">
+    <h2 class="slide-heading anim-up">Empirical Analysis: 123 Cases of Dialogical Practice</h2>
+    <div class="cases-layout">
+      <div class="anim-up">
+        <div class="big-number">123</div>
+      </div>
+      <div class="cases-grid anim-up">
+        <div class="case-item">
+          <div class="case-count">28</div>
+          <div class="case-label"><strong>ACO</strong>Original Jurisdiction</div>
+        </div>
+        <div class="case-item">
+          <div class="case-count">27</div>
+          <div class="case-label"><strong>ADI / ADPF / ADO</strong>Constitutional Review</div>
+        </div>
+        <div class="case-item">
+          <div class="case-count">21</div>
+          <div class="case-label"><strong>ARE / RE</strong>Extraordinary Appeals</div>
+        </div>
+        <div class="case-item">
+          <div class="case-count">13</div>
+          <div class="case-label"><strong>Rcl</strong>Reclamações</div>
+        </div>
+        <div class="case-item">
+          <div class="case-count">12</div>
+          <div class="case-label"><strong>SL / STP</strong>Urgent Injunctions</div>
+        </div>
+        <div class="case-item">
+          <div class="case-count">9</div>
+          <div class="case-label"><strong>Other</strong>MS, MI, AO, AR, Pet</div>
+        </div>
+      </div>
+    </div>
+    <p class="cases-note anim-up">
+      This taxonomy reflects the gradual blending of concentrated and incidental models of constitutional review — an irreversible horizon in a system where the same issue may be adjudicated through multiple procedural avenues.
+    </p>
+  </section>
+
+  <!-- ══ SLIDE 7 — Thematic Diversity ══ -->
+  <section class="slide" id="s7">
+    <div class="img-col">
+      <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=900&q=75" alt="Brazil territory" onerror="this.style.background='#1a3d2b'">
+    </div>
+    <div class="content">
+      <h2 class="slide-heading" style="color:var(--cream);margin-bottom:32px" class="anim-up">
+        Thematic Diversity of<br>Dialogical Cases
+      </h2>
+      <div class="theme-clusters">
+        <div class="cluster anim-up">
+          <div class="cluster-title">Public Health &amp; Environment</div>
+          <div class="cluster-items">
+            <span class="tag">Vaccination plans</span>
+            <span class="tag">Forest reserve protection</span>
+            <span class="tag">Indigenous land demarcations</span>
+            <span class="tag">Indigenous reparations</span>
+          </div>
+        </div>
+        <div class="cluster anim-up">
+          <div class="cluster-title">Economic &amp; Fiscal</div>
+          <div class="cluster-items">
+            <span class="tag">Oil royalty distribution</span>
+            <span class="tag">Fundef/Fundeb disputes</span>
+            <span class="tag">Fiscal recovery regimes</span>
+            <span class="tag">CIAF / CAUC registers</span>
+            <span class="tag">Orçamento secreto</span>
+          </div>
+        </div>
+        <div class="cluster anim-up">
+          <div class="cluster-title">Infrastructure &amp; Boundaries</div>
+          <div class="cluster-items">
+            <span class="tag">Railroad development</span>
+            <span class="tag">Energy regulation (gas pipelines)</span>
+            <span class="tag">State boundary disputes</span>
+            <span class="tag">Public servant compensation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SLIDE 8 — Asymmetries ══ -->
+  <section class="slide" id="s8">
+    <h2 class="slide-heading anim-up">Asymmetries in Dialogical Practice</h2>
+    <div class="asymmetry-grid">
+      <div class="geo-block anim-up">
+        <div class="geo-title">Geographic Disparities</div>
+        <p class="geo-text">São Paulo, Rio de Janeiro, and Paraná are disproportionately represented. The North and much of the Northeast remain largely absent from these dialogical spaces.</p>
+        <p class="geo-question">
+          Who dialogues with the Court?<br>
+          Whose voices are institutionally amplified?<br>
+          How federalized is this "pluralization"?
+        </p>
+      </div>
+      <div class="anim-up">
+        <table class="ranking-table">
+          <thead>
+            <tr>
+              <td style="font-family:'Cormorant SC',serif;font-size:11px;letter-spacing:.12em;color:var(--mist);padding-bottom:8px">Justice</td>
+              <td></td>
+              <td style="text-align:right;font-family:'Cormorant SC',serif;font-size:11px;letter-spacing:.12em;color:var(--mist);padding-bottom:8px">Cases</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Fachin</td><td class="bar-cell"><div class="bar-fill top" style="width:100%"></div></td><td>18</td></tr>
+            <tr><td>President</td><td class="bar-cell"><div class="bar-fill top" style="width:94%"></div></td><td>17</td></tr>
+            <tr><td>Toffoli</td><td class="bar-cell"><div class="bar-fill" style="width:83%;opacity:.55"></div></td><td>15</td></tr>
+            <tr><td>Zanin</td><td class="bar-cell"><div class="bar-fill" style="width:83%;opacity:.55"></div></td><td>15</td></tr>
+            <tr><td>G. Mendes</td><td class="bar-cell"><div class="bar-fill" style="width:78%;opacity:.45"></div></td><td>14</td></tr>
+            <tr><td>Dino</td><td class="bar-cell"><div class="bar-fill" style="width:56%;opacity:.35"></div></td><td>10</td></tr>
+            <tr><td>A. Mendonça</td><td class="bar-cell"><div class="bar-fill" style="width:50%;opacity:.3"></div></td><td>9</td></tr>
+            <tr><td>C. Lúcia</td><td class="bar-cell"><div class="bar-fill" style="width:33%;opacity:.25"></div></td><td>6</td></tr>
+            <tr><td>Others</td><td class="bar-cell"><div class="bar-fill" style="width:22%;opacity:.2"></div></td><td>1–5</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:11px;color:var(--mist);margin-top:12px;font-style:italic">Top 5 justices account for ~65% of all dialogical proceedings.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SLIDE 9 — Inconsistencies ══ -->
+  <section class="slide" id="s9">
+    <h2 class="slide-heading anim-up">Procedural Inconsistencies</h2>
+    <div class="stats-row">
+      <div class="stat-block s-gold anim-up">
+        <div class="stat-value">190</div>
+        <div class="stat-label">Days — Longest Negotiation</div>
+        <div class="stat-sub">Justice Rosa Weber's cases averaged 190 days of dialogical process</div>
+      </div>
+      <div class="stat-block s-mist anim-up">
+        <div class="stat-value">11</div>
+        <div class="stat-label">Days — Shortest Negotiation</div>
+        <div class="stat-sub">Justice Cristiano Zanin's cases averaged just 11 days — a 17× gap</div>
+      </div>
+      <div class="stat-block s-green anim-up">
+        <div class="stat-value">123</div>
+        <div class="stat-label">Total Cases — NUSOL</div>
+        <div class="stat-sub">Mapped by the Conflict Resolution Unit across 2020–2024</div>
+      </div>
+    </div>
+    <div class="inconsistency-note anim-up">
+      <p>Many agreements were reached <strong>without contextualization hearings or technical meetings</strong>, suggesting that a significant portion of settlements occurred through informal or ad hoc procedures rather than structured, deliberative processes.</p>
+      <p>This reinforces the need for clearer institutional parameters — both to ensure procedural consistency and to prevent the dialogical turn from becoming yet another vector of <strong>judicial concentration driven by individual ministerial discretion</strong>.</p>
+    </div>
+  </section>
+
+  <!-- ══ SLIDE 10 — Conclusion ══ -->
+  <section class="slide" id="s10">
+    <div class="left">
+      <div class="concl-sub anim-up">Conclusion</div>
+      <h2 class="conclusion-heading anim-up">
+        <em>Democratization</em><br>or<br>Statization?
+      </h2>
+      <ul class="concl-questions anim-up">
+        <li>Who is being heard?</li>
+        <li>Which interests are being amplified?</li>
+        <li>What institutional and regional asymmetries shape access?</li>
+      </ul>
+      <div class="concl-thesis anim-up">
+        The pluralization of Brazil's constitutional jurisdiction remains <strong>largely internal to the state</strong>. It has not yet crossed the threshold into democratization of access or voice. The challenge is not how many dialogical techniques the Court deploys — but <strong>whom they serve, and whom they exclude</strong>.
+      </div>
+    </div>
+    <div class="right">
+      <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=900&q=75" alt="People before Supreme Court" onerror="this.style.display='none'">
+    </div>
+  </section>
+
+</div><!-- /#deck -->
+
+<!-- UI Chrome -->
+<div id="progress"><div id="progress-fill"></div></div>
+<div id="nav-dots"></div>
+<div id="counter"></div>
+<div id="nav-arrows">
+  <button class="arrow-btn" id="btn-prev" aria-label="Previous slide">&#8592;</button>
+  <button class="arrow-btn" id="btn-next" aria-label="Next slide">&#8594;</button>
+</div>
+<div id="hint">← → arrow keys to navigate</div>
+
+<script>
+  // ── State ──
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const total  = slides.length;
+  let current  = 0;
+  let hintTimer;
+
+  // ── Dots ──
+  const dotsEl = document.getElementById('nav-dots');
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n) {
+    if (n < 0 || n >= total) return;
+    slides[current].classList.remove('active');
+    dotsEl.children[current].classList.remove('active');
+    current = n;
+    slides[current].classList.add('active');
+    dotsEl.children[current].classList.add('active');
+    document.getElementById('counter').textContent = `${String(current+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
+    document.getElementById('progress-fill').style.width = `${((current+1)/total)*100}%`;
+  }
+
+  goTo(0);
+
+  // ── Keys ──
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown')  goTo(current+1);
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')    goTo(current-1);
+  });
+
+  document.getElementById('btn-next').addEventListener('click', () => goTo(current+1));
+  document.getElementById('btn-prev').addEventListener('click', () => goTo(current-1));
+
+  // ── Touch swipe ──
+  let touchX = 0;
+  document.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; });
+  document.addEventListener('touchend',   e => {
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) goTo(current + (dx < 0 ? 1 : -1));
+  });
+
+  // ── Custom cursor ──
+  const cur = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  (function animCursor() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    cur.style.left  = mx + 'px';
+    cur.style.top   = my + 'px';
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(animCursor);
+  })();
+
+  // ── Hint fade ──
+  const hint = document.getElementById('hint');
+  hintTimer = setTimeout(() => { hint.style.opacity = '0'; }, 3500);
+  document.addEventListener('keydown', () => {
+    hint.style.opacity = '0';
+    clearTimeout(hintTimer);
+  });
+</script>
+</body>
+</html>
