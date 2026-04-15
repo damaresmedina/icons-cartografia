@@ -330,6 +330,30 @@
     .anim-up { opacity: 1 !important; transform: none !important; }
   }
 
+  /* SLIDE 10 · inflexão virtual × presencial */
+  .inflex-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 28px; align-items: stretch; }
+  .inflex-chart { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 16px 18px; }
+  .inflex-chart .chart-wrap { position: relative; height: 260px; width: 100%; }
+  .inflex-side { display: flex; flex-direction: column; gap: 16px; }
+  .inflex-stat { text-align: center; padding: 16px 18px; border: 1px solid var(--gold); background: rgba(184,150,46,0.08); }
+  .inflex-stat .is-big { font-family: 'Cormorant Garamond', serif; font-size: clamp(60px,6vw,84px); font-weight: 300; color: var(--gold); line-height: 1; letter-spacing: -0.02em; }
+  .inflex-stat .is-sym { font-size: 0.5em; color: var(--gold-lt); margin-left: 3px; vertical-align: super; }
+  .inflex-stat .is-label { font-family: 'Cormorant SC', serif; font-size: 11px; letter-spacing: 0.16em; color: var(--mist); margin-top: 8px; text-transform: uppercase; }
+  .inflex-marks { display: flex; flex-direction: column; gap: 9px; padding: 14px 16px; background: rgba(255,255,255,0.025); border-left: 2px solid var(--gold); }
+  .im-row { display: flex; gap: 10px; font-size: 12px; color: rgba(255,255,255,0.78); line-height: 1.5; }
+  .im-row .im-year { font-family: 'Cormorant SC', serif; font-size: 11px; color: var(--gold); letter-spacing: 0.1em; min-width: 42px; flex-shrink: 0; }
+  .im-row.im-hl { color: var(--cream); }
+  .im-row.im-hl strong { color: var(--gold-lt); font-weight: 500; }
+  .inflex-note { margin-top: 18px; font-family: 'Cormorant Garamond', serif; font-size: 11.5px; font-style: italic; color: rgba(255,255,255,0.4); line-height: 1.65; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 12px; }
+
+  /* SLIDE 13 · encerramento sem foto, com evidência */
+  .closing-sig { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: end; margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line-dark-strong); }
+  .closing-evidence { text-align: right; }
+  .closing-evidence .ce-big { font-family: 'Cormorant Garamond', serif; font-size: clamp(56px,5.5vw,78px); font-weight: 300; color: var(--gold); line-height: 1; letter-spacing: -0.02em; }
+  .closing-evidence .ce-big .sym { font-size: 0.5em; color: var(--gold-lt); margin-left: 3px; vertical-align: super; }
+  .closing-evidence .ce-label { font-family: 'Cormorant SC', serif; font-size: 11px; letter-spacing: 0.2em; color: var(--mist); margin-top: 10px; text-transform: uppercase; }
+  .closing-evidence .ce-caption { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-style: italic; color: rgba(255,255,255,0.55); margin-top: 8px; max-width: 28ch; line-height: 1.5; }
+
   /* SLIDE 11 · gráficos históricos */
   #s11b { background: var(--cream); padding: 72px 56px 48px; display: flex; flex-direction: column; justify-content: center; color: var(--ink); }
   #s11b .slide-heading { margin-bottom: 28px; }
@@ -539,21 +563,30 @@
 
 <!-- 10 · RELATOR NO DIGITAL -->
 <section class="slide" id="s10" data-theme="dark">
-  <div class="slide-meta"><span class="tag">Digital</span><span class="num">10 / 13</span></div>
-  <div class="digital-wrap">
-    <div>
-      <h2 class="anim-up">O Relator<br>no <em>ambiente digital</em></h2>
-      <p class="digital-lead anim-up d2">Hoje, a esmagadora maioria das decisões do STF é proferida no plenário virtual — de forma assíncrona, individual, sem deliberação oral. Nesse contexto, a função do relator torna-se hiperconcentrada em poder, mas se desprende de sua justificação procedimental original.</p>
-      <div class="ai-row anim-up d3">
-        <div class="ai-card"><div class="ai-name">marIA</div><div class="ai-desc">Ferramenta de IA que gera minutas de decisão a partir do acervo do Tribunal.</div></div>
-        <div class="ai-card"><div class="ai-name">VitórIA</div><div class="ai-desc">Sistema de classificação automatizada de processos por temas constitucionais.</div></div>
+  <div class="slide-meta"><span class="tag">Inflexão · 2000–2025</span><span class="num">10 / 13</span></div>
+  <h2 class="anim-up" style="font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--cream);font-size:clamp(24px,2.8vw,36px);line-height:1.2;margin-bottom:14px">A virada <em style="color:var(--gold-lt);font-style:italic">virtual × presencial</em> nas decisões colegiadas</h2>
+  <p class="anim-up d2" style="font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--mist);margin-bottom:22px;max-width:62ch;line-height:1.65">Onze anos de plenário virtual como apêndice (2007–2018, &lt; 1,3%). Em 2019, ato da presidência Toffoli amplia o regime. A pandemia apenas <em>consolida</em> o que já estava em movimento.</p>
+
+  <div class="inflex-grid anim-up d3">
+    <div class="inflex-chart"><div class="chart-wrap"><canvas id="chart_inflexao"></canvas></div></div>
+    <div class="inflex-side">
+      <div class="inflex-stat"><div class="is-big">99,5<span class="is-sym">%</span></div><div class="is-label">das colegiadas em 2025 são virtuais</div></div>
+      <div class="inflex-marks">
+        <div class="im-row"><span class="im-year">2007</span><span class="im-txt">Res. STF 375: plenário virtual inaugurado (apenas repercussão geral)</span></div>
+        <div class="im-row"><span class="im-year">2018</span><span class="im-txt">11 anos de uso marginal — 1,2% das colegiadas</span></div>
+        <div class="im-row im-hl"><span class="im-year">2019</span><span class="im-txt">Emenda Regimental 52 amplia o virtual: <strong>42,7%</strong> em um ano</span></div>
+        <div class="im-row im-hl"><span class="im-year">2020</span><span class="im-txt">pandemia fecha o presencial: <strong>89,5%</strong></span></div>
+        <div class="im-row"><span class="im-year">2023+</span><span class="im-txt">platô em 99% — nunca mais voltou</span></div>
       </div>
     </div>
-    <div class="pct-ring anim-up slow d2">
-      <div class="pct-big">99,5<span class="sym">%</span></div>
-      <div class="pct-label">das decisões em plenário virtual</div>
-    </div>
   </div>
+
+  <div class="ai-row anim-up d4" style="margin-top:20px">
+    <div class="ai-card"><div class="ai-name">marIA</div><div class="ai-desc">IA que gera minutas de decisão a partir do acervo do Tribunal.</div></div>
+    <div class="ai-card"><div class="ai-name">VitórIA</div><div class="ai-desc">Classificação automatizada de processos por temas constitucionais.</div></div>
+  </div>
+
+  <div class="inflex-note anim-up d5">Recorte metodológico: apenas decisões colegiadas do STF (acórdãos, N=397.043 · 2000–2025). Decisões monocráticas são trivialmente presenciais e foram excluídas da comparação. Fonte: Corte Aberta / STF.</div>
 </section>
 
 <!-- 11 · SÉRIE HISTÓRICA · PRESIDÊNCIA -->
@@ -595,12 +628,17 @@
     </ul>
     <div class="concl-thesis anim-up d4">A pluralização da jurisdição constitucional brasileira permanece <strong>largamente interna ao Estado</strong>. Ainda não cruzou o limiar da democratização do acesso e da voz. O desafio não é quantos instrumentos dialógicos o Tribunal utiliza — mas <strong>a quem servem e a quem excluem sistematicamente</strong>.</div>
   </div>
-  <div class="right">
-    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=900&q=75" alt="Cidadãos diante do STF" onerror="this.style.display='none'">
+  <div class="right" style="display:flex;align-items:center;justify-content:center;padding:60px 40px;background:linear-gradient(165deg,var(--forest) 0%,var(--forest-deep) 100%);">
+    <div class="anim-up slow d3" style="text-align:center;max-width:38ch">
+      <div style="font-family:'Cormorant SC',serif;font-size:11px;letter-spacing:0.22em;color:var(--gold);text-transform:uppercase;margin-bottom:24px">Evidência empírica · 2025</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(80px,8vw,120px);font-weight:300;color:var(--gold);line-height:1;letter-spacing:-0.03em">99,5<span style="font-size:0.5em;color:var(--gold-lt);margin-left:4px;vertical-align:super">%</span></div>
+      <div style="font-family:'Cormorant SC',serif;font-size:12px;letter-spacing:0.16em;color:var(--mist);margin-top:18px;text-transform:uppercase">das colegiadas do STF<br>hoje são virtuais</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:rgba(255,255,255,0.55);margin-top:28px;line-height:1.65;border-top:1px solid rgba(255,255,255,0.12);padding-top:20px">Ambiente assíncrono, individualizado,<br>sem deliberação oral. A pluralização<br>formal convive com a <em style="color:var(--gold-lt)">solidão decisória</em>.</div>
+    </div>
   </div>
 </section>
 
-<!-- 12 · ENCERRAMENTO -->
+<!-- 13 · ENCERRAMENTO -->
 <section class="slide" id="s13" data-theme="dark">
   <div class="slide-meta"><span class="tag">Fim</span><span class="num">13 / 13</span></div>
   <h1 class="closing-head anim-up slow">A pluralização do processo<br>constitucional é um projeto<br><em>necessário</em>. Sua democratização<br>permanece <em>inacabada</em>.</h1>
@@ -871,6 +909,61 @@ if (s11b) {
   obs.observe(s11b);
   // Fallback: se Chart.js demorar a carregar
   window.addEventListener('load', () => setTimeout(renderCharts, 200));
+}
+
+// ────────────────────────────────────────────
+// Slide 10 · Inflexão virtual × presencial (colegiadas)
+// Fonte: judx_decision WHERE kind='acordao'
+const ANOS_INFLEX = [2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025];
+const VIRTUAL = [19,115,86,112,147,111,70,91,82,55,50,176,7579,16296,14844,12802,18088,21275,23031];
+const PRESENCIAL = [23076,19598,16009,11230,12948,11980,14033,16983,17633,14477,12841,14353,10155,1915,572,168,105,175,110];
+
+function renderInflexao() {
+  if (typeof Chart === 'undefined') return;
+  const c = document.getElementById('chart_inflexao');
+  if (!c || c.dataset.rendered) return;
+  c.dataset.rendered = '1';
+
+  new Chart(c, {
+    type: 'bar',
+    data: {
+      labels: ANOS_INFLEX,
+      datasets: [
+        { label: 'Presencial', data: PRESENCIAL, backgroundColor: 'rgba(138,158,144,0.75)', borderColor: '#8a9e90', borderWidth: 0.5, stack: 's' },
+        { label: 'Virtual',    data: VIRTUAL,    backgroundColor: 'rgba(184,150,46,0.88)', borderColor: '#b8962e', borderWidth: 0.5, stack: 's' }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 11 }, color: 'rgba(245,240,232,0.75)', padding: 8 } },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString('pt-BR')}`,
+            footer: (items) => {
+              const v = items.find(i => i.dataset.label === 'Virtual')?.parsed.y || 0;
+              const p = items.find(i => i.dataset.label === 'Presencial')?.parsed.y || 0;
+              const pct = v + p > 0 ? (100 * v / (v + p)).toFixed(1) : '0';
+              return `Virtual: ${pct}% do total`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: { stacked: true, grid: { display: false }, ticks: { font: { size: 9 }, color: 'rgba(245,240,232,0.55)', maxRotation: 0, autoSkip: true, maxTicksLimit: 12 } },
+        y: { stacked: true, grid: { color: 'rgba(245,240,232,0.06)' }, ticks: { font: { size: 10 }, color: 'rgba(245,240,232,0.55)', callback: v => v.toLocaleString('pt-BR') } }
+      }
+    }
+  });
+}
+
+const s10 = document.getElementById('s10');
+if (s10) {
+  const obs10 = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) renderInflexao(); });
+  }, { threshold: 0.3 });
+  obs10.observe(s10);
+  window.addEventListener('load', () => setTimeout(renderInflexao, 200));
 }
 </script>
 </body>
