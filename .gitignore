@@ -10,3 +10,6 @@ __pycache__/
 *.pyc
 tmp/
 .vercel
+
+# Backups locais (dados grandes, mantidos só em disco)
+backups/
