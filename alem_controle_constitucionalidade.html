@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+SC:wght@400;500;600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
   :root {
     --forest:   #1a3d2b;
@@ -328,6 +329,23 @@
     section.slide { page-break-after: always; min-height: auto; }
     .anim-up { opacity: 1 !important; transform: none !important; }
   }
+
+  /* SLIDE 11 · gráficos históricos */
+  #s11b { background: var(--cream); padding: 72px 56px 48px; display: flex; flex-direction: column; justify-content: center; color: var(--ink); }
+  #s11b .slide-heading { margin-bottom: 28px; }
+  .charts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 24px; }
+  .chart-box { background: white; border: 1px solid var(--rule); padding: 18px 20px; }
+  .chart-title { font-family: 'Cormorant SC', serif; font-size: 11px; letter-spacing: 0.14em; color: var(--gold); margin-bottom: 10px; text-transform: uppercase; text-align: center; }
+  .chart-wrap { position: relative; height: 220px; width: 100%; }
+  .chart-note { margin-top: 10px; font-family: 'Cormorant Garamond', serif; font-size: 13px; color: #5a6e61; line-height: 1.55; font-style: italic; }
+  .chart-note strong { color: var(--forest); font-style: normal; font-weight: 500; }
+  .timeline-pres { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; padding: 14px 16px; background: var(--forest); border-left: 3px solid var(--gold); }
+  .tp-item { display: flex; flex-direction: column; gap: 2px; color: var(--cream); }
+  .tp-year { font-family: 'Cormorant SC', serif; font-size: 11px; letter-spacing: 0.12em; color: var(--gold); }
+  .tp-pres { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 500; }
+  .tp-evt { font-size: 11px; color: var(--mist); line-height: 1.4; }
+  .tp-item.tp-hl { background: rgba(184,150,46,0.14); padding: 4px 8px; margin: -4px -8px; border-left: 2px solid var(--gold-lt); }
+  .tp-item.tp-hl .tp-pres { color: var(--gold-lt); font-style: italic; }
 </style>
 </head>
 <body>
@@ -337,7 +355,7 @@
 
 <!-- 01 · CAPA -->
 <section class="slide" id="s1" data-theme="dark">
-  <div class="slide-meta"><span class="tag">Abertura</span><span class="num">01 / 12</span></div>
+  <div class="slide-meta"><span class="tag">Abertura</span><span class="num">01 / 13</span></div>
   <div class="left">
     <div class="eyebrow anim-up">PUC-SP · Doutorado em Direito · 2026</div>
     <h1 class="cover-title anim-up d2">
@@ -360,7 +378,7 @@
 
 <!-- 02 · TRANSFORMAÇÃO -->
 <section class="slide" id="s2" data-theme="light">
-  <div class="slide-meta dark"><span class="tag">Abertura</span><span class="num">02 / 12</span></div>
+  <div class="slide-meta dark"><span class="tag">Abertura</span><span class="num">02 / 13</span></div>
   <h2 class="slide-heading anim-up">A Transformação do Supremo Tribunal Federal</h2>
   <div class="timeline">
     <div class="tl-item anim-up d2"><div class="tl-num">1</div><div class="tl-label">Modelo Histórico</div><div class="tl-desc">O STF foi historicamente marcado pelo hermetismo e pela verticalidade judicial — um modelo fechado, hierárquico, de adjudicação constitucional.</div></div>
@@ -374,7 +392,7 @@
 
 <!-- 03 · CONTEXTO HISTÓRICO -->
 <section class="slide" id="s3" data-theme="dark">
-  <div class="slide-meta"><span class="tag">Contexto</span><span class="num">03 / 12</span></div>
+  <div class="slide-meta"><span class="tag">Contexto</span><span class="num">03 / 13</span></div>
   <div class="content">
     <h2 class="s3-heading anim-up">Do Hermetismo<br>à Abertura</h2>
     <p class="s3-lead anim-up d2">As raízes dessa transição remontam aos anos 1980, na redemocratização brasileira — um esforço institucional consciente de abertura do Tribunal à sociedade.</p>
@@ -394,7 +412,7 @@
 
 <!-- 04 · INOVAÇÕES -->
 <section class="slide" id="s4" data-theme="light">
-  <div class="slide-meta dark"><span class="tag">Inovações</span><span class="num">04 / 12</span></div>
+  <div class="slide-meta dark"><span class="tag">Inovações</span><span class="num">04 / 13</span></div>
   <h2 class="slide-heading anim-up">Inovações Recentes na Justiça Participativa</h2>
   <div class="cards-3">
     <div class="card anim-up d2"><div class="card-num">1</div><div class="card-title">Sessões de Mediação</div><div class="card-desc">Diálogo estruturado entre as partes para alcançar soluções mutuamente aceitáveis, fora do marco estrito da adjudicação.</div><span class="card-tag">NUSOL</span></div>
@@ -406,7 +424,7 @@
 
 <!-- 05 · DEBATE -->
 <section class="slide" id="s5" data-theme="dark">
-  <div class="slide-meta"><span class="tag">Debate</span><span class="num">05 / 12</span></div>
+  <div class="slide-meta"><span class="tag">Debate</span><span class="num">05 / 13</span></div>
   <h2 class="slide-heading anim-up">O Debate: Benefícios vs. Riscos</h2>
   <div class="debate-grid">
     <div class="debate-col pro anim-up d2">
@@ -433,7 +451,7 @@
 
 <!-- 06 · 123 CASOS -->
 <section class="slide" id="s6" data-theme="light">
-  <div class="slide-meta dark"><span class="tag">Mapeamento</span><span class="num">06 / 12</span></div>
+  <div class="slide-meta dark"><span class="tag">Mapeamento</span><span class="num">06 / 13</span></div>
   <h2 class="slide-heading anim-up">Análise Empírica: 123 Casos de Prática Dialógica</h2>
   <div class="cases-layout">
     <div class="anim-up d2"><div class="big-number">123</div></div>
@@ -451,7 +469,7 @@
 
 <!-- 07 · TEMÁTICA -->
 <section class="slide" id="s7" data-theme="dark">
-  <div class="slide-meta"><span class="tag">Diversidade Temática</span><span class="num">07 / 12</span></div>
+  <div class="slide-meta"><span class="tag">Diversidade Temática</span><span class="num">07 / 13</span></div>
   <div class="img-col">
     <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=900&q=75" alt="Território brasileiro" onerror="this.style.background='#1a3d2b'">
   </div>
@@ -476,7 +494,7 @@
 
 <!-- 08 · ASSIMETRIAS -->
 <section class="slide" id="s8" data-theme="light">
-  <div class="slide-meta dark"><span class="tag">Assimetrias</span><span class="num">08 / 12</span></div>
+  <div class="slide-meta dark"><span class="tag">Assimetrias</span><span class="num">08 / 13</span></div>
   <h2 class="slide-heading anim-up">Assimetrias na Prática Dialógica</h2>
   <div class="asymmetry-grid">
     <div class="geo-block anim-up d2">
@@ -506,7 +524,7 @@
 
 <!-- 09 · INCONSISTÊNCIAS -->
 <section class="slide" id="s9" data-theme="dark">
-  <div class="slide-meta"><span class="tag">Inconsistências</span><span class="num">09 / 12</span></div>
+  <div class="slide-meta"><span class="tag">Inconsistências</span><span class="num">09 / 13</span></div>
   <h2 class="slide-heading anim-up">Inconsistências Procedimentais</h2>
   <div class="stats-row">
     <div class="stat-block s-gold anim-up d2"><div class="stat-value">190</div><div class="stat-label">Dias — Negociação Mais Longa</div><div class="stat-sub">Casos da Min. Rosa Weber tiveram média de 190 dias de processo dialógico</div></div>
@@ -521,7 +539,7 @@
 
 <!-- 10 · RELATOR NO DIGITAL -->
 <section class="slide" id="s10" data-theme="dark">
-  <div class="slide-meta"><span class="tag">Digital</span><span class="num">10 / 12</span></div>
+  <div class="slide-meta"><span class="tag">Digital</span><span class="num">10 / 13</span></div>
   <div class="digital-wrap">
     <div>
       <h2 class="anim-up">O Relator<br>no <em>ambiente digital</em></h2>
@@ -538,9 +556,35 @@
   </div>
 </section>
 
-<!-- 11 · CONCLUSÃO -->
-<section class="slide" id="s11" data-theme="dark">
-  <div class="slide-meta"><span class="tag">Conclusão</span><span class="num">11 / 12</span></div>
+<!-- 11 · SÉRIE HISTÓRICA · PRESIDÊNCIA -->
+<section class="slide" id="s11b" data-theme="light">
+  <div class="slide-meta dark"><span class="tag">Série histórica · 2000–2025</span><span class="num">11 / 13</span></div>
+  <h2 class="slide-heading anim-up">O crescimento da Presidência como instância decisória</h2>
+  <div class="charts-row anim-up d2">
+    <div class="chart-box">
+      <div class="chart-title">Decisões da Presidência por ano · escala logarítmica</div>
+      <div class="chart-wrap"><canvas id="chart_presidencia"></canvas></div>
+      <div class="chart-note"><strong>1.931 em 2000</strong> → <strong>49.498 em 2024</strong>. Crescimento de 25× em 24 anos — estrutural, não conjuntural.</div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">Composição decisória do STF por órgão (%)</div>
+      <div class="chart-wrap"><canvas id="chart_composicao"></canvas></div>
+      <div class="chart-note">A Presidência passou de <strong>2,2% (2000)</strong> para <strong>44% (2023)</strong>. Monocrática dos 11 ministros cede o centro de gravidade.</div>
+    </div>
+  </div>
+  <div class="timeline-pres anim-up d3">
+    <div class="tp-item"><span class="tp-year">2012</span><span class="tp-pres">Joaquim Barbosa</span><span class="tp-evt">15,6%</span></div>
+    <div class="tp-item"><span class="tp-year">2014</span><span class="tp-pres">Lewandowski</span><span class="tp-evt">19,0%</span></div>
+    <div class="tp-item"><span class="tp-year">2017</span><span class="tp-pres">Cármen Lúcia</span><span class="tp-evt">34,0%</span></div>
+    <div class="tp-item"><span class="tp-year">2019</span><span class="tp-pres">Dias Toffoli</span><span class="tp-evt">38,6%</span></div>
+    <div class="tp-item tp-hl"><span class="tp-year">2020</span><span class="tp-pres">pandemia · virtualização</span><span class="tp-evt">inflexão</span></div>
+    <div class="tp-item"><span class="tp-year">2023</span><span class="tp-pres">Rosa Weber / Barroso</span><span class="tp-evt">44,1% — platô</span></div>
+  </div>
+</section>
+
+<!-- 12 · CONCLUSÃO -->
+<section class="slide" id="s12" data-theme="dark">
+  <div class="slide-meta"><span class="tag">Conclusão</span><span class="num">12 / 13</span></div>
   <div class="left">
     <div class="concl-sub anim-up">Conclusão</div>
     <h2 class="conclusion-heading anim-up d2"><em>Democratização</em><br>ou<br>Estatização?</h2>
@@ -557,8 +601,8 @@
 </section>
 
 <!-- 12 · ENCERRAMENTO -->
-<section class="slide" id="s12" data-theme="dark">
-  <div class="slide-meta"><span class="tag">Fim</span><span class="num">12 / 12</span></div>
+<section class="slide" id="s13" data-theme="dark">
+  <div class="slide-meta"><span class="tag">Fim</span><span class="num">13 / 13</span></div>
   <h1 class="closing-head anim-up slow">A pluralização do processo<br>constitucional é um projeto<br><em>necessário</em>. Sua democratização<br>permanece <em>inacabada</em>.</h1>
   <div class="closing-meta">
     <div class="anim-up d2">
@@ -584,7 +628,7 @@
 
 <!-- Navegação global -->
 <div id="nav-dots"></div>
-<div id="counter">01 / 12</div>
+<div id="counter">01 / 13</div>
 <div id="nav-arrows">
   <button class="arrow-btn" id="btn-prev" aria-label="Anterior">&#8592;</button>
   <button class="arrow-btn" id="btn-next" aria-label="Próximo">&#8594;</button>
@@ -721,6 +765,113 @@
     el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
   });
 })();
+</script>
+
+<script>
+// Slide 11 · Dados reais do stf_master (2000–2025) — extraídos em 14/abr/2026
+// Fonte: Corte Aberta STF (campo orgao_julgador)
+const ANOS = [2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025];
+const PRESIDENCIA = [1931,2501,1768,5488,2702,932,1652,5648,8584,6213,5611,7780,14017,10145,21747,24497,32055,43030,42763,44746,37544,42666,39583,46798,49498,43320];
+const TOTAL = [88226,124945,100352,110169,104139,110380,122844,165534,132590,104647,109703,102427,90082,90252,114457,116659,117490,126570,126757,115962,99612,98231,90016,106097,115687,118091];
+const MONO  = [75221,113322,87033,95466,90442,94445,110091,139263,109086,85011,94382,82552,64719,66887,76752,76239,73455,72183,71815,56234,47749,43688,40302,46881,50846,56395];
+const TURMAS = [10635,8551,10646,8671,10520,14505,10566,15034,13935,12679,8785,11081,10849,11657,14364,14895,11097,10772,11244,13761,12327,10340,8966,9707,13661,16732];
+const PLENARIO = [439,571,905,544,475,498,535,5570,870,658,813,918,392,1493,1505,953,829,535,896,1184,1963,1496,1135,2691,1651,1603];
+
+const pctPres = PRESIDENCIA.map((v,i) => (100 * v / TOTAL[i]).toFixed(1));
+const pctMono = MONO.map((v,i) => (100 * v / TOTAL[i]).toFixed(1));
+const pctTurmas = TURMAS.map((v,i) => (100 * v / TOTAL[i]).toFixed(1));
+const pctPlen = PLENARIO.map((v,i) => (100 * v / TOTAL[i]).toFixed(1));
+
+const GOLD = '#b8962e';
+const GOLD_LT = '#d4b05a';
+const FOREST = '#1a3d2b';
+const MIST = '#8a9e90';
+const CREAM = '#f5f0e8';
+
+function renderCharts() {
+  if (typeof Chart === 'undefined') return;
+  const c1 = document.getElementById('chart_presidencia');
+  const c2 = document.getElementById('chart_composicao');
+  if (!c1 || !c2 || c1.dataset.rendered) return;
+  c1.dataset.rendered = c2.dataset.rendered = '1';
+
+  // Gráfico 1 · Decisões da Presidência · escala log
+  new Chart(c1, {
+    type: 'line',
+    data: {
+      labels: ANOS,
+      datasets: [{
+        label: 'Decisões da Presidência',
+        data: PRESIDENCIA,
+        borderColor: GOLD,
+        backgroundColor: 'rgba(184,150,46,0.12)',
+        borderWidth: 2.2,
+        pointBackgroundColor: GOLD,
+        pointRadius: 3,
+        pointHoverRadius: 5,
+        fill: true,
+        tension: 0.25
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => `${ctx.parsed.y.toLocaleString('pt-BR')} decisões`,
+            title: (items) => `Ano ${items[0].label}`
+          }
+        }
+      },
+      scales: {
+        y: {
+          type: 'logarithmic',
+          grid: { color: 'rgba(26,61,43,0.06)' },
+          ticks: { font: { size: 10 }, color: '#5a6e61',
+            callback: v => { const s = v.toLocaleString('pt-BR'); return [500,1000,5000,10000,50000].includes(v) ? s : null; } }
+        },
+        x: { grid: { display: false }, ticks: { font: { size: 9 }, color: '#5a6e61', maxRotation: 0, autoSkip: true, maxTicksLimit: 10 } }
+      }
+    }
+  });
+
+  // Gráfico 2 · Composição por órgão · área empilhada 100%
+  new Chart(c2, {
+    type: 'line',
+    data: {
+      labels: ANOS,
+      datasets: [
+        { label: 'Monocrática (11 min.)', data: pctMono, backgroundColor: 'rgba(138,158,144,0.75)', borderColor: MIST, borderWidth: 1, fill: true, pointRadius: 0, tension: 0.25 },
+        { label: 'Presidência', data: pctPres, backgroundColor: 'rgba(184,150,46,0.85)', borderColor: GOLD, borderWidth: 1, fill: true, pointRadius: 0, tension: 0.25 },
+        { label: 'Turmas', data: pctTurmas, backgroundColor: 'rgba(26,61,43,0.65)', borderColor: FOREST, borderWidth: 1, fill: true, pointRadius: 0, tension: 0.25 },
+        { label: 'Plenário', data: pctPlen, backgroundColor: 'rgba(212,176,90,0.55)', borderColor: GOLD_LT, borderWidth: 1, fill: true, pointRadius: 0, tension: 0.25 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 }, color: '#5a6e61', padding: 8 } },
+        tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y}%` } }
+      },
+      scales: {
+        y: { stacked: true, max: 100, grid: { color: 'rgba(26,61,43,0.06)' }, ticks: { font: { size: 10 }, color: '#5a6e61', callback: v => v + '%' } },
+        x: { stacked: true, grid: { display: false }, ticks: { font: { size: 9 }, color: '#5a6e61', maxRotation: 0, autoSkip: true, maxTicksLimit: 10 } }
+      }
+    }
+  });
+}
+
+// Renderiza quando o slide 11 aparece (IntersectionObserver) ou no modo apresentação
+const s11b = document.getElementById('s11b');
+if (s11b) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { renderCharts(); } });
+  }, { threshold: 0.3 });
+  obs.observe(s11b);
+  // Fallback: se Chart.js demorar a carregar
+  window.addEventListener('load', () => setTimeout(renderCharts, 200));
+}
 </script>
 </body>
 </html>
