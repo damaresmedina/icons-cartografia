@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cartografia do Sistema Judiciário Brasileiro · ICONS</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d0d0d;--surface:#161616;--surface2:#1e1e1e;--border:#2a2a2a;
+  --text:#e8e8e8;--muted:#888;--accent:#6fa8dc;
+  --c-stf:#e8c547;
+  --c-comum:#d95f5f;
+  --c-federal:#5b9bd5;
+  --c-trabalho:#70ad47;
+  --c-eleitoral:#9b6bd5;
+  --c-militar:#7f8c8d;
+}
+html,body{background:var(--bg);color:var(--text);font-family:'Courier New',monospace;font-size:13px;line-height:1.55;min-height:100vh}
+body{padding:28px 32px 60px;max-width:1400px;margin:0 auto}
+
+header{margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--border)}
+header .eyebrow{color:var(--muted);letter-spacing:.14em;font-size:11px;margin-bottom:6px}
+header h1{font-size:26px;font-family:'Georgia',serif;color:var(--text);font-weight:normal;letter-spacing:.01em}
+header .lead{margin-top:10px;color:#c8c8c8;max-width:780px;font-size:14px}
+header .lead em{color:var(--accent);font-style:italic}
+header .meta{margin-top:14px;color:var(--muted);font-size:11px}
+header .meta span+span::before{content:"  ·  ";color:var(--border)}
+
+.cartografia{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:20px;margin-bottom:24px;position:relative}
+.cartografia-title{font-size:11px;color:var(--muted);letter-spacing:.12em;margin-bottom:14px}
+
+svg#vascular{width:100%;height:auto;display:block;user-select:none}
+svg#vascular text{font-family:'Courier New',monospace;fill:var(--text)}
+svg#vascular .nivel-label{font-size:10px;fill:var(--muted);letter-spacing:.08em}
+svg#vascular .anat-label{font-size:10px;fill:#c8c8c8;font-style:italic}
+svg#vascular .sigla{font-size:11px;font-weight:bold;fill:var(--text)}
+svg#vascular .total{font-size:10px;fill:#aaa}
+svg#vascular .connector{stroke:var(--border);fill:none;opacity:.55}
+svg#vascular .connector.live{stroke:var(--accent);opacity:.85}
+
+.node{cursor:pointer;transition:filter .15s}
+.node:hover{filter:brightness(1.35) drop-shadow(0 0 6px currentColor)}
+.pulse-bg{animation:pulseBg 4s ease-in-out infinite}
+@keyframes pulseBg{0%,100%{opacity:.75}50%{opacity:1}}
+.pulse-slow{animation:pulseSlow 6s ease-in-out infinite}
+@keyframes pulseSlow{0%,100%{r:attr(r)}50%{filter:brightness(1.2)}}
+
+.legenda{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:22px;padding-top:16px;border-top:1px solid var(--border)}
+.legenda .item{font-size:11px;color:#bbb}
+.legenda .sw{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:middle;margin-right:6px}
+
+#tooltip{position:fixed;background:rgba(13,13,13,.97);border:1px solid var(--border);border-radius:3px;padding:12px 14px;max-width:320px;display:none;z-index:100;font-size:11px;line-height:1.6;pointer-events:none}
+#tooltip h3{font-size:13px;margin-bottom:4px;color:var(--text)}
+#tooltip .tt-sub{color:var(--muted);font-size:10px;margin-bottom:8px}
+#tooltip .tt-row{display:flex;justify-content:space-between;padding:2px 0}
+#tooltip .tt-row .k{color:var(--muted)}
+#tooltip .tt-row .v{color:var(--text);font-weight:bold}
+
+.resumo{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:22px}
+.resumo .card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:14px}
+.resumo .card .label{font-size:10px;color:var(--muted);letter-spacing:.1em;margin-bottom:4px}
+.resumo .card .num{font-size:22px;color:var(--text);font-family:'Georgia',serif}
+.resumo .card .sub{font-size:11px;color:#aaa;margin-top:4px}
+
+.nota{margin-top:32px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:11px;max-width:900px}
+.nota p{margin-bottom:8px}
+.nota strong{color:#c8c8c8;font-weight:normal}
+.fonte{margin-top:12px;font-size:10px;color:var(--muted);letter-spacing:.05em}
+.fonte a{color:var(--accent);text-decoration:none}
+.fonte a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">ICONS · INSTITUTO CONSTITUIÇÃO ABERTA</div>
+  <h1>Cartografia do Sistema Judiciário Brasileiro</h1>
+  <p class="lead">
+    O sistema judiciário pulsa como um sistema circulatório. A <em>disputa é absorvida</em> nos capilares — as varas — onde emite seu primeiro pulso: a sentença. Dali ascende pelas vênulas, veias e veias cavas até alcançar o coração, o STF. A pretensão normativo-dogmática de fechamento, via súmulas vinculantes, repercussão geral e temas repetitivos, não completa o ciclo: <em>o sistema circula e tende ao não fechamento</em>.
+  </p>
+  <div class="meta">
+    <span>Fonte primária: CNJ · Datajud (agregações 17/abr/2026)</span>
+    <span>90 endpoints oficiais</span>
+    <span>329.761.662 documentos</span>
+    <span>8.648.195.237 movimentos</span>
+  </div>
+</header>
+
+<section class="cartografia">
+  <div class="cartografia-title">ÁRVORE VASCULAR DO SISTEMA JUDICIÁRIO</div>
+
+  <svg id="vascular" viewBox="0 0 1280 820" xmlns="http://www.w3.org/2000/svg">
+    <!-- defs para gradientes e filtros -->
+    <defs>
+      <radialGradient id="grad-stf" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#f4d467"/>
+        <stop offset="100%" stop-color="#b8941f"/>
+      </radialGradient>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+
+    <!-- labels de nível à esquerda -->
+    <g class="nivel-axis">
+      <text class="nivel-label" x="20" y="62">N0  ·  CORAÇÃO</text>
+      <text class="nivel-label" x="20" y="200">N1  ·  VEIAS CAVAS</text>
+      <text class="nivel-label" x="20" y="380">N2  ·  VEIAS</text>
+      <text class="nivel-label" x="20" y="560">N3  ·  VÊNULAS</text>
+      <text class="nivel-label" x="20" y="720">N4  ·  CAPILARES</text>
+
+      <text class="anat-label" x="20" y="80">bombeia a pressão constitucional</text>
+      <text class="anat-label" x="20" y="218">anteparos (filtros de grosso calibre)</text>
+      <text class="anat-label" x="20" y="398">tribunais de 2ª instância</text>
+      <text class="anat-label" x="20" y="578">1ª instância colegiada (só comum e federal)</text>
+      <text class="anat-label" x="20" y="738">varas — onde a disputa é absorvida</text>
+    </g>
+
+    <!-- Conectores (vasos) -->
+    <g class="vessels">
+      <!-- N0 → N1 -->
+      <path class="connector" d="M 640,75 C 640,120 360,160 360,200"/>
+      <path class="connector" d="M 640,75 C 640,130 540,160 540,200"/>
+      <path class="connector" d="M 640,75 C 640,130 740,160 740,200"/>
+      <path class="connector" d="M 640,75 C 640,120 920,160 920,200"/>
+
+      <!-- N1 → N2 : STJ cobre COMUM e FEDERAL; TST→TRABALHO; TSE→ELEITORAL; STM→MILITAR -->
+      <path class="connector" d="M 360,215 C 360,280 230,320 230,380" stroke-width="3"/>
+      <path class="connector" d="M 360,215 C 360,280 400,320 400,380" stroke-width="2"/>
+      <path class="connector" d="M 540,215 C 540,290 565,320 565,380" stroke-width="2"/>
+      <path class="connector" d="M 740,215 C 740,290 740,320 740,380" stroke-width="2"/>
+      <path class="connector" d="M 920,215 C 920,290 920,320 920,380" stroke-width="1.5"/>
+
+      <!-- N2 → N3 (só comum e federal têm vênulas) -->
+      <path class="connector" d="M 230,400 C 230,470 230,500 230,545" stroke-dasharray="3,3"/>
+      <path class="connector" d="M 400,400 C 400,470 400,500 400,545" stroke-dasharray="3,3"/>
+
+      <!-- N2 → N4 direto (trabalho, eleitoral, militar) -->
+      <path class="connector" d="M 565,400 C 565,540 565,640 565,710" stroke-dasharray="2,4"/>
+      <path class="connector" d="M 740,400 C 740,540 740,640 740,710" stroke-dasharray="2,4"/>
+      <path class="connector" d="M 920,400 C 920,540 920,640 920,710" stroke-dasharray="2,4"/>
+
+      <!-- N3 → N4 (comum e federal) -->
+      <path class="connector" d="M 230,580 C 230,640 230,680 230,710" stroke-dasharray="2,4"/>
+      <path class="connector" d="M 400,580 C 400,640 400,680 400,710" stroke-dasharray="2,4"/>
+    </g>
+
+    <!-- === N0 : STF === -->
+    <g class="node" data-node="STF" transform="translate(640,60)" style="color:var(--c-stf)">
+      <circle r="22" fill="url(#grad-stf)" filter="url(#glow)" class="pulse-slow"/>
+      <text class="sigla" text-anchor="middle" y="4">STF</text>
+    </g>
+
+    <!-- === N1 : anteparos === -->
+    <g class="node" data-node="STJ" transform="translate(360,200)" style="color:var(--c-federal)">
+      <circle r="18" fill="#5b9bd5" opacity=".85" class="pulse-bg"/>
+      <text class="sigla" text-anchor="middle" y="4">STJ</text>
+      <text class="total" text-anchor="middle" y="36">3,4M</text>
+    </g>
+    <g class="node" data-node="TST" transform="translate(540,200)" style="color:var(--c-trabalho)">
+      <circle r="19" fill="#70ad47" opacity=".85" class="pulse-bg"/>
+      <text class="sigla" text-anchor="middle" y="4">TST</text>
+      <text class="total" text-anchor="middle" y="36">4,8M</text>
+    </g>
+    <g class="node" data-node="TSE" transform="translate(740,200)" style="color:var(--c-eleitoral)">
+      <circle r="9" fill="#9b6bd5" opacity=".85" class="pulse-bg"/>
+      <text class="sigla" text-anchor="middle" y="4">TSE</text>
+      <text class="total" text-anchor="middle" y="26">84K</text>
+    </g>
+    <g class="node" data-node="STM" transform="translate(920,200)" style="color:var(--c-militar)">
+      <circle r="7" fill="#7f8c8d" opacity=".85" class="pulse-bg"/>
+      <text class="sigla" text-anchor="middle" y="4">STM</text>
+      <text class="total" text-anchor="middle" y="24">26K</text>
+    </g>
+
+    <!-- === N2 : veias (tribunais 2ª inst.) === -->
+    <!-- TJs (27) -->
+    <g class="node" data-node="TJs" transform="translate(230,380)" style="color:var(--c-comum)">
+      <circle r="30" fill="#d95f5f" opacity=".88" class="pulse-bg"/>
+      <text class="sigla" text-anchor="middle" y="4">TJs</text>
+      <text class="total" text-anchor="middle" y="50">≈104M</text>
+      <text class="total" text-anchor="middle" y="66" style="font-size:9px">27 tribunais</text>
+    </g>
+    <!-- TRFs (6) -->
+    <g class="node" data-node="TRFs" transform="translate(400,380)" style="color:var(--c-federal)">
+      <circle r="22" fill="#5b9bd5" opacity=".85" class="pulse-bg"/>
+      <text class="sigla" text-anchor="middle" y="4">TRFs</text>
+      <text class="total" text-anchor="middle" y="44">≈51M</text>
+      <text class="total" text-anchor="middle" y="60" style="font-size:9px">6 regiões</text>
+    </g>
+    <!-- TRTs (24) -->
+    <g class="node" data-node="TRTs" transform="translate(565,380)" style="color:var(--c-trabalho)">
+      <circle r="21" fill="#70ad47" opacity=".85" class="pulse-bg"/>
+      <text class="sigla" text-anchor="middle" y="4">TRTs</text>
+      <text class="total" text-anchor="middle" y="44">≈28M</text>
+      <text class="total" text-anchor="middle" y="60" style="font-size:9px">24 regiões</text>
+    </g>
+    <!-- TREs (27) -->
+    <g class="node" data-node="TREs" transform="translate(740,380)" style="color:var(--c-eleitoral)">
+      <circle r="13" fill="#9b6bd5" opacity=".85" class="pulse-bg"/>
+      <text class="sigla" text-anchor="middle" y="4">TREs</text>
+      <text class="total" text-anchor="middle" y="32">≈4,7M</text>
+      <text class="total" text-anchor="middle" y="48" style="font-size:9px">27 regionais</text>
+    </g>
+    <!-- TJMs (3) -->
+    <g class="node" data-node="TJMs" transform="translate(920,380)" style="color:var(--c-militar)">
+      <circle r="8" fill="#7f8c8d" opacity=".85" class="pulse-bg"/>
+      <text class="sigla" text-anchor="middle" y="4">TJMs</text>
+      <text class="total" text-anchor="middle" y="24">≈60K</text>
+      <text class="total" text-anchor="middle" y="38" style="font-size:9px">3 militares</text>
+    </g>
+
+    <!-- === N3 : vênulas (só comum + federal) === -->
+    <g class="node" data-node="T.Rec.estadual" transform="translate(230,560)" style="color:var(--c-comum)">
+      <rect x="-54" y="-12" width="108" height="24" rx="2" fill="#d95f5f" fill-opacity=".28" stroke="#d95f5f" stroke-opacity=".6"/>
+      <text class="sigla" text-anchor="middle" y="4" style="font-size:10px">T. Recursais (comum)</text>
+    </g>
+    <g class="node" data-node="T.Rec.federal" transform="translate(400,560)" style="color:var(--c-federal)">
+      <rect x="-52" y="-12" width="104" height="24" rx="2" fill="#5b9bd5" fill-opacity=".28" stroke="#5b9bd5" stroke-opacity=".6"/>
+      <text class="sigla" text-anchor="middle" y="4" style="font-size:10px">T. Recursais / JEF</text>
+    </g>
+
+    <!-- === N4 : capilares (base — milhares de varas) === -->
+    <g class="capilares">
+      <!-- Banda pontilhada representando a malha de varas -->
+      <line x1="60" y1="722" x2="1200" y2="722" stroke="#444" stroke-width="1"/>
+
+      <g transform="translate(230,735)">
+        <text class="sigla" text-anchor="middle" style="fill:#d95f5f;font-size:10px">Varas + JECs (comum)</text>
+        <text class="total" text-anchor="middle" y="14" style="font-size:9px">milhares de vasinhos</text>
+      </g>
+      <g transform="translate(400,735)">
+        <text class="sigla" text-anchor="middle" style="fill:#5b9bd5;font-size:10px">Varas + JEFs (federal)</text>
+        <text class="total" text-anchor="middle" y="14" style="font-size:9px">centenas</text>
+      </g>
+      <g transform="translate(565,735)">
+        <text class="sigla" text-anchor="middle" style="fill:#70ad47;font-size:10px">Varas do Trabalho</text>
+        <text class="total" text-anchor="middle" y="14" style="font-size:9px">~1.500 unidades</text>
+      </g>
+      <g transform="translate(740,735)">
+        <text class="sigla" text-anchor="middle" style="fill:#9b6bd5;font-size:10px">Zonas Eleitorais</text>
+        <text class="total" text-anchor="middle" y="14" style="font-size:9px">~3.000 zonas</text>
+      </g>
+      <g transform="translate(920,735)">
+        <text class="sigla" text-anchor="middle" style="fill:#7f8c8d;font-size:10px">Auditorias Militares</text>
+        <text class="total" text-anchor="middle" y="14" style="font-size:9px">pequeno volume</text>
+      </g>
+
+      <!-- onda sutil de pulso nos capilares -->
+      <path d="M 60,760 Q 200,755 340,760 T 620,760 T 900,760 T 1200,760"
+            stroke="#666" stroke-width="1" fill="none" opacity=".6" class="pulse-slow"/>
+    </g>
+
+    <!-- setas de sentido do fluxo -->
+    <g opacity=".55">
+      <text x="1220" y="400" class="anat-label" style="font-size:10px;fill:var(--accent)">↑</text>
+      <text x="1220" y="415" class="anat-label" style="font-size:9px">ascensão</text>
+      <text x="1220" y="430" class="anat-label" style="font-size:9px">de recursos</text>
+
+      <text x="1220" y="200" class="anat-label" style="font-size:10px;fill:#888">⇢</text>
+      <text x="1220" y="215" class="anat-label" style="font-size:9px">pretensão</text>
+      <text x="1220" y="230" class="anat-label" style="font-size:9px">descendente</text>
+      <text x="1220" y="245" class="anat-label" style="font-size:9px">(não fecha)</text>
+    </g>
+  </svg>
+
+  <div class="legenda">
+    <div class="item"><span class="sw" style="background:var(--c-comum)"></span>Justiça comum estadual — CF art. 125, competência residual</div>
+    <div class="item"><span class="sw" style="background:var(--c-federal)"></span>Justiça federal — CF art. 109, só causas da União</div>
+    <div class="item"><span class="sw" style="background:var(--c-trabalho)"></span>Justiça do trabalho — CF art. 114, relações de trabalho</div>
+    <div class="item"><span class="sw" style="background:var(--c-eleitoral)"></span>Justiça eleitoral — CF art. 121, matéria eleitoral</div>
+    <div class="item"><span class="sw" style="background:var(--c-militar)"></span>Justiça militar — CF art. 124, crimes militares</div>
+    <div class="item"><span class="sw" style="background:var(--c-stf)"></span>STF — jurisdição constitucional (recebe RE/ARE de qualquer especialidade)</div>
+  </div>
+</section>
+
+<section class="resumo">
+  <div class="card">
+    <div class="label">PROCESSOS AGREGADOS</div>
+    <div class="num">182.549.960</div>
+    <div class="sub">84 endpoints (sem TJSP, TJMG, TJPR, TJRS, TRF4, TRE-SC)</div>
+  </div>
+  <div class="card">
+    <div class="label">DOCUMENTOS BRUTOS</div>
+    <div class="num">329.761.662</div>
+    <div class="sub">Dimensão total Datajud</div>
+  </div>
+  <div class="card">
+    <div class="label">PULSOS (MOVIMENTOS)</div>
+    <div class="num">8.648.195.237</div>
+    <div class="sub">47,4 eventos por processo (média)</div>
+  </div>
+  <div class="card">
+    <div class="label">ENDPOINTS OFICIAIS</div>
+    <div class="num">90</div>
+    <div class="sub">5 especialidades × 5 níveis</div>
+  </div>
+</section>
+
+<div class="nota">
+  <p>
+    <strong>Sobre a anatomia.</strong> A figura representa o sistema judiciário como rede vascular, com hierarquia anatômica correspondente à hierarquia processual. <strong>Capilares</strong> (N4) são as varas, juizados especiais, zonas eleitorais e auditorias militares — porta de entrada da disputa e sítio do primeiro pulso, a sentença. <strong>Vênulas</strong> (N3) são as turmas recursais (comum e federal). <strong>Veias</strong> (N2) são os tribunais de 2ª instância: TJs, TRFs, TRTs, TREs, TJMs. <strong>Veias cavas</strong> (N1) são os anteparos superiores: STJ, TST, TSE, STM. O <strong>coração</strong> (N0) é o STF.
+  </p>
+  <p>
+    <strong>Sobre o fluxo.</strong> O volumoso fluxo <strong>ascendente</strong> (recursos) segue o sentido venoso — dos capilares ao coração. O fluxo <strong>descendente</strong>, que na metáfora dogmática seria a doutrina vinculante re-irrigando o sistema, é empiricamente <em>pretensão</em>, não realização: súmulas vinculantes, temas de repercussão geral e temas repetitivos constituem o aparelho normativo de fechamento, mas o sistema observado circula, fragmenta, distingue e re-litiga. Varizes se formam onde a afetação de temas deixa milhares de processos sobrestados.
+  </p>
+  <p class="fonte">
+    Dados: <a href="https://api-publica.datajud.cnj.jus.br/" target="_blank">api-publica.datajud.cnj.jus.br</a> (CNJ) · agregação em 17/abr/2026. Contagem por endpoint em consulta; totais de TJSP, TJMG, TJPR, TJRS, TRF4 e TRE-SC pendentes de reprocessamento. · ICONS · Damares Medina
+  </p>
+</div>
+
+<div id="tooltip"></div>
+
+<script>
+const DATA = {
+  STF:   { nome:'Supremo Tribunal Federal', nivel:'N0', anat:'Coração — jurisdição constitucional', proc:null, mov:null, obs:'Recebe RE/ARE de qualquer especialidade; bombeia pretensões normativas via súmulas vinculantes, repercussão geral, controle concentrado.' },
+  STJ:   { nome:'Superior Tribunal de Justiça', nivel:'N1', anat:'Veia cava — anteparo comum e federal', proc:3_390_010, mov:77_755_928, obs:'Anteparo compartilhado: recebe REsp/AREsp da justiça comum (TJs) e da justiça federal (TRFs).' },
+  TST:   { nome:'Tribunal Superior do Trabalho', nivel:'N1', anat:'Veia cava — anteparo trabalhista', proc:4_773_267, mov:110_609_829, obs:'Anteparo exclusivo da Justiça do Trabalho.' },
+  TSE:   { nome:'Tribunal Superior Eleitoral', nivel:'N1', anat:'Veia cava — anteparo eleitoral', proc:83_885, mov:2_351_883, obs:'Anteparo exclusivo da Justiça Eleitoral.' },
+  STM:   { nome:'Superior Tribunal Militar', nivel:'N1', anat:'Veia cava — anteparo militar', proc:25_966, mov:2_095_833, obs:'Topo da Justiça Militar da União; atende diretamente 1ª instância federal militar.' },
+  TJs:   { nome:'27 Tribunais de Justiça', nivel:'N2', anat:'Veias — comum estadual', proc:104_266_839, mov:5_038_356_082, obs:'Justiça comum: competência residual (CF art. 125). Todos os casos que não cabem nas especialidades. TJSP responde por ≈72M sozinho.' },
+  TRFs:  { nome:'6 Tribunais Regionais Federais', nivel:'N2', anat:'Veias — federal', proc:51_267_000, mov:1_008_665_857, obs:'Justiça federal: só causas da União, autarquias ou EPs federais (CF art. 109). TRF3 (SP/MS) = 16,9M.' },
+  TRTs:  { nome:'24 Tribunais Regionais do Trabalho', nivel:'N2', anat:'Veias — trabalho', proc:28_290_084, mov:2_222_838_185, obs:'Trilha de trabalho tem a maior densidade de pulsos por processo (78,6 eventos/proc).' },
+  TREs:  { nome:'27 Tribunais Regionais Eleitorais', nivel:'N2', anat:'Veias — eleitoral', proc:4_722_623, mov:182_919_032, obs:'Circuito curto: direto de zona eleitoral ao TRE, sem N3.' },
+  TJMs:  { nome:'3 Tribunais de Justiça Militar', nivel:'N2', anat:'Veias — militar estadual', proc:59_560, mov:2_602_608, obs:'Apenas SP, RS e MG mantêm TJM estadual. Demais estados: auditoria militar sobe direto ao STM.' },
+  'T.Rec.estadual': { nome:'Turmas Recursais Estaduais', nivel:'N3', anat:'Vênulas — comum', proc:null, mov:null, obs:'Recursos dos Juizados Especiais Cíveis. Só existem em comum e federal; Justiça do Trabalho, eleitoral e militar não têm N3.' },
+  'T.Rec.federal':  { nome:'Turmas Recursais Federais', nivel:'N3', anat:'Vênulas — federal', proc:null, mov:null, obs:'Recursos dos Juizados Especiais Federais (Lei 10.259/01).' },
+};
+
+const tip = document.getElementById('tooltip');
+const fmt = n => n==null ? '—' : n.toLocaleString('pt-BR');
+const nodes = document.querySelectorAll('svg#vascular .node');
+
+nodes.forEach(n => {
+  n.addEventListener('mousemove', e => {
+    const key = n.getAttribute('data-node');
+    const d = DATA[key];
+    if (!d) return;
+    tip.innerHTML = `
+      <h3>${d.nome}</h3>
+      <div class="tt-sub">${d.nivel} · ${d.anat}</div>
+      <div class="tt-row"><span class="k">Processos</span><span class="v">${fmt(d.proc)}</span></div>
+      <div class="tt-row"><span class="k">Movimentos</span><span class="v">${fmt(d.mov)}</span></div>
+      <div style="margin-top:10px;color:#bbb">${d.obs}</div>
+    `;
+    tip.style.display = 'block';
+    const pad = 14;
+    let x = e.clientX + pad;
+    let y = e.clientY + pad;
+    if (x + tip.offsetWidth > window.innerWidth) x = e.clientX - tip.offsetWidth - pad;
+    if (y + tip.offsetHeight > window.innerHeight) y = e.clientY - tip.offsetHeight - pad;
+    tip.style.left = x + 'px';
+    tip.style.top = y + 'px';
+  });
+  n.addEventListener('mouseleave', () => tip.style.display = 'none');
+});
+</script>
+</body>
+</html>
