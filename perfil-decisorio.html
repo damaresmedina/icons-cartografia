@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil Decisório · 1ª e 2ª Turmas do STF · ICONS</title>
+<meta name="description" content="O virtual como arquitetura de tensão modulada. Análise empírica de 309.031 decisões colegiadas das Turmas do STF (2020-2026).">
+<meta property="og:title" content="Perfil Decisório · Turmas do STF · ICONS">
+<meta property="og:description" content="O virtual concentra poder sem deliberar. 309.031 decisões analisadas.">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+:root{--ink:#0f0e0d;--paper:#f5f0e8;--paper2:#ede7d9;--paper3:#e2d9c8;--gold:#b8860b;--gold2:#d4a017;--gold3:rgba(184,134,11,.1);--navy:#1a2744;--navy2:#243058;--muted:#6b6355;--muted2:#9b9186;--red:#c0392b;--teal:#0d5c5c;--border:rgba(15,14,13,.12)}
+*{margin:0;padding:0;box-sizing:border-box}
+::selection{background:var(--gold);color:var(--paper)}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.65;font-size:17px}
+
+/* HEADER (mesmo padrão do index ICONS) */
+header{background:var(--navy);padding:0 2.5rem;display:flex;align-items:center;height:54px;border-bottom:1px solid rgba(184,134,11,.2);position:sticky;top:0;z-index:100}
+.hlogo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.hlogo-mark{width:28px;height:28px;border-radius:5px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:14px;font-weight:900;color:var(--navy)}
+.hlogo-txt{font-family:'DM Mono',monospace;font-size:11px;color:var(--gold2);letter-spacing:.05em}
+.hlogo-sub{font-family:'DM Mono',monospace;font-size:7.5px;color:rgba(245,240,232,.3);letter-spacing:.12em;text-transform:uppercase}
+.hnav{margin-left:auto;display:flex;gap:1.5rem;align-items:center}
+.hnav a{font-family:'DM Mono',monospace;font-size:9px;color:rgba(245,240,232,.4);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.hnav a:hover{color:var(--gold2)}
+
+/* HERO */
+.hero{background:var(--navy);padding:5rem 2.5rem 3.5rem;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero::before{content:'';position:absolute;top:-100px;right:-50px;width:500px;height:500px;background:radial-gradient(circle,rgba(184,134,11,.06) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto}
+.hero-badge{font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.hero-badge::before{content:'';width:24px;height:1px;background:var(--gold)}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5.5vw,4rem);font-weight:900;color:var(--paper);line-height:1.05;letter-spacing:-.02em;margin-bottom:1.2rem;max-width:780px}
+.hero h1 em{font-style:italic;color:var(--gold2)}
+.hero-sub{font-family:'Crimson Pro',serif;font-size:1.25rem;color:rgba(245,240,232,.65);line-height:1.7;max-width:680px;margin-bottom:2.5rem}
+.hero-author{font-family:'DM Mono',monospace;font-size:.65rem;color:rgba(245,240,232,.35);letter-spacing:.12em;text-transform:uppercase;margin-bottom:2rem}
+.hero-author span{color:var(--gold2)}
+.hero-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1.5rem;max-width:850px;border-top:1px solid rgba(245,240,232,.08);padding-top:1.5rem}
+.kpi{padding-left:.7rem;border-left:2px solid rgba(184,134,11,.3)}
+.kpi-n{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:700;color:var(--gold2);line-height:1.05}
+.kpi-l{font-family:'DM Mono',monospace;font-size:.65rem;color:rgba(245,240,232,.45);letter-spacing:.1em;text-transform:uppercase;margin-top:.3rem;line-height:1.4}
+
+/* EPÍGRAFE */
+.epigraph{padding:2.5rem 2.5rem 1rem;max-width:820px;margin:0 auto;text-align:center}
+.epigraph p{font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;color:var(--muted);line-height:1.5}
+.epigraph .at{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-top:.5rem}
+
+/* SEÇÕES */
+.section{padding:3rem 2.5rem;max-width:1100px;margin:0 auto}
+.sec-tag{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
+.sec-tag::before{content:'';width:24px;height:1px;background:var(--gold)}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.3rem);font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:.7rem;max-width:740px}
+.sec-title em{color:var(--gold);font-style:italic}
+.sec-lead{font-family:'Crimson Pro',serif;font-size:1.05rem;color:var(--muted);line-height:1.7;max-width:640px;margin-bottom:2rem}
+
+p.body{font-family:'Crimson Pro',serif;font-size:1.2rem;color:var(--ink);line-height:1.8;margin-bottom:1.3rem;max-width:760px}
+p.body em{color:var(--gold);font-weight:500;font-style:italic}
+p.body strong{color:var(--ink);font-weight:600}
+
+/* CHART CONTAINERS */
+.chart-card{background:#fff;border:1px solid var(--border);border-radius:6px;padding:2rem;margin:2rem 0;position:relative;overflow:hidden}
+.chart-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);opacity:.6}
+.chart-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.chart-sub{font-family:'DM Mono',monospace;font-size:.78rem;color:var(--muted2);letter-spacing:.05em;margin-bottom:1.5rem}
+.chart-note{font-family:'Crimson Pro',serif;font-size:1rem;font-style:italic;color:var(--muted);line-height:1.6;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)}
+
+/* G1: DONUT DUPLO — VOLUME × DERROTAS */
+#chart1{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;min-height:380px}
+@media(max-width:720px){#chart1{grid-template-columns:1fr}}
+.donut-block{text-align:center;position:relative}
+.donut-h{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.donut-total{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.8rem}
+.donut-svg{display:block;margin:0 auto}
+.donut-legend{margin-top:1rem;display:flex;justify-content:center;gap:1.2rem;font-family:'DM Mono',monospace;font-size:.72rem;color:var(--muted)}
+.donut-legend span{display:flex;align-items:center;gap:.4rem}
+.donut-legend i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.donut-cx-n{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;fill:var(--navy)}
+.donut-cx-l{font-family:'DM Mono',monospace;font-size:8px;fill:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+.compare-arrow{grid-column:1/-1;text-align:center;font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;color:var(--ink);margin:.5rem 0 0;padding:1.2rem;background:var(--paper2);border-radius:4px;border-left:3px solid var(--gold);line-height:1.5}
+.compare-arrow strong{color:var(--gold);font-weight:700}
+
+/* G4: GRÁFICO COMPOSIÇÃO TURMAS — BARRAS HORIZONTAIS */
+.comp-chart{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1rem}
+@media(max-width:720px){.comp-chart{grid-template-columns:1fr}}
+.comp-col{}
+.comp-h{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.comp-sub{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--muted2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.2rem}
+.comp-row{display:grid;grid-template-columns:130px 1fr 55px;align-items:center;gap:.6rem;padding:.4rem 0;border-bottom:1px solid var(--border)}
+.comp-row:last-child{border-bottom:none}
+.comp-nm{font-family:'Playfair Display',serif;font-size:.92rem;color:var(--ink);font-weight:500}
+.comp-nm small{display:block;font-family:'DM Mono',monospace;font-size:.58rem;color:var(--muted2);font-weight:400;margin-top:.15rem}
+.comp-bar{height:20px;background:var(--paper3);border-radius:3px;overflow:hidden}
+.comp-bar-fill{height:100%;background:linear-gradient(90deg,var(--navy),var(--navy2));transition:width 1s ease}
+.comp-val{font-family:'DM Mono',monospace;font-size:.85rem;color:var(--gold);text-align:right;font-weight:500}
+
+/* G2: HEATMAP CONCENTRAÇÃO */
+.heat-row{display:grid;grid-template-columns:160px 1fr 80px;align-items:center;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--border)}
+.heat-row:last-child{border-bottom:none}
+.heat-rel{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:600;color:var(--ink)}
+.heat-tema{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--muted2);letter-spacing:.04em;display:block;margin-top:.15rem}
+.heat-bar{height:24px;background:var(--paper3);border-radius:3px;position:relative;overflow:hidden}
+.heat-fill{height:100%;background:linear-gradient(90deg,var(--gold) 0%,var(--gold2) 100%);transition:width .8s ease}
+.heat-bar-base{position:absolute;left:0;top:0;height:100%;background:rgba(15,14,13,.08);border-right:1px dashed var(--muted2)}
+.heat-val{font-family:'DM Mono',monospace;font-size:.85rem;color:var(--gold);font-weight:500;text-align:right}
+.heat-val small{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--muted2);display:block;margin-top:.1rem}
+
+/* G3: SÉRIE TEMPORAL */
+#chart3{min-height:380px}
+
+/* G4: COMPOSIÇÃO TURMAS */
+.turmas{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1rem}
+@media(max-width:720px){.turmas{grid-template-columns:1fr}}
+.turma-box{background:var(--paper2);border:1px solid var(--border);border-radius:5px;padding:1.5rem}
+.turma-h{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.turma-sub{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--muted2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem}
+.turma-mini{display:flex;justify-content:space-between;align-items:center;padding:.4rem 0;border-bottom:1px solid var(--border);font-size:.85rem}
+.turma-mini:last-child{border-bottom:none}
+.turma-mini .nm{font-family:'Playfair Display',serif;color:var(--ink)}
+.turma-mini .vol{font-family:'DM Mono',monospace;font-size:.75rem;color:var(--muted2)}
+
+/* QUADROS DE CITAÇÃO */
+.pull{background:var(--paper2);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2rem 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:var(--ink);line-height:1.5}
+.pull-attrib{display:block;font-family:'DM Mono',monospace;font-style:normal;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-top:.8rem}
+
+/* TABELAS */
+table.dna{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.85rem}
+table.dna th{background:var(--navy);color:var(--gold2);padding:.7rem;text-align:left;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+table.dna td{padding:.7rem;border-bottom:1px solid var(--border)}
+table.dna tr:nth-child(even){background:var(--paper2)}
+table.dna td.n{text-align:right;font-family:'DM Mono',monospace}
+table.dna td.b{font-weight:600;color:var(--navy);font-family:'Playfair Display',serif}
+
+/* INSIGHT BOX */
+.insight{background:linear-gradient(135deg,var(--paper2),var(--paper));border:1px solid var(--gold3);border-left:4px solid var(--gold);padding:2rem;margin:2.5rem 0;border-radius:0 4px 4px 0}
+.insight-tag{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+.insight-h{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--navy);font-weight:700;margin-bottom:.6rem}
+.insight-p{font-family:'Crimson Pro',serif;font-size:1rem;color:var(--ink);line-height:1.7}
+
+/* CITAÇÃO/COMO CITAR */
+.cite-box{background:var(--paper3);padding:1.3rem 1.6rem;border-radius:4px;margin-top:2rem;font-family:'DM Mono',monospace;font-size:.78rem;color:var(--ink);line-height:1.6}
+.cite-box::before{content:'COMO CITAR';display:block;font-size:.55rem;letter-spacing:.18em;color:var(--gold);margin-bottom:.6rem;font-weight:500}
+
+/* FOOTER */
+footer{background:var(--navy);padding:2.5rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:4rem}
+.fl{color:rgba(245,240,232,.3);font-family:'DM Mono',monospace;font-size:.65rem;line-height:1.6}
+.fl strong{color:var(--gold2)}
+.fr{font-size:.55rem;color:rgba(245,240,232,.18);font-family:'DM Mono',monospace;text-align:right;line-height:1.7}
+.fr a{color:var(--gold2);text-decoration:none}
+
+@media(max-width:768px){
+  body{font-size:15.5px}
+  header,.hero,.section,footer,.epigraph{padding-left:1.1rem;padding-right:1.1rem}
+  header{height:48px}
+  .hero{padding:2.4rem 1.1rem 2.2rem}
+  .hero h1{font-size:1.85rem;line-height:1.1}
+  .hero-sub{font-size:1rem;line-height:1.6}
+  .hero-kpis{grid-template-columns:repeat(2,1fr);gap:1rem;padding-top:1.2rem}
+  .kpi-n{font-size:1.45rem}
+  .kpi-l{font-size:.55rem}
+  .section{padding:2.2rem 1.1rem}
+  .sec-title{font-size:1.4rem;line-height:1.2}
+  p.body{font-size:1.05rem;line-height:1.7;max-width:100%}
+  .chart-card{padding:1.2rem .9rem}
+  .chart-title{font-size:1.05rem;line-height:1.3}
+  .chart-sub{font-size:.65rem}
+  .chart-note{font-size:.88rem}
+  /* Donuts */
+  #chart1{grid-template-columns:1fr;gap:1.8rem}
+  .donut-svg{width:220px;height:220px}
+  .donut-total{font-size:.95rem}
+  .donut-h{font-size:.62rem}
+  .donut-legend{flex-wrap:wrap;gap:.6rem;font-size:.65rem}
+  .compare-arrow{font-size:.98rem;padding:1rem;line-height:1.55}
+  /* Heatmap */
+  .heat-row{grid-template-columns:110px 1fr 58px;gap:.4rem;padding:.5rem 0}
+  .heat-rel{font-size:.78rem}
+  .heat-tema{font-size:.54rem}
+  .heat-val{font-size:.72rem}
+  .heat-val small{font-size:.52rem}
+  .heat-bar{height:20px}
+  /* Composição turmas */
+  .comp-chart{grid-template-columns:1fr;gap:1.5rem}
+  .comp-h{font-size:1rem}
+  .comp-sub{font-size:.6rem}
+  .comp-row{grid-template-columns:105px 1fr 55px;gap:.4rem;padding:.35rem 0}
+  .comp-nm{font-size:.78rem}
+  .comp-nm small{font-size:.52rem}
+  .comp-bar{height:16px}
+  .comp-val{font-size:.72rem}
+  /* Série temporal D3 — scroll horizontal se precisar */
+  #chart3{min-height:320px;overflow-x:auto}
+  .pull{font-size:1rem;padding:1.2rem 1.3rem;line-height:1.5}
+  .insight{padding:1.3rem}
+  .insight-h{font-size:1.05rem}
+  .insight-p{font-size:.95rem;line-height:1.6}
+  .hnav{display:none}
+  footer{flex-direction:column;text-align:center;padding:2rem 1.1rem}
+  .fr{text-align:center}
+  table.dna{font-size:.75rem}
+  table.dna th,table.dna td{padding:.5rem .4rem}
+}
+
+@media(max-width:400px){
+  .hero h1{font-size:1.6rem}
+  .hero-kpis{grid-template-columns:1fr 1fr;gap:.8rem}
+  .kpi-n{font-size:1.3rem}
+  .donut-svg{width:200px;height:200px}
+  .heat-row{grid-template-columns:95px 1fr 52px}
+  .heat-rel{font-size:.72rem}
+  .comp-row{grid-template-columns:90px 1fr 48px}
+  .comp-nm{font-size:.72rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="hlogo">
+    <div class="hlogo-mark">P</div>
+    <div><div class="hlogo-txt">PROJUS</div><div class="hlogo-sub">Instituto Constituicao Aberta · ICONS</div></div>
+  </a>
+  <nav class="hnav">
+    <a href="/cartografia_stf.html">Cartografia</a>
+    <a href="/perfil-decisorio.html" style="color:var(--gold2)">Perfil Decisório</a>
+    <a href="https://judx.com.br">JudX</a>
+  </nav>
+</header>
+
+<section class="hero">
+ <div class="hero-inner">
+  <div class="hero-badge">ICONS · Cartografia do Contencioso Constitucional · 2026</div>
+  <h1>O virtual como arquitetura<br>de <em>tensão modulada</em></h1>
+  <p class="hero-sub">Um retrato empírico das 1ª e 2ª Turmas do Supremo Tribunal Federal, a partir de 309.031 decisões colegiadas (2020–2026). A apreciação recursal colegiada é, em 99% dos casos, ficta — e a divergência sobrevive como posição doutrinária sacramentada, não como deliberação.</p>
+  <div class="hero-author">21 de abril de 2026</div>
+  <div class="hero-kpis">
+    <div class="kpi"><div class="kpi-n">309.031</div><div class="kpi-l">Decisões colegiadas<br>analisadas</div></div>
+    <div class="kpi"><div class="kpi-n">98,6%</div><div class="kpi-l">Pós-2020 julgadas<br>em sessão virtual</div></div>
+    <div class="kpi"><div class="kpi-n">3,06%</div><div class="kpi-l">Relator vencido<br>no virtual</div></div>
+    <div class="kpi"><div class="kpi-n">21,30%</div><div class="kpi-l">Relator vencido<br>no presencial</div></div>
+    <div class="kpi"><div class="kpi-n">7×</div><div class="kpi-l">Razão presencial<br>sobre virtual</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+  <div class="sec-tag">Hipótese central</div>
+  <h2 class="sec-title">A apreciação recursal colegiada é <em>materialmente esvaziada</em> no plenário virtual</h2>
+  <p class="body">O recurso ao Supremo Tribunal Federal goza, por garantia constitucional, da apreciação colegiada do mérito. Esse direito é cumprido formalmente no atual modelo de plenário virtual turmário — cada ministro lança seu voto por registro escrito, em prazo comum, e o resultado é proclamado como se fosse decisão de cinco pessoas. Os dados deste relatório, extraídos da base oficial Corte Aberta do STF, permitem afirmar que essa apreciação é, em ampla maioria, <em>ficta</em>. Os ministros que não relatam aderem silenciosamente ao voto do relator em <strong>97% dos casos</strong>. O virtual concentra poder no relator e dispensa deliberação.</p>
+  <p class="body">A confirmação empírica vem da comparação entre a taxa de derrota do relator no ambiente virtual e no ambiente presencial — único arranjo institucional capaz de produzir debate oral com réplica e tréplica.</p>
+</section>
+
+<section class="section">
+  <div class="sec-tag">Evidência primária</div>
+  <h2 class="sec-title">A taxa de derrota do relator é <em>sete vezes maior</em> no presencial</h2>
+
+  <div class="chart-card">
+    <div class="chart-title">Relator vencido por ambiente · 1ª e 2ª Turmas STF · 2020–2026</div>
+    <div class="chart-sub">Comparativo entre ambientes — pós-Resoluções STF 642/2019 e 669/2020</div>
+    <div id="chart1">
+      <div class="donut-block">
+        <div class="donut-h">Composição do volume</div>
+        <div class="donut-total">74.766 decisões pós-2020</div>
+        <svg id="donut1" class="donut-svg" width="260" height="260"></svg>
+        <div class="donut-legend">
+          <span><i style="background:#6b6355"></i> Virtual · 98,6%</span>
+          <span><i style="background:#b8860b"></i> Presencial · 1,4%</span>
+        </div>
+      </div>
+      <div class="donut-block">
+        <div class="donut-h">Composição das derrotas</div>
+        <div class="donut-total">2.481 casos de relator vencido</div>
+        <svg id="donut2" class="donut-svg" width="260" height="260"></svg>
+        <div class="donut-legend">
+          <span><i style="background:#6b6355"></i> Virtual · 90,7%</span>
+          <span><i style="background:#b8860b"></i> Presencial · 9,3%</span>
+        </div>
+      </div>
+      <div class="compare-arrow">
+        O presencial representa apenas <strong>1,4%</strong> do volume, mas concentra <strong>9,3%</strong> das derrotas do relator — <strong>razão de 7×</strong> entre as taxas internas de cada ambiente (3,06% virtual · 21,30% presencial).
+      </div>
+    </div>
+    <div class="chart-note">O presencial é residual desde 2022 — apenas 1.080 decisões em seis anos. O ambiente que ainda preserva debate oral foi efetivamente extinto da rotina, sobrevivendo apenas em casos destacados.</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-tag">Sofisticação necessária</div>
+  <h2 class="sec-title">A divergência que sobrevive é <em>sacramentada</em></h2>
+  <p class="body">Os 3% de relator vencido em sessão virtual poderiam, à primeira leitura, sugerir resíduo de deliberação. A análise cruzada dos 2.251 casos revela algo mais preciso: essa taxa é <em>o piso irredutível da divergência individual em um colegiado plural</em>. Se fosse zero, pressuporia-se um Tribunal monolítico — o que não se coaduna com o perfil jurisprudencial dos outliers. Os 3% são a assinatura exata do mínimo doutrinário que qualquer colegiado democrático preserva para não se travestir de câmara administrativa.</p>
+  <p class="body">A confirmação vem por <em>concentração temática</em>. Cruzando o relator original de cada derrota com o ramo do direito em que ocorre, e comparando com a base natural do ramo no universo virtual pós-2020, constata-se sobrerrepresentação persistente em temas com disputa doutrinária estrutural:</p>
+
+  <div class="chart-card">
+    <div class="chart-title">Sobrerrepresentação temática nas derrotas do relator</div>
+    <div class="chart-sub">% das derrotas no tema dominante / % do tema no universo virtual</div>
+    <div id="chart2"></div>
+    <div class="chart-note">Cada barra dourada representa a concentração de derrotas do ministro no tema dominante. A linha tracejada cinza marca a base natural do tema no universo. Quanto mais a barra ultrapassa a linha, mais sacramentada é a posição doutrinária do ministro nesse tema.</div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-tag">Leitura estrutural</div>
+    <div class="insight-h">Trabalho é o grande campo de batalha doutrinária virtualizada</div>
+    <div class="insight-p">Cinco dos sete relatores mais vencidos em virtual concentram suas derrotas em matéria trabalhista — sobrerrepresentação entre 3 e 10 vezes maior que a base. O Direito do Trabalho responde por apenas 7,8% do universo virtual das Turmas, mas absorve metade ou mais das derrotas dos relatores divergentes. A leitura é direta: o ambiente trabalhista é onde, pós-ADPF 324 e Tema 725, há disputa estrutural persistente entre corrente garantista (vencida) e corrente liberalizante (vitoriosa).</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-tag">Camada estratégica</div>
+  <h2 class="sec-title">O virtual como <em>respiro do divergente</em></h2>
+  <p class="body">A leitura mais profunda do dado é hermenêutica. O ambiente virtual exerce três papéis simultâneos no funcionamento do colegiado.</p>
+  <p class="body">Para a <strong>maioria</strong>, permite consolidar posição sem consumir capital deliberativo — adesão silenciosa ao relator (quando integra o bloco majoritário) ou ao redator designado, sem precisar convocar presencial, sem enfrentar o divergente em debate oral.</p>
+  <p class="body">Para o <strong>divergente</strong>, é espaço de respiro. O ministro sabe que, em matérias com coalizão consolidada, perderá tanto no virtual quanto no presencial. A diferença está no custo: destacar exige gastar capital político (retirar o caso do fluxo, confrontar a maioria em sessão aberta, aceitar o ruído do conflito); manter no virtual com voto vencido registrado <em>não exige nada</em>. A posição fica documentada no acórdão, disponível para citação futura, consolidação doutrinária, mudança de composição. O divergente calcula que a preservação da assinatura a custo zero vale mais do que o confronto aberto de resultado certo.</p>
+  <p class="body">Para o <strong>Tribunal</strong>, é o mecanismo que permite a convivência pacífica de posições ideológicas opostas. A pluralidade sobrevive formalmente, a estabilidade institucional é preservada, e o volume recursal é resolvido em cadência industrial.</p>
+  <p class="body">O que o dado evidencia, portanto, é que <strong>o Supremo não é um bloco monolítico</strong>. O virtual não apaga a divergência — ao contrário, é o espaço em que ela se registra, se sedimenta e permanece disponível para reversão futura. O que se vê como uniformidade aparente é, na realidade, <em>uma arquitetura institucional que acomoda a pluralidade ideológica sem deixá-la paralisar o funcionamento da Corte</em>.</p>
+
+  <div class="pull">
+    Parece um jogo de xadrez no qual os relatores posicionam estrategicamente suas peças. Cada voto vencido é um território marcado.
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-tag">Evolução temporal</div>
+  <h2 class="sec-title">Cada movimento ministerial deixa <em>impressão digital</em> na série</h2>
+  <p class="body">As assinaturas doutrinárias não são estáticas. A análise ano a ano das derrotas do relator em virtual revela movimentos institucionais legíveis:</p>
+
+  <div class="chart-card">
+    <div class="chart-title">Derrotas em sessão virtual por ano — top 6 relatores</div>
+    <div class="chart-sub">Cada linha representa um ministro · cada ponto, derrotas como relator naquele ano</div>
+    <div id="chart3"></div>
+    <div class="chart-note">A explosão de derrotas de Fachin em 2024–2025 marca o consolidar empírico do bloco liberalizante trabalhista. A entrada de Toffoli na divergência em 2024 (zero antes) sugere realinhamento. Fux, ao migrar para a 2ª Turma em 2025, leva imediatamente a peça doutrinária para o novo tabuleiro: 75% de suas derrotas pós-mudança são em Direito do Trabalho.</div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-tag">O caso Luiz Fux — efeito-mobilidade entre turmas</div>
+    <div class="insight-p">A mudança de turma não neutraliza a posição doutrinária. Fux passou da 1ª para a 2ª Turma em 2025 e <em>imediatamente</em> ocupou papel de divergente trabalhista, com sobrerrepresentação de 9,6 vezes. Não houve período de adaptação — ele já tinha a peça pronta, apenas reposicionou no novo tabuleiro. Esse achado tem implicação direta para qualquer análise prospectiva de mudanças de composição da Corte.</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-tag">Perfil decisório</div>
+  <h2 class="sec-title">Composição vigente das Turmas (2025)</h2>
+  <div class="chart-card">
+    <div class="chart-title">Volume relatado por ministro · 2025</div>
+    <div class="chart-sub">Top relatores em cada turma — decisões colegiadas</div>
+    <div class="comp-chart">
+      <div class="comp-col">
+        <div class="comp-h">1ª Turma</div>
+        <div class="comp-sub">Composição 2025</div>
+        <div id="comp1"></div>
+      </div>
+      <div class="comp-col">
+        <div class="comp-h">2ª Turma</div>
+        <div class="comp-sub">Composição 2025</div>
+        <div id="comp2"></div>
+      </div>
+    </div>
+    <div class="chart-note">A migração de Fux da 1ª para a 2ª Turma em 2025 (ponto gold) é o evento-chave da composição vigente — e produz efeito imediato na divergência trabalhista da nova turma de destino.</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-tag">Consequências</div>
+  <h2 class="sec-title">Da economia recursal à <em>legitimidade institucional</em></h2>
+  <p class="body"><strong>Consequência jurídica.</strong> Se a apreciação recursal colegiada é ficta na esmagadora maioria dos casos, a garantia constitucional do colegiado é cumprida formalmente e materialmente esvaziada. Isso reabre o debate sobre devido processo, contraditório substantivo e segurança jurídica do recurso ao próprio modelo de plenário virtual.</p>
+  <p class="body"><strong>Consequência econômica.</strong> Para litigantes recorrentes, a precificação do tempo recursal precisa incorporar o fato de que a chance de virar o voto do relator em virtual é estruturalmente marginal, e que a decisão estratégica de pleitear ou não destaque é a maior variável de risco — maior do que relator, do que tema, do que composição.</p>
+  <p class="body"><strong>Consequência institucional.</strong> A percepção pública de justiça não realizada produz, necessariamente, perda de legitimidade da Corte. Esse fenômeno é parte do ambiente cultural-institucional em que se gestaram os ataques de <strong>8 de janeiro de 2023</strong>. O Supremo se defendeu daquela crise institucionalmente, mas não enfrentou o que a alimenta: a opacidade do próprio funcionamento colegiado. Este relatório propõe, como contribuição não-oposicionista mas iluminista, transparência radical sobre o funcionamento real das Turmas.</p>
+</section>
+
+<section class="section">
+  <div class="sec-tag">Nota de método</div>
+  <h2 class="sec-title">Como esta análise foi construída</h2>
+  <p class="body">Base bruta: 2.927.525 decisões do Corte Aberta STF (2000–2026), com o relator corrigido por composição temporal auditada em 35 biênios. Segregação para 309.031 decisões colegiadas das 1ª e 2ª Turmas, com filtragem pós-2020 para análise do ambiente. Parser léxico aplicado às observações de andamento para identificação de unanimidade, maioria, lista de vencidos, ressalvistas, ausentes, redator designado, ambiente textual e período da sessão virtual. Dicionário CNJ TPU Movimentos catalogado empiricamente em 59 códigos, com cobertura de 85,9% do universo classificado.</p>
+  <p class="body">Toda a cadeia é executada localmente a partir de fontes públicas, sem acesso privilegiado a material indisponível aos demais pesquisadores. O diferencial não está na fonte — está no método, no léxico e na leitura.</p>
+
+</section>
+
+<footer>
+  <div class="fl">
+    <strong>ICONS</strong> · Instituto Constituicao Aberta · PROJUS<br>
+    icons.org.br · damaresmedina.adv.br
+  </div>
+  <div class="fr">
+    © 2026 Damares Medina · Todos os direitos reservados<br>
+    Dados sujeitos a verificação · Não constitui aconselhamento jurídico<br>
+    Análise complementar em produto · <a href="https://judx.com.br">judx.com.br</a>
+  </div>
+</footer>
+
+<script>
+// ════════════ DADOS ════════════
+
+// G2: Concentração temática (relator → tema dominante, % derrotas, % base, sobrerep)
+const HEAT = [
+  {rel:'Luiz Fux',            tema:'Direito do Trabalho',          pct:75.0, base:7.8,  sobre:9.6},
+  {rel:'Dias Toffoli',        tema:'Direito do Trabalho',          pct:60.0, base:7.8,  sobre:7.7},
+  {rel:'Edson Fachin',        tema:'Direito do Trabalho',          pct:48.5, base:7.8,  sobre:6.2},
+  {rel:'Gilmar Mendes',       tema:'Direito do Trabalho',          pct:25.0, base:7.8,  sobre:3.2},
+  {rel:'André Mendonça',      tema:'Direito da Saúde',             pct:16.4, base:0.8,  sobre:21.3},
+  {rel:'André Mendonça',      tema:'Direito Previdenciário',       pct:19.4, base:1.3,  sobre:15.3},
+];
+
+// G3: Série temporal (relator x ano x derrotas)
+const SERIE = {
+  'Edson Fachin':       [{a:2020,n:6},{a:2021,n:25},{a:2022,n:29},{a:2023,n:74},{a:2024,n:200},{a:2025,n:174}],
+  'Nunes Marques':      [{a:2021,n:25},{a:2022,n:4},{a:2023,n:23},{a:2024,n:15},{a:2025,n:22}],
+  'Dias Toffoli':       [{a:2023,n:12},{a:2024,n:45},{a:2025,n:25}],
+  'Gilmar Mendes':      [{a:2020,n:9},{a:2021,n:6},{a:2022,n:7},{a:2023,n:10},{a:2024,n:28},{a:2025,n:20}],
+  'André Mendonça':     [{a:2023,n:15},{a:2024,n:8},{a:2025,n:25}],
+  'Luiz Fux':           [{a:2025,n:12}],
+};
+const COL = {
+  'Edson Fachin':       '#b8860b',
+  'Nunes Marques':      '#8a7240',
+  'Dias Toffoli':       '#1a2744',
+  'Gilmar Mendes':      '#0d5c5c',
+  'André Mendonça':     '#c0392b',
+  'Luiz Fux':           '#d4a017',
+};
+
+// ════════════ CHART 1 — DONUTS D3 ════════════
+function drawDonut(svgId, data, centerNum, centerLbl){
+  const svg = d3.select('#'+svgId);
+  svg.selectAll('*').remove();
+  const W = 260, H = 260, R = 110, r = 68;
+  const g = svg.append('g').attr('transform',`translate(${W/2},${H/2})`);
+  const pie = d3.pie().value(d=>d.v).sort(null).padAngle(.012);
+  const arc = d3.arc().innerRadius(r).outerRadius(R).cornerRadius(3);
+  const arcHover = d3.arc().innerRadius(r).outerRadius(R+8).cornerRadius(3);
+
+  g.selectAll('path').data(pie(data)).enter().append('path')
+    .attr('d',arc).attr('fill',d=>d.data.c)
+    .attr('stroke','#fff').attr('stroke-width',2)
+    .style('cursor','pointer')
+    .on('mouseenter',function(){d3.select(this).transition().duration(200).attr('d',arcHover)})
+    .on('mouseleave',function(){d3.select(this).transition().duration(200).attr('d',arc)});
+
+  // Rótulos nas fatias
+  const labelArc = d3.arc().innerRadius((R+r)/2).outerRadius((R+r)/2);
+  g.selectAll('text.slice').data(pie(data)).enter().append('text')
+    .attr('class','slice')
+    .attr('transform',d=>`translate(${labelArc.centroid(d)})`)
+    .attr('text-anchor','middle')
+    .attr('dy','.35em')
+    .style('fill','#fff').style('font-family','Playfair Display,serif')
+    .style('font-size',d=>d.data.v > 5 ? '14px':'10px')
+    .style('font-weight','700')
+    .text(d=>d.data.v >= 2 ? d.data.v.toFixed(1)+'%':'');
+
+  // Centro
+  g.append('text').attr('class','donut-cx-n').attr('text-anchor','middle').attr('dy','-.1em').text(centerNum);
+  g.append('text').attr('class','donut-cx-l').attr('text-anchor','middle').attr('dy','1.3em').text(centerLbl);
+}
+drawDonut('donut1',[
+  {v:98.6, c:'#6b6355'},
+  {v:1.4,  c:'#b8860b'}
+],'74.766','DECISÕES');
+drawDonut('donut2',[
+  {v:90.7, c:'#6b6355'},
+  {v:9.3,  c:'#b8860b'}
+],'2.481','DERROTAS');
+
+// ════════════ CHART 4 — COMPOSIÇÃO TURMAS ════════════
+const TURMA1 = [
+  {nm:'Alexandre de Moraes', v:2046},
+  {nm:'Flávio Dino', v:1660},
+  {nm:'Cristiano Zanin', v:1636},
+  {nm:'Cármen Lúcia', v:1502},
+  {nm:'Luiz Fux', v:1460, sub:'saiu para 2ª T', mark:'out'},
+];
+const TURMA2 = [
+  {nm:'Dias Toffoli', v:1781},
+  {nm:'Nunes Marques', v:1632},
+  {nm:'Gilmar Mendes', v:1615},
+  {nm:'André Mendonça', v:1585},
+  {nm:'Edson Fachin', v:1426},
+  {nm:'Luiz Fux', v:262, sub:'entrou em 2025', mark:'in'},
+];
+function drawComp(id, data){
+  const el = document.getElementById(id);
+  el.innerHTML = '';
+  const maxV = Math.max(...data.map(d=>d.v));
+  data.forEach(d=>{
+    const row = document.createElement('div');
+    row.className = 'comp-row';
+    const markColor = d.mark==='in' ? '#b8860b' : (d.mark==='out' ? '#9b9186' : null);
+    const subHtml = d.sub ? `<small style="${markColor?'color:'+markColor:''}">${d.sub}</small>`:'';
+    const fillColor = d.mark==='in' ? 'linear-gradient(90deg,#b8860b,#d4a017)'
+                    : d.mark==='out' ? 'linear-gradient(90deg,#9b9186,#b8b0a0)'
+                    : 'linear-gradient(90deg,#1a2744,#243058)';
+    row.innerHTML = `
+      <div class="comp-nm">${d.nm}${subHtml}</div>
+      <div class="comp-bar"><div class="comp-bar-fill" style="width:${(d.v/maxV*100).toFixed(1)}%;background:${fillColor}"></div></div>
+      <div class="comp-val">${d.v.toLocaleString('pt-BR')}</div>
+    `;
+    el.appendChild(row);
+  });
+}
+drawComp('comp1', TURMA1);
+drawComp('comp2', TURMA2);
+
+// ════════════ CHART 2 — HEATMAP ════════════
+const c2 = document.getElementById('chart2');
+const maxBar = Math.max(...HEAT.map(d=>d.pct));
+HEAT.forEach(d=>{
+  const row = document.createElement('div');
+  row.className = 'heat-row';
+  row.innerHTML = `
+    <div>
+      <div class="heat-rel">${d.rel}</div>
+      <span class="heat-tema">${d.tema}</span>
+    </div>
+    <div class="heat-bar">
+      <div class="heat-bar-base" style="width:${(d.base/maxBar*100).toFixed(1)}%"></div>
+      <div class="heat-fill" style="width:${(d.pct/maxBar*100).toFixed(1)}%"></div>
+    </div>
+    <div class="heat-val">${d.sobre.toFixed(1)}×<small>${d.pct.toFixed(1)}% / ${d.base.toFixed(1)}%</small></div>
+  `;
+  c2.appendChild(row);
+});
+
+// ════════════ CHART 3 — SÉRIE TEMPORAL D3 ════════════
+function drawSerie(){
+  const el = document.getElementById('chart3');
+  el.innerHTML = '';
+  const isMobile = window.innerWidth < 640;
+  const W = Math.max(el.clientWidth, isMobile ? 520 : 600);
+  const H = isMobile ? 300 : 360;
+  const M = {top:20, right:isMobile?100:130, bottom:36, left:isMobile?38:50};
+  const w = W - M.left - M.right;
+  const h = H - M.top - M.bottom;
+
+  const svg = d3.select(el).append('svg').attr('width',W).attr('height',H);
+  const g = svg.append('g').attr('transform',`translate(${M.left},${M.top})`);
+
+  const x = d3.scaleLinear().domain([2020,2026]).range([0,w]);
+  const yMax = d3.max(Object.values(SERIE).flat(), d=>d.n);
+  const y = d3.scaleLinear().domain([0,yMax]).range([h,0]).nice();
+
+  // Eixos
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(7).tickFormat(d3.format('d')))
+    .selectAll('text').style('font-family','DM Mono,monospace').style('font-size','10px').style('fill','#6b6355');
+  g.append('g').call(d3.axisLeft(y).ticks(5))
+    .selectAll('text').style('font-family','DM Mono,monospace').style('font-size','10px').style('fill','#6b6355');
+
+  // Grid
+  g.append('g').attr('class','grid').call(d3.axisLeft(y).tickSize(-w).tickFormat('').ticks(5))
+    .selectAll('line').style('stroke','#e2d9c8').style('stroke-dasharray','2,3');
+  g.selectAll('.grid path').style('display','none');
+
+  const line = d3.line().x(d=>x(d.a)).y(d=>y(d.n)).curve(d3.curveMonotoneX);
+
+  Object.entries(SERIE).forEach(([rel, pts])=>{
+    g.append('path').datum(pts).attr('fill','none').attr('stroke',COL[rel]).attr('stroke-width',2.2).attr('d',line).attr('opacity',.85);
+    g.selectAll(null).data(pts).enter().append('circle').attr('cx',d=>x(d.a)).attr('cy',d=>y(d.n)).attr('r',3.5).attr('fill',COL[rel]);
+  });
+
+  // Legenda
+  const leg = svg.append('g').attr('transform',`translate(${M.left+w+15},${M.top})`);
+  Object.keys(SERIE).forEach((rel,i)=>{
+    leg.append('rect').attr('x',0).attr('y',i*22).attr('width',12).attr('height',3).attr('fill',COL[rel]);
+    leg.append('text').attr('x',18).attr('y',i*22+5).text(rel).style('font-family','DM Sans,sans-serif').style('font-size','10px').style('fill','#0f0e0d');
+  });
+}
+drawSerie();
+window.addEventListener('resize', drawSerie);
+</script>
+
+</body>
+</html>
