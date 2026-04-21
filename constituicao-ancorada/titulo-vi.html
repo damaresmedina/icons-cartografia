@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Título VI · Tributação e Orçamento · Constituição Ancorada · ICONS</title>
+<meta name="description" content="859 decisões do STF ancoradas ao Título VI da Constituição Federal — Tributação e Orçamento. Cartografia do contencioso constitucional fiscal brasileiro, 1990–2026.">
+<meta property="og:title" content="Constituição Ancorada · Título VI · Tributação e Orçamento">
+<meta property="og:description" content="23 artigos da CF/88. 859 decisões do STF mapeadas. O contencioso constitucional fiscal visível pela primeira vez.">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+:root{
+  --ink:#0f0e0d;--paper:#f5f0e8;--paper2:#ede7d9;--paper3:#e2d9c8;
+  --gold:#b8860b;--gold2:#d4a017;--gold3:rgba(184,134,11,.1);
+  --navy:#1a2744;--navy2:#243058;
+  --muted:#6b6355;--muted2:#9b9186;
+  --red:#c0392b;--teal:#0d5c5c;--purple:#6b4f8f;--sage:#7a8b5c;
+  --border:rgba(15,14,13,.12);
+  /* cores por tipo processo */
+  --c-RE:#1a2744;--c-ADI:#b8860b;--c-AI:#6b6355;--c-ARE:#9b9186;
+  --c-SUM:#d4a017;--c-ADPF:#6b4f8f;--c-ACO:#0d5c5c;--c-SV:#c0392b;
+  --c-MS:#7a8b5c;--c-OUT:#c0b39e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+::selection{background:var(--gold);color:var(--paper)}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.65;font-size:16px}
+
+/* HEADER */
+header{background:var(--navy);padding:0 2.5rem;display:flex;align-items:center;height:54px;border-bottom:1px solid rgba(184,134,11,.2);position:sticky;top:0;z-index:100}
+.hlogo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.hlogo-mark{width:28px;height:28px;border-radius:5px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:14px;font-weight:900;color:var(--navy)}
+.hlogo-txt{font-family:'DM Mono',monospace;font-size:11px;color:var(--gold2);letter-spacing:.05em}
+.hlogo-sub{font-family:'DM Mono',monospace;font-size:7.5px;color:rgba(245,240,232,.3);letter-spacing:.12em;text-transform:uppercase}
+.hnav{margin-left:auto;display:flex;gap:1.5rem;align-items:center}
+.hnav a{font-family:'DM Mono',monospace;font-size:9px;color:rgba(245,240,232,.4);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.hnav a:hover{color:var(--gold2)}
+.hnav a.on{color:var(--gold2)}
+
+/* HERO */
+.hero{background:var(--navy);padding:4.5rem 2.5rem 3.5rem;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero::before{content:'';position:absolute;top:-100px;right:-50px;width:520px;height:520px;background:radial-gradient(circle,rgba(184,134,11,.07) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2}
+.hero-crumb{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:1.1rem;display:flex;align-items:center;gap:.5rem}
+.hero-crumb::before{content:'';width:24px;height:1px;background:var(--gold)}
+.hero-crumb span{color:rgba(245,240,232,.35);margin:0 .4rem}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4rem);font-weight:900;color:var(--paper);line-height:1.04;letter-spacing:-.02em;margin-bottom:1.1rem;max-width:850px}
+.hero h1 em{font-style:italic;color:var(--gold2)}
+.hero-sub{font-family:'Crimson Pro',serif;font-size:1.22rem;color:rgba(245,240,232,.68);line-height:1.7;max-width:680px;margin-bottom:2.3rem}
+.hero-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.4rem;max-width:900px;border-top:1px solid rgba(245,240,232,.08);padding-top:1.5rem}
+.kpi{padding-left:.7rem;border-left:2px solid rgba(184,134,11,.3)}
+.kpi-n{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--gold2);line-height:1.05}
+.kpi-l{font-family:'DM Mono',monospace;font-size:.6rem;color:rgba(245,240,232,.42);letter-spacing:.1em;text-transform:uppercase;margin-top:.3rem;line-height:1.4}
+
+/* SEÇÕES */
+.section{padding:3.5rem 2.5rem;max-width:1200px;margin:0 auto}
+.sec-tag{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
+.sec-tag::before{content:'';width:24px;height:1px;background:var(--gold)}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:.8rem;max-width:820px}
+.sec-title em{color:var(--gold);font-style:italic}
+.sec-lead{font-family:'Crimson Pro',serif;font-size:1.12rem;color:var(--muted);line-height:1.75;max-width:720px;margin-bottom:2rem}
+
+p.body{font-family:'Crimson Pro',serif;font-size:1.15rem;color:var(--ink);line-height:1.8;margin-bottom:1.25rem;max-width:760px}
+p.body em{color:var(--gold);font-weight:500;font-style:italic}
+p.body strong{color:var(--ink);font-weight:600}
+
+/* SISMÓGRAFO — TIMELINE */
+.sismo-card{background:#fff;border:1px solid var(--border);border-radius:6px;padding:2rem 1.6rem 1.6rem;margin:1.5rem 0;position:relative;overflow:hidden}
+.sismo-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));opacity:.75}
+.sismo-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.sismo-title em{color:var(--gold);font-style:italic}
+.sismo-sub{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--muted2);letter-spacing:.05em;margin-bottom:1.2rem}
+/* SKYLINE — pilares por decisão */
+#sismo{width:100%;height:380px;position:relative;overflow:hidden}
+#sismo svg{display:block;width:100%}
+.pillar-controls{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.2rem;flex-wrap:wrap;padding:.8rem 1rem;background:var(--paper2);border-radius:4px;border:1px solid var(--border)}
+.pc-lbl{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.pc-grp{display:flex;gap:.4rem}
+.pc-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:.38rem .8rem;border-radius:3px;cursor:pointer;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;transition:all .15s}
+.pc-btn:hover{border-color:var(--gold);color:var(--gold)}
+.pc-btn.on{background:var(--navy);border-color:var(--navy);color:var(--gold2)}
+
+.pillar{cursor:pointer;transition:opacity .2s}
+.pillar:hover{opacity:1 !important}
+.pillar rect{transition:all .2s cubic-bezier(.2,.8,.2,1)}
+.pillar:hover rect.bar{filter:brightness(1.15)}
+.pillar.hot rect.bar{filter:drop-shadow(0 0 10px currentColor) brightness(1.2)}
+.pillar-label{font-family:'DM Mono',monospace;font-size:9px;fill:var(--muted);pointer-events:none}
+.pillar-tick{stroke:rgba(15,14,13,.08);stroke-width:1}
+.tremor-mark{fill:var(--red);opacity:.85}
+
+.art-card.hot{border-color:var(--gold);box-shadow:0 8px 28px rgba(184,134,11,.22);transform:translateY(-3px);outline:2px solid var(--gold2)}
+.pulse-tt{position:absolute;background:var(--navy);color:var(--paper);padding:.6rem .85rem;border-radius:4px;font-family:'DM Mono',monospace;font-size:.7rem;line-height:1.55;pointer-events:none;z-index:50;opacity:0;transition:opacity .15s;max-width:260px;border:1px solid var(--gold3)}
+.pulse-tt.on{opacity:1}
+.pulse-tt strong{color:var(--gold2);font-weight:500}
+.pulse-tt em{color:var(--muted2);font-style:normal;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;display:block;margin-top:.25rem}
+.sismo-note{font-family:'Crimson Pro',serif;font-size:.98rem;font-style:italic;color:var(--muted);line-height:1.6;margin-top:.8rem;padding-top:.9rem;border-top:1px solid var(--border)}
+.sismo-legend{display:flex;flex-wrap:wrap;gap:.9rem;margin:.8rem 0 0;font-family:'DM Mono',monospace;font-size:.68rem;color:var(--muted)}
+.sismo-legend span{display:flex;align-items:center;gap:.35rem}
+.sismo-legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* GRID DE ARTIGOS */
+.arts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1.5rem}
+.art-card{background:#fff;border:1px solid var(--border);border-radius:5px;padding:1.2rem 1.2rem 1.1rem;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:150px}
+.art-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:var(--cap-col,var(--gold));transition:width .2s}
+.art-card:hover::before{width:5px}
+.art-card:hover{border-color:var(--gold);box-shadow:0 6px 22px rgba(184,134,11,.1);transform:translateY(-2px)}
+.art-n{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.16em;color:var(--muted2);text-transform:uppercase;margin-bottom:.2rem}
+.art-lbl{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.2}
+.art-descr{font-family:'Crimson Pro',serif;font-size:.92rem;color:var(--muted);line-height:1.55;margin-bottom:.8rem;flex:1}
+.art-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:.6rem;border-top:1px solid var(--border)}
+.art-tot{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--gold)}
+.art-tot small{font-family:'DM Mono',monospace;font-size:.55rem;color:var(--muted2);letter-spacing:.1em;text-transform:uppercase;display:block;margin-top:-.1rem}
+.art-open{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--muted2);letter-spacing:.1em;text-transform:uppercase}
+.art-card:hover .art-open{color:var(--gold)}
+
+/* FILTROS DE CAPÍTULO */
+.chap-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0 .5rem}
+.chap-tab{background:transparent;border:1px solid var(--border);color:var(--muted);padding:.5rem .95rem;border-radius:3px;cursor:pointer;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;transition:all .15s}
+.chap-tab:hover{border-color:var(--gold);color:var(--gold)}
+.chap-tab.on{background:var(--navy);border-color:var(--navy);color:var(--gold2)}
+.chap-tab small{opacity:.6;margin-left:.4rem}
+
+/* DRAWER */
+#drawer-bg{position:fixed;inset:0;background:rgba(15,14,13,.2);z-index:890;opacity:0;pointer-events:none;transition:opacity .25s}
+#drawer-bg.on{opacity:1;pointer-events:auto}
+#drawer{position:fixed;top:0;right:0;height:100vh;width:min(640px,100%);background:var(--paper);border-left:1px solid var(--border);box-shadow:-8px 0 36px rgba(15,14,13,.18);z-index:900;overflow-y:auto;transform:translateX(100%);transition:transform .35s cubic-bezier(.22,.61,.36,1)}
+#drawer.on{transform:translateX(0)}
+#drawer-close{position:absolute;top:14px;right:16px;background:transparent;border:1px solid var(--border);color:var(--muted);width:32px;height:32px;border-radius:3px;cursor:pointer;font-family:'DM Mono',monospace;font-size:14px;z-index:2}
+#drawer-close:hover{border-color:var(--red);color:var(--red)}
+#drawer-content{padding:2rem 1.8rem 3rem}
+.drw-crumb{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-bottom:.8rem}
+.drw-h{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:.4rem}
+.drw-h em{color:var(--gold);font-style:italic}
+.drw-descr{font-family:'Crimson Pro',serif;font-size:1.08rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem}
+.drw-kpis{display:flex;gap:1.5rem;margin-bottom:1.5rem;padding:1rem 1.2rem;background:var(--paper2);border-radius:4px}
+.drw-kpi{}
+.drw-kpi-n{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--gold)}
+.drw-kpi-l{font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2);margin-top:.1rem}
+.drw-block{margin-bottom:1.5rem}
+.drw-block-h{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--navy);margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:baseline}
+.drw-block-h small{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--muted2);letter-spacing:.1em}
+.dec{padding:.8rem 0;border-bottom:1px dashed var(--border)}
+.dec:last-child{border-bottom:none}
+.dec-head{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.25rem}
+.dec-tag{display:inline-block;padding:.14rem .5rem;border-radius:2px;font-family:'DM Mono',monospace;font-size:.58rem;font-weight:600;letter-spacing:.08em}
+.dec-proc{font-family:'DM Mono',monospace;font-size:.85rem;color:var(--ink);font-weight:500;letter-spacing:.02em}
+.dec-date{font-family:'DM Mono',monospace;font-size:.66rem;color:var(--muted2);margin-left:auto}
+.dec-rel{font-family:'Crimson Pro',serif;font-size:.88rem;color:var(--muted);font-style:italic;margin-bottom:.2rem}
+.dec-emt{font-family:'Crimson Pro',serif;font-size:.95rem;color:var(--ink);line-height:1.6}
+.dec-emt .preview{display:inline}
+.dec-emt .full{display:none}
+.dec-emt.open .preview{display:none}
+.dec-emt.open .full{display:inline}
+.dec-more{display:inline-flex;align-items:center;gap:.25rem;margin-left:.3rem;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:transparent;border:none;cursor:pointer;padding:0;font-weight:500}
+.dec-more:hover{color:var(--gold2)}
+.dec-more .arr{transition:transform .2s}
+.dec-emt.open .dec-more .arr{transform:rotate(180deg)}
+.dec-link{display:inline-flex;align-items:center;gap:.3rem;margin-top:.35rem;font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);text-decoration:none}
+.dec-link:hover{color:var(--gold)}
+.dec-source{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:.3rem;opacity:.85}
+
+.tag-RE,.tag-ARE{background:rgba(26,39,68,.1);color:var(--navy);border:1px solid rgba(26,39,68,.3)}
+.tag-ADI,.tag-ADC,.tag-ADO{background:rgba(184,134,11,.12);color:var(--gold);border:1px solid var(--gold3)}
+.tag-ADPF{background:rgba(107,79,143,.1);color:var(--purple);border:1px solid rgba(107,79,143,.3)}
+.tag-AI{background:rgba(107,99,85,.1);color:var(--muted);border:1px solid var(--border)}
+.tag-Súmula,.tag-SV{background:rgba(212,160,23,.12);color:#8a6809;border:1px solid rgba(212,160,23,.35)}
+.tag-ACO,.tag-AC{background:rgba(13,92,92,.1);color:var(--teal);border:1px solid rgba(13,92,92,.3)}
+.tag-MS,.tag-RMS{background:rgba(122,139,92,.12);color:#556a3c;border:1px solid rgba(122,139,92,.3)}
+.tag-Rcl,.tag-HC,.tag-SS,.tag-SL,.tag-Pet{background:rgba(15,14,13,.05);color:var(--muted);border:1px solid var(--border)}
+
+/* FOOTER */
+footer{background:var(--navy);padding:2.5rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:4rem}
+.fl{color:rgba(245,240,232,.3);font-family:'DM Mono',monospace;font-size:.65rem;line-height:1.6}
+.fl strong{color:var(--gold2)}
+.fr{font-size:.55rem;color:rgba(245,240,232,.18);font-family:'DM Mono',monospace;text-align:right;line-height:1.7}
+.fr a{color:var(--gold2);text-decoration:none}
+
+/* INSIGHT */
+.insight{background:linear-gradient(135deg,var(--paper2),var(--paper));border:1px solid var(--gold3);border-left:4px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 4px 4px 0}
+.insight-tag{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+.insight-h{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);font-weight:700;margin-bottom:.5rem}
+.insight-p{font-family:'Crimson Pro',serif;font-size:1.02rem;color:var(--ink);line-height:1.7}
+
+/* MOBILE */
+@media(max-width:768px){
+  body{font-size:15.5px}
+  header,.hero,.section,footer{padding-left:1.1rem;padding-right:1.1rem}
+  header{height:48px}
+  .hero{padding:2.5rem 1.1rem 2.3rem}
+  .hero h1{font-size:1.85rem;line-height:1.1}
+  .hero-sub{font-size:1rem;line-height:1.6}
+  .hero-kpis{grid-template-columns:repeat(2,1fr);gap:1rem;padding-top:1.2rem}
+  .kpi-n{font-size:1.45rem}
+  .kpi-l{font-size:.55rem}
+  .section{padding:2.2rem 1.1rem}
+  .sec-title{font-size:1.5rem}
+  p.body{font-size:1.02rem;line-height:1.7}
+  .sismo-card{padding:1.2rem .9rem}
+  .sismo-title{font-size:1.1rem}
+  #sismo{height:220px}
+  .arts-grid{grid-template-columns:1fr;gap:.8rem}
+  #drawer{width:100%}
+  #drawer-content{padding:1.4rem 1.1rem 2rem}
+  .drw-h{font-size:1.4rem}
+  .drw-kpis{flex-wrap:wrap;gap:1rem;padding:.8rem 1rem}
+  .hnav{display:none}
+  footer{flex-direction:column;text-align:center}
+  .fr{text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="hlogo">
+    <div class="hlogo-mark">P</div>
+    <div><div class="hlogo-txt">PROJUS</div><div class="hlogo-sub">Instituto Constituicao Aberta · ICONS</div></div>
+  </a>
+  <nav class="hnav">
+    <a href="/">Início</a>
+    <a href="/perfil-decisorio.html">Perfil Decisório</a>
+    <a href="/constituicao-ancorada/titulo-vi.html" class="on">Constituição Ancorada</a>
+    <a href="https://judx.com.br">JudX</a>
+  </nav>
+</header>
+
+<section class="hero">
+ <div class="hero-inner">
+  <div class="hero-crumb">Constituição Ancorada <span>·</span> Título VI <span>·</span> piloto v1</div>
+  <h1>Tributação e Orçamento<br>— a <em>placa tectônica</em> mais ativa da CF/88</h1>
+  <p class="hero-sub">23 artigos. 859 decisões do Supremo. 37 anos de jurisprudência. O Título VI responde por 11% de todo o contencioso constitucional mapeado — e é onde o Estado litiga mais consigo mesmo. A cada lei tributária editada, um tremor mensurável na Corte.</p>
+  <div class="hero-kpis">
+    <div class="kpi"><div class="kpi-n">23</div><div class="kpi-l">Artigos do<br>Título VI</div></div>
+    <div class="kpi"><div class="kpi-n">859</div><div class="kpi-l">Decisões STF<br>ancoradas</div></div>
+    <div class="kpi"><div class="kpi-n">1990</div><div class="kpi-l">Primeira<br>decisão</div></div>
+    <div class="kpi"><div class="kpi-n">42%</div><div class="kpi-l">RE · 30%<br>ADI</div></div>
+    <div class="kpi"><div class="kpi-n">art. 150</div><div class="kpi-l">Artigo mais<br>litigioso (255)</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+  <div class="sec-tag">Hipótese estrutural</div>
+  <h2 class="sec-title">O contencioso fiscal é <em>pulso constante</em>, não exceção</h2>
+  <p class="body">A leitura tradicional vê a litigância tributária como patologia: excesso de recursos, cultura de recorrer. A análise ancorada revela outra coisa: a <strong>litigância fiscal é o modo normal de operação</strong> do federalismo brasileiro. Cada novo imposto, cada alteração de alíquota, cada lei complementar tributária produz tremor mensurável no STF em 1 a 3 anos.</p>
+  <p class="body">No Título VI, <em>o art. 150</em> concentra sozinho 30% das decisões — é o ponto onde limitações ao poder de tributar (legalidade, anterioridade, vedação ao confisco, imunidades) são disputadas recurso a recurso. Junto com os arts. 153 (impostos federais) e 155 (impostos estaduais), forma o tripé do litígio fiscal constitucional.</p>
+
+  <div class="sismo-card">
+    <div class="sismo-title">Cartografia do Título VI · <em>índice de decidibilidade</em> por dispositivo</div>
+    <div class="sismo-sub">Cada pilar é um dispositivo constitucional (caput, inciso, alínea, parágrafo) · cada tijolo empilhado é uma decisão — um <em>pulso</em> · altura do pilar = quantidade de pulsos acumulados sobre o dispositivo = intensidade da disputa constitucional · cor = tipo de processo · clique para abrir o artigo</div>
+
+    <div class="pillar-controls">
+      <span class="pc-lbl">escala</span>
+      <div class="pc-grp" id="pc-scale">
+        <button class="pc-btn on" data-scale="linear">linear</button>
+        <button class="pc-btn" data-scale="log">logarítmica</button>
+      </div>
+      <span class="pc-lbl">ordem</span>
+      <div class="pc-grp" id="pc-order">
+        <button class="pc-btn on" data-order="artigo">por artigo</button>
+        <button class="pc-btn" data-order="volume">por decidibilidade</button>
+        <button class="pc-btn" data-order="capitulo">por capítulo</button>
+      </div>
+    </div>
+
+    <div id="sismo"></div>
+    <div class="sismo-legend" id="sismo-legend"></div>
+    <div class="sismo-note">O <strong>art. 150</strong> (Limitações ao Poder de Tributar) domina a paisagem com 255 decisões — quase três vezes o segundo colocado. Junto com os arts. <strong>153</strong> (impostos federais, 61) e <strong>155</strong> (impostos estaduais, 164), forma o tripé do contencioso fiscal constitucional. Os pilares de Finanças Públicas (arts. 163-169) são discretos — a disputa constitucional fiscal está concentrada no sistema tributário, não no orçamentário.</div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-tag">leitura estrutural</div>
+    <div class="insight-h">RE é o protagonista: 42% das decisões</div>
+    <div class="insight-p">Recurso Extraordinário (363 casos) e ADI (261) dominam o Título VI — 73% de tudo. RE é o contribuinte litigando contra acórdão de TJ/TRF desfavorável. ADI é o ente federativo (PGR, OAB, governador) atacando lei tributária em abstrato. A combinação revela a dupla natureza do contencioso fiscal: conflito individual massificado por recurso + conflito federativo por controle abstrato.</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-tag">Cartografia</div>
+  <h2 class="sec-title">23 artigos · os <em>pontos ancorados</em> do Título VI</h2>
+  <p class="body">Cada card é um artigo da CF/88. O número à direita é o volume de decisões do STF ancoradas ao dispositivo. A cor da barra indica o capítulo: <span style="color:var(--gold);font-weight:600">Sistema Tributário</span> (arts. 145–162 e 202) · <span style="color:var(--teal);font-weight:600">Finanças Públicas</span> (arts. 163–169). Clique para abrir o drawer com a decomposição detalhada.</p>
+
+  <div class="chap-tabs" id="chap-tabs">
+    <button class="chap-tab on" data-cap="all">Todos <small id="c-all"></small></button>
+    <button class="chap-tab" data-cap="sistema">Sistema Tributário <small id="c-sistema"></small></button>
+    <button class="chap-tab" data-cap="financas">Finanças Públicas <small id="c-financas"></small></button>
+  </div>
+
+  <div class="arts-grid" id="arts-grid"></div>
+</section>
+
+<section class="section">
+  <div class="sec-tag">Nota de método · piloto v1</div>
+  <h2 class="sec-title">Como esta cartografia foi construída</h2>
+  <p class="body">Esta é a versão-piloto da <strong>Constituição Ancorada</strong>. Retoma o sonho fundador do ICONS: a Constituição como âncora, as decisões do Supremo como objetos ancorados em cada artigo. O Título VI foi escolhido como piloto por ser o campo mais litigioso da CF/88 em matéria de Estado-litigante — território natural do programa de pesquisa <em>Extractive Litigating State</em>.</p>
+  <p class="body">Base: 859 decisões do STF classificadas por artigo, inciso, alínea e parágrafo. Cada decisão contém tipo (RE, ADI, ADPF, Súmula, SV etc.), relator, data de julgamento e excerto da ementa. O piloto fixa a identidade visual e a arquitetura de exploração; nas próximas iterações, cada Título da Constituição recebe a mesma camada.</p>
+</section>
+
+<!-- DRAWER -->
+<div id="drawer-bg"></div>
+<div id="drawer" aria-hidden="true">
+  <button id="drawer-close">×</button>
+  <div id="drawer-content"></div>
+</div>
+
+<footer>
+  <div class="fl">
+    <strong>ICONS</strong> · Instituto Constituicao Aberta · PROJUS<br>
+    icons.org.br · damaresmedina.adv.br
+  </div>
+  <div class="fr">
+    © 2026 · Constituição Ancorada · Todos os direitos reservados<br>
+    Piloto v1 · Título VI de 9 · em construção<br>
+    Análise complementar em produto · <a href="https://judx.com.br">judx.com.br</a>
+  </div>
+</footer>
+
+<script>
+// ═══════════ DADOS ═══════════
+let DATA = null;
+let TEXTOS = {}; // map processo → verbete completo (quando disponível)
+
+// Agrupamento do label de desdobramento
+function dsLabel(k){
+  if(k === 'caput') return 'Caput';
+  if(k.startsWith('inc_')) return 'Inciso ' + k.slice(4);
+  if(k.startsWith('al_')) return 'Alínea ' + k.slice(3);
+  if(k.startsWith('p_') || k.startsWith('par_')) return '§ ' + k.split('_').pop();
+  if(k === 'p_u' || k === 'par_u') return 'Parágrafo único';
+  return k.replace(/_/g,' ');
+}
+
+// Cor por tipo
+function typeColor(t){
+  const m = {RE:'#1a2744',ARE:'#243058',ADI:'#b8860b',ADC:'#b8860b',ADO:'#b8860b',AI:'#6b6355','Súmula':'#d4a017',ADPF:'#6b4f8f',ACO:'#0d5c5c',AC:'#0d5c5c',SV:'#c0392b',MS:'#7a8b5c',RMS:'#7a8b5c',Rcl:'#9b9186',HC:'#9b9186',SS:'#c0b39e',SL:'#c0b39e',Pet:'#c0b39e'};
+  return m[t] || '#c0b39e';
+}
+
+// ═══════════ RENDER GRID DE ARTIGOS ═══════════
+function renderGrid(filter){
+  const g = document.getElementById('arts-grid');
+  g.innerHTML = '';
+  const arts = filter === 'all' ? DATA.arts : DATA.arts.filter(a=>a.cap===filter);
+  const capCol = {sistema:'var(--gold)', financas:'var(--teal)'};
+  arts.forEach(a=>{
+    const card = document.createElement('div');
+    card.className = 'art-card';
+    card.style.setProperty('--cap-col', capCol[a.cap] || 'var(--gold)');
+    card.dataset.art = a.n;
+    card.innerHTML = `
+      <div class="art-n">Art. ${a.n}</div>
+      <div class="art-lbl">${a.label}</div>
+      <div class="art-descr">${a.descr}</div>
+      <div class="art-foot">
+        <div class="art-tot">${a.tot}<small>decisões</small></div>
+        <div class="art-open">abrir →</div>
+      </div>
+    `;
+    card.addEventListener('click', ()=>openDrawer(a));
+    g.appendChild(card);
+  });
+}
+
+// ═══════════ TABS ═══════════
+function setupTabs(){
+  const tabs = document.querySelectorAll('.chap-tab');
+  const totAll = DATA.arts.length;
+  const totSis = DATA.arts.filter(a=>a.cap==='sistema').length;
+  const totFin = DATA.arts.filter(a=>a.cap==='financas').length;
+  document.getElementById('c-all').textContent = `(${totAll})`;
+  document.getElementById('c-sistema').textContent = `(${totSis})`;
+  document.getElementById('c-financas').textContent = `(${totFin})`;
+  tabs.forEach(t=>{
+    t.addEventListener('click', ()=>{
+      tabs.forEach(x=>x.classList.remove('on'));
+      t.classList.add('on');
+      renderGrid(t.dataset.cap);
+    });
+  });
+}
+
+// ═══════════ DRAWER ═══════════
+function openDrawer(art){
+  const d = document.getElementById('drawer');
+  const c = document.getElementById('drawer-content');
+
+  // Stats do artigo
+  const allDecs = [];
+  Object.values(art.ds).forEach(v=>allDecs.push(...v.d));
+  const relatores = {};
+  const tipos = {};
+  const years = [];
+  allDecs.forEach(de=>{
+    if(de.r) relatores[de.r] = (relatores[de.r]||0)+1;
+    if(de.t) tipos[de.t] = (tipos[de.t]||0)+1;
+    if(de.y) years.push(de.y);
+  });
+  const topRel = Object.entries(relatores).sort((a,b)=>b[1]-a[1])[0];
+  const yMin = years.length ? Math.min(...years) : '–';
+  const yMax = years.length ? Math.max(...years) : '–';
+
+  // Montar HTML
+  let html = `
+    <div class="drw-crumb">CF/88 · Título VI · Art. ${art.n}</div>
+    <div class="drw-h">${art.label}</div>
+    <div class="drw-descr">${art.descr}</div>
+    <div class="drw-kpis">
+      <div class="drw-kpi"><div class="drw-kpi-n">${art.tot}</div><div class="drw-kpi-l">decisões</div></div>
+      <div class="drw-kpi"><div class="drw-kpi-n">${yMin}–${yMax}</div><div class="drw-kpi-l">período</div></div>
+      <div class="drw-kpi"><div class="drw-kpi-n">${topRel ? topRel[1] : 0}</div><div class="drw-kpi-l">${topRel ? topRel[0] : 'relator top'}</div></div>
+    </div>
+  `;
+
+  // Ordem dos desdobramentos
+  const keys = Object.keys(art.ds);
+  const order = (k)=> k==='caput' ? 0 : k.startsWith('inc_') ? 1 + romToInt(k.slice(4)) : k.startsWith('al_') ? 200 + k.charCodeAt(3) : k.startsWith('p_')||k.startsWith('par_') ? 500 + parseInt(k.split('_').pop())||500 : 999;
+  keys.sort((a,b)=>order(a)-order(b));
+
+  keys.forEach(k=>{
+    const bloco = art.ds[k];
+    html += `
+      <div class="drw-block">
+        <div class="drw-block-h">${dsLabel(k)} <small>${bloco.c} decisão${bloco.c>1?'ões':''}</small></div>
+    `;
+    bloco.d.slice(0,25).forEach(de=>{
+      const tag = (de.t||'').replace(/[^\w]/g,'');
+      const tagClass = 'tag-' + (de.t || 'default');
+      const emt = de.e || '';
+      const verbete = de.p ? TEXTOS[de.p.trim()] : null;
+      // Se tem verbete editorial, usar ele; senão a ementa curta do dataset
+      const full = verbete || emt;
+      const LIMIT = 180;
+      const isLong = full.length > LIMIT;
+      const preview = isLong ? full.slice(0, LIMIT).replace(/\s+\S*$/,'') + '…' : full;
+      const hasVerbete = !!verbete;
+      html += `
+        <div class="dec">
+          <div class="dec-head">
+            <span class="dec-tag ${tagClass}">${de.t||'—'}</span>
+            <span class="dec-proc">${de.p||''}</span>
+            <span class="dec-date">${de.dj||''}</span>
+          </div>
+          ${de.r ? `<div class="dec-rel">Rel. ${de.r}</div>`:''}
+          ${(full || emt) ? `<div class="dec-emt" ${isLong?'data-long="1"':''}>
+            <span class="preview">${preview}</span>
+            <span class="full">${full}</span>
+            ${isLong ? `<button class="dec-more" onclick="this.parentElement.classList.toggle('open');const open=this.parentElement.classList.contains('open');this.querySelector('.lbl').textContent=open?'recolher':'ler mais';">
+              <span class="lbl">ler mais</span><span class="arr">▾</span>
+            </button>` : ''}
+            ${hasVerbete ? `<div class="dec-source">verbete editorial · Constituição Comentada STF</div>` : (full ? '' : '')}
+          </div>`:''}
+        </div>
+      `;
+    });
+    if(bloco.d.length > 25){
+      html += `<div style="margin-top:.6rem;font-family:'DM Mono',monospace;font-size:.66rem;color:var(--muted2);letter-spacing:.1em">+ ${bloco.d.length - 25} decisões adicionais · expansão completa na próxima versão</div>`;
+    }
+    html += `</div>`;
+  });
+
+  c.innerHTML = html;
+  d.classList.add('on');
+  document.getElementById('drawer-bg').classList.add('on');
+  d.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+}
+function closeDrawer(){
+  document.getElementById('drawer').classList.remove('on');
+  document.getElementById('drawer-bg').classList.remove('on');
+  document.body.style.overflow = '';
+}
+function romToInt(r){const M={I:1,V:5,X:10,L:50,C:100,D:500,M:1000};let s=0,p=0;for(let i=r.length-1;i>=0;i--){const v=M[r[i]]||0;s+=v<p?-v:v;p=v;}return s;}
+
+document.getElementById('drawer-close').addEventListener('click', closeDrawer);
+document.getElementById('drawer-bg').addEventListener('click', closeDrawer);
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDrawer(); });
+
+// ═══════════ CARTOGRAFIA — PILAR POR DISPOSITIVO, STACK DE PULSOS ═══════════
+let TT = null;
+let _scale  = 'linear';// 'linear' | 'log'
+let _order = 'artigo'; // 'artigo' | 'volume' | 'capitulo'
+
+function buildSismo(){
+  const el = document.getElementById('sismo');
+  el.innerHTML = '';
+  if(!TT){
+    TT = document.createElement('div');
+    TT.className = 'pulse-tt';
+    document.body.appendChild(TT);
+  }
+
+  const capCol = {sistema:'#b8860b', financas:'#0d5c5c'};
+  const capLabel = {sistema:'Sistema Tributário', financas:'Finanças Públicas'};
+
+  // Ordenar artigos
+  let arts = DATA.arts.slice();
+  if(_order === 'volume')       arts.sort((a,b)=>b.tot - a.tot);
+  else if(_order === 'capitulo')arts.sort((a,b)=> a.cap===b.cap ? a.n-b.n : (a.cap==='sistema'?-1:1));
+  else                           arts.sort((a,b)=>a.n - b.n);
+
+  const containerW = el.clientWidth || (el.parentElement.clientWidth - 32);
+  const isMobile = containerW < 720;
+
+  const dsOrder = (k)=> k==='caput' ? 0
+    : k.startsWith('inc_') ? 1 + romToInt(k.slice(4))
+    : k.startsWith('al_')  ? 200 + k.charCodeAt(3)
+    : k.startsWith('p_')||k.startsWith('par_') ? 500 + (parseInt(k.split('_').pop())||0)
+    : 999;
+
+  // Monta pilares: cada pilar = 1 dispositivo
+  // No mobile: cada pilar = 1 artigo (agregado) para caber
+  const bars = [];      // { art, ds|null, label, tot, decs[], stack[], cap }
+  const artBounds = [];
+
+  arts.forEach(a=>{
+    const startIdx = bars.length;
+    if(isMobile){
+      // 1 pilar por artigo, stack interno = tipos agregados do artigo
+      const stack = {};
+      const decs = [];
+      Object.values(a.ds).forEach(v=>{
+        v.d.forEach(de=>{
+          decs.push(de);
+          stack[de.t||'—'] = (stack[de.t||'—']||0)+1;
+        });
+      });
+      bars.push({art:a.n, ds:null, artObj:a, cap:a.cap, label:a.label, tot:decs.length, decs, stack, agg:true});
+    } else {
+      // 1 pilar por dispositivo do artigo
+      const keys = Object.keys(a.ds).sort((x,y)=>dsOrder(x)-dsOrder(y));
+      keys.forEach(k=>{
+        const decs = a.ds[k].d;
+        if(!decs.length) return;
+        const stack = {};
+        decs.forEach(de=>{ stack[de.t||'—'] = (stack[de.t||'—']||0)+1; });
+        bars.push({art:a.n, ds:k, artObj:a, cap:a.cap, label:dsLabel(k), tot:decs.length, decs, stack});
+      });
+    }
+    const endIdx = bars.length - 1;
+    if(endIdx >= startIdx) artBounds.push({art:a.n, artObj:a, label:a.label, cap:a.cap, tot:a.tot, start:startIdx, end:endIdx});
+  });
+
+  // Dimensionamento adaptativo
+  const M = {top:28, right:14, bottom:isMobile?50:62, left:isMobile?34:42};
+  const W = containerW;
+  const H = isMobile ? 320 : 400;
+  const h = H - M.top - M.bottom;
+  const usable = W - M.left - M.right;
+  const nGaps = Math.max(0, artBounds.length - 1);
+
+  let bw, bg, artGap;
+  if(isMobile){
+    artGap = 2; bg = 1;
+    bw = Math.max(6, (usable - nGaps*artGap - (bars.length-1)*bg) / bars.length);
+  } else {
+    artGap = 5; bg = .6;
+    bw = Math.max(1.2, (usable - nGaps*artGap - (bars.length-1)*bg) / bars.length);
+  }
+  const innerW = bars.length*bw + (bars.length-1)*bg + nGaps*artGap;
+
+  const svg = d3.select(el).append('svg').attr('width', W).attr('height', H);
+  const g = svg.append('g').attr('transform', `translate(${M.left},${M.top})`);
+
+  // Altura = índice de decidibilidade (tot de pulsos por pilar)
+  const maxTot = Math.max(1, ...bars.map(b=>b.tot));
+  const y = _scale === 'log'
+    ? d3.scaleLog().domain([1, maxTot]).range([h, 10]).clamp(true)
+    : d3.scaleLinear().domain([0, maxTot]).range([h, 10]).nice();
+
+  // Grid horizontal
+  const gridTicks = _scale === 'log'
+    ? [1,3,10,30,100,300].filter(v=>v<=maxTot)
+    : y.ticks(4);
+  g.append('g').selectAll('line.grid').data(gridTicks).enter().append('line')
+    .attr('class','pillar-tick')
+    .attr('x1',0).attr('x2', innerW)
+    .attr('y1',d=>y(d)).attr('y2',d=>y(d));
+
+  // Eixo Y
+  g.append('g').call(d3.axisLeft(y).tickValues(gridTicks).tickFormat(d3.format('d')).tickSize(0).tickPadding(6))
+    .call(g=>g.select('.domain').remove())
+    .selectAll('text').style('font-family','DM Mono,monospace').style('font-size','9.5px').style('fill','#6b6355');
+  // Rótulo do eixo: decidibilidade
+  g.append('text').attr('class','pillar-label')
+    .attr('transform', `translate(${-M.left+8},${h/2}) rotate(-90)`)
+    .attr('text-anchor','middle')
+    .style('fill','#9b9186').style('font-size','8.5px').style('letter-spacing','.12em').style('text-transform','uppercase')
+    .text('pulsos · índice de decidibilidade');
+
+  // Baseline
+  g.append('line').attr('x1',0).attr('x2', innerW).attr('y1',h).attr('y2',h).attr('stroke','rgba(15,14,13,.3)').attr('stroke-width',1);
+
+  // Posição X de cada barra, respeitando gap entre artigos
+  const barX = new Array(bars.length);
+  let curX = 0, ab = 0;
+  for(let i=0;i<bars.length;i++){
+    if(i>0 && i-1===artBounds[ab].end){ curX += artGap; ab++; }
+    barX[i] = curX;
+    curX += bw + bg;
+  }
+
+  // Render: 1 pilar por dispositivo, composto de pulsos empilhados (stack colorido por tipo)
+  // Ordem preferencial dos tipos dentro do stack (base → topo): controle difuso primeiro, abstrato no topo
+  const TYPE_ORDER = ['AI','ARE','RE','HC','RMS','MS','ACO','AC','Rcl','Pet','SS','SL','Súmula','ADO','ADC','ADPF','ADI','SV'];
+  const typeRank = t => { const i = TYPE_ORDER.indexOf(t); return i<0?99:i; };
+
+  const pill = g.selectAll('.pillar').data(bars).enter().append('g')
+    .attr('class','pillar')
+    .attr('transform',(d,i)=>`translate(${barX[i]},0)`);
+
+  // Hit-area invisível maior — facilita click/hover
+  const hitW = Math.max(bw, isMobile ? bw : 7);
+  pill.append('rect').attr('class','hit')
+    .attr('x', (bw - hitW)/2)
+    .attr('width', hitW)
+    .attr('y', 0)
+    .attr('height', h)
+    .attr('fill','transparent');
+
+  // Stack de pulsos: cada decisão um tijolo
+  pill.each(function(d){
+    const g0 = d3.select(this);
+    const baseY = y(Math.max(d.tot, _scale==='log'?1:0));
+    const totalH = h - baseY;
+    // altura por tijolo (proporcional em linear; em log mantém stack visível)
+    const tiles = [];
+    Object.entries(d.stack).sort((a,b)=>typeRank(a[0])-typeRank(b[0])).forEach(([t,n])=>{
+      tiles.push({t, n});
+    });
+    let acc = 0;
+    tiles.forEach(tile=>{
+      const hTile = _scale==='log'
+        ? (totalH * (tile.n/d.tot))
+        : (totalH * (tile.n/d.tot));
+      g0.append('rect')
+        .attr('class','pulse-tile')
+        .attr('x', 0)
+        .attr('width', bw)
+        .attr('y', h - acc - hTile)
+        .attr('height', Math.max(hTile - .4, .3))
+        .attr('fill', typeColor(tile.t))
+        .attr('rx', bw > 3 ? 1 : .3);
+      // separador sutil entre tijolos se o pilar permitir
+      if(hTile > 3 && bw > 2){
+        g0.append('line')
+          .attr('x1',0).attr('x2',bw)
+          .attr('y1', h - acc - hTile)
+          .attr('y2', h - acc - hTile)
+          .attr('stroke','rgba(255,255,255,.35)')
+          .attr('stroke-width',.5)
+          .style('pointer-events','none');
+      }
+      acc += hTile;
+    });
+
+    // Brilho lateral do pilar
+    g0.append('rect')
+      .attr('x',0).attr('width', Math.max(bw*.28, .4))
+      .attr('y', baseY)
+      .attr('height', totalH)
+      .attr('fill','rgba(255,255,255,.18)')
+      .style('pointer-events','none');
+  });
+
+  // Fronteira de artigo — label abaixo e linha separadora
+  const artG = g.append('g').attr('class','art-bounds');
+  // calcular larguras de cada grupo para decidir quais labels mostrar
+  const groupInfo = artBounds.map(ab=>{
+    const xStart = barX[ab.start];
+    const xEnd   = barX[ab.end] + bw;
+    return {...ab, xStart, xEnd, xMid:(xStart+xEnd)/2, width:xEnd-xStart};
+  });
+
+  // Decide largura mínima para caber o label "145"
+  const minLabelW = isMobile ? 14 : 12;
+  // Para evitar colisão: só mostra label se o grupo tem largura suficiente E distância ao label anterior visível ≥ 16px
+  let lastShownMid = -Infinity;
+  groupInfo.forEach(g0=>{
+    const canFit = g0.width >= minLabelW;
+    const farEnough = (g0.xMid - lastShownMid) >= (isMobile ? 20 : 16);
+    g0.showLabel = canFit && farEnough;
+    if(g0.showLabel) lastShownMid = g0.xMid;
+  });
+
+  groupInfo.forEach(g0=>{
+    // linha inferior do grupo (sempre)
+    artG.append('line')
+      .attr('x1', g0.xStart).attr('x2', g0.xEnd)
+      .attr('y1', h+2).attr('y2', h+2)
+      .attr('stroke', capCol[g0.cap]).attr('stroke-width',2).attr('opacity',.6);
+    // label só quando cabe
+    if(g0.showLabel){
+      artG.append('text')
+        .attr('class','pillar-label')
+        .attr('x', g0.xMid).attr('y', h+16)
+        .attr('text-anchor','middle')
+        .style('font-weight','600')
+        .style('fill', capCol[g0.cap])
+        .text(g0.art);
+    } else {
+      // artigo sem label fica com um tick pequeno
+      artG.append('line')
+        .attr('x1', g0.xMid).attr('x2', g0.xMid)
+        .attr('y1', h+2).attr('y2', h+6)
+        .attr('stroke', capCol[g0.cap]).attr('stroke-width',1).attr('opacity',.5);
+    }
+  });
+
+  // Linha "art." no canto superior esquerdo do eixo, como rótulo semântico
+  g.append('text').attr('class','pillar-label')
+    .attr('x', -6).attr('y', h+16)
+    .attr('text-anchor','end')
+    .style('fill','#9b9186').style('font-size','8.5px').style('letter-spacing','.1em').style('text-transform','uppercase')
+    .text('art.');
+
+  // Interação por pilar
+  pill.on('mouseenter', function(ev,d){
+      d3.select(this).selectAll('.pulse-tile').attr('filter','drop-shadow(0 0 4px rgba(184,134,11,.5))');
+      const card = document.querySelector(`.art-card[data-art="${d.art}"]`);
+      if(card){ card.classList.add('hot'); }
+      // Composição do stack para tooltip
+      const stackLines = Object.entries(d.stack).sort((a,b)=>b[1]-a[1]).slice(0,4)
+        .map(([t,n])=>`${n} ${t}`).join(' · ');
+      if(d.agg){
+        TT.innerHTML = `<strong>Art. ${d.art} · ${d.label}</strong>
+          <em>${capLabel[d.cap]}</em>
+          índice de decidibilidade: <strong style="color:#d4a017">${d.tot} pulsos</strong><br>
+          ${stackLines}`;
+      } else {
+        TT.innerHTML = `<strong>Art. ${d.art} · ${d.label}</strong>
+          <em>${capLabel[d.cap]}</em>
+          índice de decidibilidade: <strong style="color:#d4a017">${d.tot} pulsos</strong><br>
+          ${stackLines}`;
+      }
+      TT.classList.add('on');
+    })
+    .on('mousemove', function(ev){
+      TT.style.left = (ev.clientX + 14) + 'px';
+      TT.style.top = (ev.clientY + 14) + 'px';
+    })
+    .on('mouseleave', function(ev,d){
+      d3.select(this).selectAll('.pulse-tile').attr('filter',null);
+      const card = document.querySelector(`.art-card[data-art="${d.art}"]`);
+      if(card) card.classList.remove('hot');
+      TT.classList.remove('on');
+    })
+    .on('click', function(ev,d){ openDrawer(d.artObj); });
+
+  // Legenda (cores dos pulsos no stack)
+  const leg = document.getElementById('sismo-legend');
+  leg.innerHTML = '';
+  const items = [
+    ['#1a2744','RE · ARE — recurso extraordinário'],
+    ['#b8860b','ADI · ADC · ADO — controle abstrato'],
+    ['#6b4f8f','ADPF'],
+    ['#6b6355','AI — agravo'],
+    ['#d4a017','Súmula · SV'],
+    ['#0d5c5c','ACO · AC — ação cível originária'],
+    ['#7a8b5c','MS · RMS']
+  ];
+  items.forEach(([col,lbl])=>{
+    const s = document.createElement('span');
+    s.innerHTML = `<i style="background:${col}"></i>${lbl}`;
+    leg.appendChild(s);
+  });
+}
+
+// Controles
+function setupPillarControls(){
+  document.querySelectorAll('#pc-scale .pc-btn').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('#pc-scale .pc-btn').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      _scale = b.dataset.scale;
+      buildSismo();
+    });
+  });
+  document.querySelectorAll('#pc-order .pc-btn').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('#pc-order .pc-btn').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      _order = b.dataset.order;
+      buildSismo();
+    });
+  });
+}
+
+// ═══════════ BOOT ═══════════
+Promise.all([
+  fetch('titulo-vi.data.json').then(r=>r.json()),
+  fetch('titulo-vi.textos.json').then(r=>r.ok?r.json():{}).catch(()=>({}))
+])
+.then(([j, tx])=>{
+    DATA = j;
+    TEXTOS = tx || {};
+    setupTabs();
+    renderGrid('all');
+    setupPillarControls();
+    buildSismo();
+    window.addEventListener('resize', buildSismo);
+})
+.catch(err=>{
+    document.getElementById('arts-grid').innerHTML = '<div style="padding:2rem;color:var(--red)">Erro ao carregar dados: '+err.message+'</div>';
+});
+</script>
+</body>
+</html>
