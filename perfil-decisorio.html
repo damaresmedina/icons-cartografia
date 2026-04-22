@@ -191,8 +191,9 @@ footer{background:var(--navy);padding:2.5rem 2.5rem;display:flex;justify-content
   .comp-nm small{font-size:.52rem}
   .comp-bar{height:16px}
   .comp-val{font-size:.72rem}
-  /* Série temporal D3 — scroll horizontal se precisar */
-  #chart3{min-height:320px;overflow-x:auto}
+  /* Série temporal D3 — cabe na tela (legenda embaixo) */
+  #chart3{min-height:0;overflow:hidden}
+  #chart3 svg{width:100%;height:auto;display:block}
   .pull{font-size:1rem;padding:1.2rem 1.3rem;line-height:1.5}
   .insight{padding:1.3rem}
   .insight-h{font-size:1.05rem}
@@ -425,6 +426,7 @@ function drawDonut(svgId, data, centerNum, centerLbl){
   const svg = d3.select('#'+svgId);
   svg.selectAll('*').remove();
   const W = 260, H = 260, R = 110, r = 68;
+  svg.attr('viewBox',`0 0 ${W} ${H}`).attr('preserveAspectRatio','xMidYMid meet');
   const g = svg.append('g').attr('transform',`translate(${W/2},${H/2})`);
   const pie = d3.pie().value(d=>d.v).sort(null).padAngle(.012);
   const arc = d3.arc().innerRadius(r).outerRadius(R).cornerRadius(3);
@@ -526,13 +528,14 @@ function drawSerie(){
   const el = document.getElementById('chart3');
   el.innerHTML = '';
   const isMobile = window.innerWidth < 640;
-  const W = Math.max(el.clientWidth, isMobile ? 520 : 600);
-  const H = isMobile ? 300 : 360;
-  const M = {top:20, right:isMobile?100:130, bottom:36, left:isMobile?38:50};
+  const W = el.clientWidth;
+  const legendH = isMobile ? Math.ceil(Object.keys(SERIE).length/2)*20 + 12 : 0;
+  const H = (isMobile ? 260 : 360) + legendH;
+  const M = {top:20, right:isMobile?12:130, bottom:36+legendH, left:isMobile?34:50};
   const w = W - M.left - M.right;
   const h = H - M.top - M.bottom;
 
-  const svg = d3.select(el).append('svg').attr('width',W).attr('height',H);
+  const svg = d3.select(el).append('svg').attr('width',W).attr('height',H).attr('viewBox',`0 0 ${W} ${H}`).style('max-width','100%');
   const g = svg.append('g').attr('transform',`translate(${M.left},${M.top})`);
 
   const x = d3.scaleLinear().domain([2020,2026]).range([0,w]);
@@ -540,7 +543,7 @@ function drawSerie(){
   const y = d3.scaleLinear().domain([0,yMax]).range([h,0]).nice();
 
   // Eixos
-  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(7).tickFormat(d3.format('d')))
+  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(isMobile?4:7).tickFormat(d3.format('d')))
     .selectAll('text').style('font-family','DM Mono,monospace').style('font-size','10px').style('fill','#6b6355');
   g.append('g').call(d3.axisLeft(y).ticks(5))
     .selectAll('text').style('font-family','DM Mono,monospace').style('font-size','10px').style('fill','#6b6355');
@@ -557,15 +560,32 @@ function drawSerie(){
     g.selectAll(null).data(pts).enter().append('circle').attr('cx',d=>x(d.a)).attr('cy',d=>y(d.n)).attr('r',3.5).attr('fill',COL[rel]);
   });
 
-  // Legenda
-  const leg = svg.append('g').attr('transform',`translate(${M.left+w+15},${M.top})`);
-  Object.keys(SERIE).forEach((rel,i)=>{
-    leg.append('rect').attr('x',0).attr('y',i*22).attr('width',12).attr('height',3).attr('fill',COL[rel]);
-    leg.append('text').attr('x',18).attr('y',i*22+5).text(rel).style('font-family','DM Sans,sans-serif').style('font-size','10px').style('fill','#0f0e0d');
-  });
+  // Legenda — direita no desktop, embaixo em 2 colunas no mobile
+  if (isMobile) {
+    const leg = svg.append('g').attr('transform',`translate(${M.left},${H-legendH+4})`);
+    const colW = w/2;
+    Object.keys(SERIE).forEach((rel,i)=>{
+      const col = i%2, row = Math.floor(i/2);
+      leg.append('rect').attr('x',col*colW).attr('y',row*20).attr('width',12).attr('height',3).attr('fill',COL[rel]);
+      leg.append('text').attr('x',col*colW+18).attr('y',row*20+5).text(rel).style('font-family','DM Sans,sans-serif').style('font-size','10px').style('fill','#0f0e0d');
+    });
+  } else {
+    const leg = svg.append('g').attr('transform',`translate(${M.left+w+15},${M.top})`);
+    Object.keys(SERIE).forEach((rel,i)=>{
+      leg.append('rect').attr('x',0).attr('y',i*22).attr('width',12).attr('height',3).attr('fill',COL[rel]);
+      leg.append('text').attr('x',18).attr('y',i*22+5).text(rel).style('font-family','DM Sans,sans-serif').style('font-size','10px').style('fill','#0f0e0d');
+    });
+  }
 }
 drawSerie();
-window.addEventListener('resize', drawSerie);
+// Debounce + só redesenha se a largura mudou (evita crash no mobile quando URL bar some/aparece)
+let lastW = window.innerWidth, resizeTimer;
+window.addEventListener('resize', ()=>{
+  if (window.innerWidth === lastW) return;
+  lastW = window.innerWidth;
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(drawSerie, 150);
+});
 </script>
 
 </body>
